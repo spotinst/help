@@ -43,7 +43,7 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 
 2. Click **Save**.
 
-## Step 4: Assign Users to the Spot by NetApp App
+## Step 4: Assign Users to the Spot App
 
 1. Go to the Assignments tab.
 2. Click **Assign** > **Assign to People**.

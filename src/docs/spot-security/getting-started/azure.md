@@ -10,7 +10,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 
  <details>
    <summary markdown="span">View image</summary>
-    <img src="https://github.com/spotinst/help/assets/106514736/24567701-1bed-4790-a9b2-9c9f817a7bed">
+    <img width=600 src="https://github.com/user-attachments/assets/93d2d563-08b5-46d8-bc20-f6791890211b">
    
  </details>
 

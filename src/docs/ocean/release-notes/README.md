@@ -1,6 +1,82 @@
 # Ocean Release Notes
 
-## December 2024: Features and Enhancements
+
+## April 2025: Features and Enhancements
+
+*  **OCN-0074: April 01, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Machine Ephemeral Storage: Use `instanceStorePolicy` to manage instance store volumes for faster node ephemeral storage. [Learn more…](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=machine-ephemeral-storage)
+
+Previous months...
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">March, 2025 - click to view</summary>
+ 
+   <div style="padding-left:16px">
+
+*  **OCN-0073: March 27, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Enable **auto-attach** and let Ocean automatically attach your right-sizing rules to workloads based on selected namespace/labels criteria [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads)
+
+*  **OCN-0072: March 27 2025:** (**<font color="#FC01CC">AKS</font>**) You can now run **immediate** or scheduled auto-updates for AKS from the Ocean console for Kubernetes patch version updates to avoid potential errors and keep updated with the latest version. [Learn more...](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version)
+
+*  **OCN-0071: March 09, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) You can now select the right-sizing percentile settings to calculate the memory recommendations.[Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=set-the-vcpumemory-percentile)
+
+*  **OCN-0070: March 09, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Changes were made to right-sizing statuses. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list)
+
+</div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">February, 2025 - click to view</summary>
+ 
+   <div style="padding-left:16px">
+
+*  **OCN-0069: February 26, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) You can now view your (actual) right-sizing savings from applying down-sizing recommendations to your workloads. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab)
+
+*  **OCN-0068: February 26, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Ocean right-sizing auto-tuning is implemented to handle workload limits. [Learn more…](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=how-it-works)
+
+*  **OCN-0067: February 26, 2025:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports the Azure Linux 3.0 image type on AKS version 1.31 for new clusters.
+[Learn more...](https://learn.microsoft.com/en-us/azure/azure-linux/how-to-enable-azure-linux-3)
+
+*  **OCN-0066: February 26, 2025:** (**<font color="#FC01CC">GKE</font>**) You can now set up GKE cluster and virtual node group orientation via the Spot API. [Learn more...](https://docs.spot.io/ocean/features/gke-cluster-vng-orientation)
+
+ 
+*  **OCN-0065: February 12, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Introduced a set of instance types labels. All nodes will be automatically labeled according to node criteria, and you can apply those labels to a workload's constraints (nodeSelector, node affinity, etc.) to reflect instance-types properties such as category and family. [Learn more…](https://docs.spot.io/ocean/features/labels-and-taints?id=instance-types-labels)
+
+*  **OCN-0064: February 10, 2025:** (**<font color="#FC01CC">AWS EKS</font>**) Dynamic IOPS lets you scale IOPS for GP3 EBS volumes based on instance size. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=dynamic-iops)
+
+</div>
+</details>
+
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">January, 2025 - click to view</summary>
+ 
+   <div style="padding-left:16px">
+
+*  **OCN-0063: January 26, 2025:** (**<font color="#FC01CC">AWS EKS</font>**). Implemented native support for the `topology.k8s.aws/zone-id` label in the Ocean autoscaler. You can use the `topology.k8s.aws/zone-id` label in your workloads' constraints, such as `nodeSelector`, `nodeAffinity` and `topologyKey` (in `topologySpreadConstraints`, `podAffinity` and `podAntiAffinity`). For more information about this label, refer to the [Amazon EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions-standard.html#kubernetes-1.30).
+
+*  **OCN-0062: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**). New gauge metrics were added to the Ocean Prometheus exporter (nodes added/removed and failed scale-ups/downs). [Learn more...](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=prometheus-for-kubernetes-data-plane-monitoring)
+
+*  **OCN-0061: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) The latest release introduces two major features: Enhanced scale-up for faster pod scheduling and improved cluster utilization, and an enhanced distribution algorithm for balanced node spreading and greater cost savings. These enhancements significantly reduce cluster costs while maintaining cluster availability. Enhanced scale-up is available to all Ocean customers and requires Ocean Controller V2.
+
+*  **OCN-0060: January 14, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now access extensive information about Ocean AKS revert to spot and revert to lower-cost events from the autoscaler activity graph. [Learn more…](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=display-extended-details-for-revert-to-spotsrevert-to-lower-cost-events)
+
+*  **OCN-0059: January 14, 2025:** (**<font color="#FC01CC">AKS</font>**) Ocean now identifies missing labels and taints that can cause AKS node migration failures. Before migrating nodes, you can fix mismatches between virtual node groups and workloads in the console. [Learn more...](https://docs.spot.io/ocean/tutorials/migrate-workload-aks-ui?id=migrate-aks-workload-using-the-console)
+
+*  **OCN-0058: January 08, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now set temporary startup taints for nodes. For example, you can use a startup taint to deploy a specific pod to a node to perform a specific function before deploying other pods to the same node. [Learn more...](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
+
+*  **OCN-0057: IMPORTANT NOTICE - January 01, 2025:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AKS</font>** (from **January 01, 2025**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
+Ocean Controller
+Version 1 was previously deprecated for other cloud service providers:
+   * **<font color="#FC01CC">AWS Kubernetes </font>**: was deprecated November 01, 2024
+   * **<font color="#FC01CC">GKE</font>**: was deprecated December 18, 2024
+   
+</div>
+</details>
+
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">December, 2024 - click to view</summary>
+ 
+   <div style="padding-left:16px">
 
 *  **OCN-0056: December 25, 2024:** (**<font color="#FC01CC">AWS ECS</font>**) You can now set the `instanceMetadataTags` attributes from your Ocean ECS clusters via the Spot API 
 under `cluster.compute.LaunchSpecification`. For example, [Create Cluster](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterCreate).
@@ -29,10 +105,9 @@ Version 1 deprecation for other cloud service providers:
 
 *  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-lower-cost-node-pools)
 
-Previous months...
+</div>
+</details>
 
-
- 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
  
@@ -101,7 +176,7 @@ Ocean Controller Version 1 will be deprecated for other cloud service providers 
  
 <div style="padding-left:16px">
 
-*  **OCN-0027: August 29, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Turn On/Off Utilize Commitments per Virtual Node Group: You can now distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster via the `utilizeReservedInstances` and `utilizeCommitments` attributes. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=turn-onoff-utilize-commitments-per-virtual-node-group)
+*  **OCN-0027: August 29, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Enable Utilize Commitments per Virtual Node Group: You can now distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster via the `utilizeReservedInstances` and `utilizeCommitments` attributes. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=turn-onoff-utilize-commitments-per-virtual-node-group)
 
 *  **OCN-0026: August 21, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean Controller Version 2 now supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24 for the AKS platform. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=kubernetes-namespaceselector-scaling-constraint-label) about the `namespaceSelector` label.
 

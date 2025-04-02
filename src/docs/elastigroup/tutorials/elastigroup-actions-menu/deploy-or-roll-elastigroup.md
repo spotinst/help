@@ -1,12 +1,10 @@
 # Deploy an Elastigroup
 
-A Deployment is a process in which all of the instances running in an Elastigroup are detached and new instances are launched to replace them. A deployment is required when you update a software version and whenever you make changes to certain parameters in the Elastigroup configuration.
+A deployment is a process in which all of the instances running in an Elastigroup are detached and new instances are launched to replace them. A deployment is required when you update a software version and whenever you make changes to certain parameters in the Elastigroup configuration.
 
 This tutorial describes how a deployment works, the procedure for running a deployment, and information that Elastigroup provides about a deployment.
 
-## Relevance
-
-This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Deploy an Elastigroup](elastigroup/tutorials/azure/deploy-an-elastigroup).
+For Elastigroup with Azure, see [Deploy an Elastigroup](elastigroup/tutorials-azure/deploy-an-elastigroup).
 
 ## When to Deploy
 
@@ -68,39 +66,6 @@ Once the deployment has started, you will see a banner at the top of the page in
 
 You can also configure a scheduled task that will run a deployment automatically at a time you choose. This enables you to run the deployment at a time that is convenient for you or times less likely to impact your operations.
 
-## View Deployments
-
-To see information about the deployments of a group, go to the Elastigroup Overview page and click the Deployments tab.
-
-<img src="/elastigroup/_media/tutorials-deploy-elastigroup-03.png" />
-
-### List of Deployments
-
-The list of deployments provides an overview that includes:
-
-- ID: A unique identifier for the deployment.
-- Progress: The percent completion of the deployment process.
-- Status: Can be In Progress, Failed, Stopped or Completed.
-- Created At: Date and time the deployment was started.
-
-### Details
-
-To see a drill-down of the deployment details, click the arrow by the ID. The drill-down includes:
-
-- Deployment ID
-- Number of Batches
-- Current Batch
-- Grace Period
-- Blue Instances
-- Green Instances
-- Start Date and Time
-- Health Check
-- Status
-
-<img src="/elastigroup/_media/tutorials-deploy-elastigroup-04.png" />
-
-If you need to see information about the specific instances or the events in the deployment, click View More.
-
 ### Instances
 
 The Instance tab shows status and details of each instance in the deployment, including the blue (old) instances and the green (new) instances.
@@ -112,15 +77,3 @@ The Instance tab shows status and details of each instance in the deployment, in
 The Events tab gives you visibility of the specific events as they complete in the deployment.
 
 <img src="/elastigroup/_media/tutorials-deploy-elastigroup-06.png" />
-
-## Troubleshooting
-
-There are several reasons that a deployment could fail. Some of the more common issues are:
-
-- The grace period was too short.
-- A version of your application is problematic (e.g., the codebase or a new AMI).
-- If more than 50% of the instances in a specific batch are unhealthy after the grace period, the deployment will fail.
-
-If a deployment fails, the instance remains running for troubleshooting purposes. Some instances in the Elastigroup may have the old configuration, while the rest may have the new configuration. To fix the failed roll, you will need to stop and detach either the old instances or the new onew. You will have the option to decide which instances. Then, update the Elastigroup configuration and deploy again to apply the configuration updates.
-
-Elastigroup will not start new deployments or any scale down activities until the failed deployment is completely stopped or resolved.

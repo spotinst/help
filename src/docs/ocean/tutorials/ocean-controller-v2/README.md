@@ -2,17 +2,13 @@
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font> 
 
->**IMPORTANT NOTICE**: Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from November 1, 2024) and for **<font color="#FC01CC">GKE</font>** (from December 18, 2024) . This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support.   
-
->Ocean Controller Version 1 will be deprecated for other cloud service providers as follows:
-> - **<font color="#FC01CC">AKS</font>**: January 1, 2025
+>**IMPORTANT NOTICE**: Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from November 1, 2024), for **<font color="#FC01CC">GKE</font>** (from December 18, 2024), and for **<font color="#FC01CC">AKS</font>** (from January 1, 2025) . This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support.   
 
 The Ocean Controller is a pod that resides inside your Kubernetes cluster, facilitating seamless integration with the Spot platform. By collecting metrics and events and reporting them to the Spot SaaS environment, the Controller empowers Ocean to manage, control, and optimize your infrastructure autonomously. With the Ocean Controller, you can effortlessly harness the capabilities of the Spot platform while ensuring efficient infrastructure management.
 
 Ocean Controller Version 2 comes with two replicas out-of-the-box. You can add more replicas as required. 
 
-![Ocean-controller-multiples](https://github.com/spotinst/help/assets/159915991/90e2a5ab-f724-4297-914a-186ef4e1b803)
-
+<img width="1000" src="https://github.com/user-attachments/assets/2daa08f7-a7e9-44c8-bed4-ad2548f885c7" />
 
 The Ocean Controller offers the following functionality and benefits: 
 

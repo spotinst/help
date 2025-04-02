@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Your Azure MCA for Eco Analysis
 
 This document describes the process and procedures to enable the Eco Managed Service for Eco reservation management and provide appropriate access to reservation.

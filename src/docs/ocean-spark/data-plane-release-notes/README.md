@@ -1,5 +1,14 @@
 # Cluster Release Notes
 
+## [0.5.6-86] - 2025-01-09
+
+Changelog
+
+- [0.5.8] bigdata-proxy
+  - vulnerability fixes
+- [0.5.6] bigdata-operator
+  - support workspaces upgrade
+
 ## [0.5.4-85] - 2024-12-16
 
 Changelog

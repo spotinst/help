@@ -10,8 +10,7 @@ To view your right-sizing recommendations and rules:
 
 1. In the left main menu, click **Ocean** > **Cloud Clusters**.
 2. Select a cluster from the list of clusters.
-3. Click the **Right Sizing** tab.  
-4. Click **Advanced Optimization**. 
+3. Click **Right Sizing > Advanced Optimization**. 
 
 The Advanced Optimization tab contains these lists:  
 
@@ -22,24 +21,24 @@ Your workload optimization activities impact the status of the workloads in the 
 
 ##  Workloads Optimization List 
 
-<img width="1000" src="https://github.com/user-attachments/assets/129b3cbf-ed65-4a0b-8cba-ad59fbc4ee10" />
-
+<img width="1000" src="https://github.com/user-attachments/assets/a6070749-5c8f-4871-b4ff-2c3faccc5755" />
 
 This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
-*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under **Rules**. The rule has one of the following workload (colored) optimization statuses:
-   *  Green (Fully Optimized): The Workload is fully optimized, and no action is required.
-   *  Orange (Limited): The Workload has optimization limitations (constrained by settings). 
-   *  Blue (Pending): The rule for the workload has been attached but is out of schedule.
+*  Workload optimization status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under the **Rules** column. The rule can have one of the following workload (colored) optimization statuses:
+   *  Green (Optimized): Workload is fully optimized, and no action is required.
+   *  Orange (Limited): Ocean applied recommendations to the workload, but there are limitations due to overhead, HPA, etc.
+   *  Blue (Pending): Rule has been attached to the workload but is out of schedule.
+   *  Red (Not Optimized): Workloads for which Ocean cannot apply the recommendation due to HPA, Thresholds, etc.
    *  Gray (Rollback): Ocean rolled back to the original deployment request and suspended the workload's attachment to the rule.
-   *  Red (Not Optimized): The Workload is not optimized.
-*  Workload type and namespace.
-*  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
-*  If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
-* Potential monthly max. Savings if you adopt these recommendations.
+   *  Brown (Not Attached): The Workload is not optimized.
+*  Workload type and names.
+*  vCPU and memory right sizing recommendations per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
+*  HPA: If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
+*  Potential monthly maximums savings if you adopt the recommendations.
 
 > **Notes**:
-> - Orange or blue status: Hover over the workload optimization status to view more details in a tooltip.
+> - Hover over the Limited and Not optimized statuses to view more details in a tooltip.
 > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
 >  
 > - If the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears on the right of the screen, workloads were moved to rollback status. See [Acknowledge a Workload Rollback](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
@@ -67,7 +66,6 @@ Each rule entry shows relevant information about the parameters that trigger the
 
 ##  Work with Right Sizing Rules 
 
-You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule and later attach it to one or more workloads. 
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
 
 ###   Create or Edit a Right-Sizing Rule 
@@ -77,13 +75,13 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-![rule-configure-hpa-3](https://github.com/user-attachments/assets/d4f27b25-6d88-463f-bc2a-dbe3db46594c)
+<img height="700" src="https://github.com/user-attachments/assets/0dcc58d8-86c3-4496-bde8-b1cce5dc2109" />
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
-      *   **At a specific time**: You select when to apply the recommendation after it becomes available.
+      *   **Specific time**: You select when to apply the recommendation after it becomes available.
 
 ![rule-when-to-apply-3](https://github.com/user-attachments/assets/5cb76163-9f33-477e-95d6-b99b36f0f200)
 
@@ -93,11 +91,17 @@ To create/edit a right-sizing rule:
    * Manifests with more than 1 replica only.
    * No restart.
 7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
-8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 100 for CPU and 128 MiB for memory; no lower values will be accepted.
+8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
    * If a recommendation is above the set boundaries, automatic right-sizing will apply the recommendation using the maximum value configured in the rule.
    * If a recommendation is below the set boundaries, automatic right-sizing will apply the recommendation using the minimum value configured in the rule.
-10. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-11. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
+10. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+
+11. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
+     *  In the Auto-attach area, select required namespaces / labels.
+   
+<img width="500" src="https://github.com/user-attachments/assets/dae038b7-6dda-4a85-8e2f-bea04c12f517" />
+
 12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
@@ -105,9 +109,17 @@ To create/edit a right-sizing rule:
     > - The **10%** default overhead is calculated within the recommendation itself.
     > - Threshold value is only used for down-sizing cases
 
-###   Attach a Right-Sizing Rule to One or More Workloads 
+###   Attach a Right-Sizing Rule to One or More Workloads
 
-To attach a rule to one or more workloads: 
+Options:
+
+* Auto-attach: Turn on auto-attach and let Ocean automatically attach rules to workloads based on selected criteria. See [Create or Edit a Right-Sizing Rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule).
+>**Note**: Auto-attach attaches rules to existing and newly-added workloads.
+  
+* Manual attach: Manually attach a specific right-sizing rule to one or more workloads.
+
+
+To manually attach a rule:
 
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
@@ -161,22 +173,29 @@ To acknowledge a workload rollback:
 
 The workloads are displayed in the [Workloads Optimization List](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list) without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
 
-### Set the vCPU Percentile
+### Set the vCPU/Memory Percentile
 
-You can select the percentile setting right-sizing uses to calculate the vCPU recommendations.
+You can select the right-sizing percentile settings to calculate the vCPU and memory recommendations.
 The lower the percentile, the stronger the recommendations.
 
-By default, right-sizing uses the 85th percentile.
+By default:
+
+*  vCPU: Right-sizing uses the 85th percentile.
+*  Memory: Right-sizing uses the maximum value.
 
 >**Important:** Changing the percentile setting will impact the recommendations that were already applied (this may take a few minutes to update).
 
-To change this setting:
+To change settings:
 
-1. Click the **Settings** button at the top-right of the screen.
-2. Select your required percentile value in the Settings dialog box and save your changes.
+1. Click **Settings** above the [workloads optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
-<img width="320" src="https://github.com/user-attachments/assets/30478c24-f728-4b3a-8aba-113c64573bb0"/>
+ <img width="500" src="https://github.com/user-attachments/assets/5bcddc81-c527-4f87-a897-369e911bedcc" />
 
+2. Click the arrow on the right for **vCPU** or **Memory** as required (vCPU shown in the example).
+
+ <img width="500" src="https://github.com/user-attachments/assets/59b2e755-04d8-4967-9b39-9fc0904e5231" />
+
+3. Change the current value(s) and save.
 
 ## Best Practices
 

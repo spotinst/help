@@ -1,11 +1,13 @@
 # Auto-Upgrade the AKS Control Plane Patch Version in the Console
 
-You can schedule an auto-upgrade of an AKS patch version once a day (recommended) or at a specific time. For both types of auto-upgrade, you can set one of these options:
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
+You can immediately run an auto-upgrade of an AKS patch version or schedule an auto-upgrade once a day (recommended) or at a specific time. For both immediate or scheduled auto-upgrade, you can set one of these options:
 
 * Control plane upgrade: Upgrade the control plane patch version only.
 * Control plane upgrade and Ocean roll: Upgrade the control plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the updated version.
 
-We recommend you schedule once daily and let Ocean manage your upgrades.
+Spot recommends you schedule once daily and let Ocean manage your upgrades.
 
 ## Check if you need to Upgrade
 
@@ -29,11 +31,11 @@ provide support updates for Kubernetes minor version upgrades.
 
 * Click **Auto Upgrade** at the bottom of the cluster overview screen (next to the control plane version), or click the **Auto Upgrade** tab.
 
-  >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Auto-Upgrade** button in the center of the screen. Otherwise, lists are displayed as shown below.
+  >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Update** button in the center of the screen. Otherwise, lists are displayed as shown below.
 
 ![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
-The Updates History list for completed runs is displayed at the top of the screen with these attributes:
+The auto-upgrades history list for completed runs is displayed at the top of the screen with these attributes:
 
 * Execution Time: Format MM/DD/YYYY, hh: mm: ss.
 * Old Version number (before the run).
@@ -97,6 +99,23 @@ To schedule an auto-upgrade:
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
 
+##  Auto-Upgrade Now
+
+Use this option if you want to auto-upgrade immediately (rather than schedule an upgrade).
+
+1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
+2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Configure and Update Now**).
+
+<img width="600" src="https://github.com/user-attachments/assets/8df2d910-0653-4f73-8036-8c128490fe20" />
+
+>Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
+
+3. Click **Update Now**.
+
+>**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
+
+After the update is complete, a new entry is added to the auto-upgrades history list.
+
 ## Delete an Auto-Upgrade Schedule
 
 To delete an auto-upgrade schedule:
@@ -106,4 +125,5 @@ To delete an auto-upgrade schedule:
 3. Click **Schedule**. The schedule will appear at the bottom of the screen in the auto-upgrades schedules list. 
 
   
+
 

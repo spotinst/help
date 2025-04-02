@@ -19,7 +19,7 @@ They bring all critical data into one platform. Each integration exposes a set o
 
 * Execution History- Audit log of each workflow execution, including detailed input and output data of each step in the workflow.
 
-Spot Connect helps you easily build, run, manage, and analyze workflows to accelerate, optimize and automate cloud operations infrastructures. In addition, Spot Connect allows users to deploy Spot by NetApp services rapidly and reliably, as well as manage these services within their existing cloud environments. This could be for onboarding, incident response, large-scale configuration change, or day-to-day management.  
+Spot Connect helps you easily build, run, manage, and analyze workflows to accelerate, optimize and automate cloud operations infrastructures. In addition, Spot Connect allows users to deploy Spot services rapidly and reliably, as well as manage these services within their existing cloud environments. This could be for onboarding, incident response, large-scale configuration change, or day-to-day management.  
 
 In addition, Spot Connect integrates third-party applications as well as manage Spot resources via our backend API but don’t have the in-house resources or expertise to configure or maintain this.
 

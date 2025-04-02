@@ -188,7 +188,16 @@ Select an on-demand VM size. At least one VM needs to be defined as on demand. T
 * **Fallback to On-Demand**: a stateful node provides a fallback mechanism if no Spot VMs are available.
 * **Continuous Optimization**: choose when stateful node may move workloads from on demand to spot VMs:
    - **Once Available**: the stateful node moves the workloads when your Spot VM types become available.
-   - **Custom**: define time windows to allow the move.
+   - **Custom**: define time windows to allow the move. For example, if you want your on-demand instances to revert to spot instances daily, Monday through Friday, between 9 AM and 8 PM, you need to select:
+
+        * **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Monday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Tuesday</i>, **start time**: <i>09:00</i>, **to**: <i>Tuesday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Wednesday</i>, **start time**: <i>9:00</i>, **to**: <i>Wednesday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Thursday</i>, **start tim**e: <i>09:00</i>, **to**: <i>Thursday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Friday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>.
+
+     If you select **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>, your on-demand instances can revert to spot instances past 8 PM on Mondays, Tuesdays, Wednesdays, and Thursdays. It will set <i>the entire time</i> between Monday at 9 AM all the way through Friday at 8 PM, <i>not daily</i> between 9 AM and 8 PM.
+
 
 ### Strategy
 * Cluster orientation:

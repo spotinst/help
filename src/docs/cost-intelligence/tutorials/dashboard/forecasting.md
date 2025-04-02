@@ -1,11 +1,16 @@
 # Forecasting 
 
-You can leverage LLM intelligence to generate forecast models based on their existing charts within the Cost Intelligence Dashboards. 
+You can leverage LLM intelligence to generate forecast models based on their existing charts within the Cost Intelligence Dashboards.
 
-All qualifying charts have an icon in the top bar titled Forecasting. Forecasting is currently limited to single-series, time-based charts. 
+The Forecasting feature provides this information:
+* Confidence upper and lower scores to the forecasts. These scores provide valuable context and indicate the level of confidence in the forecasted values. 
+* Additional chart types, specifically multi-series line and box charts based on time. You can generate forecasts for charts that display multiple series of data over time, allowing for more accurate predictions.
 
-![forecasting-1](https://github.com/user-attachments/assets/cc07bfcb-c493-4c05-9bc6-e8048d62d80b)
+All qualifying charts have a Forecasting icon in the top bar 	
+<img height="18" src="https://github.com/user-attachments/assets/7cf0d199-1f1a-431c-ba25-1da5c19235e8">.
 
-Click the forecasting icon to open a modal window where you can view the predicted forecast in real time and then export it as a CSV or PNG image. 
+![forecasting-1](https://github.com/user-attachments/assets/27ec4a09-c526-49ca-a777-18ce3d71686d)
 
-![forecasting-2](https://github.com/user-attachments/assets/ecb2bd43-06b8-4783-bd7a-3c3a52e6d2a1)
+Click the Forecasting icon to open a modal window that presents the predicted forecast in real time and then export it as a CSV or PNG image. 
+
+![forecasting-2](https://github.com/user-attachments/assets/c7487e0c-b7ca-43a1-9d01-4426d9eb9d14)

@@ -1,6 +1,37 @@
 # Cost Intelligence Dashboards    
 
-Users with the Cost Intelligence Admin permissions can determine the organization’s default dashboard for all users.  The dashboard page has an action bar at the top that provides the options to edit, clone, create, delete, manage files, and select default dashboards.     
+You can set the organization's default dashboard for everyone in an organization if you have these permissions:
+
+* Cost Intelligence Administrator
+* Creator Policy 
+
+The dashboard page has an action menu with options to edit, clone, create, delete, manage files, and select default dashboards.
+
+When your account is successfully configured in Cost Intelligence, you can create dashboards and charts in the datasets. 
+
+<details>
+   <summary markdown="span">Click to view account types</summary>
+
+* Billing - Created from the Billing Engine and is available when you connect a billing account to Billing Engine. Data is synced with Billing Engine once a day.
+
+* Best Practice Check - Created from Cost Intelligence and is available when you onboard an account with inventory-related data. Provides data related to all best practice checks available for cost intelligence. 
+
+    * AWS → Billing account and/or a linked account 
+    * Azure → subscription
+
+    
+Note: This does not include data from Spot Security Risk Assessment checks.
+
+* Inventory - Created from Cost Intelligence and is available when you onboard an account with inventory-related data. Provides high-level inventory-related data for onboarded accounts. 
+
+    * AWS → Billing account and/or a linked account 
+    * Azure → subscription
+    
+
+**Note**: This does not include data from Spot Security Inventory.
+
+ </details>
+
 
 ## Create a Dashboard  
 
@@ -14,7 +45,29 @@ To create a dashboard:
 
 2. Enter a name for the dashboard and click **Publish Dashboard**. This publishes the dashboard and makes it available to all users in the organization.
 
-NOTE: If you do not publish the dashboard, the newly created dashboard will display as an empty dashboard in the list of available dashboards.  
+**Note**: If you do not publish the dashboard, the newly created dashboard will display as an empty dashboard in the list of available dashboards.  
+
+### Smart Analyzer
+
+The Smart Analyzer feature connects your chart data to NetApp's ChatGPT models, enabling you to gain deeper insights into your data through natural language interactions. This feature allows you to ask questions and view the summary answer along with the underlying logic and methodology used to generate the analysis results.  
+
+To analyze a chart:
+
+1. Click the robot icon above the chart you want to analyze for detailed insights and automated recommendations.
+2. In the <i>Smart Analyzer</i> window, you can:
+
+![image](https://github.com/user-attachments/assets/06f259fd-9643-4736-9eef-a3d91cf6bc06)
+
+* Select a question from the generated list based on the chart's data.
+* Enter a question.
+
+The Smart Analyzer is enabled for all users and applies to all relevant charts within the Cost Intelligence dashboard.  
+
+The Smart Analyzer does not alter or modify datasets. It operates solely on the data provided in the dashboard charts. 
+
+#### Data Protection 
+
+Your data is strictly protected and siloed. It is important to note that the data used for analysis is not utilized to train the ChatGPT models. This ensures that your data remains confidential and is not used for purposes other than generating insights within the Smart Analyzer feature.
 
 ## Set Default Dashboard for an Organization
 
@@ -52,9 +105,24 @@ To clone a dashboard:
 2. Modify the dashboard as desired.  
 3. To finalize the cloned dashboard, enter a new name. Then click the **Publish Dashboard** button.   
 
-NOTE: If you do not publish the dashboard, the newly cloned dashboard will display in the list of available dashboards.  
+**Note**: If you do not publish the dashboard, the newly cloned dashboard will display in the list of available dashboards.  
+![dashboard-6](https://github.com/spotinst/help/assets/106514736/443f9293-861a-4ec1-943f-32d4f053099c)
 
-![dashboard-6](https://github.com/spotinst/help/assets/106514736/443f9293-861a-4ec1-943f-32d4f053099c)   
+## Managed Dashboards
+
+Managed Dashboards are pre-built dashboards created by Cost Intelligence when data is available. These dashboards are designed to facilitate a quick start within the dashboards, focusing on specific use cases. They also serve as configuration references, enabling you to become familiar with them quickly.
+
+* **Cost Intelligence**: Highlights broad cost and resource utilization using billing and inventory data.
+
+* **Best Practice Checks**: Provides trend analysis across the best practices tool. You can visualize how the BPCs progress against various checks and potentially spot erratic resource behavior/utilization.
+
+* **Compute**: Highlights compute-resource utilization and compute-focused best practice checks.
+
+* **Inventory**: This dashboard provides a high-level overview of inventory utilization for both the current date and trends over time.
+
+* **Resource Optimization**: Focuses on best practice checks to reduce costs by identifying underutilized or idle resources. 
+
+* **Cost Intelligence Anomaly Metrics/Threshold Metrics**: Provides a suite of metrics to be utilized alongside CI Workflow Builder to create various alerts.
 
 ## Upload a CSV/Create a Dataset    
 

@@ -4,13 +4,11 @@ This tutorial covers the creation of a Load Balanced Elastigroup from scratch. T
 
 ## Get Started
 
-<img src="/elastigroup/_media/gettingstarted-eg-gcp-01.png" />
-
 The creation template is available under `Use Cases` in the Creation Wizard:
 
 1. In the [Spot Console](https://console.spotinst.com/), on the lefthand menu, select Elastigroups.
 2. Click the `Create Elastigroup` button on the top right.
-3. Choose the `Load Balancing` use case:
+3. Choose the `Load Balancing` use case.
 
 The creation wizard will assist you with creating an Elastigroup with all the required resources.
 
@@ -70,7 +68,7 @@ The creation wizard will assist you with creating an Elastigroup with all the re
 
 1. Specify your settings for instance launch.
 2. Choose OS image from `Common Images` list or browse for your custom image.
-3. Set disk type and size.
+3. Set disk type and size. Make sure the disk size is at least the same size as the configured disk size of the image.
 4. You can also add a startup script which will be executed every time your instance boots up.
 5. Startup scripts can perform many actions, such as installing software, performing updates, turning on services, and any other tasks defined in the script. You can use startup scripts in order to easily and programmatically customize your virtual machine instances, including on new instances at creation time.
 
