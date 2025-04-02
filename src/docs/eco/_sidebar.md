@@ -2,7 +2,6 @@
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Eco](eco/)
-<!--   - [Getting Started](eco/getting-started/)-->
   - [Release Notes](eco/release-notes/)
   - [AWS](eco/tutorials/)
     - Getting Started
@@ -34,3 +33,4 @@
     - [Connect your AWS Account in CloudCheckr](eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr)
     - [View Savings in Dashboard](eco/eco-in-cloudcheckr/view-savings-in-dashboard)      
   - [Troubleshooting](eco/troubleshooting/)
+<!--   - [Getting Started](eco/getting-started/)-->
