@@ -1,12 +1,12 @@
 # Connect your AWS Account
 
-This document describes the requirements for Spot Eco to provide an estimated cost savings analysis using AWS and the connection process. 
-
-> **Note**: If you have an Ocean or Elastigroup account, connect Eco for AWS to your existing Spot account. Eco, Ocean, and Elastigroup are integrated to maximize the usage of spot EC2 instances when commitment management is enabled.
+If you have an Ocean or Elastigroup account, connect Eco for AWS to your existing Spot account. Eco, Ocean, and Elastigroup are integrated to maximize the usage of spot EC2 instances when commitment management is enabled.
 
 ## Prerequisites
 
-Getting started with Eco on AWS usually requires read-only permissions to the Cost and Usage Reports, which are in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/). Choose one of the following methods:
+Getting started with Eco on AWS usually requires read-only permissions to the Cost and Usage Reports, which are in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/).
+
+Choose one of these methods:
 
 - Read data from your Direct-to-AWS Management Account and connect as described below.
 - Read data from a single AWS MSP/Reseller customer account and connect as described below.
@@ -15,34 +15,32 @@ Getting started with Eco on AWS usually requires read-only permissions to the Co
 
 ## AWS Region
 
-All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region. This includes generating the CUR file into a bucket in us-east-1. If there is a problem doing this, please contact Support. 
+All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region. This includes generating the CUR file into a bucket in `us-east-1`. If you have trouble, contact Support. 
 
 ## Get Started
 
-1. Log in to the Spot console.  
+1. In the Spot console, go to **Eco** > **Amazon Web Services**. 
 
-2. In the left main menu, click **Eco** and then **Amazon Web Services**. 
+    <details>
+   <summary markdown="span">View image</summary>
 
-![connect-aws-1](https://github.com/spotinst/help/assets/106514736/a8c7e89b-9eba-4b45-9072-0f7173ddd9db)
+   <img height="400" src="https://github.com/spotinst/help/assets/106514736/a8c7e89b-9eba-4b45-9072-0f7173ddd9db" />
 
-## Step 1 
+ </details>
 
-Log in to your AWS management account (or single, member account if you are an MSP end customer). 
+1. Sign in to your AWS management account (or single, member account if you are an MSP end customer).
+2. Set up Cost and Usage Reports:
 
-## Step 2 
+    <ol style="list-style-type: lower-alpha;">
+    <li>Sign in to [AWS](https://us-east-1.console.aws.amazon.com/costmanagement/home#/bcm-data-exports) and click **AWS Billing and Cost Management Data Exports**.</li>
+    <li>Click <b>Create</b> > <b>Legacy CUR report</b> and enter a name for your CUR export.</li>
+    <li>Substep3</li>
+    </ol>
 
-Set up Cost and Usage Reports as described below. 
-
-1. Log in to [AWS](https://us-east-1.console.aws.amazon.com/costmanagement/home#/bcm-data-exports) and click **AWS Billing and Cost Management Data Exports**. 
-2. To create a new export, click **Create**. 
-
-![connect-aws-2](https://github.com/spotinst/help/assets/106514736/6d059a8f-2fc5-4964-97af-66c0902197fc)
-
-3. Select **Legacy CUR export**. 
 
 ![connect-aws-3](https://github.com/spotinst/help/assets/106514736/4a7c2d5a-ea30-4d33-9176-f8905eab3bdf)
 
-4. Enter a name for your CUR export. 
+4.  
 5. Complete the following information to export the configuration: 
 
 ![connect-aws-4](https://github.com/spotinst/help/assets/106514736/5d6413e9-f8fc-4fc9-8f4e-d624e51c05a4)
