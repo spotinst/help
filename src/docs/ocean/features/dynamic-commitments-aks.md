@@ -42,15 +42,15 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 ###  Launching a VM
 
-Ocean checks if an RI or SP applies to the market selection. If so, Ocean utilizes that RI/SP.
+As part of the scale-up process, Ocean checks if an RI or SP applies to the market selection. If so, Ocean utilizes that RI/SP.
 
 ###  Running Spot VMs
 
-Ocean replaces spot VMs with regular VMs and utilizes RI/SP if applicable.
+As part of the revert to commitments process, Ocean replaces spot VMs with regular VMs and utilizes RI/SP if applicable.
 
 ###  Running Regular VMs
 
-Ocean utilizes RI/SP as a wrapper for a regular VM if applicable to cost savings.
+As part of the revert to commitments process, Ocean utilizes RI/SP as a wrapper for a regular VM if applicable to cost savings.
 
 ###  Running Regular (RI/SP) VMs
 
@@ -86,7 +86,7 @@ Before you can turn on commitments for your cluster or virtual node groups, you 
 *  [Get your Azure credentials](link)
 *  [Connect Commitments to Spot Products](link)
 
-Once you have your Azure credentials, you can turn on dynamic commitments via either the Spot console or the Spot API.
+Once you have your Azure credentials, you can turn on commitments via either the Spot console or the Spot API.
 
 ##  Get the Azure Credentials Required to Connect Commitments to Spot Products
 
@@ -151,13 +151,15 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 <img width="600" src="https://github.com/user-attachments/assets/2cb2085e-acd0-4096-b646-040eedcae654" />
 
-The first time you use dynamic commitments, you must add permissions at the tenant level so Spot can connect to Azure cluster environments. 
+The first time you use commitments, you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
 
-These permissions give you access to all the resources under the same tenant. You need these permissions to turn on virtual node group-level dynamic commitments.
+These permissions give you access to all the resources under the same tenant. You need these permissions to turn on virtual node group-level commitments.
 
 >IMPORTANT: If this step is unsuccessful, check your Azure environment.
 
-1.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level with PowerShell:
+1.  Select the permissions in accordance with those you purchased from Azure. By default, both RI and SP are selected.
+
+2.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level with PowerShell:
 
 ```
 Import-Module Az.Accounts
@@ -171,8 +173,6 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIE
 ## Assign Savings Plan Reader role (optional)
 New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
 ```
-
-2.  Optionally add Savings plan permissions by clicking the checkbox.
 
 3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
