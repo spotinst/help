@@ -43,7 +43,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
     * Report versioning > **Overwrite existing report**.
     * Report data integration > **Amazon Athena**.
 
-   >Note: You should create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. If you choose to use a preexisting S3 bucket, the following Athena integration setup process using AWS CloudFormation removes any Amazon S3 events that your bucket might already have. 
+   >Note: You should create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. If you choose to use a existing S3 bucket, the Athena integration setup process using AWS CloudFormation removes any Amazon S3 events that your bucket might already have.
 
 4. In your AWS account, go to the Cost and Usage Reports page > **Delivery Options** and copy the S3 bucket value. 
 
@@ -76,7 +76,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
       <details>
         <summary markdown="span">How to use custom templates</summary>
 
-        The custom template lets you use custom CloudFormation templates that are approved by our Spot solutions architect.
+        You can use custom CloudFormation templates approved by our Spot solutions architect.
   
         ![connect-aws-11](https://github.com/spotinst/help/assets/106514736/8e15c3ba-39fd-4327-b9b3-257c7c91f10a)
 
@@ -92,15 +92,15 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
            ![connect-aws-13](https://github.com/spotinst/help/assets/106514736/4b9ff909-5f07-4bcb-81c9-bc2a92ebca76)
 
         6. Enter the stack name and click **Next**. 
-        7. On the Review and create page, mark the checkbox **I acknowledge that AWS CloudFormation might change IAM resources** and click **Submit**.  
+        7. On the Review and create page, select **I acknowledge that AWS CloudFormation might change IAM resources** and click **Submit**.  
 
            ![connect-aws-14](https://github.com/spotinst/help/assets/106514736/c0a3b874-9ceb-4424-ae28-5ead8a86d529)
 
-           You can view the creation process of the stack in the left panel.  
+           You can see the creation process of the stack in the left panel.  
 
            ![connect-aws-15](https://github.com/spotinst/help/assets/106514736/a135d8cc-354e-4635-9199-7766cf4aafa0)
 
-        8. When the status changes to create_complete, click the Resources tab, then the hyperlink in the Physical ID column you want to view. 
+        8. When the status changes to `create_complete`, go to the Resources tab, then the hyperlink in the Physical ID column you want to view. 
 
            ![connect-aws-16](https://github.com/spotinst/help/assets/106514736/4ebe5049-3577-402a-8378-ac9e8c5e4f82)
 
