@@ -3,7 +3,7 @@
 
 ## April 2025: Features and Enhancements
 
-*  **OCN-0074: April 01, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Machine Ephemeral Storage: Use instanceStorePolicy to manage instance store volumes for faster node ephemeral-storage. [Learn more…](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=machine-ephemeral-storage)
+*  **OCN-0074: April 01, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Machine Ephemeral Storage: Use `instanceStorePolicy` to manage instance store volumes for faster node ephemeral-storage. [Learn more…](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=machine-ephemeral-storage)
 
 Previous months...
 
