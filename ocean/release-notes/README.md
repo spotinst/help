@@ -3,6 +3,9 @@
 
 ## April 2025: Features and Enhancements
 
+
+*  **OCN-0075 April 02, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Our latest AWS Kubernetes node-draining enhancement changes scale-down behavior. Once all pods have been successfully evicted from a node, the node is drained (scaled down) immediately without waiting for the full draining timeout period to expire. [Learn more…](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down-behavior)
+
 *  **OCN-0074: April 01, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Machine Ephemeral Storage: Use `instanceStorePolicy` to manage instance store volumes for faster node ephemeral storage. [Learn more…](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=machine-ephemeral-storage)
 
 Previous months...
