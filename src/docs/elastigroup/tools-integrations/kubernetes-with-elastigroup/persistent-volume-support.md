@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Persistent Volume Support
 
 ## Introduction
