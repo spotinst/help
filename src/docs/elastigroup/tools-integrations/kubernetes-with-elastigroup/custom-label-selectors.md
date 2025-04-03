@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Custom Label Selectors
 
 Labels are `key/value` pairs that are attached to objects, such as `pods`. Labels allow constraining a pod to only be able to run on particular nodes or have a preference for a particular node. See the Kubernetes documentation [here](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) for more information.
