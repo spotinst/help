@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Kubernetes on Managed Container Service
 
 Kubernetes is a container cluster management software that makes it easy to manage containerized applications across multiple hosts. It provides deployment scheduling, workload, and resource usage optimization, as well as easy scaling.

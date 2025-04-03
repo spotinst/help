@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Kubernetes Bearer Token
 
 To create a service account token for the Spot Kubernetes integration, follow the steps below.
