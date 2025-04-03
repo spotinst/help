@@ -56,7 +56,7 @@ Supported products: Ocean, Elastigroup.
 
 Savings in the Spot API shows you the total cost of the cluster/group.
 
-Savings in the Spot console (click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Savings**) shows you how much you saved by using spot nodes instead of on-demand nodes:
+Savings in the Spot console (click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Savings**) shows you how much you saved by using spot instances instead of on-demand instances:
 
 * **Potential cost** is the price of the resource based on on-demand pricing.
 * **Actual cost** is the actual payment made to the cloud provider after Ocean/EG optimization.
