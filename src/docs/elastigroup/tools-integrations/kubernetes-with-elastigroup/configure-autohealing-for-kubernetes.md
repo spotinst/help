@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Auto-Healing for Kubernetes
 
 MCS can ensure that the running Kubernetes worker nodes are healthy and that they are ready to serve your different Pods and application's needs with MCS Auto-Healing for Kubernetes.
