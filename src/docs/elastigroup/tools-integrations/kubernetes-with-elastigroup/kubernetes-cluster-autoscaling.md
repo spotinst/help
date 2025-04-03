@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Kubernetes Cluster Autoscaling
 
 Elastigroup is an infrastructure scaling service for Kubernetes that adjusts infrastructure capacity and size to meet the Pods, Containers and applications needs.
