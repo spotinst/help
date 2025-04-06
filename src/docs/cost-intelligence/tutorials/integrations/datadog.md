@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Datadog 
 
 Use Datadog integration to collect billable and usage metrics for your organization.
