@@ -4,8 +4,6 @@
 * [Elastigroup](/elastigroup/)
 * [Elastigroup Stateful Node](managed-instance/)
 * [Eco](eco/)
-* [Cost Intelligence](cost-intelligence/)
-* [Billing Engine](billing-engine/)
 * [Ocean for Apache Spark](ocean-spark/)
 * [Spot Security](spot-security/)
 * [Spot Connect](spot-connect/)
