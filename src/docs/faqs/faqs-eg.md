@@ -1039,7 +1039,21 @@ This can happen if the specific VM family and size aren’t available for a cert
    </div>
 
  </details>
- 
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egtfupdate">Integration: How can I update Terraform provider to the latest version?</summary>
+
+   <div style="padding-left:16px">
+
+You can:
+
+* [Download the Spot provider plugin](tools-and-provisioning/terraform/getting-started/install-terraform) and update it.
+* [Update the plugin from Terraform](tools-and-provisioning/terraform/getting-started/install-terraform#update-terraform-provider).
+
+ </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch2">Integration: Can Elasticsearch integrate with Spot?</summary>
 
