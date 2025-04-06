@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Administration 
 
 User and account access are managed in Billing Engine and Cost Intelligence Administration pages. On these pages, you can see the users and cloud accounts configured for Spot accounts. 
