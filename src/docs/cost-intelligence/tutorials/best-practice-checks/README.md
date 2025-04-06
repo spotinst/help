@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Best Practice Checks  
 
 Cloud service providers have many options to customize your deployment. Using best practice checks helps you identify:
