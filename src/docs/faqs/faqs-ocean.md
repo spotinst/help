@@ -2410,3 +2410,14 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
  </div>
  
  </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkperm">What are the minimum permissions for creating a workspace?</summary>
+
+ <div style="padding-left:16px">
+
+You can give some of your users [access to a workspace](ocean-spark/configure-permissions/?id=set-permissions-for-workspace-users) but not allow them to make changes to a cluster.
+
+ </div>
+ 
+ </details>
