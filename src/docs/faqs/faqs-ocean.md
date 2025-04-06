@@ -349,7 +349,25 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </div>
 
  </details>
- 
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oc2min">AWS: Why doesn’t Spot gracefully terminate instances if AWS gives a 2-minute termination notice?</summary>
+
+  <div style="padding-left:16px">
+
+AWS has a 2-minute warning before terminating spot instances. In reality, the warning doesn’t always give you the full 2 minutes. Sometimes, it can be as short as a few seconds.
+
+When AWS terminates an instance, the machine status is updated regardless of the notification. Elastigroup and Ocean monitor the instance's status and can immediately launch a replacement spot instance. For this to happen, capacity must be available in the AWS market. Spot can’t always run the shutdown script in time due to capacity.
+
+You can get higher availability by including:
+
+* More instance types and availability zones for the group/cluster
+* Fallback to on-demand
+
+   </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanebs">AWS: Why is EBS optimization disabled on instances optimized by default?</summary>
 
@@ -507,6 +525,19 @@ Update the key pair:
 1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and click on the name of a cluster.
 2. Click **Actions** > **Edit Cluster** > **Compute**.
 3. In **Instance Specifications**, select a **Key Pair**.
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocssh">AWS: Why can’t I connect to an instance in Spot using SSH?</summary>
+
+  <div style="padding-left:16px">
+
+It’s possible that you can connect to your AWS instance using SSH but not your Spot instance, even with the same VPC, subnet, security group, and AMI.
+
+One of the reasons this can happen is if you’re using enhanced networking and aren’t using the default eth0 predictable network interface name. If your Linux distribution supports predictable network names, this could be a name like ens5. For more information, expand the RHEL, SUSE, and CentOS section in [Enable enhanced networking on your instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking-ena.html#enabling_enhanced_networking).
 
    </div>
 
@@ -1400,6 +1431,21 @@ Defining a static value for `--max-pods` in the user data startup script for a v
    </div>
 
  </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="octerraform">EKS: How can I update Terraform provider to the latest version?</summary>
+
+   <div style="padding-left:16px">
+
+You can:
+
+* [Download the Spot provider plugin](tools-and-provisioning/terraform/getting-started/install-terraform) and update it.
+* [Update the plugin from Terraform](tools-and-provisioning/terraform/getting-started/install-terraform#update-terraform-provider).
+
+ </div>
+
+ </details>
+
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
@@ -1663,6 +1709,19 @@ This will let you manually increase the target of the cluster and the nodes will
 When you look in the Spot console (**Ocean** > **Cloud Clusters** > node > **Nodes**), the memory and CPU are requests by pod. The <i>requests</i> are grouped at the node. This is the pod <i>allocation</i>.
 
 When you look in the AWS console, you can see the actual <i>utilization</i>, which is different than the <i>allocation</i>.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocscheduloc">AKS, EKS, GKE: How can I schedule the Ocean Controller?</summary>
+
+  <div style="padding-left:16px">
+
+By default, the controller pod has priorityClassName `system-node-critical`, so it has guaranteed scheduling.
+
+You can make sure the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) is always running by setting the minimum capacity in the cluster or virtual node group to at least 1. This means there is always a node running in the controller’s pod.
 
  </div>
 
@@ -2378,6 +2437,17 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
     ],
 ````
 
+
+ </div>
+ 
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkperm">What are the minimum permissions for creating a workspace?</summary>
+
+ <div style="padding-left:16px">
+
+You can give some of your users [access to a workspace](ocean-spark/configure-permissions/?id=set-permissions-for-workspace-users) but not allow them to make changes to a cluster.
 
  </div>
  
