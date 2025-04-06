@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Automatically Enroll AWS Accounts with StackSets 
 
 You can automatically enroll AWS member accounts as new Spot accounts using StackSets. 
