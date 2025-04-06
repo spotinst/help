@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Getting Started 
 
 ## Connect your AWS Account 
