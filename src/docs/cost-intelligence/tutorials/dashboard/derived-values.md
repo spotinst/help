@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Generate Derived Values 
 
 This document describes how to utilize Cost Intelligence Dashboards to generate derived values. Before generating derived values, it is essential to upload a dataset. 

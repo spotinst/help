@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Forecasting 
 
 You can leverage LLM intelligence to generate forecast models based on their existing charts within the Cost Intelligence Dashboards.

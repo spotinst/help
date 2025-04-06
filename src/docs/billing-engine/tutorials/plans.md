@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Plans 
 
 A plan takes cost modifications from your rules and makes them into a template. You can then use this template for many cloud accounts.

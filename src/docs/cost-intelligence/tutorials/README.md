@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Features
 
 The procedures in this section describe how to maximize your cost intelligence policies, set up dashboards, and ensure that the infrastructure of your deployment is configured properly to reduce costs by utilizing usage data. 

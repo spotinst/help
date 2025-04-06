@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # MongoDB Atlas
 
 Use MongoDB Atlas integration to collect billable and usage metrics for your organization.

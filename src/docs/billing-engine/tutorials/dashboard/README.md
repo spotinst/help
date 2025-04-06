@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Dashboard
 
 The Billing Engine Dashboard page provides insights into various cost metrics, including the total cost to providers and cost breakdowns by different categories during a time period of your choice.

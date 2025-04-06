@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cost Intelligence Release Notes
 
 * **COI-0022 February 5, 2025**: You can select the region and more than one service in the inventory report. [Learn more](cost-intelligence/tutorials/inventory).

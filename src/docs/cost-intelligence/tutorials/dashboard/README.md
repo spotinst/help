@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cost Intelligence Dashboards    
 
 You can set the organization's default dashboard for everyone in an organization if you have these permissions:
