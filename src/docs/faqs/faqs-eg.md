@@ -1083,6 +1083,19 @@ You can [retrigger the Jenkins job automatically](tools-and-provisioning/ci-cd/j
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="integrationemr">Integration: Why should I use on-demand for EMR core node and spot for task nodes?</summary>
+
+  <div style="padding-left:16px">
+
+If a core instance is terminated, the group is permanently deleted. Core and masters are essential for the group to work well in [EMR](elastigroup/tools-integrations/elastic-mapreduce/). As a result, it’s better to use on-demand instances for core nodes.
+
+Task nodes can be replaced frequently as part of different instance groups, so it’s better to use spot instances for task nodes.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkvariables">Integration: Is maintenance mode needed when I add Beanstalk environment variables?</summary>
 
