@@ -800,6 +800,19 @@ If you have a stateful Elastigroup with root or data volume persistence, you can
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnrevert">AWS: Is a stateful Elastigroup affected by the <i>revert to preferred</i> process?</summary>
+
+  <div style="padding-left:16px">
+
+[Revert to preferred/reserved](elastigroup/features/core-features/market-scoring-managing-interruptions?id=revert-to-preferred-spot) do not work for stateful groups because the processes require recycling, which causes downtime.
+
+You can configure a [maintenance window](elastigroup/features/core-features/maintenance-windows) to control replacing on-demand instances with spot instances.
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdelinstance">AWS: Can I delete a stateful instance from Spot and manage it in AWS?</summary>
 
