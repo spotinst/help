@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # OpenAI
 
 Use OpenAI integration to collect billable and usage metrics for your organization.
