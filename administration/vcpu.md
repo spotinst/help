@@ -15,4 +15,8 @@ In the dashboard, you can:
 * Filter your spending by account, month, product, and cloud provider.
 * Export your data to a CSV file.
 
-Keep in mind, data is available starting January 2025. You can view it by one month at a time, up to 12 months in the past.
+Keep in mind:
+
+* Data is available starting January 2025. You can view it by one month at a time, up to 12 months in the past.
+* Billing is based on the amount of vCPUs being managed by the Spot platform.
+* The amount of vCPUs represents the amount being charged for, and not the actual run rate.
