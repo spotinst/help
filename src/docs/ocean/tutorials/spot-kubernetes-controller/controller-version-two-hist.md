@@ -1,5 +1,11 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.60] (v2.0.70) - 2025-04-06
+
+### Added
+* Updated the controller to use Go version 1.24.
+* Added a FIPS-compliant image.  
+
 ## Chart Version [0.1.59] (v2.0.69) - 2025-02-17
 
 ### Added
