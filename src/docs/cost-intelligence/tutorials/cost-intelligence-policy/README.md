@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cost Intelligence Policy 
 
 Cost Intelligence collects information on various services and metrics in the AWS and Azure infrastructures. It provides reporting and analysis capabilities and is regularly updated to include new services and metrics.  
