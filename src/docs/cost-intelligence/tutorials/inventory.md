@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Inventory Reports 
 
 Cost Intelligence provides detailed inventory reports for a variety of services for both AWS and Azure cloud services. These reports let you view your entire infrastructure by service. With the snapshot feature (history), you can view snapshots by service by day. **History** defaults to the last successful snapshot. You can select a different date to view the snapshots.
