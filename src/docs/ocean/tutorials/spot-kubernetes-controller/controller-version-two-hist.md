@@ -4,7 +4,8 @@
 
 ### Added
 * Updated the controller to use Go version 1.24.
-* Added a FIPS-compliant image.  
+* Added a FIPS-140 compliant image mode. Use `--set image.fips=true` to utilize a FIPS-140 compliant version of an image.
+* Added `--set spotinst.insecureSkipTLSVerify` flag to disable TLS certificate validation.
 
 ## Chart Version [0.1.59] (v2.0.69) - 2025-02-17
 
