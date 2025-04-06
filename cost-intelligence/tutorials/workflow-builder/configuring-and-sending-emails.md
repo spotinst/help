@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Workflow Builder – Sending Emails 
 Use workflow builder to send out automatic emails according to different criteria. Emails can be sent on a recurring schedule or based on data conditions.
 

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Allocate Assignments
 
 Allocation Assignments let you allocate costs for different tasks and generate reports that facilitate chargeback or showback of costs based on specific identifiers relevant to your usage.  You can create identifiers based on specific conditions and apply them to resources, enabling more granular cost reporting and analysis.

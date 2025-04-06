@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Strategies 
 
 Strategies are the highest-level calculations most commonly used across individual cloud organizations.

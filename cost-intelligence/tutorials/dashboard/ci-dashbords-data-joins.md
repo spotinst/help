@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CI Dashboards Data Joins
 
 This document describes how to perform data joins within Cost Intelligence dashboards. The join data feature enables users to create a new dataset from multiple data sources. The joins can be made with datasets that have at least one column in common. In the example below, Cost Intelligence has joined Spot data set with the Datadog dataset where the join is made on the organization ID. 

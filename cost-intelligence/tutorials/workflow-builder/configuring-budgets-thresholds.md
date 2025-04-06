@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Workflow Builder – Basic Alerts for Budgets and Thresholds 
 You can create many kinds of alerts in Workflow Builder, based on budgets and thresholds that you set. They are delivered by email, SMS, or Slack integration.
 

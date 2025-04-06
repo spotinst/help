@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Azure Subscription Using Azure CLI 
 
 The [Azure CLI onboarding tool](https://spot.io/blog/spot-azure-cli-onboarding-tool/) allows you to add multiple subscriptions to Cost Intelligence at the same time. The script can be run using Azure Cloud Shell or Azure CLI. This procedure describes how to use Azure Cloud Shell. 

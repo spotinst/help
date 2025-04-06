@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Billing Analysis 
 
 The Analysis page shows your cloud expenditures and detailed information. You can view your cloud spending across AWS, Microsoft Azure, and Google Cloud. Your data is processed at specific intervals to give you a quick turnaround from when the cloud provider publishes the data to when you can view the data in the Spot console. As Billing Engine processes your cloud data, the more specific details from the bill are translated into the [FOCUS](https://focus.finops.org/) model. The data is then displayed in different reports, including Analysis. This lets you analyze your data in real time. You can create a pivot report to focus on different data points.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Your Azure Subscription to Cost Intelligence 
 
 The procedures on this page describe how to connect your Microsoft Azure subscription to Cost Intelligence.  

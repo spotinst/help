@@ -449,6 +449,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/billing-engine/_media/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/billing-engine/betoc</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/billing-engine/betoc"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/billing-engine/betoc"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/billing-engine/get-started/connect-aws</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -692,6 +699,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/cost-intelligence/_media/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/cost-intelligence/_media/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/cost-intelligence/citoc</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/cost-intelligence/citoc"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/cost-intelligence/citoc"/>
     </url>
     <url>
         <loc>https://docs.spot.io/cost-intelligence/get-started/connect-aws-stacksets</loc>
