@@ -64,3 +64,7 @@ providers {
 ```
 
 Running `terraform init` will search this directory for additional plugins during initialization phase.
+
+## Update Terraform Provider
+
+You can update the plugin from Terraform by running the `sudo terraform init -upgrade` command.

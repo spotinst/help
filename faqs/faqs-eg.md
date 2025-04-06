@@ -306,6 +306,36 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eg2min">AWS: Why doesn’t Spot gracefully terminate instances if AWS gives a 2-minute termination notice?</summary>
+
+  <div style="padding-left:16px">
+
+AWS has a 2-minute warning before terminating spot instances. In reality, the warning doesn’t always give you the full 2 minutes. Sometimes, it can be as short as a few seconds.
+
+When AWS terminates an instance, the machine status is updated regardless of the notification. Elastigroup and Ocean monitor the instance's status and can immediately launch a replacement spot instance. For this to happen, capacity must be available in the AWS market. Spot can’t always run the shutdown script in time due to capacity.
+
+You can get higher availability by including:
+
+* More instance types and availability zones for the group/cluster
+* Fallback to on-demand
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egssh">AWS: Why can’t I connect to an instance in Spot using SSH?</summary>
+
+  <div style="padding-left:16px">
+
+It’s possible that you can connect to your AWS instance using SSH but not your Spot instance, even with the same VPC, subnet, security group, and AMI.
+
+One of the reasons this can happen is if you’re using enhanced networking and aren’t using the default eth0 predictable network interface name. If your Linux distribution supports predictable network names, this could be a name like ens5. For more information, expand the RHEL, SUSE, and CentOS section in [Enable enhanced networking on your instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking-ena.html#enabling_enhanced_networking).
+
+   </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egebs">AWS: Why is EBS optimization disabled on instances optimized by default?</summary>
@@ -394,6 +424,21 @@ You can [lock](elastigroup/features/core-features/instance-actions?id=lock-an-in
 
  </details>
  
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcustomproxy">AWS: Can I use a custom proxy client for Spot health check service?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can make changes to how the proxy agent works.
+
+The Spot [health check service](elastigroup/tools-integrations/custom-health-check-service) is a proxy between Spot hosts and your EC2 private instances in your VPC. Spot triggers the proxy service on each check. The proxy communicates with your private instances in the VPC and sends the results to Spot. When an instance is marked as unhealthy, and the Elastigroup Health Check type is set to HCS, Spot replaces it with a new instance according to the Elastigroup config.
+
+You can create a custom proxy agent based on the [Spot health check service API](https://github.com/spotinst/spotinst-hcs-openapi).
+
+   </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">AWS: Can I configure a scaling policy for the latency metric?</summary>
 
@@ -800,6 +845,19 @@ If you have a stateful Elastigroup with root or data volume persistence, you can
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnrevert">AWS: Is a stateful Elastigroup affected by the <i>revert to preferred</i> process?</summary>
+
+  <div style="padding-left:16px">
+
+[Revert to preferred/reserved](elastigroup/features/core-features/market-scoring-managing-interruptions?id=revert-to-preferred-spot) do not work for stateful groups because the processes require recycling, which causes downtime.
+
+You can configure a [maintenance window](elastigroup/features/core-features/maintenance-windows) to control replacing on-demand instances with spot instances.
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdelinstance">AWS: Can I delete a stateful instance from Spot and manage it in AWS?</summary>
 
@@ -1011,7 +1069,21 @@ This can happen if the specific VM family and size aren’t available for a cert
    </div>
 
  </details>
- 
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egtfupdate">Integration: How can I update Terraform provider to the latest version?</summary>
+
+   <div style="padding-left:16px">
+
+You can:
+
+* [Download the Spot provider plugin](tools-and-provisioning/terraform/getting-started/install-terraform) and update it.
+* [Update the plugin from Terraform](tools-and-provisioning/terraform/getting-started/install-terraform#update-terraform-provider).
+
+ </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch2">Integration: Can Elasticsearch integrate with Spot?</summary>
 
@@ -1078,6 +1150,19 @@ Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin]
   <div style="padding-left:16px">
 
 You can [retrigger the Jenkins job automatically](tools-and-provisioning/ci-cd/jenkins) if a node is interrupted. The interrupted job parameters are transferred to the new job.
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="integrationemr">Integration: Why should I use on-demand for EMR core node and spot for task nodes?</summary>
+
+  <div style="padding-left:16px">
+
+If a core instance is terminated, the group is permanently deleted. Core and masters are essential for the group to work well in [EMR](elastigroup/tools-integrations/elastic-mapreduce/). As a result, it’s better to use on-demand instances for core nodes.
+
+Task nodes can be replaced frequently as part of different instance groups, so it’s better to use spot instances for task nodes.
 
  </div>
 
