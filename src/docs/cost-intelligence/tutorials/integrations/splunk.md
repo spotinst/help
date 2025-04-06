@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Splunk 
 
 Use Splunk integration to collect billable and usage metrics for your organization.
