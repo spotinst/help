@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Workflow Builder
 
 You can create automated workflows in Cost Intelligence Workflow Builder. Flows are based on data in the Cost Intelligence dashboards.
