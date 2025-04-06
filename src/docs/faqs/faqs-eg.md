@@ -395,6 +395,21 @@ You can [lock](elastigroup/features/core-features/instance-actions?id=lock-an-in
  </details>
  
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcustomproxy">AWS: Can I use a custom proxy client for Spot health check service?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can make changes to how the proxy agent works.
+
+The Spot [health check service](elastigroup/tools-integrations/custom-health-check-service) is a proxy between Spot hosts and your EC2 private instances in your VPC. Spot triggers the proxy service on each check. The proxy communicates with your private instances in the VPC and sends the results to Spot. When an instance is marked as unhealthy, and the Elastigroup Health Check type is set to HCS, Spot replaces it with a new instance according to the Elastigroup config.
+
+You can create a custom proxy agent based on the [Spot health check service API](https://github.com/spotinst/spotinst-hcs-openapi).
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">AWS: Can I configure a scaling policy for the latency metric?</summary>
 
   <div style="padding-left:16px">
