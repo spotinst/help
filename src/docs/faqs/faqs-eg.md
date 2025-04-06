@@ -307,6 +307,24 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eg2min">AWS: Why doesn’t Spot gracefully terminate instances if AWS gives a 2-minute termination notice?</summary>
+
+  <div style="padding-left:16px">
+
+AWS has a 2-minute warning before terminating spot instances. In reality, the warning doesn’t always give you the full 2 minutes. Sometimes, it can be as short as a few seconds.
+
+When AWS terminates an instance, the machine status is updated regardless of the notification. Elastigroup and Ocean monitor the instance's status and can immediately launch a replacement spot instance. For this to happen, capacity must be available in the AWS market. Spot can’t always run the shutdown script in time due to capacity.
+
+You can get higher availability by including:
+
+* More instance types and availability zones for the group/cluster
+* Fallback to on-demand
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egssh">AWS: Why can’t I connect to an instance in Spot using SSH?</summary>
 
   <div style="padding-left:16px">
