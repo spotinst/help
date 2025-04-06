@@ -1684,6 +1684,19 @@ When you look in the AWS console, you can see the actual <i>utilization</i>, whi
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocscheduloc">AKS, EKS, GKE: How can I schedule the Ocean Controller?</summary>
+
+  <div style="padding-left:16px">
+
+By default, the controller pod has priorityClassName `system-node-critical`, so it has guaranteed scheduling.
+
+You can make sure the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) is always running by setting the minimum capacity in the cluster or virtual node group to at least 1. This means there is always a node running in the controller’s pod.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocstaticendpoint">AKS, EKS, GKE: Can I use a static endpoint with Ocean Controller Version 2?</summary>
 
   <div style="padding-left:16px">
