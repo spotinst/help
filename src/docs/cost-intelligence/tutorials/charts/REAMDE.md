@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Charts
 
 You can create charts in the Cost Intelligence dashboards that provide a visual representation of cost data, making it easier to compare costs over a specific period. You can create charts for different Cost Intelligence dashboards. 
