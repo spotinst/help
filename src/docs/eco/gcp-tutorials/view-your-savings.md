@@ -2,7 +2,7 @@
 
 # View Your Savings
 
-Once Eco GCP is set up for your organization and you selected your reservation and savings plan strategy, your Eco GCP dashboard will display a more complete view of savings.
+Once Eco GCP is set up for your organization and you select your committed use discount strategy, your Eco GCP dashboard will display a more complete view of savings.
 
 To view the Eco dashboard in the Spot console, go to **Eco** > **Dashboard** and select the Google Cloud tab.
 
@@ -12,12 +12,12 @@ The default view of the Eco Google Cloud dashboard shows data from all the subsc
 
 During the first setup of the Eco Google Cloud dashboard, data from the past 90 days is loaded and then updated daily going forward.
 
-By default, the dashboard shows all loaded data from Google Cloud that Eco Azure has available. You can limit the data shown in the dashboard by time, regoin, and service.
+By default, the dashboard shows all loaded data from Google Cloud that Eco Google Cloud has available. You can limit the data shown in the dashboard by time, region, and service.
 
 You can see summary data for:
 
 - Total committed use discount savings. This is the total saved for the selected time period.
-- Current monthly commitment. This is the total commiteed use for the current month.
+- Current monthly commitment. This is the total committed use for the current month.
 - MTD savings. This is the total savings from the first day of this month to the most recent update.
 
 ## Savings over Time
