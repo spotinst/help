@@ -1,4 +1,4 @@
-# Connect Your AWS Account to Eco
+# Connect Your AWS Account for Eco Analysis
 
 If you have an Ocean or Elastigroup account, you can connect Eco for AWS to your existing Spot account. Eco, Ocean, and Elastigroup are integrated to maximize the usage of spot EC2 instances when commitment management is enabled.
 
