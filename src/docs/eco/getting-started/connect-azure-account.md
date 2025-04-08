@@ -29,7 +29,7 @@ If you have one of these account/agreement types, you can [connect your account 
       <ol style="list-style-type: lower-alpha;">
       <li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=certificate%2Cexpose-a-web-api">Register an application in Microsoft Entra ID</a>. Select **Accounts in this organizational directly only**, without a redirect URI.</li>
       <li><p><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret%2Cexpose-a-web-api#add-credentials">Create a new client secret</a>.</p>
-      <p>**Note**: Copy the Secret Key. The key will not appear again after you leave the Key settings.</p></li>
+      <p><b>Note</b>: Save the secret key because it won't be displayed again after you leave this page.</p></li>
        </ol>
 
 3. For EA only, [assign the EnrollmentReader role to the registered application using a Microsoft API](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/assign-roles-azure-service-principals#assign-enrollment-account-role-permission-to-the-spn).
