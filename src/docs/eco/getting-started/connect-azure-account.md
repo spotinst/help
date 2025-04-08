@@ -6,9 +6,11 @@ If you have one of these account/agreement types, you can [connect your account 
 
 * Azure Enterprise Agreement (EA)
 * Microsoft Customer Agreement (MCA)
-* Microsoft Onlines Services Program (MOSP)/pay as you go (PAYG)
+* Microsoft Online Services Program (MOSP)/pay as you go (PAYG)
 
 > **Note**: Cloud Solution Provider (CSP) users need to contact [Support](https://spot.io/contact/).
+
+If you need assistance, read the [FAQs](https://docs.spot.io/faqs/faqs-finops). If needed, the [Eco Azure team](https://spot.io/contact/) can help you to set up the registered application and transfer the application credentials.
 
 ## Prerequisites
 
@@ -53,53 +55,15 @@ If you have one of these account/agreement types, you can [connect your account 
 
  </details>
 
-4. Add the Billing Account Reader Role 
+4. For MCA only, [add the Billing Account Reader role to the registered application](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles#manage-billing-roles-in-the-azure-portal).
 
-**This Adding the Billing Account Reader Role analysis stage applies only to Microsoft Customer Agreements**. Add the Billing Account Reader Role to the registered application:  
- 
-1. Click the **Cost Management + Billing page** and select the billing account you want to connect. 
- 
-<img width="1976" alt="connect-azure-7 1" src="https://github.com/spotinst/help/assets/106514736/72086fad-f0e8-497d-8f9b-1399064727e9">
+5. Assign the Cost Management Reader role to the registered application on the [management groups](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/assign-access-acm-data#assign-management-group-scope-access) or [subscriptions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/assign-access-acm-data#assign-subscription-scope-access) you want to manage (the management groups/subscriptions you want Eco Azure to purchase reservations).
 
-<img width="1860" alt="connect-azure-7 2" src="https://github.com/spotinst/help/assets/106514736/483de2b3-3bff-4e26-a78b-e680946318ad">
+6. For PAYG only, assign the Reservation Reader role to the registered application.
+    <ol style="list-style-type: lower-alpha;">
+    <li>Go to the Reservations page > <b>Role assignments</b> > <b>Add role assignment</b>. </li>
+    <li>Search for and select <b>Reservation Reader</b>, then click <b>Next</b> > <b>Select Members</b>.</li>
+    <li>Search for and select the Eco Azure Registered application, then click <b>Review + Assign</b>.</li>
+      </ol>
 
-2. Select the **Access Control (IAM)** and then add the Billing Account Reader access to the app registration. 
-
-![connect-azure-8](https://github.com/spotinst/help/assets/106514736/01880d93-b600-4612-ba73-2f43de72adbe)
-
-#### Assign the Cost Management Reader Role 
-
-**This Assign the Cost Management Reader Role analysis stage applies to EA, MCA and PAYG agreements**. 
-
-Assign the Cost Management Reader role to the registered application on the subscriptions you want to manage.
-
-Select the Management Groups or Subscriptions(s) on which you want Eco Azure to purchase reservations.  
-
-1. In the left menu, select **Access Control (IAM) > Add / Add role assignment**.  
-2. Search for and select **Cost Management Reader > Next** in the bottom left. 
-3. Click **+ Select Members**. 
-4. In the right pane, search for and select the registered application.  
-
-#### Assign the Reservation Reader 
-
-**Assigning the Reservation Reader applies to PAYG users only**.
-
-Assign the Reservation Reader role to the registered application. 
-
-1. Click the **Reservations** page. 
-2. Click **Role assignments** and then **Add / Add role assignment**.  
- 
-<img width="1661" alt="connect-azure-9" src="https://github.com/spotinst/help/assets/106514736/679242ae-82de-4f4a-91ea-358a4c664a24">
-
-3. Search for and select **Reservation Reader > Next > + Select Members**. 
-4. In the right pane, search for and select the Eco Azure Registered application. 
-5. Click **Review + Assign** in the bottom left.  
-
-#### Add the App Registration Details 
-
-Enter the following details in the App Registration page: Application ID, Tenant ID, Application Secret Value and Expiration date in the fields in the Spot Console and click **Connect**. 
-
-<img width="797" alt="connect-azure-10" src="https://github.com/spotinst/help/assets/106514736/0ac3bb37-86f4-4ff7-847e-a6a0c123c3fc">
-
-If you need assistance, read our [troubleshooting guide](https://docs.spot.io/eco/troubleshooting/azure-faq). Additionally, the Eco Azure team can assist with setting up the registered application and transferring the application credentials. Contact https://spot.io/contact/ for further information. 
-
+7. In the Spot console, in the App Registration page, enter the Application ID, Tenant ID, Application Secret Value and Expiration date and click **Connect**. 
