@@ -34,23 +34,26 @@ If you have one of these account/agreement types, you can [connect your account 
 
 3. For EA only, [assign the EnrollmentReader role to the registered application using a Microsoft API](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/assign-roles-azure-service-principals#assign-enrollment-account-role-permission-to-the-spn).
 
-   Sample header input and body of API call
+   <details>
+    <summary markdown="span">Sample header input and body of API call</summary>
 
-   ```
-   Header Inputs: 
-   billingAccountName: <enrollment id> 
-   billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e 
-   Example of body for API call: 
-   { 
-   "properties": { 
-   "roleDefinitionId": "/providers/Microsoft.Billing/billingAccounts/<insert enrollment number>/billingRoleDefinitions/24f8edb6-1668-4659-b5e2-40bb5f3a7d7e", 
-   "principalTenantId": "<insert Tenant ID>", 
-   "principalId": "<insert Object Id of the service principle>"        
-   } 
-   } 
-   ``` 
+     ```
+     Header Inputs: 
+     billingAccountName: <enrollment id> 
+     billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e 
+     Example of body for API call: 
+     { 
+     "properties": { 
+     "roleDefinitionId": "/providers/Microsoft.Billing/billingAccounts/<insert enrollment number>/billingRoleDefinitions/24f8edb6-1668-4659-b5e2-40bb5f3a7d7e", 
+     "principalTenantId": "<insert Tenant ID>", 
+     "principalId": "<insert Object Id of the service principle>"        
+     } 
+     } 
+     ```
 
-#### Add the Billing Account Reader Role 
+ </details>
+
+4. Add the Billing Account Reader Role 
 
 **This Adding the Billing Account Reader Role analysis stage applies only to Microsoft Customer Agreements**. Add the Billing Account Reader Role to the registered application:  
  
