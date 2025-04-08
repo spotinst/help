@@ -1,83 +1,54 @@
 # Connect Your Azure Account for Eco Analysis
 
-This document describes the requirements for Spot Eco to provide an estimated cost savings analysis. The procedure below describes the connection process. For a more detailed explanation of Spot's roles and permissions, please review our [access roles and permissions page](eco/azure-tutorials/access-roles-read-only). 
+You can connect your account to Eco to get estimated cost savings analysis.
 
-The steps below apply to the following account/agreement types:
+If you have one of these account/agreement types, you can [connect your account to Eco](eco/getting-started/connect-azure-account?id=prerequisites):
 
-* EA
-* MCA
-* MOSP/PAYG
+* Azure Enterprise Agreement (EA)
+* Microsoft Customer Agreement (MCA)
+* Microsoft Onlines Services Program (MOSP)/pay as you go (PAYG)
 
-**Note**: CSP users- please contact https://spot.io/contact/ for connection details.
+> **Note**: Cloud Solution Provider (CSP) users need to contact [Support](https://spot.io/contact/).
 
 ## Prerequisites
 
-- Review [read-only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team.
-- The Azure user must be a Global Administrator with [elevated access](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the relevant Management Group(s) or Subscription(s).
+- Review [read-only permissions](eco/azure-tutorials/access-roles-read-only) required for the Eco Cost Specialist team.
+- The Azure user must be a Global Administrator with [elevated access](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the management groups or subscriptions.
 - The Azure user must be an Enterprise Administrator (EA) or Billing account owner (MCA).
 - A Member Account only. The account cannot be a guest user account.
 - A registered [Spot account](https://console.spotinst.com/spt/auth/signUp).
 
 ## Connect Cloud Account 
 
-Complete the following steps: 
+1. In the Spot console, click **Eco** > **Microsoft Azure** > **Azure Billing Account**.
+2. Select the onboarding type:
 
-1. In the left main menu, click **Eco** and select **Microsoft Azure** as your cloud provider. 
-2. Select **Azure Billing Account**. 
-3. Select [Automated Onboarding](eco/getting-started/connect-azure-account?id=connect-automatically) or [Manual Onboarding](eco/getting-started/connect-azure-account?id=connect-manually). 
+    * **Automated onboarding** is the quicker option. The Microsoft Application Consent process allows Eco Azure to build the app registration on your behalf and use your credentials.
+    * **Manual onboarding** lets you use higher security requirements when needed:
 
-### Connect Automatically 
+      <ol style="list-style-type: lower-alpha;">
+      <li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=certificate%2Cexpose-a-web-api">Register an application in Microsoft Entra ID</a>. Select **Accounts in this organizational directly only**, without a redirect URI.</li>
+      <li><p><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret%2Cexpose-a-web-api#add-credentials">Create a new client secret</a>.</p>
+      <p>**Note**: Copy the Secret Key. The key will not appear again after you leave the Key settings.</p></li>
+       </ol>
 
-Connecting automatically is the quicker option. The Microsoft Application Consent process allows Eco Azure to build the app registration on your behalf and use your credentials. 
+3. For EA only, [assign the EnrollmentReader role to the registered application using a Microsoft API](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/assign-roles-azure-service-principals#assign-enrollment-account-role-permission-to-the-spn).
 
-### Connect Manually 
+   Sample header input and body of API call
 
-The manual process allows for adherence to higher security requirements when needed. 
-
-1. Go to Azure’s Microsoft Entra ID service.  
-2. Click **App registration** and click **New Registration**. **Note**: This applies to EA, MCA, PAYG. 
-3. Enter a name for the application (no redirect URI needed). 
- 
-![connect-azure-5](https://github.com/spotinst/help/assets/106514736/5c57c149-496f-4785-8943-a059a62951de)
-
-4. In the app registration you just created, click **Certificates and Secrets**, and create a new client secret. **Note**: Copy the Secret Key. The key will not appear again after you leave the Key settings. 
- 
-![connect-azure-6](https://github.com/spotinst/help/assets/106514736/0d1d2353-5ed1-465f-a00f-cab617a05e16)
-
-#### Assign the Enrollment Reader  
-
-**This Assigning the Enrollment Reader analysis stage applies to Enterprise Agreement Only**. Assign the Enrollment Reader role to the registered application. 
- 
-The Enrollment Reader Role can only be applied using a Microsoft API. Learn how to [add the role using an API call](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/assign-roles-azure-service-principals#assign-enrollment-account-role-permission-to-the-spn). 
- 
-|       Role             |                                                                                                                                                Actions allowed                                                                                                                                            |               Role definition ID          |   |
-|------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------:|---|
-|      EnrollmentReader  |     Enrollment readers can view data at the enrollment, department, and account scopes. The data contains charges for all of the subscriptions under the scopes, including across tenants. Can view the Azure Prepayment (previously called monetary commitment) balance associated with the enrollment.  |     24f8edb6-1668-4659-b5e2-40bb5f3a7d7e  |   |
-|                        |                                                                                                                               
-
-**Example of header input and body of API call**: 
-
-```
-Header Inputs: 
-billingAccountName: <enrollment id> 
-billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e 
- 
-Example of body for API call: 
-
-{ 
-
-"properties": { 
-
-"roleDefinitionId": "/providers/Microsoft.Billing/billingAccounts/<insert enrollment number>/billingRoleDefinitions/24f8edb6-1668-4659-b5e2-40bb5f3a7d7e", 
-
-"principalTenantId": "<insert Tenant ID>", 
-
-"principalId": "<insert Object Id of the service principle>"        
-
-} 
-
-} 
-``` 
+   ```
+   Header Inputs: 
+   billingAccountName: <enrollment id> 
+   billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e 
+   Example of body for API call: 
+   { 
+   "properties": { 
+   "roleDefinitionId": "/providers/Microsoft.Billing/billingAccounts/<insert enrollment number>/billingRoleDefinitions/24f8edb6-1668-4659-b5e2-40bb5f3a7d7e", 
+   "principalTenantId": "<insert Tenant ID>", 
+   "principalId": "<insert Object Id of the service principle>"        
+   } 
+   } 
+   ``` 
 
 #### Add the Billing Account Reader Role 
 
