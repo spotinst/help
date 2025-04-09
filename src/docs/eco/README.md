@@ -1,14 +1,16 @@
 # Eco
 
-Eco is a flexible reserved capacity management service that manages cloud commitments (Reserved Instances, Savings Plans, and CUDs) on behalf of the customers of the major cloud providers. 
+Eco is a service that helps you manage your cloud commitments for the major cloud providers. This can include reserved instances, savings plans, and committed use discounts (CUDs).
 
-Savings commitments offer 30-60% discounts depending on your plan, yet many businesses either forgo the benefit or achieve a savings rate well below the potential. In addition, managing the on-going changes and predicting long-term use is challenging and time consuming for most enterprises. Organizations quickly find that matching commitment spend to engineering demands is extremely challenging. A solution that allows DevOps to manage infrastructure and enables Finance leaders to control cost is the best possible solution. 
+Depending on your plan, you can save between 30% and 60% with these commitments. However, many businesses either miss out on these savings or do not achieve their full potential.
 
-Using automation, deep analytics, forecasting models, and human oversight, Eco will help you define your optimal savings strategy and purchase the optimal fleet of commitments for you. Eco uses real-time utilization tracking to identify any decrease in usage so that instances can be offloaded or adjusted as needed. 
+Managing changes and predicting how much you will use can be difficult and time-consuming for most companies. Organizations often struggle to match their spending on commitments with what their engineering teams need. A solution that allows DevOps teams to handle infrastructure while helping finance leaders control costs is ideal.
 
-Eco enables you to get the most out of cloud commitment purchases. This includes: 
+Eco uses automation, analytics, forecasting models, and human oversight to help you create the best savings strategy and choose the right commitments for your needs. Eco tracks your usage in realtime to find any drops in usage, so you can adjust or offload instances as needed.
 
-* A full managed commitment portfolio 
-* Reduced commitment lock-in 
-* FinOps synergy 
-* No Engineering Effort 
+Eco helps you get the most value from your cloud commitments by offering:
+
+* A fully-managed commitment portfolio
+* Less commitment lock-in
+* FinOps collaboration
+* No extra work for your engineering team
