@@ -225,6 +225,25 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocautotag">AWS: What does autoTag in CloudFormation do?</summary>
+
+  <div style="padding-left:16px">
+
+When you use autoTag in CloudFormation, Spot adds these tracking tags to instances provisioned as part of the custom resource:
+
+* `spotinst:aws:cloudformation:logical-id`
+* `spotinst:aws:cloudformation:stack-name`
+* `spotinst:aws:cloudformation:stack-id`
+
+You can see examples of autotagging in:
+
+* [Ocean](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-a-kubernetes-ocean-cluster)
+* [Elastigroup](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-elastigroup)
+
+   </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmonitortags">AWS: Can I monitor detached instances using tags?</summary>
@@ -356,63 +375,6 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egtagpol">AWS: Why can’t I spin new instances (tag policies)?</summary>
-
-  <div style="padding-left:16px">
-
-If you’re getting this message:
-
-````
-Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.
-````
-
-It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
-
-1. In the Spot console, go to:
-
-   * **Elastigroup** > **Groups** > click on the Elastigroup > **Log**.
-   * **Ocean** > **Cloud Clusters** > click on the cluster > **Log**.
-
-2. Identify the problematic tag keys/values.
-
-3. Review [AWS’s tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html) and how to [set up tag policies](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-launches-tag-policies/).
-
-4. In the Spot console, update the tag keys/values:
-
-   * **Elastigroup** > **Groups** > click on the Elastigroup > **Actions** > **Edit Configuration** > **Compute** > **Advanced Settings**.
-   * **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
-
-The instance will be launched when the tags in Spot clusters/groups comply with the tag policy defined in AWS.
-
-   </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egencodedauth">AWS: Why can’t I spin new instances (encoded authorization)?</summary>
-
-  <div style="padding-left:16px">
-
-You can get these messages when the group or cluster is scaling up instances:
-
-* `Can’t Spin Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
-* `Can’t Spin On-Demand Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
-
-These messages could be related to [service control policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) (SCP). Keep in mind, Spot doesn’t get SCP information from AWS, so doesn’t know which instance types AWS blocks because of the SCP restrictions. As a result, Spot cannot launch a new instance of a different type.
-
-1. You need to [identify the reason for the error](https://docs.aws.amazon.com/STS/latest/APIReference/API_DecodeAuthorizationMessage.html) in AWS.
-2. In the Spot console, update the instance types:
-
-   * [Ocean](ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types)
-   * [Elastigroup](elastigroup/features/compute/preferred-instance-types)
-   * [Ocean ECS cluster update API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
-   * [Elastigroup AWS update API](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate)
-
-   </div>
-
- </details>
-
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglockedautohealing">AWS: Does autohealing work on locked instances?</summary>
 
@@ -500,7 +462,7 @@ This means that there are no [spot markets](elastigroup/features/core-features/m
  </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egoutofstrategy">AWS: Why am I getting an  <i>Out Of Strategy - On Demand No Replacement Will Be Created</i> message?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egoutofstrategy">AWS: Why am I getting an <i>Out Of Strategy - On Demand No Replacement Will Be Created</i> message?</summary>
 
   <div style="padding-left:16px">
 
@@ -518,6 +480,64 @@ The fix strategy can be paused if:
 
  </div>
  
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egtagpol">AWS: Why can’t I spin new instances (tag policies)?</summary>
+
+  <div style="padding-left:16px">
+
+If you’re getting this message:
+
+````
+Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.
+````
+
+It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
+
+1. In the Spot console, go to:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Log**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Log**.
+
+2. Identify the problematic tag keys/values.
+
+3. Review [AWS’s tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html) and how to [set up tag policies](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-launches-tag-policies/).
+
+4. In the Spot console, update the tag keys/values:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Actions** > **Edit Configuration** > **Compute** > **Advanced Settings**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
+
+The instance will be launched when the tags in Spot clusters/groups comply with the tag policy defined in AWS.
+
+   </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egencodedauth">AWS: Why can’t I spin new instances (encoded authorization)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get these messages when the group or cluster is scaling up instances:
+
+* `Can’t Spin Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+* `Can’t Spin On-Demand Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+
+These messages could be related to [service control policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) (SCP). Keep in mind, Spot doesn’t get SCP information from AWS, so doesn’t know which instance types AWS blocks because of the SCP restrictions. As a result, Spot cannot launch a new instance of a different type.
+
+1. You need to [identify the reason for the error](https://docs.aws.amazon.com/STS/latest/APIReference/API_DecodeAuthorizationMessage.html) in AWS.
+2. In the Spot console, update the instance types:
+
+   * [Ocean](ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types)
+   * [Elastigroup](elastigroup/features/compute/preferred-instance-types)
+   * [Ocean ECS cluster update API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
+   * [Elastigroup AWS update API](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate)
+
+   </div>
+
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
