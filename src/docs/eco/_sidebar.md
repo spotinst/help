@@ -27,7 +27,7 @@
     - [Choose Azure RI Strategy](eco/azure-tutorials/choose-ri-strategy)
     - [View your Savings](eco/azure-tutorials/view-your-savings)
   - [GCP](eco/gcp-tutorials/)
-     - [Getting Started](eco/getting-started/gettingstarted-gcp)
+     - [Getting Started](eco/getting-started/gettingstarted-gc)
         - [Connect GC to Eco](eco/getting-started/connect-gc-account)
   - [Eco in CloudCheckr](eco/eco-in-cloudcheckr/)
     - [Connect your AWS Account in CloudCheckr](eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr)
