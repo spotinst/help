@@ -2059,12 +2059,33 @@ There are two options for restricting pods from scaling down:
 
 * Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
 
-  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization. Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
+  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the virtual node group level so the nodes and pods within the virtual node group are not replaced or scaled down due to the auto scaler resource optimization. Create a virtual node group, go to the Advanced tab, then select **Restrict Scale Down**.
 
  </div>
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocstopautoscaler">AKS, EKS, GKE: How do I stop autoscaler and recoveries?</summary>
+
+  <div style="padding-left:16px">
+
+You can stop the autoscaler and recoveries:
+
+1. Disable [autoscaling](ocean/features/scaling-kubernetes?id=customize-scaling-configuration).
+2. Stop recoveries:
+
+    <ol style="list-style-type: lower-alpha;">
+    <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b> and select a group.</li>
+    <li>On the Nodes tab, select the node and click Actions > <b>Detach</b>.</li>
+    <li>In the AWS console, <a target="_blank" href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-detach-attach-instances.html" >detach any new nodes</a>.</li>
+    </ol>
+
+If you need to restart autoscaling and recoveries, enable [autoscaling](ocean/features/scaling-kubernetes?id=customize-scaling-configuration).
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GKE: Why does Ocean fail to update instance types?</summary>
