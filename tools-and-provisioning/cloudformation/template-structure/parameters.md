@@ -160,6 +160,12 @@ Below are several examples where we defined parameters to use inside the Spot re
 
 ## Request JSON Example: Adding Auto Tags to Elastigroup
 
+When you use autoTag in CloudFormation, Spot adds these tracking tags to instances provisioned as part of the custom resource:
+
+* `spotinst:aws:cloudformation:logical-id`
+* `spotinst:aws:cloudformation:stack-name`
+* `spotinst:aws:cloudformation:stack-id`
+
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",
@@ -198,4 +204,101 @@ Below are several examples where we defined parameters to use inside the Spot re
     }
   }
 }
+```
+
+## Request JSON Example: Adding Auto Tags to a Kubernetes Ocean Cluster
+
+When you use autoTag in CloudFormation, Spot adds these tracking tags to instances provisioned as part of the custom resource:
+
+* `spotinst:aws:cloudformation:logical-id`
+* `spotinst:aws:cloudformation:stack-name`
+* `spotinst:aws:cloudformation:stack-id`
+
+```json
+
+{  
+   "Resources":{
+    "SpotinstOcean": {
+      "Type": "Custom::ocean",
+      "Properties": {
+        "ServiceToken": {
+          "AWS::Sub": ["arn:aws:lambda:${Region}:178579023202:function:spotinst-cloudformation"]
+        },
+        "accessToken": "Spotinst Token",
+        "accountId": "Spotinst Account ID",
+        "autoTag": true,
+        "updatePolicy": {
+          "shouldUpdateTargetCapacity": false
+          "shouldRoll": 'true'
+          "rollConfig": {
+            "roll": {
+              "batchSizePercentage": 25
+            }
+          }
+        },
+        "ocean":{
+          "name": "Your Ocean Name",
+          "controllerClusterId": "ocean.k8s",
+          "region": {
+            "AWS::Sub":["${AWS::Region}"]
+          },
+          "autoScaler":{
+            "isEnabled": true,
+            "cooldown": 180,
+            "resourceLimits":{
+              "maxMemoryGib": 1500,
+              "maxVCpu": 750
+            },
+            "down":{
+              "evaluationPeriods": 3
+            },
+            "headroom":{
+              "cpuPerUnit": 2000,
+              "memoryPerUnit": 0,
+              "numOfUnits": 4
+            },
+            "isAutoConfig": false
+          },
+          "capacity":{
+            "minimum": 0,
+            "maximum": 1,
+            "target": 1
+          },
+          "strategy":{
+            "spotPercentage": 100,
+            "fallbackToOd": true,
+            "utilizeReservedInstances": false
+          },
+          "compute":{
+            "subnetIds":[
+              ""
+            ],
+            "instanceTypes":{
+              "whitelist":[
+                "c4.8xlarge"
+              ]
+            },
+            "launchSpecification":{
+              "imageId": "",
+              "userData": "12345678987654321",
+              "securityGroupIds":[
+                ""
+              ],
+              "iamInstanceProfile":{
+                "arn": ""
+              },
+              "keyPair": "",
+              "tags":{
+                "tagKey": "creator",
+                "tagValue": "test"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 ```
