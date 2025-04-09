@@ -351,6 +351,26 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocautotag">AWS: What does autoTag in CloudFormation do?</summary>
+
+  <div style="padding-left:16px">
+
+When you use autoTag in CloudFormation, Spot adds these tracking tags to instances provisioned as part of the custom resource:
+
+* `spotinst:aws:cloudformation:logical-id`
+* `spotinst:aws:cloudformation:stack-name`
+* `spotinst:aws:cloudformation:stack-id`
+
+You can see examples of autotagging in:
+
+* [Ocean](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-a-kubernetes-ocean-cluster)
+* [Elastigroup](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-elastigroup)
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oc2min">AWS: Why doesn’t Spot gracefully terminate instances if AWS gives a 2-minute termination notice?</summary>
 
   <div style="padding-left:16px">
