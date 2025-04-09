@@ -2097,7 +2097,7 @@ You can stop the autoscaler and recoveries:
 
     <ol style="list-style-type: lower-alpha;">
     <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b> and select a group.</li>
-    <li>On the Nodes tab, select the node and click Actions > <b>Detach</b>.</li>
+    <li>On the Nodes tab, select the node and click <b>Actions</b> > <b>Detach</b>.</li>
     <li>In the AWS console, <a target="_blank" href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-detach-attach-instances.html" >detach any new nodes</a>.</li>
     </ol>
 
