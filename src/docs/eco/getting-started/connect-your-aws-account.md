@@ -12,7 +12,7 @@ Eco can process historical AWS Cost and Usage Report files in a CSV file. If you
 
 ## Prerequisites
 
-Getting started with Eco on AWS usually requires read-only permissions to the Cost and Usage Reports, which are in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/).
+Getting started with Eco on AWS requires read-only permissions to the Cost and Usage Reports, which are in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/).
 
 You can choose between reading data from:
 
