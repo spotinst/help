@@ -6,9 +6,7 @@ The initial data processing takes up to 48 hours. You'll get an email when your 
 
 Eco can process historical AWS Cost and Usage Report files in a CSV file. If you have previous CUR files in a CSV format that you would like to add, place them in the S3 bucket with the current CUR files generated from the setup.
 
->Note:
->
->If you have limited AWS MSP/reseller customer accounts, [retrieve your billing information](eco/getting-started/connect-account-customer-working-with-msp).
+>**Note**: If you have limited AWS MSP/reseller customer accounts, [retrieve your billing information](eco/getting-started/connect-account-customer-working-with-msp).
 
 ## Prerequisites
 
@@ -18,7 +16,7 @@ You can choose between reading data from:
 
 - Your Direct-to-AWS management account
 - A single AWS MSP/reseller customer account
-- Multiple AWS MSP/reseller customer accounts (you'll also need to [enroll your reports](design-documents/msp/msp-enrollment))
+- Multiple AWS MSP/reseller customer accounts (you'll also need to [enroll your reports](eco/tutorials/msp-enrollment))
 
 ## AWS Region
 
@@ -88,4 +86,4 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
     Your organization is connected to Eco. The initial data processing takes up to 48 hours. You'll get an email when your dashboards are ready.
 
-10. If you have multiple AWS MSP/Reseller customer accounts, [enroll your reports](design-documents/msp/msp-enrollment).
+10. If you have multiple AWS MSP/Reseller customer accounts, [enroll your reports](eco/tutorials/msp-enrollment).

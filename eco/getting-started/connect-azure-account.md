@@ -29,8 +29,8 @@ If you need assistance, read the [FAQs](https://docs.spot.io/faqs/faqs-finops). 
     * **Manual onboarding** lets you use higher security requirements when needed:
 
       <ol style="list-style-type: lower-alpha;">
-      <li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=certificate%2Cexpose-a-web-api">Register an application in Microsoft Entra ID</a>. Select **Accounts in this organizational directly only**, without a redirect URI.</li>
-      <li><p><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret%2Cexpose-a-web-api#add-credentials">Create a new client secret</a>.</p>
+      <li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=certificate%2Cexpose-a-web-api" target="_blank" rel="nopopener">Register an application in Microsoft Entra ID</a>. Select <b>Accounts in this organizational directly only</b>, without a redirect URI.</li>
+      <li><p><a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret%2Cexpose-a-web-api#add-credentials" target="_blank" rel="nopopener">Create a new client secret</a>.</p>
       <p><b>Note</b>: Save the secret key because it won't be displayed again after you leave this page.</p></li>
        </ol>
 
