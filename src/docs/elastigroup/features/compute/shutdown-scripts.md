@@ -38,7 +38,7 @@ Navigate to the Compute Tab and open the Advanced settings.
 
 Install the Spot agent. For ease of use, we recommend adding this at the end of your user data script.
 
-Installation of the Spot agent is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/).
+Installation of the Spot agent is governed by Flexera’s end user license agreement (“EULA”), which can be found at https://www.flexera.com/legal.
 
 1. [Get your account ID](https://console.spotinst.com/#/settings/account/general) from the Account settings in your console.
 2. [Get a Token](https://console.spotinst.com/#/settings/tokens/permanent).
