@@ -16,7 +16,7 @@ The Ocean Controller Version 2 installation is based on Helm, so make sure to ha
 
 2.  Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm), [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-terraform).  
 
->**Note**: Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/). 
+>**Note**: Installation of the Ocean Controller is governed by Flexera’s end user license agreement (“EULA”), which can be found at https://www.flexera.com/legal. 
 
 ## Existing Clusters - Install Ocean Controller on Clusters Running Version 1
 
