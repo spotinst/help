@@ -1,16 +1,16 @@
 <meta name="robots" content="noindex">
 
-# SPOT BY NETAPP AI SUPPORT ASSISTANT (AISA) DISCLAIMER
+# SPOT AI SUPPORT ASSISTANT (AISA) DISCLAIMER
 
 ## Terms of Use
 
-<font color="#FC01CC">AISA</font> is Spot by NetApp's generative **AI-powered Support Assistant** on the [Spot by NetApp console](https://console.spotinst.com/overview/dashboard).
+<font color="#FC01CC">AISA</font> is Spot's generative **AI-powered Support Assistant** on the [Spot console](https://console.spotinst.com/overview/dashboard).
 
-<font color="#FC01CC">AISA</font> has been designed to respond to questions about Spot By NetApp services. It can do so based on the content available on the [Spot by NetApp Documentation Portal](https://docs.spot.io/) and the [Spot by NetApp Resource Center](https://spot.io/).
+<font color="#FC01CC">AISA</font> has been designed to respond to questions about Spot services. It can do so based on the content available on the [Spot Documentation Portal](https://docs.spot.io/) and the [Spot Resource Center](https://spot.io/).
 
 Please be informed that this Beta version of <font color="#FC01CC">AISA</font> generates algorithmically generated content, which may contain errors or inaccuracies. It is important to consider all generated content as a starting point rather than definitive information.
 
-To ensure accuracy, it is recommended that you verify <font color="#FC01CC">AISA</font> responses by referring to the Spot by NetApp official product documentation. Relying on <font color="#FC01CC">AISA</font> - generated responses are made at your own risk, and Spot by NetApp cannot be held responsible for any issues or difficulties that may arise as a result.
+To ensure accuracy, it is recommended that you verify <font color="#FC01CC">AISA</font> responses by referring to the Spot official product documentation. Relying on <font color="#FC01CC">AISA</font> - generated responses are made at your own risk, and Spot cannot be held responsible for any issues or difficulties that may arise as a result.
 
 Though <font color="#FC01CC">AISA</font> can respond in several languages, to ensure you have the most accurate information possible, always verify <font color="#FC01CC">AISA</font> responses in the English language.
 

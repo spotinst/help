@@ -18,7 +18,7 @@ There are several ways to install the Controller. Choose one of the procedures b
 
 >**Important**: When installing, the recommendation is to generate a programmatic (API) token not associated with a user account. This ensures that the token will not be deleted when the user account is deleted, in which case the Ocean Controller would not function.
 
-Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/).
+Installation of the Ocean Controller is governed by Flexera’s end user license agreement (“EULA”), which can be found at https://www.flexera.com/legal.
 
 By installing the Ocean Controller, you accept and approve the EULA.
 

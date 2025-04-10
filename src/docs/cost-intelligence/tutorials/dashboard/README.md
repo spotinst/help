@@ -51,7 +51,7 @@ To create a dashboard:
 
 ### Smart Analyzer
 
-The Smart Analyzer feature connects your chart data to NetApp's ChatGPT models, enabling you to gain deeper insights into your data through natural language interactions. This feature allows you to ask questions and view the summary answer along with the underlying logic and methodology used to generate the analysis results.  
+The Smart Analyzer feature connects your chart data to Spot's ChatGPT models, enabling you to gain deeper insights into your data through natural language interactions. This feature allows you to ask questions and view the summary answer along with the underlying logic and methodology used to generate the analysis results.  
 
 To analyze a chart:
 
