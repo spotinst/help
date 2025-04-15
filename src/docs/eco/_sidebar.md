@@ -29,4 +29,5 @@
   - [GCP](eco/gcp-tutorials/)
      - [Getting Started](eco/getting-started/gettingstarted-gc)
         - [Connect GC to Eco](eco/getting-started/connect-gc-account)
+  - [Eco in Flexera One](eco/eco-in-flexera-one/)
   - [Troubleshooting](eco/troubleshooting/)
