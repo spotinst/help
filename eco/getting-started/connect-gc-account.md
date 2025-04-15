@@ -65,7 +65,6 @@
      SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION="Spot Custom Role for Programmatic Access"
      SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS="monitoring.timeSeries.list,cloudquotas.quotas.get,cloudquotas.quotas.update,serviceusage.quotas.get,serviceusage.quotas.update,serviceusage.services.get,serviceusage.services.list"
 
-
      for ROLE in "${ANALYSIS_ORG_ROLES[@]}"; do
        for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
          echo "Adding member: user:$EMAIL to role $ROLE ..."
