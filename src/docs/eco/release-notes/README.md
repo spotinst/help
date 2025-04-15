@@ -3,7 +3,7 @@
 * **ECO-0003 April 15, 2025**: Enhancements and new onboarding for Eco Google Cloud:
    * The [new onboarding process](eco/getting-started/connect-gc-account) lets you grant Eco read-only permission to your Google Cloud environment for data analysis and ingestion.
    * You can [view Google Cloud savings data](eco/gcp-tutorials/view-your-savings), such as total committed use discount savings, current monthly commitment, and month-to-date (MTD) savings.
-   * You can also see a detailed visualization of your committed use discount savings in the savings over time graph. It includes filters for resource-based and spend-based committed use discounts. This gives you a comprehensive view of your savings.
+   * You can also see a [detailed visualization](eco/gcp-tutorials/view-your-savings) of your committed use discount savings in the savings over time graph. It includes filters for resource-based and spend-based committed use discounts. This gives you a comprehensive view of your savings.
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
