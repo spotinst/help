@@ -6,7 +6,7 @@ Once Eco GCP is set up for your organization and you select your committed use d
 
 To view the Eco dashboard in the Spot console, go to **Eco** > **Dashboard** and select the Google Cloud tab.
 
-![image](https://github.com/user-attachments/assets/fd8d242c-9552-462a-8fe3-789b0d83f539)
+<img width=800 src="https://github.com/user-attachments/assets/fd8d242c-9552-462a-8fe3-789b0d83f539">
 
 The default view of the Eco Google Cloud dashboard shows data from all the subscriptions in your GCP account.
 
