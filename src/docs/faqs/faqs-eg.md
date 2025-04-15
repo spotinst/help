@@ -659,11 +659,11 @@ Update the key pair:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">AWS: Why am I getting an <i>instance launch failed because an EBS volume cannot be encrypted</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">AWS: Why am I getting an <i>instance launch failed because an EBS volume cannot be encrypted</i> message?</summary>
 
 <div style="padding-left:16px">
 
-If you get this error:
+If you get this message:
 
 ````
 Spot Bad Parameters: Spot Request id: Optional{instance ID}. Code: bad-parameters Message: {timestamp}: Instance launch failed because an EBS volume cannot be encrypted. If your launch specification includes an encrypted EBS volume, you must grant the AWSServiceRoleForEC2Spot service-linked role access to any custom KMS keys.
@@ -724,11 +724,34 @@ Update the parameters:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">AWS: Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsubnetid">AWS: Why am I getting a <i>Security group and subnet belong to different networks</i> message?</summary>
 
   <div style="padding-left:16px">
 
-When you import a new group to Elastigroup, you may get this error:
+You may see this message:
+
+````
+Security group sg-xxx and subnet subnet-xxx belong to different networks.
+````
+
+This can happen if the security groups or subnets aren’t compatible and are associated with the same virtual private cloud (VPC) network.
+
+Update the subnetIds in the JSON:
+
+1. In the Spot console, go to **Elastigroup** > **Groups** and select the Elastigroup.
+2. Click **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
+3. In `compute:availabilityZones`, remove the subnetIds listed in the error message.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">AWS: Why am I getting a <i>"value" contains a conflict between peers</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+When you import a new group to Elastigroup, you may get this message:
 
 ````
 "value" contains a conflict between exclusive peers [resourceRequirements, spot]
