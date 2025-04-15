@@ -9,7 +9,7 @@
    * `roles/iam.serviceAccountCreator` to create service accounts.
    * `roles/iam.serviceAccountAdmin` to manage service accounts.
    * `roles/resourcemanager.projectIamAdmin` to manage IAM policies for projects.
-   
+
 ## Connect Your Google Cloud Account
 
 1. In the Spot console, go to Eco and select **Google Cloud** &gt; **Log in to your Google Cloud account**. After you sign in to Google Cloud, keep that browser tab open, then in the Spot console, click **Next**.
