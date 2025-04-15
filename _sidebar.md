@@ -6,7 +6,6 @@
     - [Connect GCP Manually](connect-your-cloud-provider/first-account/gcp-manually)
     - [Connect Azure Manually](connect-your-cloud-provider/first-account/azure)
   - [Connect Azure Billing Account](connect-your-cloud-provider/azure-ea-account)
-  - [Connect Billing/Resource Data (FinOps)](connect-your-cloud-provider/finops)
   - [Connect an Additional Account](connect-your-cloud-provider/additional-account)
   - [Release Notes - Connect Your Cloud Account](connect-your-cloud-provider/release-notes-connecting/)
 - [**Overview Dashboards**](connect-your-cloud-provider/overview-dashboards)
