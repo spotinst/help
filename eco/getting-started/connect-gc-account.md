@@ -41,9 +41,7 @@
 
    <div style="padding-left:16px">
 
-     ````
-     ANALYSIS_ORG_ID="$(gcloud projects get-ancestors ingresruletesting | awk '/TYPE: organization/{print id} {id=$2}')"
-     
+     ````     
      ANALYSIS_ORG_ID="$(gcloud projects get-ancestors $(gcloud config get-value project --quiet) | awk '/TYPE: organization/{print id} {id=$2}')"
      SERVICE_ACCOUNT_ORG_ID="$(gcloud projects get-ancestors $(gcloud config get-value project --quiet) | awk '/TYPE: organization/{print id} {id=$2}')"
      ANALYSIS_PROJECTS=("$(gcloud config get-value project --quiet)")
