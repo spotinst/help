@@ -3,6 +3,7 @@
 
 ## April 2025: Features and Enhancements
 
+*  **OCN-0076 April 16, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean node recovery process improvements ensure a more accurate scale-up and take scaling constraints into account. [Learn more…](https://docs.spot.io/ocean/features/scaling-kubernetes?id=ocean-instance-recovery-mechanism)
 
 *  **OCN-0075 April 02, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Our latest AWS Kubernetes node-draining enhancement changes scale-down behavior. Once all pods have been successfully evicted from a node, the node is drained (scaled down) immediately without waiting for the full draining timeout period to expire. [Learn more…](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down-behavior)
 

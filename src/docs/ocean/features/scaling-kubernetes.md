@@ -97,6 +97,15 @@ Ocean now supports node health optimization in your GKE clusters by ensuring res
 
 To enable this feature for Ocean GKE, contact [Spot Support](https://spot.io/support/).
 
+###  Ocean Instance Recovery Mechanism
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font> 
+
+The Ocean node recovery process occurs when a spot instance in a cluster experiences an interruption and needs to be gracefully drained and replaced with a new instance. 
+This process considers scaling constraints, such as labels, availability zones, pod requests, and daemon sets. 
+Ocean's autoscaler ensures accurate scale-up by only launching new nodes when required to avoid wasting idle resources. 
+Ocean checks where the pod can run and estimates whether a new node is required even before the pod enters the pending state.
+
 ## Scale Down
 
 Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) their pods more efficiently to scale down the nodes and reduce cluster cost. A higher resource allocation reflects this. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
