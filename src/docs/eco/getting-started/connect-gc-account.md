@@ -47,7 +47,7 @@
      ANALYSIS_PROJECTS=("$(gcloud config get-value project --quiet)")
      SERVICE_ACCOUNT_PROJECT_LIST=("$(gcloud config get-value project --quiet)")
      ANALYSIS_ORG_ROLES=("roles/billing.viewer" "roles/browser")
-     ANALYSIS_EMAILS=("rhardin@netapp.com" "gkuderna@netapp.com")
+     ANALYSIS_EMAILS=("ross.hardin@flexera.com" "greg.kuderna@flexera.com")
      ANALYSIS_PROJECT_ROLE="roles/bigquery.dataViewer"
      ANALYSIS_CUSTOM_ROLE_NAME="spot-read-only-custom-role"
      ANALYSIS_CUSTOM_ROLE_TITLE="Spot Read-Only Custom Role"
