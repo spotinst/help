@@ -135,8 +135,7 @@ Click **View Details** on the right of the right-sizing tab to see your [actual 
 
 ## Autoscaling Activity Panel 
 
-<img width="1500" src="https://github.com/user-attachments/assets/1abec927-d47b-4645-83e5-d5e3eb3ab0a6" />
-
+<img width="1500" src="https://github.com/user-attachments/assets/42d56091-d8a9-4e1c-be4a-1916b97f00a0" />
 
 The Autoscaling Activity panel contains the following widgets:  
 
@@ -214,8 +213,6 @@ level so you can see why the Ocean Autoscaler triggered a specific scale event w
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
-![activity-graph-screen-1](https://github.com/user-attachments/assets/9be9c4db-ea65-4bd1-a195-dd549d76770a)
-
 The upper graph displays the autoscaling activity to analyze. By default, it displays a full set of activity curves. Click an item on the legend above the graph to turn its associated curve on or off.
 
 These are the curves:
@@ -237,7 +234,7 @@ To set the zoom level for the graph:
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
 >**Tip**: Set the period on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
 
-![activity-graph-screen-2](https://github.com/user-attachments/assets/0583b815-7e68-4208-9edb-049171ccb3a6)
+<img width="827" src="https://github.com/user-attachments/assets/b1c08ae6-f2c0-4a5a-b693-a2e20368d05a" />
 
 To display the autoscaling activity at a specific point on the graph:
 
@@ -263,8 +260,13 @@ For vCPU/memory(GiB)/GPU:
 
 Total Allocation Calculation:
 
-* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. 
+* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
 
+To display detailed information about a specific autoscaling event:
+
+* Click on an event displayed in a blue rectangle, for example, Scale Down.
+
+<img width="827" src="https://github.com/user-attachments/assets/80a3d140-e466-4548-91ea-74b749c6f6f2" />
 
 ##  Related Topics 
 
