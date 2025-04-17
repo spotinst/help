@@ -47,7 +47,7 @@
      ANALYSIS_PROJECTS=("$(gcloud config get-value project --quiet)")
      SERVICE_ACCOUNT_PROJECT_LIST=("$(gcloud config get-value project --quiet)")
      ANALYSIS_ORG_ROLES=("roles/billing.viewer" "roles/browser")
-     ANALYSIS_EMAILS=("rhardin@netapp.com" "gkuderna@netapp.com")
+     ANALYSIS_EMAILS=("ross.hardin@flexera.com" "greg.kuderna@flexera.com")
      ANALYSIS_PROJECT_ROLE="roles/bigquery.dataViewer"
      ANALYSIS_CUSTOM_ROLE_NAME="spot-read-only-custom-role"
      ANALYSIS_CUSTOM_ROLE_TITLE="Spot Read-Only Custom Role"
@@ -117,7 +117,7 @@
    <div style="padding-left:16px">
 
    The script automates setting up IAM roles and service accounts in Google Cloud for programmatic access and analysis:
-     * Retrieves organization IDs and project IDs for the GCP projects.
+     * Retrieves organization IDs and project IDs for the GC projects.
      * Assigns predefined roles to specific email addresses for both organizational and project-level access.
      * Creates a custom IAM role with specific permissions for data visibility and analysis.
      * Sets up a service account with a custom role and permissions for programmatic access to resources.

@@ -1,4 +1,4 @@
-## GCP Tutorials
+## GC Tutorials
 
 Eco actively manages your commitments throughout their entire lifecycle. This includes planning, purchasing, exchanging, and canceling. It optimizes your committed use discount portfolio from the beginning.
 

@@ -26,7 +26,7 @@
     - [Access Roles and Permissions - Read-Only](eco/azure-tutorials/access-roles-read-only)
     - [Choose Azure RI Strategy](eco/azure-tutorials/choose-ri-strategy)
     - [View your Savings](eco/azure-tutorials/view-your-savings)
-  - [GCP](eco/gcp-tutorials/)
+  - [GC](eco/gcp-tutorials/)
      - [Getting Started](eco/getting-started/gettingstarted-gc)
         - [Connect GC to Eco](eco/getting-started/connect-gc-account)
      - [View your Savings](eco/gcp-tutorials/view-your-savings)
