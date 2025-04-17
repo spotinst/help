@@ -274,7 +274,7 @@ These are the curves:
 
 >**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
 
-### Set the Zoom Level for the Graph
+To set the zoom level for the graph:
 
 1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 3 days/ 7 days.
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
@@ -282,7 +282,7 @@ These are the curves:
 
 <img width=800 src="https://github.com/user-attachments/assets/96bc9f5c-48e9-445d-b451-267397c723db" />
 
-### Display Autoscaling Activity at a Specific Point on the Graph
+To display autoscaling activity at a specific point on the graph:
 
 1. Mouse over the upper graph to view the main details.
 2. Click **Cluster State Details** to view more information.
@@ -299,38 +299,22 @@ For vCPU/Memory(GiB)/GPU:
   * Total node allocation. 
   * Split according to lifecycle types.
 *  Workload:
-    *  deamonSets Requested. 
-    *  Pods Requested.
-    *  Headroom requested.
-    *  Total workload allocation percentage (includes only running pods, headroom pods, and DaemonSets pods scheduled on Ocean nodes).
+   * deamonSets Requested. 
+   * Pods Requested.
+   * Headroom requested.
+   * Total workload allocation percentage (includes only running pods, headroom pods, and DaemonSets pods scheduled on Ocean nodes).
 
 Total Allocation Calculation:
 
 * Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
 
-To view more detailed information about autoscaling events:
+To display detailed information for a specific autoscaler event:
 
-### Display Extended Details for Revert to Spots/Revert to Lower-Cost Events
-
-WILL ADD DYNAMIC COMMITMENTS EXTENDED DETAILS
-
-1. Set the zoom level to 12 hours or less (described above).
-2. Mouse over the revert to spots / revert to lower cost event on the curve.
-
-<img width="270" src="https://github.com/user-attachments/assets/ef53d900-078d-4da9-89e4-7432d9a0f08e" />
-
-3. Click the (shaded) revert event in the main details to show the extended details.
+* Click the blue rectangle for the event, for example, a revert to lower cost event.
 
 <img width="900" src="https://github.com/user-attachments/assets/25d4f754-c88d-4a04-b414-90a3d1b6e3db" />
 
-These are the extended details:
-
-* Affected node pools (new/replaced).
-* Nodes count.
-* Virtual node group (click on the link to view virtual node group details).
-* VM Size.
-* Availability Zones.
-* LifeCycle (Spot/regular).
+>Note: The details shown in the box depend on the type of autoscaler event.
 
 ## Resource Allocation Panel
 
