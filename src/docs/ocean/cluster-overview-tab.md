@@ -195,10 +195,9 @@ Tracking these events on the Autoscaling Activity panel lets you see when and ho
 
 #### Dynamic Commitments
 
-Ocean reverts from on-demand reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean continually adjusts to changes in application requirements and usage. 
+Ocean reverts from on-demand reserved instances when they can be used in other workloads to increase the coverage of commitments and replacements. When working with dynamic workloads in the cloud, Ocean continually adjusts to application requirements and usage changes. 
 
-Ocean tracks commitments and initiates proactive replacements, increasing the account’s commitment coverage, and decreasing excessive on-demand node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments.
-
+Ocean tracks commitments and initiates proactive replacements, increasing the account’s commitment coverage and decreasing excessive on-demand node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments. For more information, see [Dynamic Commitments](https://docs.spot.io/ocean/features/dynamic-commitments-aws).
 
 #### Autohealing
 
@@ -244,8 +243,8 @@ To display the autoscaling activity at a specific point on the graph:
 This is the information displayed:
 
 * Autoscaling events (displayed for a period of 12 hours or less):
-One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
-For example, Scale Up, Scale Down, or Autohealing.
+One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling events displayed as widgets above the graph.
+For example, Scale Up, Scale Down, Dynamic Commitments, or Autohealing.
 
 For vCPU/memory(GiB)/GPU:
 
@@ -264,7 +263,8 @@ Total Allocation Calculation:
 
 To display detailed information about a specific autoscaling event:
 
-* Click on an event displayed in a blue rectangle, for example, Scale Down.
+* Click on an event displayed in a blue rectangle, for example, <img width="93" src="https://github.com/user-attachments/assets/5af702e2-f41e-43c6-ba03-20b5392782e4" />
+  for a Scale Down event.
 
 <img width="827" src="https://github.com/user-attachments/assets/80a3d140-e466-4548-91ea-74b749c6f6f2" />
 
