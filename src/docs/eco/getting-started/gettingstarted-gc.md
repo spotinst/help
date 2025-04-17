@@ -1,4 +1,4 @@
-# Get Started with Eco (GCP)
+# Get Started with Eco (GC)
 
 Eco is an automation and optimization solution for cloud commitment purchasing and deployment. Taking into account flexibility, market volume, historical, and predicted usage, Eco identifies the ideal blend of committed use discounts to maximize savings while providing the most flexibility for future needs.
 
