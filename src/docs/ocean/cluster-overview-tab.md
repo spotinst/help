@@ -270,21 +270,20 @@ To display detailed information about a specific autoscaling event:
 
 The information box shows the following information (depending on the type of event / resources):
 
-*  Pre scale and post scale resource values for vCPU/memory(GiB)/GPU.
+*  Pre scale and post scale resources for vCPU/memory(GiB)/GPU.
 *  Pod rescheduling simulation information:
    * Pod name.
    * Node name.
    * Target node.
    * Total requested resources for vCPU/memory(GiB)/GPU.
-   * Restrictions (PDB, 
+   * Restrictions: for example. PDB.
 *  Information about terminated instances:
    * Instance ID.
    * Virtual node group.
    * Instance type.
    * Lifecycle.
    * Availability Zone
-   * Available resource values for vCPU/memory(GiB)/GPU.
-
+   * Available resources for vCPU/memory(GiB)/GPU.
 
 ##  Related Topics 
 
