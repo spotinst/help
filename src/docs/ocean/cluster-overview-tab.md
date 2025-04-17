@@ -135,7 +135,8 @@ Click **View Details** on the right of the right-sizing tab to see your [actual 
 
 ## Autoscaling Activity Panel 
 
-![autoscaling-panel-14-08](https://github.com/user-attachments/assets/6db596fa-2705-4af4-96c0-060cfaefd6cb)
+<img width="1500" src="https://github.com/user-attachments/assets/1abec927-d47b-4645-83e5-d5e3eb3ab0a6" />
+
 
 The Autoscaling Activity panel contains the following widgets:  
 
