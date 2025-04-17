@@ -117,7 +117,7 @@
    <div style="padding-left:16px">
 
    The script automates setting up IAM roles and service accounts in Google Cloud for programmatic access and analysis:
-     * Retrieves organization IDs and project IDs for the GCP projects.
+     * Retrieves organization IDs and project IDs for the GC projects.
      * Assigns predefined roles to specific email addresses for both organizational and project-level access.
      * Creates a custom IAM role with specific permissions for data visibility and analysis.
      * Sets up a service account with a custom role and permissions for programmatic access to resources.
