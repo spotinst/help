@@ -1,12 +1,11 @@
-<meta name="robots" content="noindex">
-
 # View Your Savings
 
-Once Eco GCP is set up for your organization and you select your committed use discount strategy, your Eco GCP dashboard will display a more complete view of savings.
+Once Eco GC is set up for your organization and you select your committed use discount strategy, your Eco GC dashboard will display a more complete view of savings.
 
 To view the Eco dashboard in the Spot console, go to **Eco** > **Dashboard** and select the Google Cloud tab.
 
-<img width=800 src="https://github.com/user-attachments/assets/fd8d242c-9552-462a-8fe3-789b0d83f539">
+<img width=800 src="https://github.com/user-attachments/assets/7d48f24c-c18c-45d5-ae94-20778b50d0b1">
+
 
 The default view of the Eco Google Cloud dashboard shows data from all the subscriptions in your GCP account.
 
@@ -22,5 +21,5 @@ You can see summary data for:
 
 ## Savings over Time
 
-The Savings over Time graph shows the amount of savings each month broken down by type of savings. This graph displays the savings from reservations and savings plans. You can use the filters at the top of the page.
+The savings over time graph shows the amount of savings each month broken down by type of savings. This graph displays the savings from reservations and savings plans. You can use the filters at the top of the page.
 
