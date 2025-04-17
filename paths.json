@@ -1,6 +1,7 @@
 [
   "/_404.md",
   "/_media/reusable-sample-media.md",
+  "/_reusables/_readme.md",
   "/_sidebar.md",
   "/administration/README.md",
   "/administration/_sidebar.md",
@@ -586,8 +587,8 @@
   "/ocean-spark/tools-integrations/shuffle-plugin.md",
   "/ocean-spark/tools-integrations/spark-connect.md",
   "/over-test-22-08-24-01.md",
-  "/reusables/README.md",
-  "/reusables/reusable-sample.md",
+  "/reusables/_README.md",
+  "/reusables/_reusable-sample.md",
   "/spot-connect/README.md",
   "/spot-connect/_sidebar.md",
   "/spot-connect/actions/README.md",
