@@ -194,6 +194,13 @@ The Revert to Lower Cost widget shows the number of events for which a node was 
 
 Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
 
+#### Dynamic Commitments
+
+Ocean reverts from on-demand reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean continually adjusts to changes in application requirements and usage. 
+
+Ocean tracks commitments and initiates proactive replacements, increasing the account’s commitment coverage, and decreasing excessive on-demand node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments.
+
+
 #### Autohealing
 
 Auto Healing monitors the status of each Kubernetes node by examining the condition object, which provides information about various aspects of the node. Specifically, Autohealing focuses on the Ready condition. If the Ready condition indicates a status of False or Unknown, the instance is deemed unhealthy, prompting the initiation of a replacement process. 
