@@ -268,7 +268,7 @@ To display detailed information about a specific autoscaling event:
 
 <img width="827" src="https://github.com/user-attachments/assets/80a3d140-e466-4548-91ea-74b749c6f6f2" />
 
-The information shown in the box depends on the type of event.
+>Note: The information shown in the box depends on the type of event.
 
 ##  Related Topics 
 
