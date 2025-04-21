@@ -22,7 +22,7 @@ By using <font color="#FC01CC">AISA</font>, you acknowledge and consent to adher
 
 * Do not employ <font color="#FC01CC">AISA</font> to generate content that could potentially cause harm, abuse, violence, or deception.
 * Refrain from engaging <font color="#FC01CC">AISA</font> in conversations that fall outside the intended purpose of the assistant.
-* Do not seek responses from <font color="#FC01CC">AISA</font> for inquiries unrelated to Spot by NetApp products.
+* Do not seek responses from <font color="#FC01CC">AISA</font> for inquiries unrelated to Spot products.
 
 Please note that these conditions are in place to ensure the responsible and appropriate use of <font color="#FC01CC">AISA</font>. We appreciate your cooperation in adhering to these conditions.
 
