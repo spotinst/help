@@ -227,7 +227,10 @@ These are the curves:
 
 >**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
 
-To set the zoom level for the graph:
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To set the zoom level for the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 7 days.
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
@@ -235,7 +238,13 @@ To set the zoom level for the graph:
 
 <img width="827" src="https://github.com/user-attachments/assets/b1c08ae6-f2c0-4a5a-b693-a2e20368d05a" />
 
-To display the autoscaling activity at a specific point on the graph:
+   </div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display the autoscaling activity at a specific point on the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. Mouse over the upper graph to view the main details.
 2. Click **Cluster State Details** to view more information.
@@ -261,7 +270,13 @@ Total Allocation Calculation:
 
 * Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
 
-To display detailed information about a specific autoscaling event:
+  </div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display detailed information about a specific autoscaling event</summary>
+ 
+   <div style="padding-left:16px">
 
 * Click on an event displayed in a blue rectangle, for example, <img width="93" src="https://github.com/user-attachments/assets/5af702e2-f41e-43c6-ba03-20b5392782e4" />
   for a Scale Down event.
@@ -269,6 +284,10 @@ To display detailed information about a specific autoscaling event:
 <img width="827" src="https://github.com/user-attachments/assets/80a3d140-e466-4548-91ea-74b749c6f6f2" />
 
 >Note: The information shown in the box depends on the type of event.
+
+  </div>
+</details>
+
 
 ##  Related Topics 
 
