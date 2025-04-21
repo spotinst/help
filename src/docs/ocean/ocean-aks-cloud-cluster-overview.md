@@ -274,7 +274,11 @@ These are the curves:
 
 >**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
 
-To set the zoom level for the graph:
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To set the zoom level for the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 3 days/ 7 days.
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
@@ -282,7 +286,13 @@ To set the zoom level for the graph:
 
 <img width=800 src="https://github.com/user-attachments/assets/96bc9f5c-48e9-445d-b451-267397c723db" />
 
-To display autoscaling activity at a specific point on the graph:
+   </div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display autoscaling activity at a specific point on the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. Mouse over the upper graph to view the main details.
 2. Click **Cluster State Details** to view more information.
@@ -308,13 +318,22 @@ Total Allocation Calculation:
 
 * Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
 
-To display detailed information for a specific autoscaler event:
+   </div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display detailed information for a specific autoscaler event</summary>
+ 
+   <div style="padding-left:16px">
 
 * Click the blue rectangle for the event, for example, a revert to lower cost event.
 
 <img width="900" src="https://github.com/user-attachments/assets/25d4f754-c88d-4a04-b414-90a3d1b6e3db" />
 
 >Note: The details shown in the box depend on the type of autoscaler event.
+
+   </div>
+</details>
 
 ## Resource Allocation Panel
 
