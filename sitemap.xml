@@ -15,6 +15,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/_media/reusable-sample-media"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/_reusables/reusable-sample</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/_reusables/reusable-sample"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/_reusables/reusable-sample"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/administration/access-policies/access-policy-actions</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
