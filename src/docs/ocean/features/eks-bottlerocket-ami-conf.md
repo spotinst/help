@@ -1,5 +1,7 @@
 <meta name="robots" content="noindex">
 
+# Configure Bottlerocket AMI for Ocean
+
 Cloud provider AWS
 
 Bottlerocket is an open-source, Linux-based operating system used for hosting containers.
@@ -10,7 +12,7 @@ Using Bottlerocket, you can benefit from enhanced security, more consistency in 
 
 Ocean (AWS) supports the Bottlerocket OS. You can launch instances with Bottlerocket OS, manage Bottlerocket OS nodes, and run the Spot Controller on top of a Bottlerocket OS machine.
 
-details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">To configure Bottlerocket OS in Ocean EKS clusters</summary>
  
    <div style="padding-left:16px">
@@ -40,14 +42,39 @@ details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    </div>
 </details>
 
-
-
-To troubleshoot nodes not joining after upgrade
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To troubleshoot nodes not joining after upgrade</summary>
  
-If you configured Bottlerocket AMI correctly but nodes are still not joining the cluster, you might need to update the aws-auth ConfigMap:
+   <div style="padding-left:16px">
 
 
+If you configured Bottlerocket AMI correctly but nodes are still not joining the cluster, you might need to update the aws-auth ConfigMap.
+ <br> 
+1. Run this command to edit the ConfigMap:
 
+`kubectl edit configmap aws-auth -n kube-system -o yaml > aws-auth.yaml`
+
+2. Add the necessary permissions for the new node IAM role:
+
+   * ⁠groups:
+     - system:bootstrappers
+     - system:nodes
+     
+     `rolearn: arn:aws:iam::YOUR-AWS-ACCOUNT-ID:role/YOUR-NODE-IAM-ROLE
+  username: system:node:`
+
+3. Save changes and apply the updated ConfigMap:
+
+   `kubectl apply -f aws-auth.yaml`
+
+4. Verify that the nodes have joined.
+
+   `kubectl get nodes`
+ 
+Refer to this [Spot blog](https://spot.io/blog/run-container-optimized-eks-clusters-with-ocean-and-bottlerocket-os/) for reference and further information:
+
+ </div>
+</details>
 
 
 
