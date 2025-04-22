@@ -2,7 +2,7 @@
 
 # Configure Bottlerocket AMI for Ocean
 
-Cloud provider AWS
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>
 
 Bottlerocket is an open-source, Linux-based operating system used for hosting containers.
 
