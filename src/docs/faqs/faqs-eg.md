@@ -332,6 +332,28 @@ You can configure a custom scaling policy that is based on another metric. For e
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egansibleroll">AWS: Can I roll my Elastigroup in Ansible?</summary>
+
+  <div style="padding-left:16px">
+
+You can roll your Elastigroup in Ansible if you have the **roll_config** in your [Ansible configuration](https://github.com/spotinst/spotinst-ansible-module/blob/master/docs/argument_reference_eg.yml):
+
+````
+roll_config:
+   description:
+     - (Object) Roll configuration.;
+       If you would like the group to roll after updating, please use this feature.
+       Accepts the following keys -
+       batch_size_percentage(Integer, Required),
+       grace_period - (Integer, Required),
+       health_check_type(String, Optional)
+````
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egeventbridge">AWS: How do I create spot interruption notifications?</summary>
 
   <div style="padding-left:16px">
