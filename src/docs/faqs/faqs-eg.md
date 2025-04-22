@@ -1126,7 +1126,20 @@ You can:
 
  </details>
 
- 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="emrscaling">Integration: Why aren't my existing scaling policies imported with the EMR cluster?</summary>
+
+  <div style="padding-left:16px">
+
+Elastigroup has its own scaling and manages the instance groups. [Clone and wrap](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes) don’t actually import the cluster:
+
+* <i>Clone</i>: Elastigroup copies the configuration of an existing environment (including terminated environments) and creates a new cluster with this configuration.
+* <i>Wrap</i>: Elastigroup manages scaling of only the task nodes of an existing EMR cluster.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
 
