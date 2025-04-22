@@ -168,6 +168,35 @@ The default draining for:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eg32bit">AWS: Can my shutdown scripts have 32-bit code (PowerShell)?</summary>
+
+<div style="padding-left:16px">
+
+Normally, Elastigroup scripts in PowerShell run in 64-bit. You may need part of your code to run in 32-bit. You can do it by adding:
+
+````powershell
+Set-Alias Start-PowerShell64 "$env:windir\sysnative\WindowsPowerShell\v1.0\powershell.exe"
+Start-PowerShell64 <command-here>
+````
+
+For example, if you’re using it for **Stop-WebAppPool -Name ***, you can use this code:
+
+````powershell
+  <powershell>
+    Start-Transcript -Path C:\Temp\shutdown_script.log -append
+    New-Item D:\Logs\shutdown_started.txt
+    Set-Content D:\Logs\shutdown_started.txt 'shutdown-script is running - running webpool Stop'
+    Set-Alias Start-PowerShell64 "$env:windir\sysnative\WindowsPowerShell\v1.0\powershell.exe"
+    Start-PowerShell64 {Stop-WebAppPool -Name *}
+    Stop-Transcript
+    Start-Sleep -s 300
+````
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
