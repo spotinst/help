@@ -179,7 +179,7 @@ Set-Alias Start-PowerShell64 "$env:windir\sysnative\WindowsPowerShell\v1.0\power
 Start-PowerShell64 <command-here>
 ````
 
-For example, if you’re using it for **Stop-WebAppPool -Name ***, you can use this code:
+For example, if you’re using it for `Stop-WebAppPool -Name *`, you can use this code:
 
 ````powershell
   <powershell>
