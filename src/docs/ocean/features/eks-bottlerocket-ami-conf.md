@@ -8,7 +8,7 @@ Bottlerocket is an open-source, Linux-based operating system used for hosting co
 
 Bottlerocket OS was specifically designed to address gaps left by the ECS and EKS-optimized AMIs, which are based on operating systems that run traditional software applications.
 
-Using Bottlerocket, you can benefit from enhanced security, more consistency in environments, and efficiency in operations.
+Using Bottlerocket, you can benefit from enhanced security, more environmental consistency, and more efficiency in operations.
 
 Ocean (AWS) supports the Bottlerocket OS. You can launch instances with Bottlerocket OS, manage Bottlerocket OS nodes, and run the Spot Controller on top of a Bottlerocket OS machine.
 
@@ -17,7 +17,7 @@ Ocean (AWS) supports the Bottlerocket OS. You can launch instances with Bottlero
  
    <div style="padding-left:16px">
 
-1. You need The latest Bottlerocket AMI ID for your EKS cluster version and region. You can retrieve the AMI ID with the AWS CLI or the AWS Management Console. 
+1. You need the latest Bottlerocket AMI ID for your EKS cluster version and region. You can retrieve the AMI ID with the AWS CLI or the AWS Management Console. 
 
     * Run this command via AWS CLI (Replace 1.26 with your EKS cluster version and region code with your EKS region):
 
@@ -32,7 +32,7 @@ Ocean (AWS) supports the Bottlerocket OS. You can launch instances with Bottlero
 3. On your required virtual node groups:
 
     1. Insert Bottlerocket AMI ID.
-    2. Copy the user-data.toml file content and paste it to the userData field in the Spot API.
+    2. Copy the user-data.toml file content and paste into the userData field in the Spot API.
   
    <br> 
 
@@ -54,7 +54,7 @@ If you configured Bottlerocket AMI correctly but nodes are still not joining the
 
 `kubectl edit configmap aws-auth -n kube-system -o yaml > aws-auth.yaml`
 
-2. Add the necessary permissions for the new node IAM role:
+2. Add the required permissions for the new node IAM role:
 
    * ⁠groups:
      - system:bootstrappers
