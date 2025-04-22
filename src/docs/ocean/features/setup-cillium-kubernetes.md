@@ -4,9 +4,9 @@ Cilium is an open-source, cloud-native solution that provides, secures, and obse
 
 Generally, you run Cilium as a daemonset in a cluster.
 
-Cilium-compatible nodes must launch with a `node.cilium.io/agent-not-ready=true:NoExecute` taint, so only the Cilium daemonset can be scheduled for the matching toleration. The Cilium daemonset pod executes its task on the node, and then automatically removes the taint so that workload pods can be scheduled on the node.
+Cilium-compatible nodes must launch with a `node.cilium.io/agent-not-ready=true:NoExecute` taint, so only the Cilium daemonset can be scheduled for the matching toleration. The Cilium daemonset pod executes its task on the node, then automatically removes the taint to schedule workload pods on the node.
 
-See [Cillium](https://cilium.io/)
+See [Cilium](https://cilium.io/)
 
 Regarding Spot Ocean:
 
