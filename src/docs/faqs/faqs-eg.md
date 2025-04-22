@@ -752,6 +752,29 @@ Update the parameters:
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsubnetid">AWS: Why am I getting a <i>Security group and subnet belong to different networks</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+You may see this message:
+
+````
+Security group sg-xxx and subnet subnet-xxx belong to different networks.
+````
+
+This can happen if the security groups or subnets aren’t compatible and are associated with the same virtual private cloud (VPC) network.
+
+Update the subnetIds in the JSON:
+
+1. In the Spot console, go to **Elastigroup** > **Groups** and select the Elastigroup.
+2. Click **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
+3. In `compute:availabilityZones`, remove the subnetIds listed in the error message.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">AWS: Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
 
