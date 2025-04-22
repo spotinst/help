@@ -285,6 +285,9 @@ Total Allocation Calculation:
 
 >Note: The information shown in the box depends on the type of event.
 
+The above example shows the pre and post scale resource utilization for the scale-down action. Ocean simulated two running pods that could be moved to other nodes for better node utilization. 
+Each pod was rescheduled on a different target node. All the terminated instances were spots.
+
   </div>
 </details>
 
