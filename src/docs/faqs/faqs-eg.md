@@ -168,6 +168,35 @@ The default draining for:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eg32bit">AWS: Can my shutdown scripts have 32-bit code (PowerShell)?</summary>
+
+<div style="padding-left:16px">
+
+Normally, Elastigroup scripts in PowerShell run in 64-bit. You may need part of your code to run in 32-bit. You can do it by adding:
+
+````powershell
+Set-Alias Start-PowerShell64 "$env:windir\sysnative\WindowsPowerShell\v1.0\powershell.exe"
+Start-PowerShell64 <command-here>
+````
+
+For example, if you’re using it for **Stop-WebAppPool -Name ***, you can use this code:
+
+````powershell
+  <powershell>
+    Start-Transcript -Path C:\Temp\shutdown_script.log -append
+    New-Item D:\Logs\shutdown_started.txt
+    Set-Content D:\Logs\shutdown_started.txt 'shutdown-script is running - running webpool Stop'
+    Set-Alias Start-PowerShell64 "$env:windir\sysnative\WindowsPowerShell\v1.0\powershell.exe"
+    Start-PowerShell64 {Stop-WebAppPool -Name *}
+    Stop-Transcript
+    Start-Sleep -s 300
+````
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
@@ -297,6 +326,28 @@ You can configure a custom scaling policy that is based on another metric. For e
      <img width=450 src="https://github.com/user-attachments/assets/430e1adc-458b-4723-ba8a-061c766daef3" >
     
 5. Verify the [CloudWatch agent is installed](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egansibleroll">AWS: Can I roll my Elastigroup in Ansible?</summary>
+
+  <div style="padding-left:16px">
+
+You can roll your Elastigroup in Ansible if you have the **roll_config** in your [Ansible configuration](https://github.com/spotinst/spotinst-ansible-module/blob/master/docs/argument_reference_eg.yml):
+
+````
+roll_config:
+   description:
+     - (Object) Roll configuration.;
+       If you would like the group to roll after updating, please use this feature.
+       Accepts the following keys -
+       batch_size_percentage(Integer, Required),
+       grace_period - (Integer, Required),
+       health_check_type(String, Optional)
+````
 
  </div>
 
@@ -723,6 +774,29 @@ Update the parameters:
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsubnetid">AWS: Why am I getting a <i>Security group and subnet belong to different networks</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+You may see this message:
+
+````
+Security group sg-xxx and subnet subnet-xxx belong to different networks.
+````
+
+This can happen if the security groups or subnets aren’t compatible and are associated with the same virtual private cloud (VPC) network.
+
+Update the subnetIds in the JSON:
+
+1. In the Spot console, go to **Elastigroup** > **Groups** and select the Elastigroup.
+2. Click **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
+3. In `compute:availabilityZones`, remove the subnetIds listed in the error message.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">AWS: Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
 
@@ -1126,7 +1200,20 @@ You can:
 
  </details>
 
- 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="emrscaling">Integration: Why aren't my existing scaling policies imported with the EMR cluster?</summary>
+
+  <div style="padding-left:16px">
+
+Elastigroup has its own scaling and manages the instance groups. [Clone and wrap](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes) don’t actually import the cluster:
+
+* <i>Clone</i>: Elastigroup copies the configuration of an existing environment (including terminated environments) and creates a new cluster with this configuration.
+* <i>Wrap</i>: Elastigroup manages scaling of only the task nodes of an existing EMR cluster.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
 
