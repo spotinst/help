@@ -833,13 +833,23 @@ You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/late
 
  </details>
 
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">AWS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsubnet">AWS: Why am I getting an InsufficientFreeAddressesInSubnet message?</summary>
 
 <div style="padding-left:16px">
 
-You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
+This can happen if the subnet doesn’t have enough free IP addresses for your request. [Free up IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html#api-error-codes-table-client) in this subnet.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">AWS: Why am I getting an InvalidBlockDeviceMapping message?</summary>
+
+<div style="padding-left:16px">
+
+You can get this message when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
 ````
 Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping
