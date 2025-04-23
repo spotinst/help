@@ -1277,6 +1277,23 @@ Elastigroup has its own scaling and manages the instance groups. [Clone and wrap
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="agentrun">Integration: How can I check if the Spotinst agent is running or enable it?</summary>
+
+  <div style="padding-left:16px">
+
+You can see the status of the Spotinst agent in the Spot console. Go to **Elastigroup** > **Groups**, and select the group > **Instances**. If the agent had a heartbeat in the last 2 minutes, it’s healthy.
+
+In [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html), go to the instance and check:
+
+* If the agent service is running: `service spotinst-agent status`
+* The agent log, located `/var/log/spotinst.spotinst-agent.log`
+
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
 
   <div style="padding-left:16px">
@@ -1292,7 +1309,6 @@ systemctl restart spotinst-agent
  </div>
 
  </details>
-
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="keepjenkinsalive">Integration: Can I keep Jenkins Agent alive after a job finishes?</summary>
