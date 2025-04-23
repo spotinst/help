@@ -1918,6 +1918,19 @@ For a network client, only the **account viewer** permission is required for the
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunscheduled">AKS, EKS, GKE: Why do I have an unscheduled DaemonSet pod?</summary>
+
+  <div style="padding-left:16px">
+
+[DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) pods are scheduled by the Kubernetes scheduler when nodes boot up in the cluster.
+
+Ocean autoscaler does not trigger a launch of a new node to serve a DaemonSet pod. This is by design. In addition, the DaemonSet pod doesn’t trigger scale-up.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpodalltaints">AKS, EKS, GKE: Can my Kubernetes pods tolerate all taints?</summary>
 
   <div style="padding-left:16px">
