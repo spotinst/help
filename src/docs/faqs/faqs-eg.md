@@ -466,6 +466,25 @@ The automatic process only happens when changing the Spot % from on-demand insta
  </details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egunknown">AWS: Why is the Target_Group health check status <i>unknown</i>?</summary>
+
+  <div style="padding-left:16px">
+
+You may get an <i>unknown</i> status for the target_group if:
+
+* The instance status is in state <i>initial</i>. This means the instance is still registering to the target group or performing the initial health check.
+* There isn’t enough data:
+    * Elastigroup didn’t get the instance status per target group for each of the target groups in the Elastigroup. Only one status per instance is saved, then aggregated based on all target groups.
+    * If there’s only one target group in the Elastigroup, then data wasn’t received from AWS.
+* The grace period ended and the instance didn’t get a <i>healthy</i> status from the [target group health check](elastigroup/features/compute/autohealing?id=configure-autohealing-health-check-type).
+
+You can see the [registered targets and their statuses in AWS](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/check-target-health.html).
+
+   </div>
+
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglockedautohealing">AWS: Does autohealing work on locked instances?</summary>
 
   <div style="padding-left:16px">
