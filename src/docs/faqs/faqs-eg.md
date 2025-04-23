@@ -150,6 +150,16 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egIAMprivs">AWS: What are the minimum permissions Spot needs to my AWS environment?</summary>
+
+  <div style="padding-left:16px">
+
+You can see the list of permission required for Spot in [Sample AWS policies](https://github.com/spotinst/spotinst-examples/tree/master/Policies/AWS).
+
+ </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdraining">AWS: What is the default draining timeout?</summary>
