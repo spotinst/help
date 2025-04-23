@@ -201,19 +201,17 @@ Ocean provides attributes that let you control utilization commitments at the vi
 
 In the Spot API, under Virtual Node Groups > XXX, you can configure these attributes as either `True` or `False`:
 
-*  `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level.
-*  `utilizeSavingPlans`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level.
+*  `shouldUtilizeRCommitments`: If there are free RIs/SPs within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level.
 
-Any change you make at the Virtual Node Group level will override the value set at the cluster level.
+Any change you make at the Virtual Node Group level will override the value set for the virtual node group template.
 
 You can use this feature at the cluster or virtual node group level:
 
-* [Create cluster]() or [Update cluster]()
 * [Create virtual node group]() or [Update virtual node group]()
 
-Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
+Set the `shouldUtilizeRCommitments` parameter to `true`.
 
->**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
+>**Note**: The default value for the parameter is `false`.
 
 
 
