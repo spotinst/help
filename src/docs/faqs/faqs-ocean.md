@@ -730,6 +730,17 @@ You can read the AWS documentation on [spot instance quotas](https://docs.aws.am
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocsubnet">AWS: Why am I getting an InsufficientFreeAddressesInSubnet message?</summary>
+
+<div style="padding-left:16px">
+
+This can happen if the subnet doesn’t have enough free IP addresses for your request. [Free up IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html#api-error-codes-table-client) in this subnet.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
 <div style="padding-left:16px">
