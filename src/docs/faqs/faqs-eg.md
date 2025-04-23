@@ -150,6 +150,16 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egIAMprivs">AWS: What are the minimum permissions Spot needs to my AWS environment?</summary>
+
+  <div style="padding-left:16px">
+
+You can see the list of permission required for Spot in [Sample AWS policies](https://github.com/spotinst/spotinst-examples/tree/master/Policies/AWS).
+
+ </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdraining">AWS: What is the default draining timeout?</summary>
@@ -395,6 +405,17 @@ You can get higher availability by including:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egiam">AWS: Why can’t I see all my AWS IAM roles when setting up a cluster/group?</summary>
+
+  <div style="padding-left:16px">
+
+When you’re in a cluster or group, you only see roles associated with the instance profile.  
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egssh">AWS: Why can’t I connect to an instance in Spot using SSH?</summary>
 
   <div style="padding-left:16px">
@@ -427,6 +448,24 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egspot%">AWS: What happens if I change the spotPercentage to 0?</summary>
+
+  <div style="padding-left:16px">
+
+If you change the Spot % to 0, your already running spot instances do not automatically change to on-demand in a cluster/group.
+
+You need to:
+
+* [Deploy an Elastigroup](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+* [Roll an Ocean cluster](ocean/features/roll-gen)
+
+The automatic process only happens when changing the Spot % from on-demand instances to spot (fix strategy in [Elastigroup](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy), [Ocean](ocean/features/dynamic-commitments-aws)).
+
+   </div>
+
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglockedautohealing">AWS: Does autohealing work on locked instances?</summary>
 
   <div style="padding-left:16px">
@@ -833,13 +872,23 @@ You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/late
 
  </details>
 
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">AWS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsubnet">AWS: Why am I getting an InsufficientFreeAddressesInSubnet message?</summary>
 
 <div style="padding-left:16px">
 
-You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
+This can happen if the subnet doesn’t have enough free IP addresses for your request. [Free up IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html#api-error-codes-table-client) in this subnet.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">AWS: Why am I getting an InvalidBlockDeviceMapping message?</summary>
+
+<div style="padding-left:16px">
+
+You can get this message when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
 ````
 Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping
@@ -1195,6 +1244,19 @@ You can:
        }
      }
      ````
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="emrami">Integration: Can I use a custom AMI when cloning/importing an EMR cluster?</summary>
+
+  <div style="padding-left:16px">
+
+When you [create an EMR cluster](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster) in the Spot console, you can use a custom AMI.
+
+When you [import a cluster using clone](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes), you cannot use a custom AMI from the source cluster.
 
  </div>
 
