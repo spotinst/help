@@ -176,7 +176,7 @@ The default draining for:
 
   <div style="padding-left:16px">
 
-You can see the list of permission required for Spot in [Sample AWS policies](https://github.com/spotinst/spotinst-examples/tree/master/Policies/AWS).
+You can see the list of permissions required for Spot in [Sample AWS policies](https://github.com/spotinst/spotinst-examples/tree/master/Policies/AWS).
 
  </div>
 
