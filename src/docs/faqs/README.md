@@ -312,6 +312,22 @@ The SAML is Base64encoded by the IDP. Encrypted assertions such as AES-256-CBC a
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSOchangeprov">SSO: Can I change identity providers?</summary>
+
+  <div style="padding-left:16px">
+
+If you’re using the same email ID after the migration, you can update your identity provider:
+
+1. Click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Security** > **Identify Providers**.
+2. Browse and upload a new metadata file (SAML doc).
+
+If you use the same SAML configuration, existing user/token permissions will continue to work after changing identity providers.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSOsinglelogoutservice">SSO: What are the SingleLogoutService URLs?</summary>
 
   <div style="padding-left:16px">
