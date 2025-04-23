@@ -290,8 +290,18 @@ Nodes can be replaced during a cluster roll even if the [instance is locked](ela
   </div>
 
  </details>
-
  
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ociam">AWS: Why can’t I see all my AWS IAM roles when setting up a cluster/group?</summary>
+
+  <div style="padding-left:16px">
+
+When you’re in a cluster or group, you only see roles associated with the instance profile.  
+
+   </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
