@@ -171,6 +171,16 @@ The default draining for:
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocIAMprivs">AWS: What are the minimum permissions Spot needs to my AWS environment?</summary>
+
+  <div style="padding-left:16px">
+
+You can see the list of permission required for Spot in [Sample AWS policies](https://github.com/spotinst/spotinst-examples/tree/master/Policies/AWS).
+
+ </div>
+
+ </details>
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oelasticsearch">AWS: Can Elasticsearch integrate with Spot?</summary>
 
@@ -290,8 +300,18 @@ Nodes can be replaced during a cluster roll even if the [instance is locked](ela
   </div>
 
  </details>
-
  
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ociam">AWS: Why can’t I see all my AWS IAM roles when setting up a cluster/group?</summary>
+
+  <div style="padding-left:16px">
+
+When you’re in a cluster or group, you only see roles associated with the instance profile.  
+
+   </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
@@ -383,6 +403,23 @@ You can get higher availability by including:
 
 * More instance types and availability zones for the group/cluster
 * Fallback to on-demand
+
+   </div>
+
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocspot%">AWS: What happens if I change the spotPercentage to 0?</summary>
+  <div style="padding-left:16px">
+
+If you change the Spot % to 0, your already running spot instances do not automatically change to on-demand in a cluster/group.
+
+You need to:
+
+* [Deploy an Elastigroup](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+* [Roll an Ocean cluster](ocean/features/roll-gen)
+
+The automatic process only happens when changing the Spot % from on-demand instances to spot (fix strategy in [Elastigroup](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy), [Ocean](ocean/features/dynamic-commitments-aws)).
 
    </div>
 
@@ -725,6 +762,17 @@ You may also get an email from Spot: <i>Spot Proactive Monitoring | Max Spot Ins
 You can read the AWS documentation on [spot instance quotas](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html).
 
    
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocsubnet">AWS: Why am I getting an InsufficientFreeAddressesInSubnet message?</summary>
+
+<div style="padding-left:16px">
+
+This can happen if the subnet doesn’t have enough free IP addresses for your request. [Free up IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html#api-error-codes-table-client) in this subnet.
+
  </div>
 
  </details>
