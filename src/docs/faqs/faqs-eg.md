@@ -1200,6 +1200,19 @@ You can:
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="emrami">Integration: Can I use a custom AMI when cloning/importing an EMR cluster?</summary>
+
+  <div style="padding-left:16px">
+
+When you [create an EMR cluster](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster) in the Spot console, you can use a custom AMI.
+
+When you [import a cluster using clone](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes), you cannot use a custom AMI from the source cluster.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="emrscaling">Integration: Why aren't my existing scaling policies imported with the EMR cluster?</summary>
 
