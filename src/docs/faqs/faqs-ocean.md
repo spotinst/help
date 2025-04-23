@@ -388,6 +388,23 @@ You can get higher availability by including:
 
  </details>
 
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocspot%">AWS: What happens if I change the spotPercentage to 0?</summary>
+  <div style="padding-left:16px">
+
+If you change the Spot % to 0, your already running spot instances do not automatically change to on-demand in a cluster/group.
+
+You need to:
+
+* [Deploy an Elastigroup](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+* [Roll an Ocean cluster](ocean/features/roll-gen)
+
+The automatic process only happens when changing the Spot % from on-demand instances to spot (fix strategy in [Elastigroup](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy), [Ocean](ocean/features/dynamic-commitments-aws)).
+
+   </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanebs">AWS: Why is EBS optimization disabled on instances optimized by default?</summary>
 
