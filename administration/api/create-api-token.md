@@ -1,7 +1,9 @@
 # Create an API Token
 
 You can create permanent and temporary tokens:
-* Permanent tokens can be either <i>personal</i> (the user is a person accessing the console) or <i>programmatic</i> (the user is an application accessing Spot with an API).
+* Permanent tokens can be either:
+    * **Personal** when a user is a person accessing the console or an API. Keep in mind, if you use a personal key and that user is removed from Spot, any tokens created for that user won’t be valid. This will cause some of your services and APIs to fail.
+    * **Programmatic** when the user is an application accessing Spot with an API or service.
 * Temporary tokens are created using the Spot API.
 
 ## Create a Permanent Token
@@ -13,7 +15,7 @@ Only Organization Admins can create programmatic tokens.
 1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **API**.
 2. Click **Permanent Tokens** > **Generate Token**.
 3. Select <i>Personal</i> or <i>Programmatic</i>:
-    * **Personal**: give your token a name and **click Generate**.
+    * **Personal**: give your token a name and **click Generate**. Keep in mind, if you use a personal key and that user is removed from Spot, any tokens created for that user won’t be valid. This will cause some of your services and APIs to fail.
     * **Programmatic**: give your token a name and select the type of programmatic user, then click **Generate**. Only Organization Admins can create programmatic tokens.
 	
 > **Important**: Remember to keep your tokens secret. Treat them just like passwords. They act on your behalf when interacting with the API. Do not share your personal access tokens with anyone outside your organization. Do not hardcode them into your programs. Instead, use environment variables. Contact support if you're concerned your token has been compromised.

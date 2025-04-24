@@ -1021,6 +1021,17 @@ You can configure a [maintenance window](elastigroup/features/core-features/main
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egweightstateful">AWS: Can I use weights to control stateful Elastigroup capacity?</summary>
+
+  <div style="padding-left:16px">
+
+It’s not recommended to use [weighted capacity](elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted) for stateful Elastigroups. You can use it for non-stateful Elastigroups.
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdelinstance">AWS: Can I delete a stateful instance from Spot and manage it in AWS?</summary>
 
   <div style="padding-left:16px">
