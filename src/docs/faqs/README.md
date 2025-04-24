@@ -615,4 +615,41 @@ Spotinst-sdk2 is not part of the default PyPl. You need to create a deployment p
  </div>
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="tokenkind">Which type of key/token should I create to connect resources (APIs) to Spot?</summary>
+
+  <div style="padding-left:16px">
+
+You can [create tokens](administration/api/create-api-token):
+* Programmatic tokens for APIs and connecting your services to Spot.
+* Personal tokens. If you choose to use a personal key and that user is removed from Spot, any tokens created for that user won’t be valid. This will cause some of your services and APIs to fail.
+
+ </div>
+ </details>
  
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="tokenmove">Can I move an existing token to a different user?</summary>
+
+  <div style="padding-left:16px">
+
+No, it’s not possible to transfer an existing token between users.
+
+You should use [programmatic tokens](https://docs.spot.io/administration/api/create-api-token) for APIs and connecting your services to Spot.
+
+ </div>
+ </details>
+  
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="tokenmove">Can I see who owns a token and what permissions it has?</summary>
+
+  <div style="padding-left:16px">
+
+You can see which user owns a token and the permissions:
+
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **API** > **Permanent Tokens**.
+2. Find the last 4 digits of the token in the list and see which user it’s assigned to.
+3. You can see the permissions for a token by clicking **Organizations** > **Users**.
+4. Find the user in the list who created the token and see what the permissions are.
+
+ </div>
+ </details>
