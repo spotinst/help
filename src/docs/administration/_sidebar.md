@@ -9,6 +9,8 @@
   - [Organizations & Accounts](administration/organizations/)
     - [Multitenancy](/administration/organizations/multitenancy)
     - [Billing](administration/organizations/billing-details)
+  - [Savings](administration/savings)
+  - [vCPU](administration/vcpu)
   - [Notification Center](administration/notification-center/)
     - [Event Policies](administration/notification-center/event-policies/)
       - [Create a Compute Policy](administration/notification-center/event-policies/create)
