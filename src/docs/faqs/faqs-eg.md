@@ -128,6 +128,25 @@ Change the session client from <i>elastigroup_aws</i> to [the client you need](h
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egutilize">AWS: Why do some on-demand instances in my AWS account use reservations or savings plans with <i>utilizeCommitments: false</i>?</summary>
+
+  <div style="padding-left:16px">
+
+You can have on-demand instances running in your group/cluster using reserved instance/savings plan even if you have set utilizeCommitments: false.
+
+This happens because of:
+* **AWS commitments coverage**: When an on-demand instance launches in AWS, if there are any existing reservation or savings plan AWS may use them. AWS has its own way of deciding if an instance can be covered by a commitment plan. If the instance meets certain criteria, it will be covered if there's available space. This is how AWS handles reservations and savings plans. This happens even if you select utilizeCommitments: false.
+* **Elastigroup/Ocean’s explicit commitment utilization**: If you’ve selected utilizeCommitments: true, Spot imitates AWS’s method to help you utilize all the commitment plans for your AWS account. If there is free space in the commitment plan and markets, your on-demand instances run reserved instances/savings plans.
+
+An on-demand instance marked as a reserved instance/savings plan doesn't always mean it will launch as a commitment plan. There can be other reasons for launching on-demand instances, such as when there is no spot capacity available or when certain requirements in Ocean need an on-demand instance. Then, if the on-demand instance is eligible, it will automatically use a commitment plan if there's space.
+
+Spot cannot control how AWS automatically handles commitment plan utilization. In addition, Spot cannot prioritize which on-demand instances should be on a commitment plan and which should not.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
