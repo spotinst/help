@@ -53,7 +53,7 @@
      ANALYSIS_CUSTOM_ROLE_TITLE="Spot Read-Only Custom Role"
      ANALYSIS_CUSTOM_ROLE_DESCRIPTION="Spot Read-Only Permissions needed for programmatic visibility into commitment and cost data"
      ANALYSIS_CUSTOM_ROLE_PERMISSIONS="bigquery.capacityCommitments.get,bigquery.capacityCommitments.list,bigquery.jobs.listAll,cloudasset.assets.exportComputeCommitments,cloudasset.assets.listComputeCommitments,compute.commitments.get,compute.commitments.list,compute.instances.get,compute.instances.list,recommender.bigqueryCapacityCommitmentsInsights.get,recommender.bigqueryCapacityCommitmentsInsights.list,recommender.bigqueryCapacityCommitmentsRecommendations.get,recommender.bigqueryCapacityCommitmentsRecommendations.list,recommender.commitmentUtilizationInsights.get,recommender.commitmentUtilizationInsights.list,recommender.spendBasedCommitmentInsights.get,recommender.spendBasedCommitmentInsights.list,recommender.spendBasedCommitmentRecommendations.get,recommender.spendBasedCommitmentRecommendations.list,recommender.spendBasedCommitmentRecommenderConfig.get,recommender.usageCommitmentRecommendations.get,recommender.usageCommitmentRecommendations.list"
-     SERVICE_ACCOUNT_PROJECT_ROLES=("roles/bigquery.dataViewer", "roles/resourcemanager.projectIamAdmin")
+     SERVICE_ACCOUNT_PROJECT_ROLES=("roles/bigquery.dataViewer" "roles/resourcemanager.projectIamAdmin")
      CURRENT_PROJECT_ID=$(gcloud config get-value project --quiet)
      SERVICE_ACCOUNT_NAME="spot-programmatic-access-sa" #between 6 and 30 characters
      SERVICE_ACCOUNT_DESCRIPTION="Spot Service Account created for Programmatic Access to Resources"
