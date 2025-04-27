@@ -450,8 +450,10 @@ You can see examples of autotagging in:
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancilium0">AWS: How can I utilize Cilium in Ocean Kubernetes clusters?</summary>
 
   <div style="padding-left:16px">
-	  
-See [Startup Taints](/ocean/features/labels-and-taints?id=startup-taints)
+
+  See the following topic:
+
+  * [Startup Taints](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
 
    </div>
 
