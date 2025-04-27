@@ -29,7 +29,7 @@ This list displays your right-sizing recommendations per workload and lets you d
    *  Green (Optimized): Workload is fully optimized, and no action is required.
    *  Orange (Limited): Ocean applied recommendations to the workload, but there are limitations due to overhead, HPA, etc.
    *  Blue (Pending): Rule has been attached to the workload but is out of schedule.
-   *  Red (Not Optimized): Workloads for which Ocean cannot apply the recommendation due to HPA, Thresholds, etc.
+   *  Red (Not Optimized): Issues due to user configuration, for example, thresholds or exclude preliminary recommendations.
    *  Gray (Rollback): Ocean rolled back to the original deployment request and suspended the workload's attachment to the rule.
    *  Brown (Not Attached): The Workload is not optimized.
 *  Workload type and names.
@@ -95,7 +95,7 @@ To create/edit a right-sizing rule:
    * If a recommendation is above the set boundaries, automatic right-sizing will apply the recommendation using the maximum value configured in the rule.
    * If a recommendation is below the set boundaries, automatic right-sizing will apply the recommendation using the minimum value configured in the rule.
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-10. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+10. Ocean supports automatic right-sizing for HPA-associated workloads. To enable, click **Apply HPA on associated workload**.
 
 11. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
      *  In the Auto-attach area, select required namespaces / labels.
