@@ -25,6 +25,40 @@ us-east1, us-east1, us-east1, us-east4, us-east4, us-east4, us-central1, us-cent
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanshutdownhours0">AWS: How do virtual node group-level and cluster-level shutdown hours work?</summary>
+
+  <div style="padding-left:16px">
+
+When shutdown hours end and Ocean needs to launch a node, it searches for a virtual node group with these characteristics:
+
+* It is not in shutdown hours.
+* Has no taints (Ocean will not launch a virtual node group that has a taint).
+* `maxInstanceCount > 0` (or not set).
+
+Ocean sorts the groups as follows:
+
+* Highest max instance count.
+* Highest spot percentage.
+* Highest number of AZs.
+* Highest number of possible instance types defined.
+
+**Virtual Node Group shutdown hours:**
+
+Unlike cluster-level, virtual node group-level has no “guaranteed” scale-up to “wake up” the cluster.
+
+Scale-up occurs only if no other node can run the controller, and one of the virtual node groups that can run the controller was recently in shutdown hours.
+
+However, Ocean will not always scale up from a given virtual node group that was in shutdown hours. For example, if a virtual node group has a taint, Ocean will not launch a node from it when the shutdown hours end. Instead, Ocean applies cluster-level logic to find a suitable virtual node group to launch a node.
+
+See also [Set Shutdown Hours](https://docs.spot.io/ocean/tutorials/set-running-hours?id=set-shutdown-hours).
+
+ </div>
+ 
+ </details>
+
+ 
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">AWS, Azure, GCP: What's the difference between allocation and utilization for Ocean right sizing?</summary>
 
