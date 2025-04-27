@@ -443,6 +443,21 @@ You can see examples of autotagging in:
 
  </details>
 
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancilium0">AWS: How can I utilize Cilium in Ocean Kubernetes clusters?</summary>
+
+  <div style="padding-left:16px">
+	  
+See [Startup Taints](/ocean/features/labels-and-taints?id=startup-taints)
+
+   </div>
+
+ </details>
+ 
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oc2min">AWS: Why doesn’t Spot gracefully terminate instances if AWS gives a 2-minute termination notice?</summary>
 
