@@ -41,7 +41,7 @@
 
    <div style="padding-left:16px">
 
-     ````     
+     ````
      # Ensures the script exits on error and fails on pipeline errors
      set -euo pipefail
    
@@ -54,23 +54,29 @@
      }
    
      validate_command() {
-       if [ $? -ne 0 ]; then
-         log_error "$1"
+       local err_msg="$1"
+       local success_msg="$2"
+       local cmd="$3"
+       shift 3
+     
+       echo "Running: $cmd $*"
+     
+       if ! "$cmd" "$@"; then
+         log_error "$err_msg"
          exit 1
        else
-         log_success "$2"
+         log_success "$success_msg"
        fi
      }
    
      echo "Fetching org ID..."
      ANALYSIS_ORG_ID="$(gcloud projects get-ancestors $(gcloud config get-value project --quiet) | awk '/TYPE: organization/{print id} {id=$2}')"
      SERVICE_ACCOUNT_ORG_ID="$ANALYSIS_ORG_ID"
-     validate_command "Failed to get org ID" "Fetched org ID successfully."
    
      CURRENT_PROJECT_ID=$(gcloud config get-value project --quiet)
      ANALYSIS_PROJECTS=("$CURRENT_PROJECT_ID")
      SERVICE_ACCOUNT_PROJECT_LIST=("$CURRENT_PROJECT_ID")
-
+   
      ANALYSIS_ORG_ROLES=("roles/billing.viewer" "roles/browser")
      ANALYSIS_EMAILS=("ross.hardin@flexera.com" "greg.kuderna@flexera.com")
      ANALYSIS_PROJECT_ROLE="roles/bigquery.dataViewer" 
@@ -101,71 +107,116 @@
          log_success "Service account has $ROLE"
        fi
      done
-
+   
      for ROLE in "${ANALYSIS_ORG_ROLES[@]}"; do
        for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
          echo "Adding member: user:$EMAIL to role $ROLE ..."
-         gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID --role=$ROLE --member="user:$EMAIL"
-         validate_command "Failed to add user:$EMAIL to org role $ROLE" "Added user:$EMAIL to org role $ROLE"
+         validate_command \
+           "Failed to add user:$EMAIL to org role $ROLE" \
+           "Added user:$EMAIL to org role $ROLE" \
+           gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID \
+             --role=$ROLE \
+             --member="user:$EMAIL"
        done
      done
-
+   
      for PROJECT in "${ANALYSIS_PROJECTS[@]}"; do
        for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
          echo "Adding user:$EMAIL to project role $ANALYSIS_PROJECT_ROLE in project $PROJECT..."
-         gcloud projects add-iam-policy-binding $PROJECT --role=$ANALYSIS_PROJECT_ROLE --member="user:$EMAIL"
-         validate_command "Failed to add user:$EMAIL to project role" "Added user:$EMAIL to project role in $PROJECT"
+         validate_command \
+           "Failed to add user:$EMAIL to project role" \
+           "Added user:$EMAIL to project role in $PROJECT" \
+           gcloud projects add-iam-policy-binding $PROJECT \
+             --role=$ANALYSIS_PROJECT_ROLE \
+             --member="user:$EMAIL"
        done
      done
-
+   
      echo "Creating custom role $ANALYSIS_CUSTOM_ROLE_NAME..."
-     gcloud iam roles create "$ANALYSIS_CUSTOM_ROLE_NAME" --organization=$ANALYSIS_ORG_ID --description="$ANALYSIS_CUSTOM_ROLE_DESCRIPTION" --permissions="$ANALYSIS_CUSTOM_ROLE_PERMISSIONS" --stage="GA" --title="$ANALYSIS_CUSTOM_ROLE_TITLE"
-     validate_command "Failed to create custom role" "Created custom role $ANALYSIS_CUSTOM_ROLE_NAME"
-
+     validate_command \
+       "Failed to create custom role" \
+       "Created custom role $ANALYSIS_CUSTOM_ROLE_NAME" \
+       gcloud iam roles create "$ANALYSIS_CUSTOM_ROLE_NAME" \
+         --organization=$ANALYSIS_ORG_ID \
+         --description="$ANALYSIS_CUSTOM_ROLE_DESCRIPTION" \
+         --permissions="$ANALYSIS_CUSTOM_ROLE_PERMISSIONS" \
+         --stage="GA" \
+         --title="$ANALYSIS_CUSTOM_ROLE_TITLE"
+   
      for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
        echo "Granting custom role $ANALYSIS_CUSTOM_ROLE_NAME to $EMAIL..."
-       gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID --member="user:$EMAIL" --role="organizations/$ANALYSIS_ORG_ID/roles/$ANALYSIS_CUSTOM_ROLE_NAME"
-       validate_command "Failed to grant custom role to $EMAIL" "Granted custom role to $EMAIL"
+       validate_command \
+         "Failed to grant custom role to $EMAIL" \
+         "Granted custom role to $EMAIL" \
+         gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID \
+           --member="user:$EMAIL" \
+           --role="organizations/$ANALYSIS_ORG_ID/roles/$ANALYSIS_CUSTOM_ROLE_NAME"
      done
-
+   
      # You will need roles/iam.serviceAccountCreator to create a service account
      # To Grant the service account access to the project, you need roles/resourcemanager.projectIamAdmin
-
+   
      echo "Creating service account $SERVICE_ACCOUNT_NAME..."
-     gcloud iam service-accounts create $SERVICE_ACCOUNT_NAME --description="$SERVICE_ACCOUNT_DESCRIPTION" --display-name="$SERVICE_ACCOUNT_DISPLAY_NAME"
-     validate_command "Failed to create service account" "Created service account $SERVICE_ACCOUNT_NAME" 
-
+     validate_command \
+       "Failed to create service account" \
+       "Created service account $SERVICE_ACCOUNT_NAME" \
+       gcloud iam service-accounts create $SERVICE_ACCOUNT_NAME \
+         --description="$SERVICE_ACCOUNT_DESCRIPTION" \
+         --display-name="$SERVICE_ACCOUNT_DISPLAY_NAME"
+   
      for PROJECT in "${SERVICE_ACCOUNT_PROJECT_LIST[@]}"; do
        for ROLE in "${SERVICE_ACCOUNT_PROJECT_ROLES[@]}"; do
          echo "Adding member: serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com to role $ROLE ..."
-         gcloud projects add-iam-policy-binding $PROJECT --role="$ROLE" --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
-         validate_command "Failed to add service account to project role $ROLE" "Added service account to project role $ROLE"
+         validate_command \
+           "Failed to add service account to project role $ROLE" \
+           "Added service account to project role $ROLE" \
+           gcloud projects add-iam-policy-binding $PROJECT \
+             --role="$ROLE" \
+             --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
        done
      done
-
+   
      echo "Creating custom org level role for service account..."
-     gcloud iam roles create "$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" --organization=$SERVICE_ACCOUNT_ORG_ID --description="$SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION" --permissions="$SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS" --stage="GA" --title="$SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE"
-     validate_command "Failed to create service account custom role" "Created custom org level role $SERVICE_ACCOUNT_CUSTOM_ROLE_NAME"
-
+     validate_command \
+       "Failed to create service account custom role" \
+       "Created custom org level role $SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" \
+       gcloud iam roles create "$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" \
+         --organization=$SERVICE_ACCOUNT_ORG_ID \
+         --description="$SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION" \
+         --permissions="$SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS" \
+         --stage="GA" \
+         --title="$SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE"
+   
      echo "Granting custom role to service account..."
-     gcloud organizations add-iam-policy-binding $SERVICE_ACCOUNT_ORG_ID --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" --role="organizations/$SERVICE_ACCOUNT_ORG_ID/roles/$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME"
-     validate_command "Failed to grant custom role to service account" "Granted custom role to service account"
-
+     validate_command \
+       "Failed to grant custom role to service account" \
+       "Granted custom role to service account" \
+       gcloud organizations add-iam-policy-binding $SERVICE_ACCOUNT_ORG_ID \
+         --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" \
+         --role="organizations/$SERVICE_ACCOUNT_ORG_ID/roles/$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME"
+   
      # You will need roles/iam.serviceAccountAdmin to create this service account key...
      # Or a relevant custom role with iam.serviceAccountKeys.create
-
+   
      echo "Creating service account key..."
-     gcloud iam service-accounts keys create ~/my-sa-key.json --iam-account="$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
-     validate_command "Failed to create service account key" "Created service account key"
-
+     validate_command \
+       "Failed to create service account key" \
+       "Created service account key" \
+       gcloud iam service-accounts keys create ~/my-sa-key.json \
+         --iam-account="$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
+   
      echo "Downloading service account key..."
-     cloudshell download my-sa-key.json
-     validate_command "Failed to download service account key" "Downloaded service account key"
-
+     validate_command \
+       "Failed to download service account key" \
+       "Downloaded service account key" \
+       cloudshell download my-sa-key.json
+   
      echo "Removing local key file..."
-     rm ~/my-sa-key.json
-     validate_command "Failed to remove local key file" "Removed local key file"
-
+     validate_command \
+       "Failed to remove local key file" \
+       "Removed local key file" \
+       rm ~/my-sa-key.json
+   
      echo "Onboarding script completed successfully."
     ````
 
