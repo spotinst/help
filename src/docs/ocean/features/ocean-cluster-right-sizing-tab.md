@@ -8,11 +8,11 @@ Container resource requests, defined in a Kubernetes cluster, determine a pod’
 
 Ocean provides container-level right-sizing recommendations so you can focus on improving specific application resource requests and make impactful changes to resource utilization.  
 
-All Ocean customers have freemium automatic right-sizing enabled for up to 10 workloads by default. 
+All Ocean customers have a minimal version for automatic right-sizing that supports up to 10 workloads. 
 
 <img width="1100" src="https://github.com/user-attachments/assets/e5e77a76-1789-4eb7-8f13-9689e3e873cd" />
 
-To turn on the full capabilities of this powerful feature, [Contact Support in the Spot console online chat or by email](https://spot.io/support/)
+To opt-in and turn on the full capabilities of this powerful feature, [Contact Support in the Spot console online chat or by email](https://spot.io/support/)
 
 ##  Prerequisites
 
