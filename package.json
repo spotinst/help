@@ -47,7 +47,7 @@
     "markdownlint-cli": "^0.32.2",
     "postcss": "^8.4.17",
     "postcss-import": "^14.1.0",
-    "postcss-loader": "^7.0.2",
+    "postcss-loader": "^7.3.3",
     "postcss-mixins": "^9.0.2",
     "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.8.2",
