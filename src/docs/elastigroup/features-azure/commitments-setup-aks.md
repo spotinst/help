@@ -41,21 +41,26 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
 2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Elastigroup recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
-3.  In the Elastigroup autoscaler strategy area of the virtual node group, click **Missing permissions**.
+3.  In the Elastigroup Availability Settings area of the virtual node group, next to Utilize RIs/SPs, click **Add permission**.
 
-<img width="600" src="https://github.com/user-attachments/assets/9fa2fd52-3d18-447f-a11c-68a0764da146" />
+<img width="1000" src="https://github.com/user-attachments/assets/4d72925d-c2be-470f-b07c-253f54a06b9d" />
+
 
 ###  Step 1: App Registrations
 
 1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
 
+Upgrade:
+
 <img width="600" src="https://github.com/user-attachments/assets/a36fc22d-03b5-4b60-a8a7-72806cf71648" />
+
+New:
+
+<img width="600" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
 
 2. Copy the following credentials from your Azure app and paste them into the fields:
    * Application (client) ID.
    * Directory (tenant) ID.
-
-<img width="600" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
 
 3.  Go to Step 2: Certificates and Secrets
 
