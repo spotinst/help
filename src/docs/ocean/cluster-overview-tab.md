@@ -195,7 +195,7 @@ Tracking these events on the Autoscaling Activity panel lets you see when and ho
 
 #### Dynamic Commitments
 
-Ocean reverts from on-demand reserved instances and savings plans when they can be used in other workloads in the customer’s AWS account(s) to increase the overall coverage of their commitments. 
+Ocean reverts from on-demand reserved instances and savings plans when they can be used in other workloads in your AWS account(s) to increase the overall coverage of their commitments. 
 
 Ocean continuously tracks commitments and initiates proactive replacements to increase the account’s commitment coverage and decrease excessive on-demand node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments. For more information, see [Dynamic Commitments](https://docs.spot.io/ocean/features/dynamic-commitments-aws).
 
