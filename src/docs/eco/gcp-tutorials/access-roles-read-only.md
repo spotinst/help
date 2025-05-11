@@ -50,7 +50,7 @@ These roles and permissions are needed for Eco Google Cloud cost specialists to 
 
 These roles and permissions are needed for Eco Google Cloud service account to ingest, process, and display your data on your personal Eco Google Cloud Dashboard.
 
-**Predefined IAM Roles**
+**Predefined IAM roles**
 
 * Project level (in the project that has the Google Cloud BigQuery billing export)
    * [roles/bigquery.dataViewer](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataViewer)
@@ -70,7 +70,7 @@ These roles and permissions are needed for Eco Google Cloud service account to i
 
 These roles and permissions are needed for Eco Google Cloud cost specialists to manage your environment.
 
-**Predefined IAM Roles**
+**Predefined IAM roles**
 
 * Organization level
    * [roles/viewer](https://cloud.google.com/iam/docs/understanding-roles#legacy-basic)
