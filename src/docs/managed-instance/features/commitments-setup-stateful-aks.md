@@ -41,9 +41,9 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
 2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Stateful Node recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
-3.  In the Stateful Node Strategy area of the virtual node group, click **Add permissions**.
+3.  In the Stateful Node Strategy area of the virtual node group, next to Utilize RIs/SPs, click **Add permissions**.
 
-<img width="1150" src="https://github.com/user-attachments/assets/5ba080bf-e24e-4707-a418-e786a74e5e8b" />
+<img width="1150" src="https://github.com/user-attachments/assets/66ef2870-cccc-4fe7-aa52-28cea57efbf7" />
 
 ###  Step 1: App Registrations
 
