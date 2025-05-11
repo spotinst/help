@@ -1,4 +1,3 @@
-
 <meta name="robots" content="noindex">
 
 #  Set up Commitments
@@ -42,27 +41,27 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
 2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Stateful Node recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
-3.  In the Stateful Node autoscaler strategy area of the virtual node group, click **Missing permissions**.
+3.  In the Stateful Node Strategy area of the virtual node group, click **Add permissions**.
 
-<img width="600" src="https://github.com/user-attachments/assets/9fa2fd52-3d18-447f-a11c-68a0764da146" />
+<img width="1150" src="https://github.com/user-attachments/assets/5ba080bf-e24e-4707-a418-e786a74e5e8b" />
 
 ###  Step 1: App Registrations
 
 1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
 
-<img width="600" src="https://github.com/user-attachments/assets/a36fc22d-03b5-4b60-a8a7-72806cf71648" />
+<img width="500" src="https://github.com/user-attachments/assets/1757f341-bf0a-42ca-ad68-fd9d2ba33796" />
 
 2. Copy the following credentials from your Azure app and paste them into the fields:
    * Application (client) ID.
    * Directory (tenant) ID.
 
-<img width="600" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
+<img width="500" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
 
 3.  Go to Step 2: Certificates and Secrets
 
 ###  Step 2: Certificates and Secrets
     
-<img width="600" src="https://github.com/user-attachments/assets/c5342111-e932-445f-b985-daf299531443" />
+<img width="500" src="https://github.com/user-attachments/assets/c5342111-e932-445f-b985-daf299531443" />
 
 1. Copy the following credentials from your Azure app and paste them into the fields:
    * Application secret expiration date.
@@ -73,7 +72,8 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 ###  Step 3: Permissions Assignment
 
-<img width="600" src="https://github.com/user-attachments/assets/2cb2085e-acd0-4096-b646-040eedcae654" />
+<img width="500" src="https://github.com/user-attachments/assets/444bb909-62d1-4315-8d43-b4b2d857e2e4" />
+
 
 The first time you use commitments, you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
 
