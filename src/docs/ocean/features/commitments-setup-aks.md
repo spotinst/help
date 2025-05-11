@@ -49,13 +49,17 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
 
+Upgrade:
+
 <img width="600" src="https://github.com/user-attachments/assets/a36fc22d-03b5-4b60-a8a7-72806cf71648" />
+
+New:
+
+<img width="600" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
 
 2. Copy the following credentials from your Azure app and paste them into the fields:
    * Application (client) ID.
    * Directory (tenant) ID.
-
-<img width="600" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
 
 3.  Go to Step 2: Certificates and Secrets
 
