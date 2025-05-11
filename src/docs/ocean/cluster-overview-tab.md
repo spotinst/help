@@ -135,7 +135,7 @@ Click **View Details** on the right of the right-sizing tab to see your [actual 
 
 ## Autoscaling Activity Panel 
 
-![autoscaling-panel-14-08](https://github.com/user-attachments/assets/6db596fa-2705-4af4-96c0-060cfaefd6cb)
+<img width="1500" src="https://github.com/user-attachments/assets/42d56091-d8a9-4e1c-be4a-1916b97f00a0" />
 
 The Autoscaling Activity panel contains the following widgets:  
 
@@ -193,6 +193,12 @@ The Revert to Lower Cost widget shows the number of events for which a node was 
 
 Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
 
+#### Dynamic Commitments
+
+Ocean reverts from on-demand reserved instances when they can be used in other workloads to increase the coverage of commitments and replacements. When working with dynamic workloads in the cloud, Ocean continually adjusts to application requirements and usage changes. 
+
+Ocean tracks commitments and initiates proactive replacements, increasing the account’s commitment coverage and decreasing excessive on-demand node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments. For more information, see [Dynamic Commitments](https://docs.spot.io/ocean/features/dynamic-commitments-aws).
+
 #### Autohealing
 
 Auto Healing monitors the status of each Kubernetes node by examining the condition object, which provides information about various aspects of the node. Specifically, Autohealing focuses on the Ready condition. If the Ready condition indicates a status of False or Unknown, the instance is deemed unhealthy, prompting the initiation of a replacement process. 
@@ -205,8 +211,6 @@ The Autoscaling Activity Graph provides intuitive insights into the interaction 
 level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
-
-![activity-graph-screen-1](https://github.com/user-attachments/assets/9be9c4db-ea65-4bd1-a195-dd549d76770a)
 
 The upper graph displays the autoscaling activity to analyze. By default, it displays a full set of activity curves. Click an item on the legend above the graph to turn its associated curve on or off.
 
@@ -223,15 +227,24 @@ These are the curves:
 
 >**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
 
-To set the zoom level for the graph:
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To set the zoom level for the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 7 days.
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
 >**Tip**: Set the period on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
 
-![activity-graph-screen-2](https://github.com/user-attachments/assets/0583b815-7e68-4208-9edb-049171ccb3a6)
+<img width="827" src="https://github.com/user-attachments/assets/b1c08ae6-f2c0-4a5a-b693-a2e20368d05a" />
 
-To display the autoscaling activity at a specific point on the graph:
+   </div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display the autoscaling activity at a specific point on the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. Mouse over the upper graph to view the main details.
 2. Click **Cluster State Details** to view more information.
@@ -239,15 +252,15 @@ To display the autoscaling activity at a specific point on the graph:
 This is the information displayed:
 
 * Autoscaling events (displayed for a period of 12 hours or less):
-One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
-For example, Scale Up, Scale Down, or Autohealing.
+One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling events displayed as widgets above the graph.
+For example, Scale Up, Scale Down, Dynamic Commitments, or Autohealing.
 
 For vCPU/memory(GiB)/GPU:
 
 * Nodes Allocation (vCPU/GiB/GPU):
   * Total node allocation. 
   * Split according to lifecycle types.
-*  vCPU/GiBy/GPU of Workload:
+*  vCPU/GiB/GPU of Workload:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
@@ -255,7 +268,28 @@ For vCPU/memory(GiB)/GPU:
 
 Total Allocation Calculation:
 
-* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. 
+* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
+
+  </div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display detailed information about a specific autoscaling event</summary>
+ 
+   <div style="padding-left:16px">
+
+* Click on an event displayed in a blue rectangle, for example, <img width="93" src="https://github.com/user-attachments/assets/5af702e2-f41e-43c6-ba03-20b5392782e4" />
+  for a Scale Down event.
+
+<img width="827" src="https://github.com/user-attachments/assets/80a3d140-e466-4548-91ea-74b749c6f6f2" />
+
+>Note: The information shown in the box depends on the type of event.
+
+The above example shows the pre and post scale resource utilization for the scale-down action. Ocean simulated two running pods that could be moved to other nodes for better node utilization. 
+Each pod was rescheduled on a different target node. All the terminated instances were spots.
+
+  </div>
+</details>
 
 
 ##  Related Topics 
