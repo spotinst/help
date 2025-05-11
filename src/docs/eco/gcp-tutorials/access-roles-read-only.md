@@ -79,7 +79,7 @@ These roles and permissions are needed for Eco Google Cloud cost specialists to 
  
 * Billing account level (on the billing account to be managed)
    * [roles/consumerprocurement.orderAdmin](https://cloud.google.com/marketplace/docs/access-control#consumerprocurement.orderAdmin)
- 
+
 **Custom full management IAM role**
 
 * Organization level
