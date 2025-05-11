@@ -3193,6 +3193,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/eks-auto-ami"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/ocean/features/eks-bottlerocket-ami-conf</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/features/eks-bottlerocket-ami-conf"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/eks-bottlerocket-ami-conf"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/ocean/features/elastic-ip</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

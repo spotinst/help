@@ -421,6 +421,7 @@
   "/ocean/features/distribute-vcpu.md",
   "/ocean/features/dynamic-commitments-aws.md",
   "/ocean/features/eks-auto-ami.md",
+  "/ocean/features/eks-bottlerocket-ami-conf.md",
   "/ocean/features/elastic-ip.md",
   "/ocean/features/gke-cluster-vng-orientation.md",
   "/ocean/features/headroom.md",

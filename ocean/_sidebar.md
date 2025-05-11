@@ -70,6 +70,7 @@
      - [AMI Auto-Update (EKS)](ocean/features/eks-auto-ami)
        - [Auto-Update via Console](ocean/features/ami-auto-update-eks-ui)
      - [AZ Recommendations](ocean/features/avail-zones-scores)
+     - [Configure BottleRocket AMI](ocean/features/eks-bottlerocket-ami-conf)
      - [Cluster Orientation](ocean/features/cluster-orientation)
      - [vCPU Distribution](ocean/features/distribute-vcpu)
      - [Dynamic Commitments](ocean/features/dynamic-commitments-aws)
