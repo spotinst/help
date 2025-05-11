@@ -7,7 +7,7 @@ Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 Before you can turn on commitments for your cluster or virtual node groups, you need to:
 
 *  [Get your Azure credentials](link)
-*  [Connect Commitments to Spot Products](link)
+*  [Connect Commitments to Spot Products](link) 
 
 Once you have your Azure credentials, you can turn on commitments via either the Spot console or the Spot API.
 
