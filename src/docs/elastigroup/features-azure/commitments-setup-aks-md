@@ -20,7 +20,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 1. Log in to your Azure account.
 2. Go to App Registration.
 3. Create a new application registration.
-4. Set the Redirect URI to `https://spot.io`
+4. Set the Redirect URI to `https://spot.io`.
 
 >**Note:** Spot requires this URI for authentication purposes.
 
