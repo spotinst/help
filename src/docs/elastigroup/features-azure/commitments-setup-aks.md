@@ -134,4 +134,4 @@ You can use this feature at the cluster or virtual node group level:
 
 Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 
->**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
+The default value for the `utilizeReservedInstances` parameter is `true`.
