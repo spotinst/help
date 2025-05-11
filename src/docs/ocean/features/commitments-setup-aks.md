@@ -112,31 +112,19 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 >  - [Connect Commitments to Spot Products](link)
 
 
-## Turn on Utilize Commitments for Virtual Node Groups from the Spot API
+## Turn on Utilize Commitments for Cluster or Virtual Node Groups from the Spot API
 
----------------------------------------------------------------------
-----------THIS WAS TAKEN FROM AWS. NEED TO CHECK FOR AKS-------------
----------------------------------------------------------------------
+You might need to distribute reservation instances/savings plans according to virtual node groups for several types of workloads on the same cluster.
 
-You might want to distribute reservation instances/savings plans according to virtual node groups for several types of workloads on the same cluster.
+in the Spot API, for virtual node groups/clusters, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
 
-Ocean provides attributes that let you control utilization commitments at the virtual node group level.
-
-In the Spot API, under Virtual Node Groups > XXX, you can configure these attributes as either `True` or `False`:
-
-*  `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level.
-*  `utilizeSavingPlans`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level.
-
-Any change you make at the Virtual Node Group level will override the value set at the cluster level.
-
-You can use this feature at the cluster or virtual node group level:
+When `True` (default), and there are free reserved instances / savings plans within the AWS account, Ocean will utilize them before launching spot instances. 
+The initial virtual node group default value is inherited from the identical attribute at the cluster level. 
 
 * [Create cluster]() or [Update cluster]()
 * [Create virtual node group]() or [Update virtual node group]()
 
-Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 
->**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
 
 
