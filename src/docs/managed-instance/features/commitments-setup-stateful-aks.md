@@ -1,4 +1,4 @@
-<meta name="robots" content="noindex">
+<meta name="robots" content="noindex" />
 
 #  Set up Commitments
 
@@ -43,7 +43,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Stateful Node recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
 3.  In the Stateful Node Strategy area of the virtual node group, next to Utilize RIs/SPs, click **Add permissions**.
 
-<img width="1150" src="https://github.com/user-attachments/assets/66ef2870-cccc-4fe7-aa52-28cea57efbf7" />
+<img width="1150" src="https://github.com/user-attachments/assets/22580fed-33c0-4fdf-961b-9db51e21ca52" />
 
 ###  Step 1: App Registrations
 
