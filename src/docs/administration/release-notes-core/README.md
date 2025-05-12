@@ -1,8 +1,5 @@
 #  Administration Release Notes
 
-*  **ADM-0002 May 5, 2025:** You now add the expiration date of your Azure account secret in the [console](connect-your-cloud-provider/first-account/azure) or [API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure). This lets Spot remind you that your client secret is going to expire in advance. If your client secret expires, your Azure subscription gets disconnected from Spot, preventing Spot from managing your resources.
-
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">December 2024</summary>
 
