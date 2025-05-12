@@ -5,7 +5,7 @@ When setting up your Spot account, we use a cloud formation stack to register ou
 > **Tip**: It is important to keep the [Spot Policy](administration/api/spot-policy-in-aws) updated with the latest version.
 
 To get AWS ARN of your IAM role:
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Go to **General Details** > **My Spot Account** > **AWS ARND**.
    <details>
     <summary markdown="span">View image</summary>
@@ -23,7 +23,7 @@ To get AWS ARN of your IAM role:
    <details>
     <summary markdown="span">View image</summary>
 
-   <img width=450 src="/elastigroup/_media/update-spot-policy_3.png" />
+   <img width="450" src="/elastigroup/_media/update-spot-policy_3.png" />
 
    </details>
 
@@ -32,6 +32,6 @@ To get AWS ARN of your IAM role:
    <details>
     <summary markdown="span">View image</summary>
 
-     <img width=450 src="/elastigroup/_media/update-spot-policy_4.png" />
+     <img width="450" src="/elastigroup/_media/update-spot-policy_4.png" />
 
    </details>
