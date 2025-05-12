@@ -10,11 +10,11 @@ The subject line contains the name of your company as it appears in the Spot con
 
 The header restates the goal and provides the date of the report.
 
-<img width=500 src="https://github.com/user-attachments/assets/08419c4c-7d97-4ff5-b42b-925d089dedee">
+<img width="500" src="https://github.com/user-attachments/assets/08419c4c-7d97-4ff5-b42b-925d089dedee" />
 
 ### Total Actions Provided by Eco
 
-A summary of all actions taken by Eco. This includes automated tasks as well as tasks completed by Cost Specialists on your behalf. Some of the actions are described below in the Eco Checklist, but others are not detailed as a part of our proprietary logic.
+A summary of all actions taken by Eco. This includes automated tasks as well as tasks completed by Cost Specialists on your behalf. Some of the actions are described below in the Eco Checklist, but others are not detailed as part of our proprietary logic.
 
 ### Resources Covered by Eco
 
@@ -48,7 +48,7 @@ A list of the IDs of up to five RIs with impending expiration dates and savings 
 
 ### Eco Checklist
 
-A reminder of some of the actions performed on your behalf over this past month. There are others, but they are not detailed as a part of our proprietary logic.
+A reminder of some of the actions performed on your behalf over this past month. There are others, but they are not detailed as part of our proprietary logic.
 
 ### Note from a Cost Specialist
 
@@ -56,14 +56,14 @@ If a cost specialist wants to deliver you a personalized message, it will appear
 
 ### Contact Button
 
-If you have any questions or want to let us know of upcoming account changes, please contact your assigned cost specialist. The button allows you to send an email directly to our Eco support queue for review.
+If you have any questions or want to let us know of upcoming account changes, contact your assigned cost specialist. The button allows you to send an email directly to our Eco support queue for review.
 
 ### Receiving Emails
 
 If you are interested in being added to the list of customers receiving the email, ensure that you are listed as a user within your desired organization and submit a support ticket.
 
 For companies which have been added to the allow-list, Eco sends the email to the email addresses of users registered with your organization in the Spot platform.
-The email should come to you from Eco Team <team@spot.io>. Please ensure your spam filters do not block the email.
+The email should come to you from Eco Team <team@spot.io>. Make sure your spam filters do not block the email.
 
 Much of the content of the email is in graphical format. Allow your email client to download pictures to get the full benefit of the email.
 
