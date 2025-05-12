@@ -13,7 +13,7 @@ Configuring an IDP to authenticate using SAML requires the:
 - RelayState used in IDP-initiated SSO:
   <ol style="list-style-type: lower-alpha;">
   <li>Sign in to your Spot account as an Admin.</li>
-  <li>In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > <b>Settings</b>.</li>
+  <li>In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > <b>Settings</b>.</li>
   <li>Click <b>Security</b> > <b>Identity Providers</b>.</li>
   <li>Make a copy of the Relay State value.</li>
   </ol>
@@ -31,6 +31,6 @@ The following attributes should be sent to the SAML response:
 ## Spot Configuration
 
 1. Sign in to your Spot account as an Admin.
-2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 3. Click **Security** > **Identity Providers**.
 4. Click **Browse**, select your metadata file, and click **Save**.
