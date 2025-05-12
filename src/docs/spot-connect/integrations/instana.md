@@ -59,7 +59,7 @@ Complete the following steps:
 5. Copy the Webhook API Key Value from the workflow page and paste it into the Value field of the x-api-key. 
 6. Click **Create**. 
 
-<img width="1431" alt="instana-3" src="https://github.com/spotinst/help/assets/106514736/34ad492f-e6ef-4447-8aed-52695530a985" />
+   <img width="1431" alt="instana-3" src="https://github.com/spotinst/help/assets/106514736/34ad492f-e6ef-4447-8aed-52695530a985" />
 
 7. Click **Settings** and then **Alerts**. 
 8. Click **New Alert**.  
