@@ -14,7 +14,7 @@ Permissions to create app registrations and assign subscription reader role in A
 
    <details>
    <summary markdown="span">View image</summary>
-    <img width=500 src="https://github.com/user-attachments/assets/78b5a9d4-cd4a-4025-a26a-ec2c8e49f48b">
+    <img width="500" src="https://github.com/user-attachments/assets/78b5a9d4-cd4a-4025-a26a-ec2c8e49f48b" />
 
 </details>
 
@@ -24,7 +24,7 @@ Permissions to create app registrations and assign subscription reader role in A
 
    <details>
    <summary markdown="span">View image</summary>
-    <img width="600" src="https://github.com/spotinst/help/assets/106514736/c2b789c2-c93c-45a6-bb8e-e014bfff7ffd">
+    <img width="600" src="https://github.com/spotinst/help/assets/106514736/c2b789c2-c93c-45a6-bb8e-e014bfff7ffd" />
 
 </details>
 
@@ -34,7 +34,7 @@ Click **Log in to Azure Account** and continue to the next step.
  
  <details>
    <summary markdown="span">View image</summary>
-<img width="450" src="https://github.com/spotinst/help/assets/106514736/ec3fe3e7-041b-4977-a676-4578703657fb">
+<img width="450" src="https://github.com/spotinst/help/assets/106514736/ec3fe3e7-041b-4977-a676-4578703657fb" />
 
 </details>
 
@@ -44,7 +44,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    <details>
    <summary markdown="span">View image</summary>
-    <img width=700 src="https://github.com/user-attachments/assets/9fde1ff6-ff5c-451f-84c6-134f1b7ede5a">
+    <img width="700" src="https://github.com/user-attachments/assets/9fde1ff6-ff5c-451f-84c6-134f1b7ede5a" />
 
 </details>
 
@@ -52,7 +52,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    <details>
    <summary markdown="span">View image</summary>
-    <img width="550" src="https://github.com/user-attachments/assets/71012ad2-7a4d-47a5-9253-e1ac8aa06c51">
+    <img width="550" src="https://github.com/user-attachments/assets/71012ad2-7a4d-47a5-9253-e1ac8aa06c51" />
 
 </details>
 
@@ -64,7 +64,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    <details>
    <summary markdown="span">View image</summary>
-      <img width="800" src="https://github.com/user-attachments/assets/cc7f69fe-58d4-4763-b4de-3350a09d277e">
+      <img width="800" src="https://github.com/user-attachments/assets/cc7f69fe-58d4-4763-b4de-3350a09d277e" />
 
 </details>
 
@@ -72,7 +72,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    <details>
    <summary markdown="span">View image</summary>
-      <img width="800" src="https://github.com/user-attachments/assets/fae37c2c-8dff-4481-b7a6-2f89f0c0445c">
+      <img width="800" src="https://github.com/user-attachments/assets/fae37c2c-8dff-4481-b7a6-2f89f0c0445c" />
 
 </details>
 
@@ -80,7 +80,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    <details>
    <summary markdown="span">View image</summary>
-      <img width="400" src="https://github.com/spotinst/help/assets/106514736/18d8d612-3fed-4759-9cfe-ac4836234da6">
+      <img width="400" src="https://github.com/spotinst/help/assets/106514736/18d8d612-3fed-4759-9cfe-ac4836234da6" />
 
 </details>
 
@@ -94,11 +94,11 @@ In the previous app registration that was created, complete the following steps 
  
    <details>
    <summary markdown="span">View image</summary>
-      <img width="700" src="https://github.com/user-attachments/assets/624f5c53-f1be-402b-bef9-b7ef57d18737">
+      <img width="700" src="https://github.com/user-attachments/assets/624f5c53-f1be-402b-bef9-b7ef57d18737" />
 
       </details>
 
-4. In the Cost Intelligence Wizard paste the application secret. 
+4. In the Cost Intelligence Wizard, paste the application secret. 
 5. Enter the Subscription ID you want to associate with Cost Intelligence. 
  
 ## Step 5: Assign a Role 
@@ -110,7 +110,7 @@ To assign a role:
 3. Click **Add/ Add role assignment**. 
 4. Select the Reader role and click **Next**.
 
-   **Note:** If you're adding Security Essentials, you also need to add the Azure Blob Data Reader role.
+   > **Note:** If you're adding Security Essentials, you also need to add the Azure Blob Data Reader role.
 
 5. Click **+ Select Members**. 
 6. In the right panel, search for and select the registered application created earlier. 
@@ -123,7 +123,7 @@ When the validation is complete, your Azure subscription will be connected to Co
 
  <details>
    <summary markdown="span">View image</summary>
-<img width="550" alt="connect-azure-ci-4" src="https://github.com/spotinst/help/assets/106514736/25c5539a-8b0e-4886-9b56-cac5fe289c14">
+<img width="550" alt="connect-azure-ci-4" src="https://github.com/spotinst/help/assets/106514736/25c5539a-8b0e-4886-9b56-cac5fe289c14" />
 
 </details>
 
@@ -138,19 +138,19 @@ You can connect an existing Spot Account (that is already connected to Azure for
 
    <details>
    <summary markdown="span">View image</summary>
-    <img width="700" alt="connect-azure-ci-6" src="https://github.com/spotinst/help/assets/106514736/8787e44f-fa9e-464c-8bab-861cdc8a2fd4">
+    <img width="700" alt="connect-azure-ci-6" src="https://github.com/spotinst/help/assets/106514736/8787e44f-fa9e-464c-8bab-861cdc8a2fd4" />
 
     </details>
 
 4. Click the **Existing Spot Account** drop-down menu and select the Spot account you want to connect Cost Intelligence and click **Next**.
 
-    **Note**: You can also [add Cost Intelligence to a pre-existing, unconnected Spot account](https://docs.spot.io/cost-intelligence/get-started/connect-azure?id=step-1-connect-to-your-spot-account).  
+    > **Note**: You can also [add Cost Intelligence to a pre-existing, unconnected Spot account](https://docs.spot.io/cost-intelligence/get-started/connect-azure?id=step-1-connect-to-your-spot-account).  
  
 5. Add the Azure Reader Role to the connected app registration and click, **Connect Account**. 
  
    <details>
    <summary markdown="span">View image</summary>
-    <img width=600 src="https://github.com/user-attachments/assets/5c71ed3a-b32c-48a5-bce4-ea9abfb8ebf0">
+    <img width="600" src="https://github.com/user-attachments/assets/5c71ed3a-b32c-48a5-bce4-ea9abfb8ebf0" />
 
     </details>
 
@@ -158,6 +158,6 @@ When the validation is complete, your Azure subscription will be connected to Co
 
    <details>
    <summary markdown="span">View image</summary>
-    <img width=500 src="https://github.com/user-attachments/assets/0f4407c3-b6fe-44b2-800d-dd50d9578380">
+    <img width="500" src="https://github.com/user-attachments/assets/0f4407c3-b6fe-44b2-800d-dd50d9578380" />
     
    </details>

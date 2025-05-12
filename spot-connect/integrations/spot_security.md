@@ -1,6 +1,6 @@
 # Spot Security Webhook 
 
-Webhook integration in a Spot Connect workflow lets you trigger an execution of a workflow after validating the webhook input. When creating a workflow, Spot Connect provides a Spot Security webhook trigger node that can be invoked by any Spot Security application once a new alert is generated to automatically execute the workflow. 
+Webhook integration in a Spot Connect workflow lets you trigger execution of a workflow after validating the webhook input. When creating a workflow, Spot Connect provides a Spot Security webhook trigger node that can be invoked by any Spot Security application once a new alert is generated to automatically execute the workflow. 
 
 ## How to Create a Spot Security Webhook  
 
@@ -18,12 +18,12 @@ To automatically execute a Spot Connect workflow with a Security webhook event, 
 8. In the center panel of the workflow builder, click the Spot Security trigger node to open the right panel. Under Webhook API Key Name, select an API Key you created earlier. Compose your workflow and save it. 
 9. In the workflow builder, you can copy the following values from the workflow builder: 
 
-<img width="807" alt="spot-security-1" src="https://github.com/spotinst/help/assets/106514736/eb7301ea-318f-4708-82ef-b1eda3df6d34">
+<img width="807" alt="spot-security-1" src="https://github.com/spotinst/help/assets/106514736/eb7301ea-318f-4708-82ef-b1eda3df6d34" />
 
 * Webhook API Key Value 
 * Workflow Webhook URL 
 
-After configuring the webhook you can integrate with tools (Slack and Jira) and get notifications. For example:  
+After configuring the webhook, you can integrate with tools (Slack and Jira) and get notifications. For example:  
 
 * [How to configure Slack here](spot-connect/integrations/slack)
 * Send Slack Message  

@@ -18,7 +18,7 @@ You can start a Spot-managed VM in the Spot console when a stateful node is stop
 
 ## Stop
 
-You can stop the Azure VM in the Spot console and in the Azure console when a stateful node is running. The stateful node will detect that the VM is in a stopped status and, by default, move to a stopped state. It might take a few minutes for the stateful node to appear as stopped. If the information from the user that initiated the stop operation is not received within 3 minutes after the virtual machine has stopped, it will be regarded as an interruption.
+You can stop the Azure VM in the Spot console and in the Azure console when a stateful node is running. The stateful node will detect that the VM is in a stopped status and, by default, move to a stopped state. It might take a few minutes for the stateful node to appear as stopped. If the information from the user who initiated the stop operation is not received within 3 minutes after the virtual machine has stopped, it will be regarded as an interruption.
 
 Use the API to specify an allowlist. When a VM is stopped by a user containing a string on this list, it will not be considered an interruption. If a VM is stopped by anyone not included in the list, it will be considered an interruption. This will help determine the required format for the names in the API. For example, the format could be user.name@email.com, uname@email.com, uname, user.name, or service.
 
@@ -28,9 +28,9 @@ Use the API to specify an allowlist. When a VM is stopped by a user containing a
 You cannot resume or delete a stateful node when it is stopped. 
 
  <details>
-   <summary markdown="span">Example for Stateful Node</summary>
+   <summary markdown="span">Example for stateful node</summary>
 
-<pre><code>
+````json
 {
   "statefulNode": {
     "strategy": {
@@ -42,7 +42,7 @@ You cannot resume or delete a stateful node when it is stopped.
     }
   }
 }
-</code></pre>
+````
  </details>
 
 ## Pause
@@ -51,7 +51,7 @@ When this action is used, the node is paused, the current VM is terminated, whil
 
 ## Resume
 
-This action starts the node after it was paused. When this action is used, the node will resume and a new VM will be launched together with the persisted resources that were saved while the node was paused.
+This action starts the node after it was paused. When this action is used, the node will resume, and a new VM will be launched together with the persisted resources that were saved while the node was paused.
 
 ## Delete
 
@@ -61,6 +61,6 @@ When you delete a stateful node, you can choose to terminate the VM, revert to o
 - When **Terminate VM** is <i>not</i> marked, you can choose to delete snapshots, revert it to the on-demand lifecycle, and deregister it from the load balancer.
 - When **Delete public IP** is marked, **Delete network interfaces** is marked automatically and cannot be unmarked.
 
-<img src="https://github.com/user-attachments/assets/2aec8fb9-14c0-413b-9440-2ab7c871373c" width="350"/>
+<img src="https://github.com/user-attachments/assets/2aec8fb9-14c0-413b-9440-2ab7c871373c" width="350" />
 
 Both the node and the selected resources will be deleted after 96 hours. You can use the [Delete Stateful Node API](https://docs.spot.io/api/#operation/azureStatefulNodeDelete) to set a different time period to wait.
