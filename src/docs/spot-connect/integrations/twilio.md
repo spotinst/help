@@ -1,6 +1,6 @@
 # Twilio
 
-The Twilio integration can be used to send text messages to your team and provides web service APIs for various communication functions such as make/receive phone calls, send/receive text messages etc. 
+The Twilio integration can be used to send text messages to your team and provides web service APIs for various communication functions such as make/receive phone calls, send/receive text messages. 
 
 The integration between Spot Connect and Twilio enables you to send tailor-made text messages from Spot Connect workflows to recipients. 
 
@@ -51,8 +51,8 @@ Send a text message to a list of recipients' phone numbers. The text message con
 
 ![twilio-1](https://github.com/spotinst/help/assets/106514736/6b3b404b-b8a9-4497-b59c-878c22caa41e)
 
-<img width="1139" alt="twilio-2" src="https://github.com/spotinst/help/assets/106514736/cc22b72d-3745-4314-9ac5-a1863f74ee92">
+<img width="1139" alt="twilio-2" src="https://github.com/spotinst/help/assets/106514736/cc22b72d-3745-4314-9ac5-a1863f74ee92" />
 
 #### Output 
 
-<img width="1139" alt="twilio-3" src="https://github.com/spotinst/help/assets/106514736/e32c38de-309b-4797-9bd7-32f079ada1e9">
+<img width="1139" alt="twilio-3" src="https://github.com/spotinst/help/assets/106514736/e32c38de-309b-4797-9bd7-32f079ada1e9" />
