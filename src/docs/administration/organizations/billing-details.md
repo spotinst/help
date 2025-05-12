@@ -34,6 +34,7 @@ Bills shows the monthly costs of the usage for your Spot products. It includes t
    <img width="900" src="https://github.com/user-attachments/assets/2f23502f-2e16-44bd-84eb-fb5d7e2b95a4" />
 
    </details>
+
 To view the monthly breakdown of your Spot costs:
 
 1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
