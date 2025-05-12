@@ -49,12 +49,12 @@ Action to clone a GitHub/Bitbucket Cloud repository and copy repository content 
 
 Select GitHub/Bitbucket Cloud Repository and AWS S3 Bucket inputs to configure the action. 
 
-<img width="969" alt="github-bitbucket-1" src="https://github.com/spotinst/help/assets/106514736/d5b8c61c-38ed-4e8b-8b9c-df43cf8b07f4">
+<img width="969" alt="github-bitbucket-1" src="https://github.com/spotinst/help/assets/106514736/d5b8c61c-38ed-4e8b-8b9c-df43cf8b07f4" />
 
 
 ### GitHub/Bitbucket Cloud Create PR 
 
-This action creates a pull request for a given Github/Bitbucket Cloud repository. 
+This action creates a pull request for a given GitHub/Bitbucket Cloud repository. 
 
 #### Input
 
@@ -78,11 +78,11 @@ This action creates a pull request for a given Github/Bitbucket Cloud repository
 
 #### Action Example
 
-<img width="814" alt="github-bitbucket-2" src="https://github.com/spotinst/help/assets/106514736/9a8119ab-2442-4d99-965b-8f4e8f793290">
+<img width="814" alt="github-bitbucket-2" src="https://github.com/spotinst/help/assets/106514736/9a8119ab-2442-4d99-965b-8f4e8f793290" />
 
 ### GitHub Filter Runners 
 
-This action lists GitHub runners based on the status, busy and labels filters.  
+This action lists GitHub runners based on the status, busy, and labels filters.  
 
 #### Input
 
@@ -103,18 +103,18 @@ This action lists GitHub runners based on the status, busy and labels filters.
 
 #### Action Example
 
-1. Select GitHub repository and GitHub runner busy state to filter by. 
+1. Select the GitHub repository and the GitHub runner busy state to filter by.
 
-<img width="526" alt="github-bitbucket-3" src="https://github.com/spotinst/help/assets/106514736/b6405a76-e253-41ad-8d4a-c514b79ea76f">
+<img width="526" alt="github-bitbucket-3" src="https://github.com/spotinst/help/assets/106514736/b6405a76-e253-41ad-8d4a-c514b79ea76f" />
 
 2. Select state of GitHub runner to filter. 
 
-<img width="518" alt="github-bitbucket-4" src="https://github.com/spotinst/help/assets/106514736/70b9387c-dac4-46dc-96ae-6a8ff1d06971">
+<img width="518" alt="github-bitbucket-4" src="https://github.com/spotinst/help/assets/106514736/70b9387c-dac4-46dc-96ae-6a8ff1d06971" />
 
 3. Provide labels to match GitHub runners. 
 
-<img width="519" alt="github-bitbucket-5" src="https://github.com/spotinst/help/assets/106514736/d9ad7c43-286e-4faf-9a0a-64b9e144e3b7">
+<img width="519" alt="github-bitbucket-5" src="https://github.com/spotinst/help/assets/106514736/d9ad7c43-286e-4faf-9a0a-64b9e144e3b7" />
 
 
 
-<img width="1001" alt="github-bitbucket-6" src="https://github.com/spotinst/help/assets/106514736/eb2fd408-18cc-4a35-a758-3862f4049444">
+<img width="1001" alt="github-bitbucket-6" src="https://github.com/spotinst/help/assets/106514736/eb2fd408-18cc-4a35-a758-3862f4049444" />

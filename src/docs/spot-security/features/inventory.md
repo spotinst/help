@@ -15,20 +15,20 @@ The inventory page is divided into two parts:
 
 ## Overview 
 
-The Overview page consists of 4 sections: 
+The Overview page includes: 
 
 * Summary 
 * Asset Trend 
 * Asset Count 
 * Asset Distribution Table 
 
-The Summary section provides the following information: 
+The Summary section provides this information: 
 
 * **Total Asset**: The number of assets Spot Security detected. 
 * **At Risk**:  The number of assets with at least one failing security rule. 
 * **No Risk**: The number of assets with zero failing security rules. 
-* **Assets Turned Risky**: The number of assets that have transitionsed from the status of No Risk to At Risk in the last 24 hours. 
-* **New Assets Onboarded**: The number of new assets that have onboarded in the last 24 hours. 
+* **Assets Turned Risky**: The number of assets that have transitioned from the status of No Risk to At Risk in the last 24 hours. 
+* **New Assets Onboarded**: The number of new assets that have been onboarded in the last 24 hours. 
 * **Assets With Threats**:  The number of assets with at least one threat. 
 * **Assets With Anomalies**: The number of assets with at least one anomaly. 
 * **High Risk Assets**: The number of assets with at least one failing high security rule. 
@@ -37,13 +37,13 @@ The Summary section provides the following information:
 
 ### Asset Trend
 
-The Asset Trend graph provides the trend information according to the criteria in the following colums: Assets Scanned, At Risk and No Risk. You can view the trend of the past 7 days, 14 days or 30 days. 
+The Asset Trend graph provides the trend information according to the criteria in the following columns: Assets Scanned, At Risk, and No Risk. You can view the trend of the past 7 days, 14 days, or 30 days. 
 
-<img width="1461" alt="inventory-02" src="https://github.com/spotinst/help/assets/106514736/1b7c89ef-7a3b-4e2b-9528-1d56122461c6">
+<img width="1461" alt="inventory-02" src="https://github.com/spotinst/help/assets/106514736/1b7c89ef-7a3b-4e2b-9528-1d56122461c6" />
 
 ### Asset Count
 
-The Asset Count graph provides the asset count grouped by the criteria in the following columns: Region, Account Name, Asset Type, Cloud.  The count is distributed by assets at risk and assets that are at no risk. 
+The Asset Count graph provides the asset count grouped by the criteria in the following columns: Region, Account Name, Asset Type, and Cloud. The count is distributed by assets at risk and assets that are at no risk. 
 
 ![inventory-03](https://github.com/spotinst/help/assets/106514736/b02b0855-5082-4149-8efa-9f19c2b98bd8)
 
@@ -51,7 +51,7 @@ The Asset Count graph provides the asset count grouped by the criteria in the fo
 
 The asset distribution table provides a summary of assets ditstributed by the following columns: Asset Type, Cloud, Region, Account Name, and Asset Attribute. Each of the tables provides you with the information of total assets, their distribution across assets at risk and no risk, the number of assets with events, anomalies and threats. 
 
-<img width="728" alt="inventory-04" src="https://github.com/spotinst/help/assets/106514736/4b6527cf-61ec-4720-a7d5-8119ddd48f7c">
+<img width="728" alt="inventory-04" src="https://github.com/spotinst/help/assets/106514736/4b6527cf-61ec-4720-a7d5-8119ddd48f7c" />
 
 ## All Assets 
 
@@ -59,13 +59,13 @@ The All Assets tab provides a list of assets based on the date selected and the 
 
 * Asset Name 
 * Asset ID 
-* Asset Type such as EC2 
+* Asset Type, such as EC2 
 * Asset Attribute such as Instance, Security Group  
 * Region 
 * Cloud Account Name 
 * Count and Severity for Failing Rules 
 * Status 
-* Events, Anomaly and Threats Count 
+* Events, Anomaly, and Threats Count 
 * Tags 
 * VPC/VNet if relevant 
 * Cloud Account ID 

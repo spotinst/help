@@ -4,7 +4,7 @@ The vCPU page gives you accurate, detailed visibility into vCPU consumption acro
 
 In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings** > **Usage** > **vCPU**.
 
-<img width=800 src="https://github.com/user-attachments/assets/187af7f3-d3c0-499d-a975-9f91acc36a14" />
+<img width="800" src="https://github.com/user-attachments/assets/187af7f3-d3c0-499d-a975-9f91acc36a14" />
 
 In the dashboard, you can:
 
