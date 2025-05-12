@@ -2,7 +2,7 @@
 
 The Spot integration automates Elastigroup and Ocean operations and optimizes your cloud infrastructure. 
 
-## Configure Spot n Spot Connect 
+## Configure Spot in Spot Connect 
 
 1. In the left main menu, click **Connect** and click **Settings**.  
 2. Under the Cloud Services tab, select **Spot by NetApp**.  
@@ -15,12 +15,12 @@ Details needed to set up a Spot Authorization instance in Spot Connect:
 |      Integration Alias               |     A name for the integration instance                                                     |     True       |   |
 |      Spot Programmatic Access Token  |     A Spot Programmatic Access Token is recommended or you may use a Personal Access Token  |     True       |   |
 
-Follow the steps below in your Spot account to generate Spot Programmatic Access Token.  
+Follow the steps below in your Spot account to generate a Spot programmatic access token.  
 1. In the top right, click the user icon and click **Settings**.  
-2. In the left menu, click Settings and click **API**. 
+2. In the left menu, click **Settings** and click **API**. 
 3. Click **Permanent Tokens** and on the top right, click **Generate Token**.
 
-<img width="767" alt="spot-int-9" src="https://github.com/spotinst/help/assets/106514736/bb757911-489f-4770-b305-4bde1dbd2659">
+   <img width="400" src="https://github.com/spotinst/help/assets/106514736/bb757911-489f-4770-b305-4bde1dbd2659" />
 
 4. Select Programmatic User to generate a new permanent access token. 
 5. Enter a Token name and click **Generate**.
@@ -62,15 +62,15 @@ There can be additional required or optional input values to enter based on the 
 
 #### Action Example  
 
-<img width="1229" alt="spot-int-2" src="https://github.com/spotinst/help/assets/106514736/864120d9-0552-4d69-9797-8ae06d855c41">
+<img width="600" alt="spot-int-2" src="https://github.com/spotinst/help/assets/106514736/864120d9-0552-4d69-9797-8ae06d855c41" />
 
 Complete the following information:  
 
 * Spot Instance: Select a Spot instance. 
 * Spot Account: Select a Spot account. 
 * Spot Operation: Select a Spot operation.
-* Group ID: Provide groupId of Spot Elastigroup AWS for Scale Up operation.  
-* Adjustment (Optional Inputs): Configure optional input for Scale Up operation.  
+* Group ID: Provide groupId of Spot Elastigroup AWS for Scale Up.  
+* Adjustment (Optional Inputs): Configure optional input for Scale Up.  
 
 ### Spot Ocean AWS 
 
@@ -96,14 +96,14 @@ There can be additional required or optional input values to enter based on the 
 
 #### Action Example 
 
-<img width="518" alt="spot-int-3" src="https://github.com/spotinst/help/assets/106514736/b2340039-a227-4201-b21a-fe268608f98c">
+<img width="400" src="https://github.com/spotinst/help/assets/106514736/b2340039-a227-4201-b21a-fe268608f98c" />
 
 Complete the following information:  
 
 * Spot Instance: Select a Spot instance. 
 * Spot Account: Select a Spot account. 
 * Spot Operation: Select a Spot operation. 
-* OceanClusterId: Provide oceanClusterId for Get Cluster operation. 
+* OceanClusterId: Provide oceanClusterId for Get Cluster. 
 
 ### Spot Elastigroup Detach Instance 
 
@@ -131,7 +131,7 @@ Use this action to detach an instance from Spot Elastigroup AWS.
 
 #### Action Example
 
-<img width="1022" alt="spot-int-4" src="https://github.com/spotinst/help/assets/106514736/c2fa0145-1099-45cf-94ef-ed87370bf7f1">
+<img width="600" src="https://github.com/spotinst/help/assets/106514736/c2fa0145-1099-45cf-94ef-ed87370bf7f1" />
 
 Complete the following information: 
 
@@ -166,13 +166,13 @@ Use this action to update a stateful instance.
 
 #### Action Example
 
-<img width="1277" alt="spot-int-5" src="https://github.com/spotinst/help/assets/106514736/797265dc-d932-4fec-b1f8-c94b46ba652c">
+<img width="600" alt="spot-int-5" src="https://github.com/spotinst/help/assets/106514736/797265dc-d932-4fec-b1f8-c94b46ba652c" />
 
 Complete the following information: 
 
 * Spot Instance: Select a Spot instance. 
 * Spot Account: Select a Spot account.  
-* Managed Instance Ids: Select Spot managed instance Ids. 
+* Managed Instance Ids: Select Spot managed instance IDs. 
 * Operation: Select operation on stateful instance.
 
 ### Spot Remove Idle GitHub Runner 
@@ -201,7 +201,7 @@ Use this action to detach a Spot Elastigroup AWS instance and remove idle GitHub
 
 #### Action Example
 
-<img width="1257" alt="spot-int-6" src="https://github.com/spotinst/help/assets/106514736/a2b4c2ad-8d62-4e64-9eee-fd59e24d670b">
+<img width="600" alt="spot-int-6" src="https://github.com/spotinst/help/assets/106514736/a2b4c2ad-8d62-4e64-9eee-fd59e24d670b" />
 
 Complete the following information: 
 
@@ -210,12 +210,12 @@ Complete the following information:
 * Spot Account: Select a Spot account. 
 * Elastigroup: Select Spot Elastigroup AWS 
 * Terminate Instances: Select true or false to confirm whether this action will terminate the instance. 
-* Decrement Target Capacity: Select Decrement capacity of target instances 
+* Decrement Target Capacity: Select the decrement capacity of target instances 
 * Draining timeout: Select the draining timeout (in seconds). 
 
 ### Spot Ocean Cluster Copy VNG 
 
-Use this action to create a new Virtual Node Group from an existing Spot Ocean Cluster VNG configuration.  
+Use this action to create a new virtual node group from an existing Spot Ocean cluster VNG configuration.  
 
 #### Input
 
@@ -240,7 +240,7 @@ Use this action to create a new Virtual Node Group from an existing Spot Ocean C
 
 #### Action Example
 
-<img width="1085" alt="spot-int-7" src="https://github.com/spotinst/help/assets/106514736/869bbe24-0483-47fd-89c7-ba61e3afc6ce">
+<img width="600" alt="spot-int-7" src="https://github.com/spotinst/help/assets/106514736/869bbe24-0483-47fd-89c7-ba61e3afc6ce" />
 
 Complete the following information: 
 
@@ -275,7 +275,7 @@ Use this action to fetch the aggregated cost data for Spot Ocean AWS ECS cluster
 
 #### Action Example
 
-<img width="1331" alt="spot-int-8" src="https://github.com/spotinst/help/assets/106514736/c455ff33-bf3f-44f1-ae8d-0ca74e34f9a6">
+<img width="600" alt="spot-int-8" src="https://github.com/spotinst/help/assets/106514736/c455ff33-bf3f-44f1-ae8d-0ca74e34f9a6" />
 
 Complete the following information:  
 
@@ -284,7 +284,7 @@ Complete the following information:
 * Cluster Type: Select Spot Ocean AWS cluster type. 
 * Ocean Cluster: Select Spot Ocean AWS cluster. 
 * Number of Days: Add the number of days to collect data. 
-* End Time (Optional): If provided, the number of days is calculated backwards from the selected date.  
+* End Time (Optional): If provided, the number of days is calculated backward from the selected date.  
 
 ### Spot Ocean Rightsizing k8s Resources 
 
@@ -308,18 +308,18 @@ Action to fetch Rightsizing recommendations from Spot Ocean cluster and update K
 
 |       Parameter               |         Type    |                                         Description                                     |
 |-------------------------------|:---------------:|:---------------------------------------------------------------------------------------:|
-|      s3_bucket                |     String      |     AWS S3 bucket where helm charts are uploaded                                        |
+|      s3_bucket                |     String      |     AWS S3 bucket where Helm charts are uploaded                                        |
 |      skipped_s3_objects       |     Object      |     List of K8s manifest files skipped                                                  |
 |      updated_helm_s3_objects  |     StringList  |     List of K8s manifest files updated with Spot Ocean AWS rightsizing recommendations  |
 |      execution_status         |     String      |     Status of run (ie: S_OK / E_FAIL)                                                   |                                     |   |
 
 #### Action Example
 
-<img width="767" alt="spot-int-9" src="https://github.com/spotinst/help/assets/106514736/61a24dd8-5efd-4cab-b307-404cd0bf62d3">
+<img width="600" alt="spot-int-9" src="https://github.com/spotinst/help/assets/106514736/61a24dd8-5efd-4cab-b307-404cd0bf62d3" />
 
 Complete the following information:  
 
-* Spot API Token/ Alias: Select a Spot API Token/Alias.  
+* Spot API Token/Alias: Select a Spot API Token/Alias.  
 * Spot Account: Select a Spot account. 
 * Ocean AWS Cluster: Select a Spot Ocean AWS cluster.
 * AWS S3 Bucket with K8s Manifests or Helm Config: Select AWS S3 bucket.  
@@ -327,8 +327,5 @@ Complete the following information:
 Optional:  
 
 * AWS S3 Prefix: Select an AWS S3 prefix with helm charts to be updated with Spot Ocean AWS rightsizing recommendations. 
-* Namespace, Deployment Name, and Container Name: Select namespace deployment name and container name to fetch Spot Ocean AWS rightsizing recommendations and update helm charts. 
-* Multiplier: Provide multiplier value to multiply CPU and memory resources. The default is 1.0. 
- 
-
- 
+* Namespace, Deployment Name, and Container Name: Select the namespace deployment name and container name to fetch Spot Ocean AWS rightsizing recommendations and update Helm charts. 
+* Multiplier: Provide a multiplier value to multiply CPU and memory resources. The default is 1.0.
