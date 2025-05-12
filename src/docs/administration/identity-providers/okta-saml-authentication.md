@@ -7,7 +7,7 @@ IDP-initiated flows, service provider (SP) initiated flows, and just-in-time pro
 ## Configure Okta with SAML 2.0
 
 1. Sign in to your Spot account as an Admin.
-2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 3. Click **Security** > **Identity Providers**.
 4. Copy the **Relay State** value.
 5. Sign in to the Okta Admin console, click **Applications** > **Browse App Integration Catalog**
@@ -19,7 +19,7 @@ IDP-initiated flows, service provider (SP) initiated flows, and just-in-time pro
    <li>Click <b>Save</b>.</li>
    <li>Download the metadata document by right-click, save link as, on 'View IdP metadata' link under the SAML Signing Certificates Actions.
       
-   <img src="/administration/_media/okta-saml-04.png" width="934" height="371"/></li>
+   <img src="/administration/_media/okta-saml-04.png" width="934" height="371" /></li>
    </ol>
 
 8. Go back to the Spot console, click **Browse** and upload the file you just downloaded.

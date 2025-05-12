@@ -16,9 +16,9 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 3. Search for <i>Spotinst</i> and click **Add Integration**.
 
     <details>
-   <summary markdown="span">View image</summary>
+     <summary markdown="span">View image</summary>
 
-    <img alt="scim1" src="https://github.com/user-attachments/assets/7f2c1ee9-cb5b-442a-b680-569b505fef50">
+     <img alt="scim1" src="https://github.com/user-attachments/assets/7f2c1ee9-cb5b-442a-b680-569b505fef50" />
 
     </details>
 
@@ -30,9 +30,9 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 4. Click **Test API Credentials** to make sure it’s working and then click **Save**.
    
     <details>
-   <summary markdown="span">View image</summary>
+     <summary markdown="span">View image</summary>
       
-   <img alt="scim2" src="https://github.com/user-attachments/assets/fc8cae93-8796-4fd1-bb6f-e67a638eb49d">
+     <img alt="scim2" src="https://github.com/user-attachments/assets/fc8cae93-8796-4fd1-bb6f-e67a638eb49d" />
     </details>
 
 ## Step 3: Enable SCIM Provisioning Features
@@ -53,9 +53,9 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 4. Click **Assign**.
 
     <details>
-   <summary markdown="span">View image</summary>
+     <summary markdown="span">View image</summary>
    
-   <img alt="scim3" src="https://github.com/user-attachments/assets/4b146b19-1b6d-4e22-b25b-90d87b440835">
+     <img alt="scim3" src="https://github.com/user-attachments/assets/4b146b19-1b6d-4e22-b25b-90d87b440835" />
     </details>
 
 ## Step 5: Verify User Provisioning
@@ -64,9 +64,9 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 3. Go to **Organization** > **Users**.
 2. Verify that the users assigned in Okta are showing correctly in Spot.
     <details>
-   <summary markdown="span">View image</summary>
+     <summary markdown="span">View image</summary>
 
-   <img alt="scim4" src="https://github.com/user-attachments/assets/21ecaf2e-fc5c-4296-9c01-c8b6ae6195dd">
+     <img alt="scim4" src="https://github.com/user-attachments/assets/21ecaf2e-fc5c-4296-9c01-c8b6ae6195dd" />
 
     </details>
 

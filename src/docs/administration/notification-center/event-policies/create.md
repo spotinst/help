@@ -2,7 +2,7 @@
 
 You can create notifications for compute products, such as Elastigroup and Ocean resources.
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Go to **Notification Center** > **Event Policies** > **Create Policy**.
 3. Enter a **Name** for the policy (and a **Description**).
 4. Select **Type**: Compute.
@@ -26,9 +26,9 @@ To complete the policy definition, you need to complete all steps of the wizard.
       <summary markdown="span">More about conditions and condition sets</summary>
 
      * A <i>Condition Set</i> is a group of one or more conditions. When there are multiple condition sets, they relate to each other with an <i>OR</i> operation.
-     * A <i>Condition</i> is a rule within a condition set. Multiple conditions within a condition set, relate to each other with an AND operation.
+     * A <i>Condition</i> is a rule within a condition set. Multiple conditions within a condition set relate to each other with an AND operation.
 
-       <img width="583" alt="eventpolicy-createcompute-1" src="https://github.com/user-attachments/assets/0f6692fa-d0dd-4257-927f-120a2d4d3685">
+       <img width="583" alt="eventpolicy-createcompute-1" src="https://github.com/user-attachments/assets/0f6692fa-d0dd-4257-927f-120a2d4d3685" />
        
        Each condition contains:
         - Identifier: the resource type to be monitored, such as:
@@ -58,7 +58,7 @@ To complete the policy definition, you need to complete all steps of the wizard.
      <details>
       <summary markdown="span">View image</summary>
 
-     <img alt="eventpolicy-createcompute-2" src="https://github.com/user-attachments/assets/cbd6966b-c849-4d29-841a-45e25e080d2c">
+     <img alt="eventpolicy-createcompute-2" src="https://github.com/user-attachments/assets/cbd6966b-c849-4d29-841a-45e25e080d2c" />
      
     </details>
      
@@ -71,7 +71,7 @@ To complete the policy definition, you need to complete all steps of the wizard.
       <details>
       <summary markdown="span">View image</summary>
 
-      <img width="650" alt="eventpolicy-createcompute-3" src="https://github.com/user-attachments/assets/7f6c5803-dd33-437f-8c1a-c8cdbe5f091b">
+      <img width="650" alt="eventpolicy-createcompute-3" src="https://github.com/user-attachments/assets/7f6c5803-dd33-437f-8c1a-c8cdbe5f091b" />
      
     </details>
 
@@ -84,7 +84,7 @@ If you (as an admin user) are configuring a policy at the account level, you can
 <details>
       <summary markdown="span">View image</summary>
 
-  <img width="420" alt="eventpolicy-createcompute-4" src="https://github.com/user-attachments/assets/8b7d1639-cfc3-4e57-9208-73f5ce2b5bde">
+  <img width="420" alt="eventpolicy-createcompute-4" src="https://github.com/user-attachments/assets/8b7d1639-cfc3-4e57-9208-73f5ce2b5bde" />
      
    </details>
 
@@ -93,9 +93,9 @@ You can choose from these integrations:
 - External Email to add email addresses that will receive notifications.
 - Webhook to add webhooks to applications.
 - SNS to add an SNS topic ARN to receive notifications in AWS.
-- Slack to add the webhook for a Slack channel. To define the Channel, [create a webhook URL](https://spinnakerteam.slack.com/apps/A0F7XDUAZ-incoming-webhooks).
+- Slack to add the webhook for a Slack channel. To define the channel, [create a webhook URL](https://spinnakerteam.slack.com/apps/A0F7XDUAZ-incoming-webhooks).
 
-These attributes are sent as part of the JSON message via Webhook, SNS, or Slack:
+These attributes are sent as part of the JSON message in Webhook, SNS, or Slack:
 - default
 - accountId
 - resourceId

@@ -18,7 +18,7 @@ From the list of users, you can:
 
 ## Create User
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Click **Organization** > **Users** > **Create New User**.
 4. Select the **Access Type**:
    - **Console** if the user is a person who uses the Spot console. Console users can also use the Spot API. Enter the person’s **Name** and **Email address**.
@@ -38,7 +38,7 @@ From the list of users, you can:
 
 ## Reset Password
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Click the Security tab and update your password.
 
 > **Tip**: SAML or SSO users who want to create an API Token will have to reset their password first.

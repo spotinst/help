@@ -44,7 +44,7 @@ These rules apply to policies:
 
 ## Create a Permission Policy
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Click **Organization** > **Permission Policies** > **Create New Policy**.
 3. Enter a **Policy Name** (and **Policy Description**).
 
@@ -60,13 +60,13 @@ These rules apply to policies:
 6. Select the **Service** and **Effect**:
    * <i>Allow</i> means that actions marked are allowed. Any unmarked items are not allowed. This is the default behavior for defining a service.
    * <i>Deny</i> means that actions marked are denied. Any unmarked items will not be denied.
-7. Select the **Actions** for the Service. If you do not want to allow all of the high level actions included in the standard set of actions, remove the selection from the high level action and select only the specific actions.
+7. Select the **Actions** for the Service. If you do not want to allow all of the high-level actions included in the standard set of actions, remove the selection from the high-level action and select only the specific actions.
    <details>
    <summary markdown="span">Example of create actions for the Elastigroup service</summary>
 
    Since the **Delete** action is unmarked, this policy will not allow users to delete anything in Elastigroup.
  
-   <img width="400" src="https://github.com/user-attachments/assets/8fe7f1f8-ec7f-430a-98f6-258a57d69d9a">
+   <img width="400" src="https://github.com/user-attachments/assets/8fe7f1f8-ec7f-430a-98f6-258a57d69d9a" />
 
 
   </details>
@@ -99,13 +99,13 @@ Custom policy conditions let you create conditions within policies for granular 
 
 Conditions include:
 
-* **Logical operator** (optional) defines the logic between the value based operators. Using a logical operator requires at least two value-based operators.
+* **Logical operator** (optional) defines the logic between the value-based operators. Using a logical operator requires at least two value-based operators.
 
 * **Value-based operator**:  
     - <i>StringEquals</i> compares two strings and returns <i>true</i> if equals, otherwise returns <i>false</i>.
     - <i>StringNotEquals</i> compares two strings and returns <i>false</i> if equals, otherwise returns <i>true</i>.
     - <i>StringContains</i> compares two strings and returns <i>true</i> if the first string contains the second, otherwise returns <i>false</i>.
-    - <i>StringEqualsIgnoreCase</i> compares two strings and returns <i>true</i> if the strings are in the same length, and corresponding characters in the two strings are equal ignoring case.
+    - <i>StringEqualsIgnoreCase</i> compares two strings and returns <i>true</i> if the strings are the same length, and corresponding characters in the two strings are equal ignoring case.
     - <i>StringPatternMatch</i> compares two strings and returns <i>true</i> if the string matches the given regular expression.
 
   If the condition contains more than one condition operator, <i>AND</i> is used between them. This means that all the operators should return <i>true</i>.
@@ -140,9 +140,9 @@ Conditions include:
 
 <div style="padding-left:16px">
 
-This policy lets users with example@mail.com email address update the Elastigroup resource:
+This policy lets users with `example@mail.com` email address update the Elastigroup resource:
 
-<pre>
+````json
 {
     "group": {
         "name": "eg-example",
@@ -158,11 +158,11 @@ This policy lets users with example@mail.com email address update the Elastigrou
         }
     }
 }
-</pre>
+````
 
 This policy checks for the `DeveloperEmail` tag, and lets users with this email address perform the update Elastigroup action.
 
-<pre>
+````json
 {
     "statements": [
         {
@@ -181,7 +181,7 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
         }
     ]
 }
-</pre>
+````
 
 </div>
  </details>
@@ -189,32 +189,32 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Example 2: Resource name contains</summary>
 
-<div style="padding-left:16px">
-
-  This policy enables performing Ocean-related operations on clusters with names containing <i>ocean-example-1</i> or <i>ocean-example-2</i>.
-
-<pre>
-{
-    "statements": [
-        {
-            "effect": "ALLOW",
-            "actions": [
-                "ocean:*"
-            ],
-            "resources": [
-                "*"
-            ],
-            "condition": {
-                "StringEqualsIgnoreCase": {
-                    "spot:ocean:name": ["ocean-example-1", "ocean-example-2"]
-                }
-            }
-        }
-    ]
-}
-</pre>
-
-</div>
+   <div style="padding-left:16px">
+    
+   This policy enables performing Ocean-related operations on clusters with names containing <i>ocean-example-1</i> or <i>ocean-example-2</i>.
+    
+   ````json
+   {
+       "statements": [
+           {
+               "effect": "ALLOW",
+               "actions": [
+                   "ocean:*"
+               ],
+               "resources": [
+                   "*"
+               ],
+               "condition": {
+                   "StringEqualsIgnoreCase": {
+                       "spot:ocean:name": ["ocean-example-1", "ocean-example-2"]
+                   }
+               }
+           }
+       ]
+   }
+   ````
+    
+   </div>
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -228,7 +228,7 @@ This policy enables restarting workloads on Ocean CD with specific conditions, i
 * Namespace - “nslab”
 * Workload name equals “workload1” or contains “workload2”
 
-<pre>
+````json
 {
     "statements": [{
         "effect": "ALLOW",
@@ -265,7 +265,7 @@ This policy enables restarting workloads on Ocean CD with specific conditions, i
     }
   ]
 }  
-</pre>
+````
 
   
 </div>
