@@ -21,7 +21,7 @@ Spot comes with a number of default policies. You can use these out of the box a
 
 ## Custom Policy Conditions
 
-Custom policy conditions give you more control of your Spot resources on the organization and account level:
+Custom policy conditions give you more control of your Spot resources at the organization and account level:
 
 * Condition operators that contain the condition keys:
   - Resource retrieval
