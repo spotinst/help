@@ -105,16 +105,16 @@ This action lists GitHub runners based on the status, busy, and labels filters.
 
 1. Select the GitHub repository and the GitHub runner busy state to filter by.
 
-<img width="526" alt="github-bitbucket-3" src="https://github.com/spotinst/help/assets/106514736/b6405a76-e253-41ad-8d4a-c514b79ea76f" />
+   <img width="526" alt="github-bitbucket-3" src="https://github.com/spotinst/help/assets/106514736/b6405a76-e253-41ad-8d4a-c514b79ea76f" />
 
 2. Select state of GitHub runner to filter. 
 
-<img width="518" alt="github-bitbucket-4" src="https://github.com/spotinst/help/assets/106514736/70b9387c-dac4-46dc-96ae-6a8ff1d06971" />
+   <img width="518" alt="github-bitbucket-4" src="https://github.com/spotinst/help/assets/106514736/70b9387c-dac4-46dc-96ae-6a8ff1d06971" />
 
 3. Provide labels to match GitHub runners. 
 
-<img width="519" alt="github-bitbucket-5" src="https://github.com/spotinst/help/assets/106514736/d9ad7c43-286e-4faf-9a0a-64b9e144e3b7" />
+   <img width="519" alt="github-bitbucket-5" src="https://github.com/spotinst/help/assets/106514736/d9ad7c43-286e-4faf-9a0a-64b9e144e3b7" />
 
 
 
-<img width="1001" alt="github-bitbucket-6" src="https://github.com/spotinst/help/assets/106514736/eb2fd408-18cc-4a35-a758-3862f4049444" />
+   <img width="1001" alt="github-bitbucket-6" src="https://github.com/spotinst/help/assets/106514736/eb2fd408-18cc-4a35-a758-3862f4049444" />
