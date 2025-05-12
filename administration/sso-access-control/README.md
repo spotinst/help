@@ -16,7 +16,7 @@ You can use these identity providers with Spot:
 
 ## Set Up SAML SSO in the Console
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Click **Security** > **Identity Providers**.
 4. Enter the:
     * **Relay state**: this is the Organization ID. It's used as the relay state configuration for the identity provider (used in IDP-initiated SSO).

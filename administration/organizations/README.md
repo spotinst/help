@@ -127,7 +127,7 @@ To add an account through the API, go to [Spot API – Create Account](https://d
 The Account ID is required for API and SDK interactions with the account-level Spot products (such as Elastigroup, Ocean), unless it's for the default account.
 
 1. In the Spot console, select the organization and account.
-2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. Click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 3. Go to **General Details** > **My Spot Account** > **Cloud Account ID**.
    
    <details>
@@ -140,7 +140,7 @@ The Account ID is required for API and SDK interactions with the account-level S
 ## Update Your Spot Account Name
 
 1. In the Spot console, select the organization and account.
-2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
+2. Click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 3. Go to **General Details** > **My Spot Account** > **Cloud Account ID**.
    
    <details>
@@ -164,4 +164,4 @@ You can view an audit list of events in your accounts. The Audit page shows a li
 
 Access the Audit page:
 1. In the Spot console, select the organization and account.
-2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings** > **Audit**.
+2. Click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings** > **Audit**.
