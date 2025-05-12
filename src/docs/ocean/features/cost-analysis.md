@@ -119,7 +119,7 @@ The different types of cloud provider data transfer costs which can be associate
 
 The [Ocean network client is installed](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.   
 
-<img width=1000 src="https://github.com/user-attachments/assets/5d385ef0-4df1-49ca-9141-77ec117ff806" />
+<img width="1000" src="https://github.com/user-attachments/assets/5d385ef0-4df1-49ca-9141-77ec117ff806" />
 
 ## Breakdown Types
 

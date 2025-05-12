@@ -16,7 +16,7 @@ This topic describes how to create, view, edit, and delete virtual node groups i
 
 <div style="padding-left:16px">
 
- <img width=1200 src="https://github.com/user-attachments/assets/2fc53731-83e7-4cdc-984e-3f3e3e2392db" />
+ <img width="1200" src="https://github.com/user-attachments/assets/2fc53731-83e7-4cdc-984e-3f3e3e2392db" />
 
  </div>
 
@@ -43,7 +43,7 @@ To create/edit a Virtual Node Group:
    * Configure Manually: All virtual node group fields will be taken from the virtual node group Template.
    * Import configurations from Node Pools: Values are copied from the cloud service provider node group entity to the Ocean configuration. Later, there will be no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
   
-<img width=430 src="https://github.com/user-attachments/assets/21e1c2f4-08b8-4180-8eed-194682628737" />
+<img width="430" src="https://github.com/user-attachments/assets/21e1c2f4-08b8-4180-8eed-194682628737" />
 
 3. Click **Continue**.
 4. Edit the parameters in the New Virtual Node Group screen. Parameters left blank take values from the virtual node group template.
@@ -53,7 +53,7 @@ To create/edit a Virtual Node Group:
 
 <div style="padding-left:16px">
  
-<img width=1250 src="https://github.com/user-attachments/assets/23026512-9c01-433f-84b1-35e5babd4551" />
+<img width="1250" src="https://github.com/user-attachments/assets/23026512-9c01-433f-84b1-35e5babd4551" />
 
 
 </div>
@@ -94,12 +94,12 @@ To select the VMs for your Cluster:
    * Automatic: Let Spot select your VM sizes according to the needs of your applications.
    * Advanced VM Size Selection: Use attribute filters to select VMs with customized sizes from which Ocean can scale.
 
-<img width=1250 src="https://github.com/user-attachments/assets/727d82f4-c240-4aaa-8b4b-39d5d0cc3236" />
+<img width="1250" src="https://github.com/user-attachments/assets/727d82f4-c240-4aaa-8b4b-39d5d0cc3236" />
 
 2. If you selected **Automatic**, click **Save** to complete the procedure.
 3. If you selected **Advanced VM Size Selection**: View each VM type's currently selected size, vCPU, Memory (GiB), and GPU units in the VM Selection list (click the down arrow for the VM type).
 
-<img width=1250 src="https://github.com/user-attachments/assets/5871dbd6-cf85-42c8-b568-1940e635cdc2" />
+<img width="1250" src="https://github.com/user-attachments/assets/5871dbd6-cf85-42c8-b568-1940e635cdc2" />
 
 >**Note**:
 > - The VM types shown in the virtual node group template are only those supported in the cluster's region.
