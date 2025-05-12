@@ -192,7 +192,7 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
    <div style="padding-left:16px">
     
    This policy enables performing Ocean-related operations on clusters with names containing <i>ocean-example-1</i> or <i>ocean-example-2</i>.
-    
+
    ````json
    {
        "statements": [
@@ -213,7 +213,7 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
        ]
    }
    ````
-    
+
    </div>
  </details>
 
