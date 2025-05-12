@@ -6,7 +6,7 @@ The [Spark docker images](https://docs.spot.io/ocean-spark/configure-spark-apps/
 
 The procedures below differ depending on whether Ocean Spark is deployed in the same AWS account as Glue, or whether they are in separate accounts.
 
-## Ocean Spark in same AWS Account
+## Ocean Spark in Same AWS Account
 
 The first step is to create an IAM policy granting your Spark applications access to Glue. You can do this in the AWS console, under IAM > Policies > Create policy, by entering the following JSON block.  
 You should replace `<AWS ACCOUNT ID>` with your actual account ID.
@@ -45,7 +45,7 @@ The final step is to pass the following configuration to your Spark applications
 }
 ```
 
-## Ocean Spark in different AWS Account
+## Ocean Spark in Different AWS Account
 
 The procedures below are based on the official [AWS Glue documentation](https://docs.aws.amazon.com/glue/latest/dg/cross-account-access.html)
 
@@ -118,11 +118,11 @@ To test querying the Glue catalog, you can [start a Jupyter notebook](https://do
 
 In this example, we will use the database `db_film` of the Glue Catalog.
 
-<img src="/ocean-spark/_media/tools-aws-glue-catalog-02.png"/>
+<img src="/ocean-spark/_media/tools-aws-glue-catalog-02.png" />
 
 This database has an S3 bucket location (using S3A protocol) and tables in parquet format.
 
-<img src="/ocean-spark/_media/tools-aws-glue-catalog-03.png"/>
+<img src="/ocean-spark/_media/tools-aws-glue-catalog-03.png" />
 
 You can show the available database by running `spark.sql("SHOW DATABASES")`
 
@@ -132,7 +132,7 @@ You can describe a database by running `spark.sql("DESCRIBE DATABASE db_film")`
 
 You can list the tables within a database with `spark.sql("SHOW TABLES db_film")`  
 You can then query these tables, as well as create new ones, or create a new database.
-<img src="/ocean-spark/_media/tools-aws-glue-catalog-05.png"/>
+<img src="/ocean-spark/_media/tools-aws-glue-catalog-05.png" />
 
 ## What's Next?
 
