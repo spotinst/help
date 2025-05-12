@@ -47,7 +47,7 @@ You can also use [multitenancy](administration/organizations/multitenancy) to cr
 
 ## Get Your Organization ID
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Go to **General Details** > **My Organization** > **Organization ID**.
    <details>
     <summary markdown="span">View image</summary>
@@ -58,7 +58,7 @@ You can also use [multitenancy](administration/organizations/multitenancy) to cr
 
 ## Update Your Organization Name
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Go to **General Details** > **My Organization** > **Organization ID**.
    <details>
     <summary markdown="span">View image</summary>
@@ -96,7 +96,7 @@ If your user is mapped to more than one organization, you can easily switch from
 
 When you register to Spot, the registration wizard automatically creates an account in your organization. The account is a child entity of your organization. You can manage multiple accounts in which each account is connected to a different cloud provider account. This allows you to manage multiple accounts and users under the same organization.
 
-A Spot account is an equivalent to an AWS account, Azure subscription, or a GCP project.
+A Spot account is equivalent to an AWS account, Azure subscription, or a GCP project.
 
 In the account, you can:
 
@@ -140,7 +140,7 @@ The Account ID is required for API and SDK interactions with the account-level S
 ## Update Your Spot Account Name
 
 1. In the Spot console, select the organization and account.
-2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 3. Go to **General Details** > **My Spot Account** > **Cloud Account ID**.
    
    <details>
@@ -150,18 +150,18 @@ The Account ID is required for API and SDK interactions with the account-level S
 
    </details>
 
-4. Click **Edit** <img height="14" src="https://github.com/user-attachments/assets/07c5484f-c695-464b-837d-2ce9345800f9"> to update the Spot account name.
+4. Click **Edit** <img height="14" src="https://github.com/user-attachments/assets/07c5484f-c695-464b-837d-2ce9345800f9" /> to update the Spot account name.
 
 ## Audit Events
 
 You can view an audit list of events in your accounts. The Audit page shows a list of events and enables tracking and visibility of actions on your resources. You can see these details for each event:
 - Event timestamp
 - Event type, such as update, create, detach instances, deploy instances
-- Resources type, such as Elastigroup, Ocean
+- Resource type, such as Elastigroup, Ocean
 - Resource ID
 - User name
 - View the payload
 
 Access the Audit page:
 1. In the Spot console, select the organization and account.
-2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings** > **Audit**.
+2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings** > **Audit**.
