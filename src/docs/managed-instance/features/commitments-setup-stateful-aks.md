@@ -124,7 +124,7 @@ You might need to distribute reservation instances/savings plans according to vi
 
 in the Spot API, for virtual node groups/clusters, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
 
-When `True` (default), and there are free reserved instances / savings plans within the AWS account, Stateful Node will utilize them before launching spot instances. 
+When `True` (default), and there are free reserved instances / savings plans within the Azure account, Stateful Node will utilize them before launching spot instances. 
 The initial virtual node group default value is inherited from the identical attribute at the cluster level. 
 
 * [Create cluster]() or [Update cluster]()
