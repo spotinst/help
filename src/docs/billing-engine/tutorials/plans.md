@@ -48,7 +48,7 @@ Once a plan and its rules are configured, you can use it for specific cloud acco
    <details>
      <summary markdown="span">View image</summary>
 
-   <img alt="plans1" src="https://github.com/spotinst/help/assets/167069628/dae3c261-5669-40c0-84c8-9d603468769a">
+   <img alt="plans1" src="https://github.com/spotinst/help/assets/167069628/dae3c261-5669-40c0-84c8-9d603468769a" />
 
    </details>
 
