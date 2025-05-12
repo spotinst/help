@@ -2,7 +2,7 @@
 
 You can create notifications for security resources.
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Go to **Notification Center** > **Event Policies** > **Create Policy**.
 3. Enter a **Name** for the policy (and a **Description**).
 4. Select **Type**: Spot Security.
@@ -20,7 +20,7 @@ To complete the policy definition, you need to complete all steps of the wizard.
 ## Step 2: Select Assets
 
 1. Select the assets to include in your policy.
-2. If you selected all the assets, **Future Assets** is enabled by default. This will enable the notifications for the assets which are onboarded later in these accounts.
+2. If you selected all the assets, **Future Assets** is enabled by default. This will enable the notifications for the assets that are onboarded later in these accounts.
 3. Click **Next**.
 
 ## Step 3: Select Security Rules
