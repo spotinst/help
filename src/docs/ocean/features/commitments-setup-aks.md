@@ -125,8 +125,8 @@ in the Spot API, for virtual node groups/clusters, the `shouldUtilizeCommitments
 When `True` (default), and there are free reserved instances / savings plans within the AWS account, Ocean will utilize them before launching spot instances. 
 The initial virtual node group default value is inherited from the identical attribute at the cluster level. 
 
-* [Create cluster]() or [Update cluster]()
-* [Create virtual node group]() or [Update virtual node group]()
+* [Create cluster](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterCreate) or [Update cluster](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate)  (under virtualNodeGroupTemplate > strategy)
+* [Create virtual node group](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupCreate) or [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupUpdate) (under virtualNodeGroup > strategy)
 
 
 
