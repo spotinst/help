@@ -2,7 +2,7 @@
 
 You can create notifications for Ocean CD.
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Go to **Notification Center** > **Event Policies** > **Create Policy**.
 3. Enter a **Name** for the policy (and a **Description**).
 4. Select **Type**: Ocean CD.
@@ -31,7 +31,7 @@ If you (as an admin user) are configuring a policy at the account level, you can
 <details>
       <summary markdown="span">View image</summary>
 
-  <img width="420" alt="eventpolicy-createcompute-4" src="https://github.com/user-attachments/assets/8b7d1639-cfc3-4e57-9208-73f5ce2b5bde">
+  <img width="420" alt="eventpolicy-createcompute-4" src="https://github.com/user-attachments/assets/8b7d1639-cfc3-4e57-9208-73f5ce2b5bde" />
      
    </details>
 
