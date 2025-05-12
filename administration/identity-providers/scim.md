@@ -60,7 +60,7 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 
 ## Step 5: Verify User Provisioning
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 3. Go to **Organization** > **Users**.
 2. Verify that the users assigned in Okta are showing correctly in Spot.
     <details>

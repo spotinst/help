@@ -4,7 +4,7 @@ The Instana integration ingests issues or incidents raised by built-in or custom
 
 Instana is an Application Performance Management (APM) solution that assists in managing microservices and cloud-native applications. You can create alerts from built-in events which are predefined health signatures based on integrated algorithms, or from custom events which enable you to create issues or incidents based on an individual metric of any given entity. 
 
-Instana Webhook integration in a Spot Connect workflow enables you to trigger a workflow, when a specific Instana Alert goes into the state of ALERT. 
+Instana Webhook integration in a Spot Connect workflow lets you trigger a workflow when a specific Instana Alert goes into the state of ALERT. 
 
 ## Integration Actions 
 
@@ -38,7 +38,7 @@ In the workflow builder, click the **Instana** trigger node to save the followin
 * **Webhook API Key Value** 
 * **Workflow Webhook URL** 
 
-<img width="958" alt="instana-1" src="https://github.com/spotinst/help/assets/106514736/61f4ced9-f010-4a17-90cf-8849e2d1c80b">
+<img width="958" alt="instana-1" src="https://github.com/spotinst/help/assets/106514736/61f4ced9-f010-4a17-90cf-8849e2d1c80b" />
 
 #### In Instana 
 
@@ -48,7 +48,7 @@ Complete the following steps:
 2. Click **Settings** and **Alert Channels**. 
 3. Click **Generic Webhook**. 
 
-<img width="1427" alt="instana-2" src="https://github.com/spotinst/help/assets/106514736/ab713305-d9a3-4f35-9fe2-aed20b29ca7e">
+<img width="1427" alt="instana-2" src="https://github.com/spotinst/help/assets/106514736/ab713305-d9a3-4f35-9fe2-aed20b29ca7e" />
 
 #### Create Generic Webhook Alert Channel  
 
@@ -59,7 +59,7 @@ Complete the following steps:
 5. Copy the Webhook API Key Value from the workflow page and paste it into the Value field of the x-api-key. 
 6. Click **Create**. 
 
-<img width="1431" alt="instana-3" src="https://github.com/spotinst/help/assets/106514736/34ad492f-e6ef-4447-8aed-52695530a985">
+<img width="1431" alt="instana-3" src="https://github.com/spotinst/help/assets/106514736/34ad492f-e6ef-4447-8aed-52695530a985" />
 
 7. Click **Settings** and then **Alerts**. 
 8. Click **New Alert**.  
@@ -75,7 +75,4 @@ Complete the following steps:
 
 #### Action Example 
 
-<img width="1105" alt="instana-4" src="https://github.com/spotinst/help/assets/106514736/34bbd57c-8c1f-4d52-beb3-b94979a45c98">
-
-
- 
+<img width="1105" alt="instana-4" src="https://github.com/spotinst/help/assets/106514736/34bbd57c-8c1f-4d52-beb3-b94979a45c98" />
