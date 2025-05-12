@@ -169,7 +169,7 @@ Click **View Details** on the right of the right-sizing tab to see your [actual 
 
 ## Ocean Managed Nodes and Resources Panel
 
-<img width="1000" src="https://github.com/user-attachments/assets/065b7f12-769a-4e46-9900-7b17fb81553d" >
+<img width="1000" src="https://github.com/user-attachments/assets/065b7f12-769a-4e46-9900-7b17fb81553d" />
 
 This panel contains a set of widgets that display categorized information on your managed nodes and resources.
 
