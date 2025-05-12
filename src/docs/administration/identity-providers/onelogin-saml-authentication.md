@@ -13,7 +13,7 @@ This feature makes it easy to manage your accounts and works with the most popul
 8. Go to **More Actions** > Download SAML Metadata to configure your Spot account with OneLogin's SAML settings. Note the location of your saved XML file.
    <ol style="list-style-type: lower-alpha;">
    <li>In a new browser tab, open the Spot console as an Admin.</li>
-   <li>Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > <b>Settings</b>.</li>
+   <li>Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > <b>Settings</b>.</li>
    <li>Click <b>Security</b> > <b>Identity Providers</b>.</li>
    <li>Browse and import the XML metadata file you downloaded earlier. SSO will become enabled after uploading the OneLogin metadata.</li>
    </ol>
