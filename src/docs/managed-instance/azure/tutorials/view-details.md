@@ -8,7 +8,7 @@ The Stateful Node Overview tab gives you quick access to insights and summary da
 1. In the Spot console, go to **Elastigroup** > **Stateful Nodes**.
 2. In the [list of stateful nodes](managed-instance/azure/tutorials/manage), click a Node Name.
 
-    <img width="900" alt="azure-view-stateful-node-details-01a" src="https://github.com/spotinst/help/assets/106514736/12e274e3-0350-44a7-b40e-cf9241357ebf">
+    <img width="900" alt="azure-view-stateful-node-details-01a" src="https://github.com/spotinst/help/assets/106514736/12e274e3-0350-44a7-b40e-cf9241357ebf" />
 
 You can see the node status next to the name. It can be one of these statuses:
 
@@ -20,15 +20,15 @@ The Node Summary gives you insights into your node usage.
 
 You can see statistics from the first of the month to the current date, as well as the last 7 or 30 days.
 
-<img width="900" src="https://github.com/spotinst/help/assets/106514736/df7fa0a8-c526-4359-b2fa-80cf751c1853">
+<img width="900" src="https://github.com/spotinst/help/assets/106514736/df7fa0a8-c526-4359-b2fa-80cf751c1853" />
 
 The widgets show the:
 
-* VM Size: The VM size assigned to the node. Green is a spot VM and blue is on-demand.
+* VM Size: The VM size assigned to the node. Green is a spot VM, and blue is on-demand.
 * Hours: Number of hours the VM has been used.
 * Potential Costs: The cost calculated if the VM had been on-demand.
 * Actual Costs: The cost of the VM using spot VMs.
-* OD Costs: The cost of on-demand VMs used. This should be zero unless no spot VMs were available and fallback to on-demand was required.
+* OD Costs: The cost of on-demand VMs used. This should be zero unless no spot VMs were available and a fallback to on-demand was required.
 * Saved: The amount of money saved using spot VMs.
 * Savings Percentage: The percentage of savings when using spot VMs compared to the potential cost if all on-demand VMs had been used.
 
@@ -65,7 +65,7 @@ Network and Storage are not displayed when the node is in a Paused state.
 
 * Storage: You can see information about the storage resources.
 
-   <img width="900" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4">
+   <img width="900" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4" />
 
 ### Node Activity
 
@@ -89,9 +89,9 @@ To create a new activity, click **Schedule New Activity**.
 
 ## Monitoring
 
-The Monitoring tab shows you information about the utilization of your stateful node. It gives you recommendations for modifying the preferred spot sizes list and helps you identify performance issues. You can view right sizing recommendations and graphs with historical CPU and memory utilization data for the last hour, 6 hours, day, week, or 14 days.
+The Monitoring tab shows you information about the utilization of your stateful node. It gives you recommendations for modifying the preferred spot sizes list and helps you identify performance issues. You can view rightsizing recommendations and graphs with historical CPU and memory utilization data for the last hour, 6 hours, day, week, or 14 days.
 
-<img width=900 src="https://github.com/user-attachments/assets/12cea044-b689-4b9c-804d-ae8e79499ed1">
+<img width=900 src="https://github.com/user-attachments/assets/12cea044-b689-4b9c-804d-ae8e79499ed1" />
 
 ### Right Sizing Recommendations
 Recommendations help you make better decisions about updating the VM list recommendation to update  the list of preferred VM sizes. They are based on data for the last 14 days. The data is scanned once a day for each stateful node.

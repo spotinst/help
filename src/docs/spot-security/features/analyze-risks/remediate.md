@@ -26,7 +26,7 @@ You can remediate the risks using:
    <details>
      <summary markdown="span">View image</summary>
    
-   <img width=450 src="https://github.com/spotinst/help/assets/167069628/dbc2f36b-cb7d-418d-a95f-c41ffe4a3c70" />
+   <img width="450" src="https://github.com/spotinst/help/assets/167069628/dbc2f36b-cb7d-418d-a95f-c41ffe4a3c70" />
 
    </details>
    </li>
@@ -47,7 +47,7 @@ You can remediate the risks using:
      </ul>
    <details>
      <summary markdown="span">View image</summary>
-     <img src="https://github.com/spotinst/help/assets/167069628/933d216a-b8a9-4ac9-8991-60cde9129463" width=60% />
+     <img src="https://github.com/spotinst/help/assets/167069628/933d216a-b8a9-4ac9-8991-60cde9129463" width="600" />
    </details>
      <li>Click <b>Update</b>.</li>
 
@@ -77,7 +77,7 @@ You can remediate the risks using:
    <details>
      <summary markdown="span">View image</summary>
    
-     <img src="https://github.com/spotinst/help/assets/167069628/83b58dbe-3ff0-4b84-a5ba-ae6be64565df" width=60% />
+     <img src="https://github.com/spotinst/help/assets/167069628/83b58dbe-3ff0-4b84-a5ba-ae6be64565df" width="600" />
 
    </details>
 4. You can select multiple risks to remediate, or click **Add New** to add one risk at a time.
@@ -95,7 +95,7 @@ Once auto remediation starts, the asset is grayed out. If the remediation is suc
 
 You can see the remediated risks in the Recently Auto Remediated tab. Rollback risks by selecting them and clicking **Rollback**.
 
-You can only Rollback risks where **Operation Type** is <i>Auto Remediation</i>, and less than 72 hours passed since you fixed it.
+You can only Rollback risks where **Operation Type** is <i>Auto Remediation</i>, and less than 72 hours have passed since you fixed it.
  <details>
   <summary markdown="span">View image</summary>
    
@@ -127,7 +127,7 @@ You can also edit the commands directly in the console before copying.
  <details>
   <summary markdown="span">View image</summary>
    
-  <img src="https://github.com/spotinst/help/assets/167069628/536a855e-5528-4d3f-9447-dcdcd5610245" width=60% />
+  <img src="https://github.com/spotinst/help/assets/167069628/536a855e-5528-4d3f-9447-dcdcd5610245" width="600" />
 
 </details>
 
@@ -138,7 +138,7 @@ Follow the steps listed to remediate in the AWS Console.
  <details>
   <summary markdown="span">View image</summary>
    
-  <img width="515" alt="features-remediation-013" src="https://github.com/spotinst/help/assets/167069628/e224ea2e-d031-4d97-90ce-ee10c768a9ae">
+  <img width="515" alt="features-remediation-013" src="https://github.com/spotinst/help/assets/167069628/e224ea2e-d031-4d97-90ce-ee10c768a9ae" />
 
 </details>
 
@@ -153,6 +153,6 @@ In addition, you can write Lambda functions to automate remediation using the Py
  <details>
   <summary markdown="span">View image</summary>
    
-  <img src="https://github.com/spotinst/help/assets/167069628/bd152c3f-4fca-42a9-88a1-89c91b6e59e4" width=60% />
+  <img src="https://github.com/spotinst/help/assets/167069628/bd152c3f-4fca-42a9-88a1-89c91b6e59e4" width="600" />
 
 </details>

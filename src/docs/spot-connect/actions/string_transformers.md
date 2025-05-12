@@ -48,9 +48,9 @@ An operation will have a separate set of requirements which will also have Set V
 
 1. From the workflow builder in the left panel, drag and drop a String Transformers node in the workflow panel. A sample configuration opens in the right input panel. 
 
-<img width="660" alt="string-transformers-1" src="https://github.com/spotinst/help/assets/106514736/710a2b24-55fb-4382-af97-67ddbefa79a0">
+<img width="660" alt="string-transformers-1" src="https://github.com/spotinst/help/assets/106514736/710a2b24-55fb-4382-af97-67ddbefa79a0" />
 
 
 2. After the execution of the workflow above, the output of the execution step details of string transformers are shown below.  
 
-<img width="787" alt="string-transformers-2" src="https://github.com/spotinst/help/assets/106514736/9d893bc7-1434-44de-b09e-b195d616ca95">
+<img width="787" alt="string-transformers-2" src="https://github.com/spotinst/help/assets/106514736/9d893bc7-1434-44de-b09e-b195d616ca95" />

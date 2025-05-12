@@ -10,11 +10,11 @@ Click **Log in to Azure Account** and continue to the next step.
  
 1. In the Azure console, type **App Registration** in the search bar and click the App Registrations result that appears.  
 
-   <img width=600 src="https://github.com/spotinst/help/assets/106514736/dadaf0c3-2539-4d5f-99a0-fabbc545102b">
+   <img width="600" src="https://github.com/spotinst/help/assets/106514736/dadaf0c3-2539-4d5f-99a0-fabbc545102b" />
 
 2. Click the **+ New registration** tab.  
  
-   <img width=600 src="https://github.com/spotinst/help/assets/106514736/e1769ebf-888b-43ac-9e60-f1810ae343ba">
+   <img width="600" src="https://github.com/spotinst/help/assets/106514736/e1769ebf-888b-43ac-9e60-f1810ae343ba" />
 
 3. In the Register Application window that opens, enter a name for the application. 
 
@@ -22,15 +22,15 @@ Click **Log in to Azure Account** and continue to the next step.
 
 5. In the Redirect URI dropdown menu, select **Web** and specify: https://spot.io. 
  
-   <img width=600 src="https://github.com/user-attachments/assets/8c1b4153-a694-4cb3-9a97-2084fb47ed69">
+   <img width="600" src="https://github.com/user-attachments/assets/8c1b4153-a694-4cb3-9a97-2084fb47ed69" />
 
 6. In the Register an application window, enter the application you have just registered and copy the Application (client) ID and Directory (tenant) ID to provide in the next step. Click **Register**.
 
-   <img width=600 src="https://github.com/user-attachments/assets/7ec3b929-9f12-493b-bc19-87cc71ece184">
+   <img width="600" src="https://github.com/user-attachments/assets/7ec3b929-9f12-493b-bc19-87cc71ece184" />
 
 7. Paste the Application (client) ID and Directory (tenant) ID: 
 
-   <img width=600 src="https://github.com/user-attachments/assets/3fe64c55-11e0-4de9-a157-571c934de805">
+   <img width="600" src="https://github.com/user-attachments/assets/3fe64c55-11e0-4de9-a157-571c934de805" />
 
 8. Click **Next**. 
 
@@ -42,16 +42,16 @@ In the previous app registration that was created, create a client secret:
 2. Click the **Create secrets** tab and then **+ New client secret**. 
 3. Copy the secret value and the expiration date.
  
-   <img width=800 src="https://github.com/user-attachments/assets/649a5fba-fb59-47e3-9bc8-22c31784fc15">
+   <img width="800" src="https://github.com/user-attachments/assets/649a5fba-fb59-47e3-9bc8-22c31784fc15" />
 
 
-4. In the wizard in the Spot console, paste the secret value and and expiration date, then click **Next**. 
+4. In the wizard in the Spot console, paste the secret value and expiration date, then click **Next**. 
 
-    <img width=600 src="https://github.com/user-attachments/assets/81ac2ce4-f982-4f49-b672-d07cc54de4ee">
+    <img width="600" src="https://github.com/user-attachments/assets/81ac2ce4-f982-4f49-b672-d07cc54de4ee" />
 
-5. Enter the Subscription ID you want to associate with spot.io and then continue to the next step in the Azure connection wizard. 
+5. Enter the Subscription ID you want to associate with spot.io, and then continue to the next step in the Azure connection wizard. 
  
-    <img width=600 src="https://github.com/user-attachments/assets/72916622-65e3-4f04-a9d1-c02fc5b66e52">
+    <img width="600" src="https://github.com/user-attachments/assets/72916622-65e3-4f04-a9d1-c02fc5b66e52" />
 
 ## Step 4: Create a Custom Role 
 
@@ -83,13 +83,13 @@ In the previous app registration that was created, create a client secret:
 
 3. Click the **Members** tab and click **Select members**. 
 
-   <img width=600 src="https://github.com/user-attachments/assets/29131f2d-5f05-43dd-aa88-b256c2060691">
+   <img width="600" src="https://github.com/user-attachments/assets/29131f2d-5f05-43dd-aa88-b256c2060691" />
 
  
 4. Select the app registration that was created in the previous steps and click **Next**.  
 5. In the Spot console, click **Connect Account**.  
 
-   <img width=600 src="https://github.com/user-attachments/assets/7abc3a72-f8f1-4a57-b8a7-ec4b3d6be654">
+   <img width="600" src="https://github.com/user-attachments/assets/7abc3a72-f8f1-4a57-b8a7-ec4b3d6be654" />
 
 
 When the validation is complete, your Azure subscription will be connected and ready for optimization. 

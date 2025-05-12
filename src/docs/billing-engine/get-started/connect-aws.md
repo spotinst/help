@@ -13,42 +13,39 @@ Follow the instructions for [Creating a Legacy CUR Export](https://docs.aws.amaz
 > * **Report Data integration**: <i>Amazon Redshift</i>, this is where AWS uploads your CUR data for analysis.
 > * **Compression type**: <i>gzip</i>.
 
-<img src="https://github.com/spotinst/help/assets/167069628/bbe56bf6-dbe5-48da-b589-5e31ec8fa961">
+<img width="600" src="https://github.com/spotinst/help/assets/167069628/bbe56bf6-dbe5-48da-b589-5e31ec8fa961" />
 
 ## Add a New Spot Account
 
-If you have a legacy CUR data export, connect your Spot account to the AWS Account.
+If you have a legacy CUR data export, connect your Spot account to the AWS account.
 
-1. Log in to the Spot Console and click **Billing Engine**.
+1. Sign in to the Spot console and click **Billing Engine**.
 2. Click **Add Account**.
-3. Log in to your AWS account.
-   
-![connect-aws-connect-spot1](https://github.com/spotinst/help/assets/167069628/5bcedf9e-b361-4909-a3f7-c278a532fdf4)
-
+3. Sign in to your AWS account.
 4. Enter the CUR information:
    <ol style="list-style-type: lower-alpha;">
       <li><b>Bucket Name</b> is the S3 bucket the CUR is in.</li>
       <li><b>Bucket Region</b> is the S3 bucket’s AWS region.</li>
       <li><b>S3 Path Prefix (including Report Name)</b> is the prefix path and report name generated for the CUR you configured.</li>
+  
+  <img width="450" src="https://github.com/user-attachments/assets/e4bbcda0-1ee9-47f1-a609-1ea8ce0451ad" />
   </ol>
 
-![connect-aws-s3](https://github.com/user-attachments/assets/e4bbcda0-1ee9-47f1-a609-1ea8ce0451ad)
-  
-5. Run the IAM tempate and **Connect Account**.
+5. Run the IAM template and **Connect Account**.
    
-   ![connect-aws-connect-spot3](https://github.com/spotinst/help/assets/167069628/224935ab-d6af-4067-94c7-86eed0d84051)
+   <img width="450" src="https://github.com/spotinst/help/assets/167069628/224935ab-d6af-4067-94c7-86eed0d84051" />
 
 ## Onboard an Existing Spot Account 
 
 You can connect an existing AWS account to your new Billing Engine account by rerunning the IAM template.
 
-1. Log in to your AWS account. 
+1. Sign in to your AWS account. 
 
-   <img width="470" alt="connect-aws-onboard1" src="https://github.com/spotinst/help/assets/167069628/859b0710-d29e-4134-82e9-d6bfba10d0ff">
+   <img width="470" src="https://github.com/spotinst/help/assets/167069628/859b0710-d29e-4134-82e9-d6bfba10d0ff" />
 
 2. Select **Yes** to give Billing Engine access to a CUR and enter your CUR information.
 
-   ![connect-aws-onboard2](https://github.com/spotinst/help/assets/167069628/47972b71-8a29-4480-b3d6-f96e96312aea)
+   <img width="470" src="https://github.com/spotinst/help/assets/167069628/47972b71-8a29-4480-b3d6-f96e96312aea" />
 
 3. Run the IAM template and **Connect Account**.
 

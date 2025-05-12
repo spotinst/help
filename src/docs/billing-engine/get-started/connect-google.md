@@ -19,7 +19,7 @@ This topic describes how to connect your Google Cloud Billing Account to Billing
 
 Create a service account for Spot and grant it the Viewer role. This allows Spot to access and analyze cost and usage data in your Google Cloud account. 
 
-<img width="819" alt="connect-gc-1" src="https://github.com/user-attachments/assets/b700e31b-68bc-4009-ac47-9972018299a5">
+<img width="500" alt="connect-gc-1" src="https://github.com/user-attachments/assets/b700e31b-68bc-4009-ac47-9972018299a5" />
 
 1. In the Spot console, copy the service account name, for example spotinst-role-79885e98. 
 2. In the Google Cloud console, select the project you are connecting to and [create a service account](https://cloud.google.com/iam/docs/service-accounts-create). 
@@ -42,5 +42,5 @@ To connect the BigQuery data set and table:
 4. In the Billing Engine console, paste the data set ID and table ID.
 5. Click **Connect Account**.
 
-<img width="726" alt="connect-gc-2" src="https://github.com/user-attachments/assets/185b9c18-58eb-4ce6-b1bb-d48f7fbff647">
+<img width="400" alt="connect-gc-2" src="https://github.com/user-attachments/assets/185b9c18-58eb-4ce6-b1bb-d48f7fbff647" />
 

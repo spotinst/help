@@ -8,14 +8,14 @@ To manage your stateful nodes, in the Spot console, click **Elastigroup** and cl
 
 ## View List of Stateful Nodes
 
-The list of stateful nodes gives you a quick view of your nodes and basic information including:
+The list of stateful nodes gives you a quick view of your nodes and basic information, including:
 
 * Node Name: The name you entered for the node.
 * ID: The unique identifier that Elastigroup assigned to the node upon creation.
 * VM Name: The name you created for the virtual machine. 
 * Region: The region you defined for the node.
 * Availability Zone: The Azure availability zone where the virtual machine is located.
-* VM Size: The list of the virtual machine sizes defined on the node.
+* VM Size: The list of virtual machine sizes defined on the node.
 * Life Cycle: The lifecycle of the virtual machine, On-demand or Spot.
 * Creation Date: The date the node was created.
 * Status: The activity status of the node (e.g., Running, Paused).
@@ -42,7 +42,7 @@ You can do the following from the dropdown menu:
 * Create a node.
 * Import an existing VM from Azure.  
 
-<img src="/elastigroup/_media/azure-manage-stateful-edit-5.png" width="300"/>
+<img src="/elastigroup/_media/azure-manage-stateful-edit-5.png" width="300" />
 
 ## Use Node Actions
 
@@ -71,7 +71,7 @@ On the Review page you can edit directly in the JSON configuration.
 
 1. Click **JSON** and click **Edit Mode**.  
 
-<img src="/elastigroup/_media/azure-manage-stateful-edit-4.png" />
+   <img src="/elastigroup/_media/azure-manage-stateful-edit-4.png" />
 
 2. Make your changes in the JSON configuration and click **Update**.
 

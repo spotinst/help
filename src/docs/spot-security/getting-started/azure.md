@@ -10,7 +10,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 
  <details>
    <summary markdown="span">View image</summary>
-    <img width=600 src="https://github.com/user-attachments/assets/93d2d563-08b5-46d8-bc20-f6791890211b">
+    <img width="600" src="https://github.com/user-attachments/assets/93d2d563-08b5-46d8-bc20-f6791890211b" />
    
  </details>
 
@@ -35,7 +35,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
       
   <details>
        <summary markdown="span">View image</summary>
-         <img alt="get-started-azure10" src="https://github.com/user-attachments/assets/59fcefee-e795-4d25-a0b5-7d11606c1873">
+         <img alt="get-started-azure10" src="https://github.com/user-attachments/assets/59fcefee-e795-4d25-a0b5-7d11606c1873" />
   </details>
   </li>
   <li>Click <b>Next</b>.</li>
@@ -50,7 +50,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
   <li><p>Click <b>Review + assign</b> and wait for it to assign the <i>Reader</i> role to the Spot app registration.</p>
        <details>
        <summary markdown="span">View image</summary>
-         <img alt="get-started-azure11" src="https://github.com/user-attachments/assets/a7ecacfc-d9d7-41b4-8090-0b1ebadcfaa4">
+         <img alt="get-started-azure11" src="https://github.com/user-attachments/assets/a7ecacfc-d9d7-41b4-8090-0b1ebadcfaa4" />
          
    </details>
   </li>
@@ -58,17 +58,17 @@ If you lost the service principal you used, you can access it in the Spot Accoun
   <li><p></p>Click the Role Assignments tab, search for your service principal, and make sure the app has both <i>Reader</i> and <i>Storage Blob Data Reader</i> roles assigned.</p>
      <details>
        <summary markdown="span">View image</summary>
-         <img src="https://github.com/user-attachments/assets/9a71f311-2270-48f9-b679-fd9e6f75fcbc">
+         <img src="https://github.com/user-attachments/assets/9a71f311-2270-48f9-b679-fd9e6f75fcbc" />
        </details>
   </li>
   <li><p>Click on the service principal and copy the <i>Object ID</i> of the Application Service Principal and save it for the next step of onboarding.</p>
-      <details>
+       <details>
         <summary markdown="span">View image</summary>
-          <img src="https://github.com/user-attachments/assets/15cdaccd-2c9e-43df-a3c4-b9179b16cf0c">
+          <img src="https://github.com/user-attachments/assets/15cdaccd-2c9e-43df-a3c4-b9179b16cf0c" />
         </details>
-  </li>
+   </li>
 
- </details>
+  </details>
 
 ### Step 2.2:  Enter the Service Principal Object ID
 
@@ -84,9 +84,9 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 2. Under All Services, select **Subscriptions**. Select the subscription you would like to onboard to Spot Security.
 3. Select **Activity log** > **Export Activity Logs** > **+ Add diagnostic setting**.
 
-  <details>
+   <details>
     <summary markdown="span">View image</summary>
-      <img src="https://github.com/user-attachments/assets/801fcb0e-8ea5-4f7c-860e-e5d51fc39e24">
+      <img src="https://github.com/user-attachments/assets/801fcb0e-8ea5-4f7c-860e-e5d51fc39e24" />
           
    </details>
 
@@ -101,7 +101,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 
 1. Go to the Spot console, enter the storage account name copied in the previous step and click **Validate**.
    
-  <details>
+   <details>
     <summary markdown="span">View image</summary>
       <img src="https://github.com/user-attachments/assets/f33b100b-5a4d-4a7a-b383-63c707bc272d" />
           
@@ -112,10 +112,10 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 ## Step 4: Review and Finalize
 
 1. Review the information and ensure all details are correct.
-  <details>
-    <summary markdown="span">View image</summary>
+    <details>
+     <summary markdown="span">View image</summary>
       <img src="https://github.com/user-attachments/assets/1358628d-cf21-43df-adb8-31561c9177f7" />
       
-   </details>
+    </details>
 
 2. Click **Finish Onboarding**.
