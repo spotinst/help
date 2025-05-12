@@ -51,11 +51,13 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 Upgrade:
 
-<img width="500" src="https://github.com/user-attachments/assets/1757f341-bf0a-42ca-ad68-fd9d2ba33796" />
+<img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
+
 
 New:
 
-<img width="500" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
+<img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
+
 
 2. Copy the following credentials from your Azure app and paste them into the fields:
    * Application (client) ID.
@@ -76,7 +78,7 @@ New:
 
 ###  Step 3: Permissions Assignment
 
-<img width="500" src="https://github.com/user-attachments/assets/444bb909-62d1-4315-8d43-b4b2d857e2e4" />
+<img width="500" src="https://github.com/user-attachments/assets/5486d807-043d-463f-8deb-8cc7c869ebde" />
 
 
 The first time you use commitments, you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
