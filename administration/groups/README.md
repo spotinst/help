@@ -18,7 +18,7 @@ From the list of groups, you can:
 
 ## Create a Group
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Click **Organization** > **Groups** > **Create New Group**.
 3. Enter a **Name** (and **Description**).
 

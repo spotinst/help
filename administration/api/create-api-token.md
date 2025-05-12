@@ -12,7 +12,7 @@ You can only see tokens that you have permission to view. For example, only Orga
 
 Only Organization Admins can create programmatic tokens.
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **API**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" /> > **Settings** > **API**.
 2. Click **Permanent Tokens** > **Generate Token**.
 3. Select <i>Personal</i> or <i>Programmatic</i>:
     * **Personal**: give your token a name and **click Generate**. Keep in mind, if you use a personal key and that user is removed from Spot, any tokens created for that user won’t be valid. This will cause some of your services and APIs to fail.
@@ -22,14 +22,14 @@ Only Organization Admins can create programmatic tokens.
 
 ## Create a Temporary Token
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **API**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" /> > **Settings** > **API**.
 2. Click **Temporary Token**.
 
 ## API Token from User Details Page
 
 You can only see tokens that you have permission to view. For example, only Organization Admins and users with <i>Delete Permanent Token</i> permissions can see other users’ tokens. Permissions are defined in the [permission policies](https://docs.spot.io/administration/policies/create-new-policy).
 
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Users**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png" /> > **Settings** > **Users**.
 2. In the Users list, select your username.
 3. Click **API Tokens**.
 4. Give your token a name and click **Generate API Token**.
