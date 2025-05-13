@@ -24,7 +24,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 >**Note:** Spot requires this URI for authentication purposes.
 
-5. Copy the following IDs (you will need them later on to connect to Spot):
+5. Copy the following IDs (you will need them later to connect to Spot):
    * Application (client) ID.
    * Directory (tenant) ID.
 
@@ -32,7 +32,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  In Azure, under the newly created application, click **Certificates & secrets**.
 2.  Create a new client secret and set the expiration to **24 months**.
-3.  Copy the following details (you will need them later on to connect to Spot):
+3.  Copy the following details (you will need them later to connect to Spot):
     * Application secret expiration date.
     * Client secret value.
     * Secret ID.
@@ -81,7 +81,7 @@ New:
 <img width="500" src="https://github.com/user-attachments/assets/5486d807-043d-463f-8deb-8cc7c869ebde" />
 
 
-The first time you use commitments, you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
+The first time you use commitments; you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
 
 These permissions give you access to all the resources under the same tenant. You need these permissions to turn on virtual node group-level commitments.
 
