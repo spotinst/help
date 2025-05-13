@@ -20,7 +20,7 @@ Ocean calculates and aggregates the number of unschedulable pods waiting to be p
 
 It may take a few moments before the created nodes join the Kubernetes cluster. To minimize this time (to zero), learn more about cluster [Headroom](ocean/features/headroom.md).
 
-<img src="/ocean/_media/features-scaling-k8s-01.png"/>
+<img src="/ocean/_media/features-scaling-k8s-01.png" />
 
 ### Affinity and Anti-affinity
 
