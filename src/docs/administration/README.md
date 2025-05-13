@@ -1,6 +1,3 @@
-<meta name="description" content="Manage users, permissions, and accounts in Spot">
-<meta name="keywords" content="user, group, permission policy, permission policies, manage account and organization, api token, single sign on, SSO, Okta, adfs, saml">
-
 # Administration
 
 You can easily manage users, permissions, and accounts in Spot:
