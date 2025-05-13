@@ -125,7 +125,7 @@ in the Spot API, the `shouldUtilizeCommitments` attribute controls utilization c
 When set to `True` (default), and there are free reserved instances / savings plans within the Azure account, Stateful Node will utilize them before launching spot instances. 
 Make sure that the VM attached to the specific stateful node also has  `shouldUtilizeCommitments` attribute enabled.
 
-Under under Spot API > Elastigroup > Elastigroup Azure Stateful >...  
+Under Spot API > Elastigroup > Elastigroup Azure Stateful >...  
 
 * [Create Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate) or [Update Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate)  (under statefulNode > strategy)
 * [Get Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeGetStatus) or [Update Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate) (under statefulNode > strategy)
