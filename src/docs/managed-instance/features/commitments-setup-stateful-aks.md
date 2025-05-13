@@ -40,8 +40,8 @@ Follow the instructions below while referring to the [Azure documentation](https
 ##  Connect Commitments to Spot Products
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
-2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Stateful Node recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
-3.  In the Stateful Node Strategy area of the virtual node group, next to Utilize RIs/SPs, click **Add permissions**.
+2.  Go to the stateful node where you want to turn on the utilize RSs/SPs feature. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
+3.  In the strategy area, next to Utilize RIs/SPs, click **Add permissions**.
 
 <img width="1150" src="https://github.com/user-attachments/assets/22580fed-33c0-4fdf-961b-9db51e21ca52" />
 
@@ -106,29 +106,27 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 
 3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
-##  Turn on Utilize Commitments for Virtual Node Groups from the Spot Console
+##  Turn on Utilize Commitments from the Spot Console
 
-1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Stateful Node recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
-2. In the Stateful Node autoscaler strategy area, click **Utilize RIs/SPs**.
+1. Go to the stateful node where you want to turn on the utilize RSs/SPs feature. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
+2. In the Stateful Node strategy area, click **Utilize RIs/SPs**.
 
->**Important**: If the **Missing permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
+>**Important**: If the **Add permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
 >
 >  - [Get Your Azure Credentials](link)
 >
 >  - [Connect Commitments to Spot Products](link)
 
 
-## Turn on Utilize Commitments for Cluster or Virtual Node Groups from the Spot API
+## Turn on Utilize Commitments for Stateful Node in the Spot API
 
-You might need to distribute reservation instances/savings plans according to virtual node groups for several types of workloads on the same cluster.
+in the Spot API, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
 
-in the Spot API, for virtual node groups/clusters, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
-
-When `True` (default), and there are free reserved instances / savings plans within the Azure account, Stateful Node will utilize them before launching spot instances. 
-The initial virtual node group default value is inherited from the identical attribute at the cluster level. 
+When set to `True` (default), and there are free reserved instances / savings plans within the Azure account, Stateful Node will utilize them before launching spot instances. 
+Make sure that the VM attached to the specific stateful node also has  `shouldUtilizeCommitments` attribute enabled.
 
 Under under Spot API > Elastigroup > Elastigroup Azure Stateful >...  
 
 * [Create Staeful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate) or [Update Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate)  (under statefulNode > strategy)
-* [Create virtual node group]() or [Update virtual node group]() (under virtualNodeGroup > strategy)
+* [Get Staeful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeGetStatus) or [Update Staeful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate) (under statefulNode > strategy)
 
