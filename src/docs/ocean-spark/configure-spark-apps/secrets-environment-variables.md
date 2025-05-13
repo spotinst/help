@@ -63,7 +63,7 @@ env_vars = os.environ # Dictionary of key-value pairs
 value = os.environ['ENV_VAR_KEY'] # ENV_VAR_VALUE
 ```
 
-</details><br>
+</details><br />
 
 <details>
   <summary markdown="span">Java and Scala</summary>
