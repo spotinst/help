@@ -99,14 +99,14 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
 
 1. In your Ocean cluster, go to Actions and click Cluster Roll.
 
-<img src="/ocean/_media/features-roll-01.png" width="200" height="213" />
+   <img src="/ocean/_media/features-roll-01.png" width="200" height="213" />
 
 2. Enter the following information:
    - Batch Size: Indicates how much will be rolled at a time. This value is a percentage of the cluster's target capacity.
    - Comment: Describe the reason for the roll.
    - Respect Pod Disruption Budget: Accept the default setting, or uncheck if you do not want to respect the PDB.
 
-<img src="/ocean/_media/features-roll-a.png" width="592"/>
+ <img src="/ocean/_media/features-roll-a.png" width="592" />
 
 3. Click **Roll**.
 
@@ -114,19 +114,19 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
 
 1. In your Ocean cluster, click the Virtual Node Groups tab.
 
-<img src="/ocean/_media/features-roll-02a-1.png" />
+   <img src="/ocean/_media/features-roll-02a-1.png" />
 
 2. In the list of VNGs, mark all the VNGs you want to roll.
 
-<img src="/ocean/_media/features-roll-02a-2.png" />
+   <img src="/ocean/_media/features-roll-02a-2.png" />
 
 3. Click VNG Actions and Roll VNG.
 
-<img src="/ocean/_media/features-roll-02a-3.png" />
+   <img src="/ocean/_media/features-roll-02a-3.png" />
 
 4. Enter the Batch Size and Comments, indicate whether you want to respect the pod disruption budget, and click **Roll VNG(s)**.
 
-<img src="/ocean/_media/features-roll-b.png" width="593"/>
+   <img src="/ocean/_media/features-roll-b.png" width="593" />
 
 ## Monitor The Roll
 
