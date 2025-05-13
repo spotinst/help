@@ -3,6 +3,7 @@
 The Stateful Nodes Overview gives you access to key information and summary data about a node. It offers insights into cost efficiency, as well as details about persisted network and storage resources. 
 
 ## Stateful Nodes Overview
+
 The Stateful Node Overview tab gives you quick access to insights and summary data about the node. You can obtain an overview of your current cost efficiency status and an overview of your persisted network and storage resources.
 
 1. In the Spot console, go to **Elastigroup** > **Stateful Nodes**.
@@ -61,7 +62,7 @@ Network and Storage are not displayed when the node is in a Paused state.
 
 * Network: You can see information about the network interfaces attached to the node.
 
-   <img width="900" alt="azure-view-stateful-node-details-03" src="https://github.com/spotinst/help/assets/106514736/b07195d9-a343-4b55-8539-8193d08564ee">
+   <img width="900" alt="azure-view-stateful-node-details-03" src="https://github.com/spotinst/help/assets/106514736/b07195d9-a343-4b55-8539-8193d08564ee" />
 
 * Storage: You can see information about the storage resources.
 
@@ -81,7 +82,7 @@ Click **Details** below a specific state:
 * Import: You can view the steps of the import process of a stateful node. 
 * Stopped: You can view the stopped VM. It might take a few minutes for the stateful node to appear as stopped. 
 
-If an error occurs, the stateful node transitions into an error state. The information of the failed activity will appear in the activity’s details. 
+If an error occurs, the stateful node transitions into an error state. The information about the failed activity will appear in the activity’s details. 
 
 To view scheduled activities, click **Scheduled Activities**. 
 
@@ -91,7 +92,7 @@ To create a new activity, click **Schedule New Activity**.
 
 The Monitoring tab shows you information about the utilization of your stateful node. It gives you recommendations for modifying the preferred spot sizes list and helps you identify performance issues. You can view rightsizing recommendations and graphs with historical CPU and memory utilization data for the last hour, 6 hours, day, week, or 14 days.
 
-<img width=900 src="https://github.com/user-attachments/assets/12cea044-b689-4b9c-804d-ae8e79499ed1" />
+<img width="900" src="https://github.com/user-attachments/assets/12cea044-b689-4b9c-804d-ae8e79499ed1" />
 
 ### Right Sizing Recommendations
 Recommendations help you make better decisions about updating the VM list recommendation to update  the list of preferred VM sizes. They are based on data for the last 14 days. The data is scanned once a day for each stateful node.

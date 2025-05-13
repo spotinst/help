@@ -8,7 +8,7 @@ The Groups page shows you all the details about your Elastigroup. In addition, y
 <details>
    <summary markdown="span">View image</summary>
 
-  <img width=700 src="https://github.com/user-attachments/assets/3698a171-263b-44c4-aa77-2080773e21a1">
+  <img width="700" src="https://github.com/user-attachments/assets/3698a171-263b-44c4-aa77-2080773e21a1" />
 
 </details>
 
@@ -51,7 +51,7 @@ For example, you can see:
 
 ## Instances
 
-The instances tab shows you the list of instances in your Elastigroup. You can select the fields you see by clicking the column selector <img height=18 src="https://github.com/user-attachments/assets/e5bc0ee3-3053-443d-a9b4-7642b68f95fe">. Click on an instance to open it in the AWS console.
+The instances tab shows you the list of instances in your Elastigroup. You can select the fields you see by clicking the column selector <img height="18" src="https://github.com/user-attachments/assets/e5bc0ee3-3053-443d-a9b4-7642b68f95fe" />. Click on an instance to open it in the AWS console.
 
 From **Actions**, you can:
 
@@ -75,7 +75,7 @@ You can see the compute lifecycle broken down by spot, on-demand, reserved insta
 <details>
    <summary markdown="span">View image</summary>
 
-  <img width=700 src="https://github.com/user-attachments/assets/a65ab46e-5c43-4404-a01c-6aab83750779">
+  <img width="700" src="https://github.com/user-attachments/assets/a65ab46e-5c43-4404-a01c-6aab83750779" />
 
 </details>
 
@@ -84,7 +84,7 @@ The summary shows the totals for both compute lifecycle and all resources.
 <details>
    <summary markdown="span">View image</summary>
 
-  <img width=300 src="https://github.com/user-attachments/assets/d04681a1-68fd-4147-8990-a6fcb82fe230">
+  <img width="300" src="https://github.com/user-attachments/assets/d04681a1-68fd-4147-8990-a6fcb82fe230" />
 
 </details>
 
@@ -98,17 +98,17 @@ There are several reasons that a deployment could fail. Some of the more common 
 * A version of your application is problematic, for example, the codebase or a new AMI.
 * If more than 50% of the instances in a specific batch are unhealthy after the grace period, the deployment will fail.
 
-If a deployment fails, the instance remains running for troubleshooting purposes. Some instances in the Elastigroup may have the old configuration, while the rest may have the new configuration. To fix the failed roll, stop and detach either the old instances or the new onew. Update the Elastigroup configuration and deploy again to apply the configuration updates.
+If a deployment fails, the instance remains running for troubleshooting purposes. Some instances in the Elastigroup may have the old configuration, while the rest may have the new configuration. To fix the failed roll, stop and detach either the old instances or the new ones. Update the Elastigroup configuration and deploy again to apply the configuration updates.
 
 Elastigroup will not start new deployments or any scaledown activities until the failed deployment is completely stopped or resolved.
 
 ## Recommendations
 
-[Availability zone scores and recommendations](elastigroup/features/core-features/az-scores) assist you in making informed decisions when choosing the best availability zones to launch instances at. The data on the recommendation page is based on availability zone scores calculated by Elastigroup, taking both Cost and Spot markets availability into account. To ensure tailor-made data is displayed, the data comprising the availability zone scores is directly related to the allowed instance types configured in your group.
+[Availability zone scores and recommendations](elastigroup/features/core-features/az-scores) assist you in making informed decisions when choosing the best availability zones to launch instances at. The data on the recommendation page is based on availability zone scores calculated by Elastigroup, taking both Cost and Spot markets availability into account. To make sure tailor-made data is displayed, the data comprising the availability zone scores is directly related to the allowed instance types configured in your group.
 
 ## Monitoring
 
-The monitoring tab shows you information about the utilization of your Elastigroups. It helps you optimize resource allocation (right sizing), identify performance issues, and manage costs effectively. You can view graphs with historical vCPU and memory utilization data for the last 6 hours, 24 hours, 7 days, or 30 days. Memory utilization is available if a [CloudWatch agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html) is installed.
+The monitoring tab shows you information about the utilization of your Elastigroups. It helps you optimize resource allocation (right-sizing), identify performance issues, and manage costs effectively. You can view graphs with historical vCPU and memory utilization data for the last 6 hours, 24 hours, 7 days, or 30 days. Memory utilization is available if a [CloudWatch agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html) is installed.
 
 ## Log
 

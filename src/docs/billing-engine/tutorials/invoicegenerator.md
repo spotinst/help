@@ -111,7 +111,7 @@ You can change the cost field you show in the invoice. The out-of-the-box templa
 
 You can create a custom formula to include in your invoices.
 
-1. Click <b>Formula</b> <img height=18 src="https://github.com/user-attachments/assets/0e63f319-b8f1-45c2-9b1a-a4ff523c1129">.
+1. Click <b>Formula</b> <img height="18" src="https://github.com/user-attachments/assets/0e63f319-b8f1-45c2-9b1a-a4ff523c1129" />.
 2. Select <b>Standardized Syntax</b>.
 3. Enter your formula. For example, you can create a field called <i>Profit</i>. The formula can be <i>BilledCost - ProviderCost</i>.
 

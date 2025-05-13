@@ -2,7 +2,6 @@
 
 If you have already connected your AWS account, you can start creating Elastigroups.
 
-
 ## Create an Elastigroup from Scratch
 
 You can create an Elastigroup using an empty template. To create an Elastigroup based on an existing workload such as AWS Elastic Beanstalk or AutoScaling Groups, choose your workload type under Use Cases and import a copy of your workload configuration.  
@@ -18,7 +17,7 @@ To create an Elastigroup using an empty template from scratch:
 1. In the Spot console, go to **Elastigroup** > **Groups**. 
 2. Click **Create**.
 
-   <img width=900 src="/elastigroup/_media/tutorials-create-eg-from-scratch-01a.png" />
+   <img width="900" src="/elastigroup/_media/tutorials-create-eg-from-scratch-01a.png" />
 
 3. Click **Start from scratch**.  
 
@@ -48,11 +47,11 @@ Enter the following information:
 
 Spot’s Elastigroup can support the use of multiple AMIs in a single Elastigroup. You can utilize both AWS Graviton and x86 instances in the same groups and the feature also allows the Elastigroup autoscaler to launch instances based on the best Spot pricing and availability in real time.  
 
-You can select up to three images and they must follow the following criteria: 
+You can select up to three images, and they must follow the following criteria: 
 
 * The images need to be different from one another (different AMIs). 
 * The images need to be from the same operating system (Windows, Linux/Unix, etc.).  
-* The images need to have different architchtures (ARM, x86-64, etc.).  
+* The images need to have different architectures (ARM, x86-64, etc.).  
 
 ### Workload Capacity  
 
@@ -66,16 +65,16 @@ Define your workload capacity:
     - Set by % of Spot instances: Percent of total instances that should be Spot instances. The rest will be On-Demand instances.  
     - Set by specific On-Demand count: A specific number of instances that must be On-Demand. The rest will be Spot instances. 
 
-<img width=650 src="/elastigroup/_media/tutorials-create-eg-from-scratch-3.png" />
+<img width="650" src="/elastigroup/_media/tutorials-create-eg-from-scratch-3.png" />
 
 
 ## Step 2: Networking 
 
-The networking section includes specific definitions of your network settings, load-balancer configuration and auto-healing checks. 
+The networking section includes specific definitions of your network settings, load-balancer configuration, and auto-healing checks. 
 
 ### Launch Specification 
 
-Define the paramenters of your virtual private cloud and security groups for your Elastigroup:
+Define the parameters of your virtual private cloud and security groups for your Elastigroup:
 
 1. Select the VPC you want your Elastigroup to run in.  
 2. Select one or more security groups to apply to your instances.  
@@ -91,7 +90,7 @@ Select how you want to manage your incoming traffic:
 
 Complete the following information to enable auto-healing health checks: 
 
-1. Select the Auto Healing type. This checks the instance’s health according to the resource you specify and automatically replaces instances as they beome healthy.  
+1. Select the Auto Healing type. This checks the instance’s health according to the resource you specify and automatically replaces instances as they become healthy.  
 2. Select the Health Check Grace Period in seconds. This is the timeout period (in seconds) that newly launched instances become healthy. If an instance fails the health check after the given grace period, it will be terminated and replaced with a new one. 
 
 Unhealthy Duration in seconds. This is the amount of time (in seconds) you want to keep unhealthy instances before the instance is terminated and replaced with a new one. 
@@ -105,7 +104,7 @@ The compute section includes all the relevant information needed in order to for
 1. Choose one or more Availability Zones (AZs) Elastigroup should consider when launching your instances. To maximize your savings, Elastigroup calculates the cost of launching Spot instances in the selected AZs. Spot recommends selecting multiple Availability Zones to increase the number of Spot instance markets available for Elastigroup to consider. 
 2. In the dropdown menu, choose a subnet for the availability zone.
 
-<img width=700 src="/elastigroup/_media/tutorials-create-eg-from-scratch-4.png" />
+<img width="700" src="/elastigroup/_media/tutorials-create-eg-from-scratch-4.png" />
 
 #### Cluster Orientation 
 
@@ -114,7 +113,7 @@ You can use these prediction algorithms:
     * Availability
     * Cost
 
-<img width=700 src="https://github.com/spotinst/help/assets/106514736/e806c038-8015-4df9-87ea-1af96e1f7d5d">
+<img width="700" src="https://github.com/spotinst/help/assets/106514736/e806c038-8015-4df9-87ea-1af96e1f7d5d" />
 
 ### Instance Selection 
 
@@ -149,7 +148,7 @@ You can view the market statistics of your selection.
 * Average Score: The average score for all selected markets. Market score is a reflection of the selected minimum instance lifetime and the market's stability, based on Elastigroup's prediction algorithm. 
 * Average Savings: The average savings you can achieve by utilizing the selected spot markets.   
 
-Click More Details under Market Statistics in the manual selection to open the heat-map. This shows the the availability score per market. 
+Click More Details under Market Statistics in the manual selection to open the heat-map. This shows the availability score per market. 
 
 ### Optimization (Optional) 
 
@@ -157,7 +156,7 @@ Define your optimization strategy.
 
 #### Fallback to On-Demand  
 
-If no Spot instances are available, an On-demand instance will be provisioned to meet the capacity requirement.  
+If no Spot instances are available, an on-demand instance will be provisioned to meet the capacity requirement.  
 
 #### Utilize Commitment Plans  
 
@@ -210,7 +209,7 @@ After reviewing and making any required changes, click **Next** and launch your 
 
 ## Create an Elastigroup from Scratch - Legacy Design
 
-This procedure describes how to create an Elastigroup using an empty template. To create an Elastigroup based on an existing workload such as AWS Elastic Beanstalk or AutoScaling Groups, choose your workload type under Use Cases and import a copy of your workload configuration.
+This procedure describes how to create an Elastigroup using an empty template. To create an Elastigroup based on an existing workload, such as AWS Elastic Beanstalk or AutoScaling Groups, choose your workload type under Use Cases and import a copy of your workload configuration.
 
 ## Prerequisite
 
@@ -220,7 +219,7 @@ This procedure describes how to create an Elastigroup using an empty template. T
 
 1. In the left menu of the Spot console, click Elastigroup/Groups, and click Create Elastigroup.
 
-   <img width=900 src="/elastigroup/_media/tutorials-create-eg-from-scratch-01.png" />
+   <img width="900" src="/elastigroup/_media/tutorials-create-eg-from-scratch-01.png" />
 
 2. When the Use Cases page appears, you will need to choose a use case template. Under Empty Template, click Start from Scratch.
 
@@ -241,13 +240,13 @@ This procedure describes how to create an Elastigroup using an empty template. T
    - Product: Choose the OS type to use (e.g., Linux, Red Hat, etc.)
    - On-demand Type: Choose the on-demand type to use in the event that no spot instances are available in your desired markets.
 
-    <img width=900 src="/elastigroup/_media/tutorials-create-eg-from-scratch-03.png" />
+    <img width="900" src="/elastigroup/_media/tutorials-create-eg-from-scratch-03.png" />
 
 2. Choose one or more Availability Zones (AZs) Elastigroup should consider when launching your instances. To maximize your savings, Elastigroup calculates the cost of launching spot instances in the selected AZs. We recommend selecting multiple Availability Zones to increase the number of spot instance markets available for Elastigroup to consider.
 3. Subnets: Choose one or more subnets for each AZ you define.
 4. Spot Types: Choose the instance types Elastigroup should consider when launching your instances. We recommend selecting multiple instance types to provide Elastigroup with as many Spot instance market options as possible.
 
-   <img width=900 src="/elastigroup/_media/tutorials-create-eg-from-scratch-04.png" />
+   <img width="900" src="/elastigroup/_media/tutorials-create-eg-from-scratch-04.png" />
 
 > **Tip**: We highly recommend selecting Multiple Availability Zones and multiple instance types, which provide Elastigroup with more Spot markets and result in lower prices and greater availability.
 
@@ -308,7 +307,7 @@ This option enables you to define availability preferences and gain visibility i
 - Display the resulting market scoring chart showing the probabilities of meeting your specifications.
 - Deploy instances that have the highest probability of matching your specifications.
 
-<img width=900 src="/elastigroup/_media/corefeatures-predictive-rebalancing-02.png" />
+<img width="900" src="/elastigroup/_media/corefeatures-predictive-rebalancing-02.png" />
 
 Specify the following:
 
