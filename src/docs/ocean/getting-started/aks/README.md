@@ -35,7 +35,7 @@ Ocean supports:
 This diagram shows the outbound communication connection for AKS private clusters. The Spot SaaS environment on the right is hosted in the public cloud domain and requires internet connectivity for access. 
 Your AKS environment and the components we access to operate the AKS clusters are on the left. In this example, we access the Spot Ocean Controller.  
 
-<img src="https://github.com/spotinst/help/assets/159915991/6f9107f4-f6a5-469a-a55b-bde1543cb165"/>
+<img src="https://github.com/spotinst/help/assets/159915991/6f9107f4-f6a5-469a-a55b-bde1543cb165" />
 
 The Ocean Controller is an AKS deployment that resides in the cluster and communicates with the Spot SaaS environment to trigger scale up and scale down.  
 
@@ -122,7 +122,7 @@ To run the Missing Permissions wizard:
    
    <summary markdown="span">View image</summary>
    
-    <img src="https://github.com/spotinst/help/assets/159915991/f5b6b6c9-c8a7-4ca7-8c96-63e0ba60cbce  " />
+    <img src="https://github.com/spotinst/help/assets/159915991/f5b6b6c9-c8a7-4ca7-8c96-63e0ba60cbce" />
  
    </details>
 
