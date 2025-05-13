@@ -128,7 +128,7 @@ You can show the available database by running `spark.sql("SHOW DATABASES")`
 
 You can describe a database by running `spark.sql("DESCRIBE DATABASE db_film")`
 
-<img src="/ocean-spark/_media/tools-aws-glue-catalog-04.png"/>
+<img src="/ocean-spark/_media/tools-aws-glue-catalog-04.png" />
 
 You can list the tables within a database with `spark.sql("SHOW TABLES db_film")`  
 You can then query these tables, as well as create new ones, or create a new database.
