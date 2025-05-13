@@ -4,13 +4,13 @@ This page describes the procedures for manually (using the GCP console) connecti
 
 ## Step 3.1: Click Manually
 
-<img width=500 src="https://github.com/user-attachments/assets/5a545126-5c3d-4fe2-9288-812516135647">
+<img width="500" src="https://github.com/user-attachments/assets/5a545126-5c3d-4fe2-9288-812516135647" />
 
 ## Step 3.2: GCP Login
 
 Log in to the GCP account that you are connecting to Spot. Switch back to the wizard in Spot and click **Next**.
 
-<img width=500 src="https://github.com/user-attachments/assets/f9bf9a0c-7fc5-4551-96b5-029df93a9d43">
+<img width="500" src="https://github.com/user-attachments/assets/f9bf9a0c-7fc5-4551-96b5-029df93a9d43" />
 
 ## Step 3.3: Create a new Service Account
 
@@ -38,7 +38,7 @@ In this step, you create a new service key and upload it to the service account 
 
 1. In GCP, navigate according to the path shown above.
 
-   <img width=400 src="/connect-your-cloud-provider/_media/connect-gcp-manually-007.png"/>
+   <img width="400" src="/connect-your-cloud-provider/_media/connect-gcp-manually-007.png" />
 
 2. Once you have created the key, drag and drop the JSON file to Spot, to the area indicated in the wizard.
 3. In Spot, click **Connect Account**.
