@@ -99,7 +99,7 @@ As preferred instance type is a soft requirement, the general spot instance avai
 
 For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see [Create Virtual Node Group](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) (AWS).
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">Ocean for ECS</summary>
@@ -125,7 +125,7 @@ The following is a list of attributes customizable per VNG in Ocean for ECS.
 
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">Ocean for AKS</summary>
@@ -141,7 +141,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 - Tags
 - Taints
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">Ocean for GKE</summary>
@@ -177,7 +177,7 @@ Ocean for GKE allows the utilization of local SSD disks, high-performance local 
 
 Once configured, whenever the Ocean autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the machine types that are not compatible. For information about the API, see Local SSD in the Spot API.
 
-</details><br>
+</details><br/>
 
 ### Default VNG
 
@@ -209,7 +209,7 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 - Tags
 - User data
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">AWS ECS</summary>
@@ -224,7 +224,7 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 - Tags
 - User data
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">GCP</summary>
@@ -234,7 +234,7 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 - Minimum nodes per VNG
 - Root volume size
 
-</details><br>
+</details><br/>
 
 ### Roll per VNG
 
