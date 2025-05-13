@@ -7,13 +7,13 @@ The procedures on this page describe how to connect your Microsoft Azure Billing
 Your account or agreement type must be either: 
 * Enterprise Agreement (EA) 
 * Microsoft Customer Agreement (MCA) 
- 
+
 ## Prerequisites 
 
 * Permissions to create app registrations. 
 * You must be an [Enterprise Agreement (EA) Administrator](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-ea-roles) or [Microsoft Customer Agreement (MCA) Billing Account Reader](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles). 
-* A Member Account only. The account cannot be a guest user account. 
- 
+* A Member Account only. The account cannot be a guest user account.
+
 ## Connect to your Spot Account 
 
 1. Enter an account name and click **Create Account**. 
