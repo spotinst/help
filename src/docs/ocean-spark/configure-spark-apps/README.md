@@ -77,7 +77,7 @@ Click on "New Template" in the upper right corner and create a configuration tem
 
 To know more about the all configurations you can set in a template, check out the [API reference](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
 
-</details><br>
+</details>
 
 <details>
   <summary markdown="span">API</summary>
