@@ -4,8 +4,8 @@ Clone an existing EMR Cluster into an Elastigroup.
 
 | **Parameter**     | **Type**   | **Description**                                     |
 | ----------------- | ---------- | --------------------------------------------------- |
-| `originClusterId` | **String** | The EMR cluster ID<be />Example: `j-12345`            |
-| `strategy`        | **String** | EMR group type- clone or wrap<br>Example: `cloning` |
+| `originClusterId` | **String** | The EMR cluster ID<br />Example: `j-12345`            |
+| `strategy`        | **String** | EMR group type- clone or wrap<br />Example: `cloning` |
 
 ## Request
 
