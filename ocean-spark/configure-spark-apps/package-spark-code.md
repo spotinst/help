@@ -72,7 +72,7 @@ where `<args>` are the arguments to be passed to the main script `main.py`.
 
 > **Tip**: The environment variable `SPARK_LOCAL_IP=127.0.0.1` is only required when running the image locally with docker.
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">Java & Scala</summary>
@@ -101,7 +101,7 @@ where `<args>` are the arguments to be passed to the application main class `<cl
 
 > **Tip**: The environment variable `SPARK_LOCAL_IP=127.0.0.1` is only required when running the image locally with Docker.
 
-</details><br>
+</details><br/>
 
 ### Set up a Docker registry and push your image
 
@@ -149,7 +149,7 @@ curl -X POST \
        }'
 ```
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">Java & Scala</summary>
@@ -265,7 +265,7 @@ For AWS, if you are referencing s3 for the main application file or Dockerfile, 
 
 You can access the Ocean Spark console in order to monitor your Spark application execution.
 
-</details><br>
+</details><br/>
 
 <details>
   <summary markdown="span">Java & Scala</summary>
@@ -313,7 +313,7 @@ If you need to import a dependency directly from a repository like Maven, the `d
 https://repo1.maven.org/maven2/org/influxdb/influxdb-java/2.14/influxdb-java-2.14.jar
 ```
 
-</details><br>
+</details><br/>
 
 ## What's Next?
 

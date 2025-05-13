@@ -32,7 +32,7 @@ Ocean (AWS) supports the Bottlerocket OS. You can launch instances with Bottlero
     1. Insert Bottlerocket AMI ID.
     2. Copy the user-data.toml file content and paste into the userData field in the Spot API.
   
-   <br> 
+   <br/> 
 
     <img width="856" src="https://github.com/user-attachments/assets/1a485578-e36c-4fdf-8d92-c75119c499e3" />
 
@@ -47,7 +47,7 @@ Ocean (AWS) supports the Bottlerocket OS. You can launch instances with Bottlero
 
 
 If you configured Bottlerocket AMI correctly but nodes are still not joining the cluster, you might need to update the aws-auth ConfigMap.
- <br> 
+ <br/> 
 1. Run this command to edit the ConfigMap:
 
 `kubectl edit configmap aws-auth -n kube-system -o yaml > aws-auth.yaml`

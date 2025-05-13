@@ -2514,13 +2514,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/faqs/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/kb/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/kb/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/kb/"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/managed-instance/application-persistency/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -4815,13 +4808,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/spot-storage/recommendations-log"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/spot-storage/recommendations-log"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/testbed/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/testbed/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/testbed/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/testpage</loc>
