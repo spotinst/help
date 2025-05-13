@@ -127,6 +127,8 @@ in the Spot API, for virtual node groups/clusters, the `shouldUtilizeCommitments
 When `True` (default), and there are free reserved instances / savings plans within the Azure account, Stateful Node will utilize them before launching spot instances. 
 The initial virtual node group default value is inherited from the identical attribute at the cluster level. 
 
-* [Create cluster]() or [Update cluster]()  (under virtualNodeGroupTemplate > strategy)
+Under under Spot API > Elastigroup > Elastigroup Azure Stateful >...  
+
+* [Create Staeful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate) or [Update Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate)  (under statefulNode > strategy)
 * [Create virtual node group]() or [Update virtual node group]() (under virtualNodeGroup > strategy)
 
