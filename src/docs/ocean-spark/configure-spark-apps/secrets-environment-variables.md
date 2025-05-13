@@ -73,7 +73,7 @@ val envVars = System.getenv() // Map[String, String] of key-value pairs
 val value = System.getenv("ENV_VAR_KEY") // ENV_VAR_VALUE
 ```
 
-</details><br>
+</details>
 
 To list all configurations you can set in Ocean Spark, check out the [API reference](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
 
