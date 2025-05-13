@@ -25,7 +25,7 @@ If you want to set permissions with more granularity, see [Granular Permissions 
 | Policy                                | Level        | Effect                                                    | Product Scope                                      | Ocean Spark Resource Scope                                                                      |
 | ------------------------------------- | ------------ | --------------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | Account Viewer                        | Spot account | Give read access                                          | All Spot products including Ocean for Apache Spark | All Resources                                                                                   |
-| Account Editor                        | Spot account | Give edit access<br>**including app submission**          | All Spot products including Ocean for Apache Spark | All Resources                                                                                   |
+| Account Editor                        | Spot account | Give edit access<br />**including app submission**          | All Spot products including Ocean for Apache Spark | All Resources                                                                                   |
 
 ## Granular Permissions Policies How-to Guides
 
@@ -364,13 +364,13 @@ All actions listed below are "edit" permissions
 
 | Actions                                                                                      | Resources bound                                 |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| `spark:createApplication`                                                                    | - `sparkClusterId`<br>- `sparkConfigTemplateId` |
+| `spark:createApplication`                                                                    | - `sparkClusterId`<br />- `sparkConfigTemplateId` |
 | `spark:deleteApplication`                                                                    | - `sparkClusterId`                              |
-| `spark:createCluster`<br>`spark:updateCluster`<br>`spark:deleteCluster`                      | - `sparkClusterId`                              |
+| `spark:createCluster`<br />`spark:updateCluster`<br />`spark:deleteCluster`                      | - `sparkClusterId`                              |
 | `spark:createConfigTemplate`                                                                 | - `sparkClusterId`                              |
-| `spark:updateConfigTemplate`<br>`spark:deleteConfigTemplate`                                 | - `sparkClusterId`<br>- `sparkConfigTemplateId` |
-| `spark:createNotebook`<br>`spark:updateNotebook`<br>`spark:deleteNotebook`                   | - `sparkClusterId`                              |
-| `spark:createWorkspace`<br>`spark:updateWorkspace`<br>`spark:deleteWorkspace`                | - `sparkClusterId`                              |
-| `spark:createWorkspaceProxy`<br>`spark:updateWorkspaceProxy`<br>`spark:deleteWorkspaceProxy` | - `sparkClusterId`                              |
-| `spark:updateJob`<br>`spark:updateConfig`                                                    | - `sparkClusterId`<br>- `sparkJobId`            |
-| `spark:createVirtualNodeGroup`<br>`spark:deleteVirtualNodeGroup`                             | - `sparkClusterId`                              |
+| `spark:updateConfigTemplate`<br />`spark:deleteConfigTemplate`                                 | - `sparkClusterId`<br />- `sparkConfigTemplateId` |
+| `spark:createNotebook`<br />`spark:updateNotebook`<br />`spark:deleteNotebook`                   | - `sparkClusterId`                              |
+| `spark:createWorkspace`<br />`spark:updateWorkspace`<br />`spark:deleteWorkspace`                | - `sparkClusterId`                              |
+| `spark:createWorkspaceProxy`<br />`spark:updateWorkspaceProxy`<br />`spark:deleteWorkspaceProxy` | - `sparkClusterId`                              |
+| `spark:updateJob`<br />`spark:updateConfig`                                                    | - `sparkClusterId`<br />- `sparkJobId`            |
+| `spark:createVirtualNodeGroup`<br />`spark:deleteVirtualNodeGroup`                             | - `sparkClusterId`                              |

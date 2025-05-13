@@ -79,9 +79,9 @@ Your changes to the configuration are saved and applied to the stateful node. Ch
 
 The following parameters cannot be edited and are not included in the JSON configuration that is editable:
 
-`id`<br>
-`region`<br>
-`resourceGroupName`<br>
+`id`<br />
+`region`<br />
+`resourceGroupName`<br />
 `compute.os`
 
-> Note: You can edit a node only when it is in a Running or Paused state.
+> **Note**: You can edit a node only when it is in a Running or Paused state.
