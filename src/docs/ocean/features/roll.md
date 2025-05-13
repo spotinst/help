@@ -105,7 +105,7 @@ In the Rolls tab, you can run immediate rolls for your clusters, virtual node gr
 
 * The Rolls tab is empty if you have not run or scheduled a roll in this cluster.
 
-<img width="600" src="https://github.com/user-attachments/assets/42033751-b7a9-4cbf-aae0-aa6f255398cb" />
+  <img width="600" src="https://github.com/user-attachments/assets/42033751-b7a9-4cbf-aae0-aa6f255398cb" />
 
 Otherwise:
 * If at least one roll exists, the Rolls History list appears.
@@ -166,7 +166,7 @@ To roll immediately:
 
 2.	If you are rolling virtual node groups or node pools, select from the menu at the top of the dialog box. You can optionally select **All**.
 
-<img width="450" src="https://github.com/user-attachments/assets/5787db8b-b822-4d25-b66c-b3f8fcc70278" />
+    <img width="450" src="https://github.com/user-attachments/assets/5787db8b-b822-4d25-b66c-b3f8fcc70278" />
 
 3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
@@ -194,11 +194,11 @@ To create a roll schedule:
     
 2.	In the first step of the wizard, select the roll type. The available roll types depend on your system deployment.
  
-<img width="600" src="https://github.com/user-attachments/assets/055d5d3b-0ccd-45bb-ae83-077db6e3d3a7"/>
+    <img width="600" src="https://github.com/user-attachments/assets/055d5d3b-0ccd-45bb-ae83-077db6e3d3a7" />
 
 3.	In the second step of the wizard, if you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
 
-<img width="600" src="https://github.com/user-attachments/assets/32c306ab-7f7f-4664-beef-f52e52d75291" />
+    <img width="600" src="https://github.com/user-attachments/assets/32c306ab-7f7f-4664-beef-f52e52d75291" />
 
 4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
@@ -210,7 +210,7 @@ To create a roll schedule:
 
 5.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
-<img width="600" src="https://github.com/user-attachments/assets/e022e767-bf0a-4e50-9ec7-4c24e4172927" />
+    <img width="600" src="https://github.com/user-attachments/assets/e022e767-bf0a-4e50-9ec7-4c24e4172927" />
 
 6.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
