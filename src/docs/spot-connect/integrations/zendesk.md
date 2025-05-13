@@ -17,17 +17,21 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 1. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
     * The first node in the action needs to be <i>All comment to ticket</i>.
     * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Custom data</i> with this code:
-       <pre><code>{
+
+       ````
+       {
         "comment_body": "{{comment.body.jsonEncode}}",
         "author_name": "{{comment.author.displayName}}",
         "linked_zendesk_ids": "{{issue.customfield_IDVALUEHERE}}",
           "jira_id": "{{issue.key}}"
-        }</code></pre>
+        }
+       ````
+
     * In the Spot console, copy the <i>Webhook API key value</i> and <i>workflow webhook URL</i> and paste in the Jira node.
 
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Go to Templates and search for **Update Zendesk Tickets with Comment from Linked Jira Issue**.
-4. Click <img height=18 src="https://github.com/user-attachments/assets/41e9c493-0e32-40f8-9721-cfecaca9fb9f"> and select **Duplicate**.
+4. Click <img height="18" src="https://github.com/user-attachments/assets/41e9c493-0e32-40f8-9721-cfecaca9fb9f" /> and select **Duplicate**.
 5. Enter a name for the workflow and click **Duplicate Workflow**.
 6. Click the **Generic Webhook** node to open the right panel.
 7. In the **Webhook API Key Name**, select the API key you created earlier.
