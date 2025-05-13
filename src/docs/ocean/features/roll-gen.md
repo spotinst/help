@@ -106,7 +106,7 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
    - Comment: Describe the reason for the roll.
    - Respect Pod Disruption Budget: Accept the default setting, or uncheck if you do not want to respect the PDB.
 
-   <img src="/ocean/_media/features-roll-a.png" width="592" />
+ <img src="/ocean/_media/features-roll-a.png" width="592" />
 
 3. Click **Roll**.
 
