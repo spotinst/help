@@ -67,7 +67,7 @@ You can automatically execute a Spot Connect workflow with a New Relic alert in 
 
    <details>
    <summary markdown="span">View image</summary>
-   <img width=900 src="/spot-connect/_media/general-webhook-integration-1.png" />
+   <img width="900" src="/spot-connect/_media/general-webhook-integration-1.png" />
 
    </details>
 
@@ -79,11 +79,11 @@ You can automatically execute a Spot Connect workflow with a New Relic alert in 
    <details>
    <summary markdown="span">View image</summary>
      
-    <img width="700" src="https://github.com/user-attachments/assets/458cf53c-84cd-4199-a389-bf0143ecb404">
+    <img width="700" src="https://github.com/user-attachments/assets/458cf53c-84cd-4199-a389-bf0143ecb404" />
 
    </details>
 8. In New Relic, [set up a webhook destination](https://docs.newrelic.com/docs/alerts/get-notified/notification-integrations/#set-webhook-destination):
-    * Paste the New Relic Workflow Webhook URL from the Spot Connect workflow builder in the **Endpoing URL**.
+    * Paste the New Relic Workflow Webhook URL from the Spot Connect workflow builder in the **Endpoint URL**.
     * If you want to set up a custom header:
        <ol style="list-style-type: lower-alpha;">
          <li>Click <b>+ custom headers</b> and enter <i>x-api-key</i> as the custom header <bname</b.</li>
