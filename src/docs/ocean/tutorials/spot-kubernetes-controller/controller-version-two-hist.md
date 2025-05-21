@@ -1,5 +1,13 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.61] (v2.0.70) - 2025-05-21
+
+### Added
+* Update `metrics-server` dependency to chart version `3.12.2`.
+
+### Bug Fixes
+* Added `securityContext` field on `log-shipper` container.
+
 ## Chart Version [0.1.60] (v2.0.70) - 2025-04-06
 
 ### Added
