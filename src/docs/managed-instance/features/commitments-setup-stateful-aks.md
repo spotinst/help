@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex" />
 
-#  Set up Commitments
+#  Set up Stateful Node Commitments
 
 Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
