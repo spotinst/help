@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Commitments (AKS)
+# Azure Commitments
 
 Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
@@ -37,7 +37,8 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 ## Commitments Scenarios
 
-<img width="1000" src="https://github.com/user-attachments/assets/ae781249-3fff-4647-9cc4-35bd8573abf8" />
+
+<img width="1140px" src="https://github.com/user-attachments/assets/f991b76b-efd4-41a6-9576-3e7895ecb2f5" />
 
 
 ###  Launching a VM
