@@ -2,9 +2,9 @@
 
 # Commitments (AKS)
 
-Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
->Prerequisites: Before you can utilize commitments in Stateful Node for AKS, you must first purchase commitments from Azure.
+>Prerequisites: Before you can utilize commitments in Stateful Node , you must first purchase commitments from Azure.
 
 ##  Azure Commitments
 
