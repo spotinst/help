@@ -42,7 +42,9 @@ Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod u
 
 The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
 
-Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
+Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones 
+
+----NEED TO MAKE CHANGE HERE <font color="#FC01CC">NEED TO MAKE CHANGE HERE</font>
 
 *  Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead * value + value].
 *  Recommendations for decreasing CPU requests: The calculation is the same as for memory requests, except that we use the 85th percentile instead of the maximum value.
