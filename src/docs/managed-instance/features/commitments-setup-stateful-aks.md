@@ -1,8 +1,8 @@
 <meta name="robots" content="noindex" />
 
-#  Set up Commitments (Azure Kubernetes)
+#  Set up Commitments
 
-Cloud service provider relevance: <font color="#FC01CC"><img width="1000" src=</font>
+Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
 Before you can turn on commitments for your stateful node, you need to:
 
