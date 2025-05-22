@@ -40,23 +40,23 @@ Follow the instructions below while referring to the [Azure documentation](https
 ##  Connect Commitments to Spot Products
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
-2.  Go to the stateful node where you want to turn on the utilize RSs/SPs feature. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
-3.  In the strategy area, next to Utilize RIs/SPs, click **Add permissions**.
-
-<img width="1150" src="https://github.com/user-attachments/assets/22580fed-33c0-4fdf-961b-9db51e21ca52" />
+2.  Create or edit a stateful node. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
+3.  In the Availability settings, next to Utilize RIs/SPs, click **Add permission**.
+ 
+    <img width="600" src="https://github.com/user-attachments/assets/cab63ab7-ef89-482f-8758-05a64379aaef" />
 
 ###  Step 1: App Registrations
 
-1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
+  1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
 
-Upgrade:
+      Upgrade:
 
-<img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
+      <img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
 
 
-New:
+      New:
 
-<img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
+      <img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
 
 
 2. Copy the following credentials from your Azure app and paste them into the fields:
