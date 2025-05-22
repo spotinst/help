@@ -1,11 +1,12 @@
 <meta name="robots" content="noindex" />
 
-#  Set up Commitments
+#  Set up Commitments (Azure Kubernetes)
 
-Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+Cloud service provider relevance: <font color="#FC01CC"><img width="1000" src=</font>
 
-Before you can turn on commitments for your cluster or virtual node groups, you need to:
+Before you can turn on commitments for your stateful node, you need to:
 
+*  Purchase Azure commitments (refer to Azure)
 *  [Get your Azure credentials](link)
 *  [Connect Commitments to Spot Products](link)
 
@@ -34,8 +35,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 2.  Create a new client secret and set the expiration to **24 months**.
 3.  Copy the following details (you will need them later to connect to Spot):
     * Application secret expiration date.
-    * Client secret value.
-    * Secret ID.
+    * Client secret value.   
 
 ##  Connect Commitments to Spot Products
 
@@ -66,30 +66,30 @@ New:
 3.  Go to Step 2: Certificates and Secrets
 
 ###  Step 2: Certificates and Secrets
-    
-<img width="500" src="https://github.com/user-attachments/assets/c5342111-e932-445f-b985-daf299531443" />
+
+<img width="500" src="https://github.com/user-attachments/assets/e61b0e9d-103d-47f2-b46e-74cac43daa82" />
 
 1. Copy the following credentials from your Azure app and paste them into the fields:
    * Application secret expiration date.
    * Client secret value.
-   * Secret ID.
+  
 
 2.  Go to Step 3: Permissions assignment.
 
 ###  Step 3: Permissions Assignment
 
-<img width="500" src="https://github.com/user-attachments/assets/5486d807-043d-463f-8deb-8cc7c869ebde" />
+<img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
+The first time you use commitments; you must add at least one permission at the tenant level so Spot can connect to Azure environments. 
 
-The first time you use commitments; you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
-
-These permissions give you access to all the resources under the same tenant. You need these permissions to turn on virtual node group-level commitments.
+These permissions give you access to all the resources under the same tenant. You need these permissions to turn on Stateful Node commitments.
 
 >IMPORTANT: If this step is unsuccessful, check your Azure environment.
 
 1.  Select the permissions in accordance with those you purchased from Azure. By default, both RI and SP are selected.
+2.  Required. You must select the custrom reader role: This ubscription role permission grants controlled access to Azure resources within a subscription and enables custom read-only visibility while preventing unauthorized modifications.
 
-2.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level with PowerShell:
+3.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level:
 
 ```
 Import-Module Az.Accounts
@@ -104,7 +104,31 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIE
 New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
 ```
 
-3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
+4. Use the following Azure PowerShell script to assign the Custom Reader role:
+
+
+```
+# Replace with your principal's object ID (user, group, or service principal) principalId="<YOUR-PRINCIPAL-ID>"
+ 
+# Replace with your custom role name (from your JSON) roleName="Custom Reader Role"
+ 
+# Create the custom role az role definition create --role-definition custom-role.json
+ 
+# Get all subscriptions and assign the role for sub in $(az account list --query "[].id" -o tsv); do   echo "Assigning role to subscription: $sub"   az role assignment create \     --assignee "$principalId" \     --role "$roleName" \     --scope "/subscriptions/$sub" done 
+ 
+for management groups use the following
+ 
+# Set variables principalId="<YOUR-PRINCIPAL-ID>"        # e.g. a service principal or user object ID roleName="Custom Reader Role"            # Must match "Name" in your JSON file roleFile="custom-role.json"              # Your custom role definition JSON
+ 
+# 1. Create the custom role az role definition create --role-definition "$roleFile"
+ 
+# 2. List all management group IDs and assign role to each for mg in $(az account management-group list --query "[].name" -o tsv); do   echo "Assigning '$roleName' to principal at MG: $mg"
+ 
+  az role assignment create \     --assignee "$principalId" \     --role "$roleName" \     --scope "/providers/Microsoft.Management/managementGroups/$mg" done 
+
+```
+
+5.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
 ##  Turn on Utilize Commitments from the Spot Console
 
