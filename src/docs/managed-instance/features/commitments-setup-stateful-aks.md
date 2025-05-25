@@ -79,14 +79,15 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 <img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
-The first time you use commitments; you must add at least one permission at the tenant level, so Spot can connect to Azure environments. 
-In addition, you must add the custom reader role. 
+>IMPORTANT:
+>
+>The first time you use commitments; you must add at least one permission at the tenant level, so Spot can connect to Azure environments. These permissions give you access to all the resources under the same tenant. You need these permissions to turn on Stateful Node commitments.
+>
+>In addition, you must add the custom reader role. This subscription role permission grants controlled access to Azure resources within a subscription and enables custom read-only visibility while preventing unauthorized modifications.
+>
+>If this step is unsuccessful, check your Azure environment.
 
-These permissions give you access to all the resources under the same tenant. You need these permissions to turn on Stateful Node commitments.
-
->IMPORTANT: If this step is unsuccessful, check your Azure environment.
-
-1.  Select the permissions in accordance with those you purchased from Azure. By default, both RI and SP are selected.
+1.  Select the custom reader role, and the permissions in accordance with those you purchased from Azure (by default, both RI and SP are selected).
 
 2.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level:
 
@@ -103,7 +104,7 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIE
 New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
 ```
 
-3. Required. You must select the custom reader role: This subscription role permission grants controlled access to Azure resources within a subscription and enables custom read-only visibility while preventing unauthorized modifications. Use the following Azure PowerShell script to assign the Custom Reader role:
+3.  Use the following Azure PowerShell script to assign the Custom Reader role:
 
 
 ```
