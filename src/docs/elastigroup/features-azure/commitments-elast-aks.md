@@ -1,10 +1,10 @@
 <meta name="robots" content="noindex">
 
-# Commitments (AKS)
+# Azure Commitments for Elastrigroup
 
-Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
->Prerequisites: Before you can utilize commitments in Elastigroup for AKS, you must first purchase commitments from Azure.
+>Prerequisites: Before you can utilize commitments in Elastigroup, you must first purchase commitments from Azure.
 
 ##  Azure Commitments
 
@@ -37,8 +37,7 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 ## Commitments Scenarios
 
-<img width="1000" src="https://github.com/user-attachments/assets/ae781249-3fff-4647-9cc4-35bd8573abf8" />
-
+<img width="1140" src="https://github.com/user-attachments/assets/6ae7f058-9f2f-40a7-bb09-3e8244a15929" />
 
 ###  Launching a VM
 
