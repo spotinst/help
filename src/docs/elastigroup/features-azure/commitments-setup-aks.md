@@ -40,7 +40,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 ##  Connect Commitments to Spot Products
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
-2.  Create or edit a stateful node. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
+2.  Create or edit the group. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
 3.  In the Availability settings area, next to Utilize RIs/SPs, click **Add permission**.
  
     ---NEED SCREENCAP---CREATE ELASTIGROUP---
@@ -132,7 +132,7 @@ for management groups use the following
    
 ##  Turn on Utilize Commitments from the Spot Console
 
-1. Go to the stateful node where you want to turn on the utilize RSs/SPs feature. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
+1. Go to the Elastigroup where you want to turn on the utilize RSs/SPs feature. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
 2. In the Availability settings area, click **Utilize RIs/SPs**.
 
 >**Important**: If the **Add permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
@@ -142,12 +142,11 @@ for management groups use the following
 >  - [Connect Commitments to Spot Products](link)
 
 
-## Turn on Utilize Commitments for Stateful Node in the Spot API
+## Turn on Utilize Commitments for Elastigroup in the Spot API
 
 in the Spot API, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
 
 When set to `True` (default), and there are free reserved instances / savings plans within the Azure account, Elastigroup will utilize them before launching spot instances. 
-Make sure that the VM attached to the specific stateful node also has  `shouldUtilizeCommitments` attribute enabled.
 
 Under Spot API > Elastigroup > Elastigroup Azure Spot VMs >...  
 
