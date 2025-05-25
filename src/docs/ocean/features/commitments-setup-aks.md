@@ -1,11 +1,12 @@
 <meta name="robots" content="noindex">
 
-#  Set up Commitments
+#  Set up Ocean Commitments
 
-Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
 Before you can turn on commitments for your cluster or virtual node groups, you need to:
 
+*  Purchase Azure commitments (refer to Azure)
 *  [Get your Azure credentials](link)
 *  [Connect Commitments to Spot Products](link)
 
@@ -35,27 +36,28 @@ Follow the instructions below while referring to the [Azure documentation](https
 3.  Copy the following details (you will need them later on to connect to Spot):
     * Application secret expiration date.
     * Client secret value.
-    * Secret ID.
+
 
 ##  Connect Commitments to Spot Products
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
 2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
-3.  In the Ocean autoscaler strategy area of the virtual node group, click **Missing permissions**.
+3.  In the Ocean autoscaler strategy area of the virtual node group, click **Add permissions**.
 
-<img width="600" src="https://github.com/user-attachments/assets/9fa2fd52-3d18-447f-a11c-68a0764da146" />
+    <img width="600" src="https://github.com/user-attachments/assets/9fa2fd52-3d18-447f-a11c-68a0764da146" />
 
 ###  Step 1: App Registrations
 
 1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
 
-Upgrade:
+    Upgrade:
 
-<img width="600" src="https://github.com/user-attachments/assets/a36fc22d-03b5-4b60-a8a7-72806cf71648" />
+    <img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
 
-New:
 
-<img width="600" src="https://github.com/user-attachments/assets/a3999187-19e9-492c-8c4c-238e756cade4" />
+    New:
+
+    <img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
 
 2. Copy the following credentials from your Azure app and paste them into the fields:
    * Application (client) ID.
@@ -65,18 +67,17 @@ New:
 
 ###  Step 2: Certificates and Secrets
     
-<img width="600" src="https://github.com/user-attachments/assets/c5342111-e932-445f-b985-daf299531443" />
+<img width="500" src="https://github.com/user-attachments/assets/e61b0e9d-103d-47f2-b46e-74cac43daa82" />
 
 1. Copy the following credentials from your Azure app and paste them into the fields:
    * Application secret expiration date.
-   * Client secret value.
-   * Secret ID.
+   * Client secret value. 
 
 2.  Go to Step 3: Permissions assignment.
 
 ###  Step 3: Permissions Assignment
 
-<img width="600" src="https://github.com/user-attachments/assets/2cb2085e-acd0-4096-b646-040eedcae654" />
+<img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
 The first time you use commitments, you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
 
