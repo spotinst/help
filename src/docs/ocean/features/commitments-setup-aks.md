@@ -105,7 +105,7 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIE
 New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
 ```
 
-3. Required. Use the following Azure PowerShell script to assign the Custom Reader role:
+3. Required. Use the following Azure PowerShell script to assign the custom reader role:
 
 
 ```
