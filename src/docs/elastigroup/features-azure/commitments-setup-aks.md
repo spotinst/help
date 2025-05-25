@@ -80,7 +80,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 <img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
-The first time you use commitments; you must add at least one permission at the tenant level so Spot can connect to Azure environments. 
+The first time you use commitments; you must add at least one permission at the tenant level, so Spot can connect to Azure environments. 
 In addition, you must add the custom reader role. 
 
 These permissions give you access to all the resources under the same tenant. You need these permissions to turn on Elastigroup commitments.
@@ -132,7 +132,7 @@ for management groups use the following
    
 ##  Turn on Utilize Commitments from the Spot Console
 
-1. Go to the Elastigroup where you want to turn on the utilize RSs/SPs feature. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
+1. Go to the Elastigroup where you want to turn on the **utilize RSs/SPs** feature. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
 2. In the Availability settings area, click **Utilize RIs/SPs**.
 
 >**Important**: If the **Add permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
@@ -144,7 +144,7 @@ for management groups use the following
 
 ## Turn on Utilize Commitments for Elastigroup in the Spot API
 
-in the Spot API, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
+In the Spot API, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
 
 When set to `True` (default), and there are free reserved instances / savings plans within the Azure account, Elastigroup will utilize them before launching spot instances. 
 
