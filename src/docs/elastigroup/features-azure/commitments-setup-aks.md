@@ -151,7 +151,7 @@ Make sure that the VM attached to the specific stateful node also has  `shouldUt
 
 Under Spot API > Elastigroup > Elastigroup Azure Spot VMs >...  
 
-* [Create Elastigroup]() or [Update Elastigroup]()  (under strategy)
+* [Create Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsCreate) or [Update Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsUpdate)  (under strategy)
 
 
 
