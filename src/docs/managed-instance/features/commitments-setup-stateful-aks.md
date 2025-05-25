@@ -79,7 +79,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 <img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
-The first time you use commitments; you must add at least one permission at the tenant level so Spot can connect to Azure environments. 
+The first time you use commitments; you must add at least one permission at the tenant level, so Spot can connect to Azure environments. 
 In addition, you must add the custom reader role. 
 
 These permissions give you access to all the resources under the same tenant. You need these permissions to turn on Stateful Node commitments.
@@ -131,7 +131,7 @@ for management groups use the following
    
 ##  Turn on Utilize Commitments from the Spot Console
 
-1. Go to the stateful node where you want to turn on the utilize RSs/SPs feature. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
+1. Go to the stateful node where you want to turn on the **utilize RSs/SPs** feature. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
 2. In the Availability settings area, click **Utilize RIs/SPs**.
 
 >**Important**: If the **Add permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
