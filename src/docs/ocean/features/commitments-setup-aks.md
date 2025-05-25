@@ -41,7 +41,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 ##  Connect Commitments to Spot Products
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
-2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
+2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
 3.  In the Ocean autoscaler strategy area of the virtual node group, click **Add permissions**.
 
     <img width="600" src="https://github.com/user-attachments/assets/9fa2fd52-3d18-447f-a11c-68a0764da146" />
@@ -79,7 +79,8 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 <img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
-The first time you use commitments, you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments. 
+The first time you use commitments, you must add at least one permission at the tenant level so Spot can connect to Azure cluster environments.
+In addition, you must add the custom reader role.
 
 These permissions give you access to all the resources under the same tenant. You need these permissions to turn on virtual node group-level commitments.
 
@@ -102,15 +103,39 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIE
 New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
 ```
 
-3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
+3. Required. You must select the custom reader role: This subscription role permission grants controlled access to Azure resources within a subscription and enables custom read-only visibility while preventing unauthorized modifications. Use the following Azure PowerShell script to assign the Custom Reader role:
+
+
+```
+# Replace with your principal's object ID (user, group, or service principal)principalId="<YOUR-PRINCIPAL-ID>"
+ 
+# Replace with your custom role name (from your JSON)roleName="Custom Reader Role"
+ 
+# Create the custom roleaz role definition create --role-definition custom-role.json
+ 
+# Get all subscriptions and assign the rolefor sub in $(az account list --query "[].id" -o tsv); do  echo "Assigning role to subscription: $sub"  az role assignment create \    --assignee "$principalId" \    --role "$roleName" \    --scope "/subscriptions/$sub"done
+ 
+for management groups use the following
+ 
+# Set variablesprincipalId="<YOUR-PRINCIPAL-ID>"        # e.g. a service principal or user object IDroleName="Custom Reader Role"            # Must match "Name" in your JSON fileroleFile="custom-role.json"              # Your custom role definition JSON
+ 
+# 1. Create the custom roleaz role definition create --role-definition "$roleFile"
+ 
+# 2. List all management group IDs and assign role to eachfor mg in $(az account management-group list --query "[].name" -o tsv); do  echo "Assigning '$roleName' to principal at MG: $mg"
+ 
+  az role assignment create \    --assignee "$principalId" \    --role "$roleName" \    --scope "/providers/Microsoft.Management/managementGroups/$mg"done
+
+```
+
+4.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
 
 ##  Turn on Utilize Commitments for Virtual Node Groups from the Spot Console
 
-1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
+1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
 2. In the Ocean autoscaler strategy area, click **Utilize RIs/SPs**.
 
->**Important**: If the **Missing permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
+>**Important**: If the **Add permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
 >
 >  - [Get Your Azure Credentials](link)
 >
