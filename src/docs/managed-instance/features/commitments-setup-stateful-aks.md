@@ -73,7 +73,6 @@ Follow the instructions below while referring to the [Azure documentation](https
    * Application secret expiration date.
    * Client secret value.
   
-
 2.  Go to Step 3: Permissions assignment.
 
 ###  Step 3: Permissions Assignment
@@ -144,7 +143,7 @@ for management groups use the following
 
 ## Turn on Utilize Commitments for Stateful Node in the Spot API
 
-in the Spot API, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
+In the Spot API, the `shouldUtilizeCommitments` attribute controls utilization commitments. 
 
 When set to `True` (default), and there are free reserved instances / savings plans within the Azure account, Stateful Node will utilize them before launching spot instances. 
 Make sure that the VM attached to the specific stateful node also has  `shouldUtilizeCommitments` attribute enabled.
