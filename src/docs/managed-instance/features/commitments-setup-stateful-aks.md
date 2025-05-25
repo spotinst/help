@@ -41,7 +41,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
 2.  Create or edit a stateful node. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
-3.  In the Availability settings, next to Utilize RIs/SPs, click **Add permission**.
+3.  In the Availability settings area, next to Utilize RIs/SPs, click **Add permission**.
  
     <img width="600" src="https://github.com/user-attachments/assets/cab63ab7-ef89-482f-8758-05a64379aaef" />
 
@@ -81,15 +81,15 @@ Follow the instructions below while referring to the [Azure documentation](https
 <img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
 The first time you use commitments; you must add at least one permission at the tenant level so Spot can connect to Azure environments. 
+In addition, you must add the custom reader role. 
 
 These permissions give you access to all the resources under the same tenant. You need these permissions to turn on Stateful Node commitments.
 
 >IMPORTANT: If this step is unsuccessful, check your Azure environment.
 
 1.  Select the permissions in accordance with those you purchased from Azure. By default, both RI and SP are selected.
-2.  Required. You must select the custrom reader role: This ubscription role permission grants controlled access to Azure resources within a subscription and enables custom read-only visibility while preventing unauthorized modifications.
 
-3.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level:
+2.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level:
 
 ```
 Import-Module Az.Accounts
@@ -104,7 +104,7 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIE
 New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
 ```
 
-4. Use the following Azure PowerShell script to assign the Custom Reader role:
+3. Required. You must select the custom reader role: This subscription role permission grants controlled access to Azure resources within a subscription and enables custom read-only visibility while preventing unauthorized modifications. Use the following Azure PowerShell script to assign the Custom Reader role:
 
 
 ```
@@ -128,12 +128,12 @@ for management groups use the following
 
 ```
 
-5.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
+4.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
 ##  Turn on Utilize Commitments from the Spot Console
 
 1. Go to the stateful node where you want to turn on the utilize RSs/SPs feature. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
-2. In the Stateful Node strategy area, click **Utilize RIs/SPs**.
+2. In the Availability settings area, click **Utilize RIs/SPs**.
 
 >**Important**: If the **Add permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
 >
@@ -152,5 +152,5 @@ Make sure that the VM attached to the specific stateful node also has  `shouldUt
 Under Spot API > Elastigroup > Elastigroup Azure Stateful >...  
 
 * [Create Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate) or [Update Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate)  (under statefulNode > strategy)
-* [Get Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeGetStatus) or [Update Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate) (under statefulNode > strategy)
+* [Get Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeGetStatus) or [Update Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeChangeState)
 
