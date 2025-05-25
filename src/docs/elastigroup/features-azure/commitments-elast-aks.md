@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Azure Commitments for Elastrigroup
+# Azure Commitments for Elastigroup
 
 Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
