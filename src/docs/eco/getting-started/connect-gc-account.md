@@ -30,7 +30,7 @@
       <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/iam.organizationRoleAdmin"</code></p>
       <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/iam.serviceAccountCreator"</code></p>
       <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/iam.serviceAccountAdmin"</code></p>
-      <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/resourcemanager.projectIamAdmin"</code></p>
+      <p><code>gcloud organizations add-iam-policy-binding YOUR_ORGANIZATION_ID --member="user:YOUR_EMAIL" --role="roles/iam.organizationRoleAdmin"</code></p>
     </li>
     <li>
       <p>Create a file in Cloud Shell using a text editor, such as nano or vi. For example: <code>nano setup_gcloud_iam_roles_and_service_accounts.sh</code>.</p>
@@ -42,70 +42,24 @@
    <div style="padding-left:16px">
 
      ````     
-     ANALYSIS_ORG_ID="$(gcloud projects get-ancestors $(gcloud config get-value project --quiet) | awk '/TYPE: organization/{print id} {id=$2}')"
-     SERVICE_ACCOUNT_ORG_ID="$(gcloud projects get-ancestors $(gcloud config get-value project --quiet) | awk '/TYPE: organization/{print id} {id=$2}')"
-     ANALYSIS_PROJECTS=("$(gcloud config get-value project --quiet)")
-     SERVICE_ACCOUNT_PROJECT_LIST=("$(gcloud config get-value project --quiet)")
-     ANALYSIS_ORG_ROLES=("roles/billing.viewer" "roles/browser")
-     ANALYSIS_EMAILS=("ross.hardin@flexera.com" "greg.kuderna@flexera.com")
-     ANALYSIS_PROJECT_ROLE="roles/bigquery.dataViewer"
-     ANALYSIS_CUSTOM_ROLE_NAME="spot-read-only-custom-role"
-     ANALYSIS_CUSTOM_ROLE_TITLE="Spot Read-Only Custom Role"
-     ANALYSIS_CUSTOM_ROLE_DESCRIPTION="Spot Read-Only Permissions needed for programmatic visibility into commitment and cost data"
-     ANALYSIS_CUSTOM_ROLE_PERMISSIONS="bigquery.capacityCommitments.get,bigquery.capacityCommitments.list,bigquery.jobs.listAll,cloudasset.assets.exportComputeCommitments,cloudasset.assets.listComputeCommitments,compute.commitments.get,compute.commitments.list,compute.instances.get,compute.instances.list,recommender.bigqueryCapacityCommitmentsInsights.get,recommender.bigqueryCapacityCommitmentsInsights.list,recommender.bigqueryCapacityCommitmentsRecommendations.get,recommender.bigqueryCapacityCommitmentsRecommendations.list,recommender.commitmentUtilizationInsights.get,recommender.commitmentUtilizationInsights.list,recommender.spendBasedCommitmentInsights.get,recommender.spendBasedCommitmentInsights.list,recommender.spendBasedCommitmentRecommendations.get,recommender.spendBasedCommitmentRecommendations.list,recommender.spendBasedCommitmentRecommenderConfig.get,recommender.usageCommitmentRecommendations.get,recommender.usageCommitmentRecommendations.list"
-     SERVICE_ACCOUNT_PROJECT_ROLES=("roles/bigquery.dataViewer")
-     CURRENT_PROJECT_ID=$(gcloud config get-value project --quiet)
-     SERVICE_ACCOUNT_NAME="spot-programmatic-access-sa" #between 6 and 30 characters
-     SERVICE_ACCOUNT_DESCRIPTION="Spot Service Account created for Programmatic Access to Resources"
-     SERVICE_ACCOUNT_DISPLAY_NAME="spot-programmatic-access-service-account"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_NAME="Spot_Programmatic_Access_Role"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE="Spot Programmatic Access Role"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION="Spot Custom Role for Programmatic Access"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS="monitoring.timeSeries.list,cloudquotas.quotas.get,cloudquotas.quotas.update,serviceusage.quotas.get,serviceusage.quotas.update,serviceusage.services.get,serviceusage.services.list"
-
-     for ROLE in "${ANALYSIS_ORG_ROLES[@]}"; do
-       for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
-         echo "Adding member: user:$EMAIL to role $ROLE ..."
-         gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID --role=$ROLE --member="user:$EMAIL"
-       done
-     done
-
-     for PROJECT in "${ANALYSIS_PROJECTS[@]}"; do
-       for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
-         echo "Adding member: user:$EMAIL to role $ANALYSIS_PROJECT_ROLE in project $PROJECT ..."
-         gcloud ANALYSIS_PROJECTS add-iam-policy-binding $PROJECT --role=$ANALYSIS_PROJECT_ROLE --member="user:$EMAIL"
-       done
-     done
-
-     gcloud iam roles create "$ANALYSIS_CUSTOM_ROLE_NAME" --organization=$ANALYSIS_ORG_ID --description="$ANALYSIS_CUSTOM_ROLE_DESCRIPTION" --permissions="$ANALYSIS_CUSTOM_ROLE_PERMISSIONS" --stage="GA" --title="$ANALYSIS_CUSTOM_ROLE_TITLE"
-
-     for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
-       gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID --member="user:$EMAIL" --role="organizations/$ANALYSIS_ORG_ID/roles/$ANALYSIS_CUSTOM_ROLE_NAME"
-     done
-
-     # You will need roles/iam.serviceAccountCreator to create a service account
-     # To Grant the service account access to the project, you need roles/resourcemanager.projectIamAdmin
-
-     gcloud iam service-accounts create $SERVICE_ACCOUNT_NAME --description="$SERVICE_ACCOUNT_DESCRIPTION" --display-name="$SERVICE_ACCOUNT_DISPLAY_NAME"
-
-     for PROJECT in "${SERVICE_ACCOUNT_PROJECT_LIST[@]}"; do
-       for ROLE in "${SERVICE_ACCOUNT_PROJECT_ROLES[@]}"; do
-         echo "Adding member: serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com to role $ROLE ..."
-         gcloud projects add-iam-policy-binding $PROJECT --role=$ROLE --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
-       done
-     done
-
-     gcloud iam roles create "$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" --organization=$SERVICE_ACCOUNT_ORG_ID --description="$SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION" --permissions="$SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS" --stage="GA" --title="$SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE"
-
-     gcloud organizations add-iam-policy-binding $SERVICE_ACCOUNT_ORG_ID --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" --role="organizations/$SERVICE_ACCOUNT_ORG_ID/roles/$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME"
-
-     # You will need roles/iam.serviceAccountAdmin to create this service account key...
-     # Or a relevant custom role with iam.serviceAccountKeys.create
-     gcloud iam service-accounts keys create ~/my-sa-key.json --iam-account="$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
-
-     cloudshell download my-sa-key.json
-
-     rm ~/my-sa-key.json
+    set -uo pipefail
+    
+    FAILED=0
+    log_error() {
+      echo "ERROR: $1" >&2
+    }
+    
+    log_success() {
+      echo "SUCCESS: $1"
+    }
+    
+    validate_command() {
+      local err_msg="$1"
+      local success_msg="$2"
+      local cmd="$3"
+      shift 3
+    
+      echo "Running: $cmd $*"
     ````
 
    </div>
