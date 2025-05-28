@@ -29,6 +29,7 @@
   - [GC](eco/gcp-tutorials/)
      - [Getting Started](eco/getting-started/gettingstarted-gc)
         - [Connect GC to Eco](eco/getting-started/connect-gc-account)
+    - [Access Roles and Permissions](eco/gcp-tutorials/access-roles-read-only)
      - [View your Savings](eco/gcp-tutorials/view-your-savings)
   - [Eco in Flexera One](eco/eco-in-flexera-one/)
   - [Troubleshooting](eco/troubleshooting/)
