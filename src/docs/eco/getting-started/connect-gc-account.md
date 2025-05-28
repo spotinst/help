@@ -27,10 +27,10 @@
     </li>
     <li>
       <p>Grant permissions to your account by running these commands in Cloud Shell:</p>
-      <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/iam.organizationRoleAdmin"</code></p>
+      <p><code>gcloud organizations add-iam-policy-binding YOUR_ORGANIZATION_ID --member="user:YOUR_EMAIL" --role="roles/iam.organizationRoleAdmin"</code></p>
       <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/iam.serviceAccountCreator"</code></p>
       <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/iam.serviceAccountAdmin"</code></p>
-      <p><code>gcloud organizations add-iam-policy-binding YOUR_ORGANIZATION_ID --member="user:YOUR_EMAIL" --role="roles/iam.organizationRoleAdmin"</code></p>
+      <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/resourcemanager.projectIamAdmin"</code></p>
     </li>
     <li>
       <p>Create a file in Cloud Shell using a text editor, such as nano or vi. For example: <code>nano setup_gcloud_iam_roles_and_service_accounts.sh</code>.</p>
