@@ -1,5 +1,10 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.62] (v2.0.70) - 2025-05-28
+
+### Bug Fixes
+* Fixed unknown flag `--logtostderr` in metrics-server version `v0.7.2`
+
 ## Chart Version [0.1.61] (v2.0.70) - 2025-05-21
 
 ### Added
