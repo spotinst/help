@@ -60,6 +60,197 @@
       shift 3
     
       echo "Running: $cmd $*"
+    
+      if ! "$cmd" "$@"; then
+        log_error "$err_msg"
+        FAILED=$((FAILED+1))
+      else
+        log_success "$success_msg"
+      fi
+    }
+    
+    echo "Fetching org ID..."
+    ANALYSIS_ORG_ID="$(gcloud projects get-ancestors $(gcloud config get-value project --quiet) | awk '/TYPE: organization/{print id} {id=$2}')"
+    SERVICE_ACCOUNT_ORG_ID="$ANALYSIS_ORG_ID"
+    
+    CURRENT_PROJECT_ID=$(gcloud config get-value project --quiet)
+    ANALYSIS_PROJECTS=("$CURRENT_PROJECT_ID")
+    SERVICE_ACCOUNT_PROJECT_LIST=("$CURRENT_PROJECT_ID")
+    
+    ANALYSIS_ORG_ROLES=("roles/billing.viewer" "roles/browser")
+    ANALYSIS_EMAILS=("ross.hardin@flexera.com" "greg.kuderna@flexera.com")
+    ANALYSIS_PROJECT_ROLE="roles/bigquery.dataViewer" 
+    ANALYSIS_CUSTOM_ROLE_NAME="spot_read_only_custom_role"
+    ANALYSIS_CUSTOM_ROLE_TITLE="Spot Read-Only Custom Role"
+    ANALYSIS_CUSTOM_ROLE_DESCRIPTION="Spot Read-Only Permissions needed for programmatic visibility into commitment and cost data"
+    ANALYSIS_CUSTOM_ROLE_PERMISSIONS="bigquery.capacityCommitments.get,bigquery.capacityCommitments.list,bigquery.jobs.listAll,cloudasset.assets.exportComputeCommitments,cloudasset.assets.listComputeCommitments,compute.commitments.get,compute.commitments.list,compute.instances.get,compute.instances.list,recommender.bigqueryCapacityCommitmentsInsights.get,recommender.bigqueryCapacityCommitmentsInsights.list,recommender.bigqueryCapacityCommitmentsRecommendations.get,recommender.bigqueryCapacityCommitmentsRecommendations.list,recommender.commitmentUtilizationInsights.get,recommender.commitmentUtilizationInsights.list,recommender.spendBasedCommitmentInsights.get,recommender.spendBasedCommitmentInsights.list,recommender.spendBasedCommitmentRecommendations.get,recommender.spendBasedCommitmentRecommendations.list,recommender.spendBasedCommitmentRecommenderConfig.get,recommender.usageCommitmentRecommendations.get,recommender.usageCommitmentRecommendations.list"
+    SERVICE_ACCOUNT_PROJECT_ROLES=("roles/bigquery.dataViewer" "roles/bigquery.jobUser" "roles/bigquery.readSessionUser")
+    SERVICE_ACCOUNT_NAME="spot-programmatic-access-role" #between 6 and 30 characters
+    SERVICE_ACCOUNT_DESCRIPTION="Spot Service Account created for Programmatic Access to Resources"
+    SERVICE_ACCOUNT_DISPLAY_NAME="spot-programmatic-access-service-account"
+    SERVICE_ACCOUNT_CUSTOM_ROLE_NAME="spot_programmatic_access_sa"
+    SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE="Spot Programmatic Access Role"
+    SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION="Spot Custom Role for Programmatic Access"
+    SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS="monitoring.timeSeries.list,cloudquotas.quotas.get,cloudquotas.quotas.update,serviceusage.quotas.get,serviceusage.quotas.update,serviceusage.services.get,serviceusage.services.list,bigquery.jobs.create,bigquery.readsessions.create"
+    
+    echo "Validating service account IAM roles..."
+    
+    echo "Checking if service account $SERVICE_ACCOUNT_NAME exists..."
+    if gcloud iam service-accounts describe "$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" >/dev/null 2>&1; then
+      echo "Validating service account IAM roles..."
+      for ROLE in "roles/bigquery.dataViewer" "roles/bigquery.jobUser" "roles/bigquery.readSessionUser"; do
+        echo "Checking if $SERVICE_ACCOUNT_NAME has $ROLE..."
+        if [[ -z $(gcloud projects get-iam-policy "$CURRENT_PROJECT_ID" \
+            --flatten="bindings[].members" \
+            --filter="bindings.members:serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com AND bindings.role:$ROLE" \
+            --format="value(bindings.role)") ]]; then
+          log_error "Service account does not have $ROLE"
+        else
+          log_success "Service account has $ROLE"
+        fi
+      done
+    else
+      log_success "Service account $SERVICE_ACCOUNT_NAME does not exist yet - skipping IAM role check"
+    fi
+    
+    for ROLE in "${ANALYSIS_ORG_ROLES[@]}"; do
+      for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
+        echo "Adding member: user:$EMAIL to role $ROLE ..."
+        validate_command \
+          "Failed to add user:$EMAIL to org role $ROLE" \
+          "Added user:$EMAIL to org role $ROLE" \
+          gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID \
+            --role=$ROLE \
+            --member="user:$EMAIL"
+      done
+    done
+    
+    for PROJECT in "${ANALYSIS_PROJECTS[@]}"; do
+      for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
+        echo "Adding user:$EMAIL to project role $ANALYSIS_PROJECT_ROLE in project $PROJECT..."
+        validate_command \
+          "Failed to add user:$EMAIL to project role" \
+          "Added user:$EMAIL to project role in $PROJECT" \
+          gcloud projects add-iam-policy-binding $PROJECT \
+            --role=$ANALYSIS_PROJECT_ROLE \
+            --member="user:$EMAIL"
+      done
+    done
+    
+    if gcloud iam roles describe "organizations/$ANALYSIS_ORG_ID/roles/$ANALYSIS_CUSTOM_ROLE_NAME" >/dev/null 2>&1; then
+      log_success "Custom role $ANALYSIS_CUSTOM_ROLE_NAME already exists"
+    else
+      echo "Creating custom role $ANALYSIS_CUSTOM_ROLE_NAME..."
+      validate_command \
+      "Failed to create custom role" \
+      "Created custom role $ANALYSIS_CUSTOM_ROLE_NAME" \
+      gcloud iam roles create "$ANALYSIS_CUSTOM_ROLE_NAME" \
+        --organization=$ANALYSIS_ORG_ID \
+        --description="$ANALYSIS_CUSTOM_ROLE_DESCRIPTION" \
+        --permissions="$ANALYSIS_CUSTOM_ROLE_PERMISSIONS" \
+        --stage="GA" \
+        --title="$ANALYSIS_CUSTOM_ROLE_TITLE"
+    fi
+    
+    for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
+      echo "Granting custom role $ANALYSIS_CUSTOM_ROLE_NAME to $EMAIL..."
+      validate_command \
+        "Failed to grant custom role to $EMAIL" \
+        "Granted custom role to $EMAIL" \
+        gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID \
+          --member="user:$EMAIL" \
+          --role="organizations/$ANALYSIS_ORG_ID/roles/$ANALYSIS_CUSTOM_ROLE_NAME"
+    done
+    
+    # You will need roles/iam.serviceAccountCreator to create a service account
+    # To Grant the service account access to the project, you need roles/resourcemanager.projectIamAdmin
+        
+    if gcloud iam service-accounts describe "$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" >/dev/null 2>&1; then
+      log_success "Service account $SERVICE_ACCOUNT_NAME already exists"
+    else
+      echo "Creating service account $SERVICE_ACCOUNT_NAME..."
+      validate_command \
+      "Failed to create service account" \
+      "Created service account $SERVICE_ACCOUNT_NAME" \
+      gcloud iam service-accounts create $SERVICE_ACCOUNT_NAME \
+        --description="$SERVICE_ACCOUNT_DESCRIPTION" \
+        --display-name="$SERVICE_ACCOUNT_DISPLAY_NAME"
+    fi
+    
+    echo "Waiting for service account to propagate..."
+    for i in {1..5}; do
+      if gcloud iam service-accounts describe "$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" >/dev/null 2>&1; then
+        break
+      fi
+      echo "Still waiting..."
+      sleep 2
+    done
+    
+    for PROJECT in "${SERVICE_ACCOUNT_PROJECT_LIST[@]}"; do
+      for ROLE in "${SERVICE_ACCOUNT_PROJECT_ROLES[@]}"; do
+        echo "Adding member: serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com to role $ROLE ..."
+        validate_command \
+          "Failed to add service account to project role $ROLE" \
+          "Added service account to project role $ROLE" \
+          gcloud projects add-iam-policy-binding $PROJECT \
+            --role="$ROLE" \
+            --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
+      done
+    done
+    
+    if gcloud iam roles describe "organizations/$SERVICE_ACCOUNT_ORG_ID/roles/$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" >/dev/null 2>&1; then
+      log_success "Custom role $SERVICE_ACCOUNT_CUSTOM_ROLE_NAME already exists"
+    else
+      echo "Creating custom org level role for service account..."
+      validate_command \
+        "Failed to create service account custom role" \
+        "Created custom org level role $SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" \
+        gcloud iam roles create "$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" \
+          --organization=$SERVICE_ACCOUNT_ORG_ID \
+          --description="$SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION" \
+          --permissions="$SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS" \
+          --stage="GA" \
+          --title="$SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE"
+    fi
+    
+    echo "Granting custom role to service account..."
+    validate_command \
+      "Failed to grant custom role to service account" \
+      "Granted custom role to service account" \
+      gcloud organizations add-iam-policy-binding $SERVICE_ACCOUNT_ORG_ID \
+        --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" \
+        --role="organizations/$SERVICE_ACCOUNT_ORG_ID/roles/$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME"
+    
+    # You will need roles/iam.serviceAccountAdmin to create this service account key...
+    # Or a relevant custom role with iam.serviceAccountKeys.create
+    
+    echo "Creating service account key..."
+    validate_command \
+      "Failed to create service account key" \
+      "Created service account key" \
+      gcloud iam service-accounts keys create ~/my-sa-key.json \
+        --iam-account="$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
+    
+    echo "Downloading service account key..."
+    validate_command \
+      "Failed to download service account key" \
+      "Downloaded service account key" \
+      cloudshell download my-sa-key.json
+      
+    echo
+    read -p "Press Enter once the file has finished downloading..."
+    
+    echo "Removing local key file..."
+    validate_command \
+      "Failed to remove local key file" \
+      "Removed local key file" \
+      rm ~/my-sa-key.json
+    
+    if [[ "$FAILED" -gt 0 ]]; then
+      echo "Script completed with $FAILED errors"
+    else
+      echo "Onboarding script completed successfully."
+    fi
     ````
 
    </div>
