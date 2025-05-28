@@ -54,6 +54,8 @@ These roles and permissions are needed for Eco Google Cloud service account to i
 
 * Project level (in the project that has the Google Cloud BigQuery billing export)
    * [roles/bigquery.dataViewer](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataViewer)
+   * [roles/bigquery.jobUser](https://cloud.google.com/bigquery/docs/access-control#bigquery.jobUser)
+   * [roles/bigquery.readSessionUser](https://cloud.google.com/bigquery/docs/access-control#bigquery.readSessionUser)
 
 **Custom service account IAM role**
 
@@ -65,6 +67,8 @@ These roles and permissions are needed for Eco Google Cloud service account to i
    * serviceusage.services.list
    * serviceusage.quotas.get
    * serviceusage.quotas.update
+   * bigquery.jobs.create
+   * bigquery.readsessions.create
 
 ## Full Roles and Permissions for Managing Your Environment
 
