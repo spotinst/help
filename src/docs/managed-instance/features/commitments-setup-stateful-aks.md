@@ -43,9 +43,9 @@ Follow the instructions below while referring to the [Azure documentation](https
 2.  Create or edit a stateful node. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
 3.  In the Availability settings area, next to Utilize RIs/SPs, click **Add permission**.
 
-   
+   <img src="https://docs.spot.io/managed-instance/_media/create-stateful-node-commitments.png" />
  
-    <img width="600" src="https://github.com/user-attachments/assets/cab63ab7-ef89-482f-8758-05a64379aaef" />
+   <img width="600" src="https://github.com/user-attachments/assets/cab63ab7-ef89-482f-8758-05a64379aaef" />
 
 ###  Step 1: App Registrations
 
