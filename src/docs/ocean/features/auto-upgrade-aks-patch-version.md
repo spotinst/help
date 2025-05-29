@@ -72,7 +72,7 @@ To schedule an auto-upgrade:
 
 4. If you need to upgrade node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
 
-   <img src="https://github.com/user-attachments/assets/b077d377-b6de-4faa-8cc9-8c1736ded19f" />
+   
 
 5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
@@ -110,7 +110,20 @@ Use this option if you want to auto-upgrade immediately (rather than schedule an
 1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
 2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Configure and Update Now**).
 
-<img width="600" src="https://github.com/user-attachments/assets/8df2d910-0653-4f73-8036-8c128490fe20" />
+>Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
+
+3. Click **Update Now**.
+
+>**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
+
+After the update is complete, a new entry is added to the auto-upgrades history list.
+
+##  Upgrade Now - Node Pools Only
+
+Use this option if you want to auto-upgrade node pools immediately (rather than schedule an upgrade).
+
+1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
+2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **System Node Pools Upgrade**).
 
 >Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
 
@@ -119,6 +132,7 @@ Use this option if you want to auto-upgrade immediately (rather than schedule an
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
 
 After the update is complete, a new entry is added to the auto-upgrades history list.
+
 
 ## Delete an Auto-Upgrade Schedule
 
