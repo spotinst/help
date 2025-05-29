@@ -70,5 +70,5 @@ Stateful Node performs a strategy fix check every **xx (to check)** minutes to d
 The reversion will not occur if:
 
 * There is no alternative commitment or spot VM to revert back to. 
-* It violates the group's regular VM count request. 
+* It violates the group's regular VM count request.   
 
