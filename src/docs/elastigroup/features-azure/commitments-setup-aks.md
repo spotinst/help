@@ -53,14 +53,9 @@ Follow the instructions below while referring to the [Azure documentation](https
 
       <img src="https://docs.spot.io/managed-instance/_media/commitments_register-upgrade-app.png" />
 
-      <img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
-
-
       New:
 
-      <img src="https://docs.spot.io/managed-instance/_media/commitments-register-new-app.png" />
-
-      <img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
+      <img src="https://docs.spot.io/managed-instance/_media/commitments-register-new-app.png" />    
 
 
 3. Copy the following credentials from your Azure app and paste them into the fields:
@@ -73,8 +68,6 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 <img src="https://docs.spot.io/managed-instance/_media/commitments-certs-and-secrets.png" />
 
-<img width="500" src="https://github.com/user-attachments/assets/e61b0e9d-103d-47f2-b46e-74cac43daa82" />
-
 1. Copy the following credentials from your Azure app and paste them into the fields:
    * Application secret expiration date.
    * Client secret value.
@@ -85,8 +78,6 @@ Follow the instructions below while referring to the [Azure documentation](https
 ###  Step 3: Permissions Assignment
 
 <img src="https://docs.spot.io/managed-instance/_media/commitments-permss-with-reader.png" />
-
-<img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
 >IMPORTANT:
 >
