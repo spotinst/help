@@ -244,6 +244,8 @@
   "/elastigroup/features/z-stateful-instance/stateful-instance-actions.md",
   "/elastigroup/features/z-stateful-instance/z-stateful-instances.md",
   "/elastigroup/features-azure/README.md",
+  "/elastigroup/features-azure/commitments-elast-aks.md",
+  "/elastigroup/features-azure/commitments-setup-aks.md",
   "/elastigroup/features-azure/dns.md",
   "/elastigroup/features-azure/networking.md",
   "/elastigroup/features-azure/od-spotvm.md",
