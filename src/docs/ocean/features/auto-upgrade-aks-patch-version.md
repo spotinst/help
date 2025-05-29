@@ -35,7 +35,7 @@ provide support updates for Kubernetes minor version upgrades.
 
   >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Update** button in the center of the screen. Otherwise, lists are displayed as shown below.
 
-<img src="https://docs.spot.io/ocean/_media/_media/autoupgrades-history.png" />
+<img src="https://docs.spot.io/ocean/_media/autoupgrades-history.png" />
 
 ![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
