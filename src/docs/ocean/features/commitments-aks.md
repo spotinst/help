@@ -39,9 +39,6 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 <img src="https://docs.spot.io//ocean/_media/ocean-commitments.png" />
 
-<img width="1000" src="https://github.com/user-attachments/assets/ae781249-3fff-4647-9cc4-35bd8573abf8" />
-
-
 ###  Launching a VM
 
 As part of the scale-up process, Ocean checks if an RI or SP applies to the market selection. If so, Ocean utilizes that RI/SP.
