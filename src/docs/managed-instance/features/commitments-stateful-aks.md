@@ -39,9 +39,6 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 <img src="https://docs.spot.io/managed-instance/_media/stateful-node-commitment-options.png" />
 
-<img width="1140px" src="https://github.com/user-attachments/assets/f991b76b-efd4-41a6-9576-3e7895ecb2f5" />
-
-
 ###  Launching a VM
 
 As part of the scale-up process, Stateful Node checks if an RI or SP applies to the market selection. If so,  utilizes that RI/SP.
