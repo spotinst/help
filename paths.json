@@ -411,6 +411,8 @@
   "/ocean/features/auto-upgrade-aks-patch-version.md",
   "/ocean/features/avail-zones-scores.md",
   "/ocean/features/cluster-orientation.md",
+  "/ocean/features/commitments-aks.md",
+  "/ocean/features/commitments-setup-aks.md",
   "/ocean/features/committed-use-discount.md",
   "/ocean/features/connect-eks-cluster-test.md",
   "/ocean/features/cost-analysis.md",
