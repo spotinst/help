@@ -53,14 +53,14 @@ Follow the instructions below while referring to the [Azure documentation](https
 
       Upgrade:
 
-      https://github.com/spotinst/help/blob/1974-staeful-commitments/src/docs/managed-instance/_media/commitments_register-upgrade-app.png
+      <img src="https://docs.spot.io/managed-instance/_media/commitments_register-upgrade-app.png" />
 
       <img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
 
 
       New:
 
-      https://github.com/spotinst/help/blob/1974-staeful-commitments/src/docs/managed-instance/_media/commitments-register-new-app.png
+         <img src="https://docs.spot.io/managed-instance/_media/commitments-register-new-app.png" />
       
       <img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
 
@@ -73,7 +73,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 ###  Step 2: Certificates and Secrets
 
-https://github.com/spotinst/help/blob/1974-staeful-commitments/src/docs/managed-instance/_media/commitments-certs-and-secrets.png
+   <img src="https://docs.spot.io/managed-instance/_media/commitments-certs-and-secrets.png" />
 
 <img width="500" src="https://github.com/user-attachments/assets/e61b0e9d-103d-47f2-b46e-74cac43daa82" />
 
@@ -85,7 +85,7 @@ https://github.com/spotinst/help/blob/1974-staeful-commitments/src/docs/managed-
 
 ###  Step 3: Permissions Assignment
 
-https://github.com/spotinst/help/blob/1974-staeful-commitments/src/docs/managed-instance/_media/commitments-permss-with-reader.png
+   <img src="https://docs.spot.io/managed-instance/_media/commitments-permss-with-reader.png" />
 
 <img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
 
