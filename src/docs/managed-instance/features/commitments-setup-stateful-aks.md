@@ -152,5 +152,5 @@ Make sure that the VM attached to the specific stateful node also has  `shouldUt
 Under Spot API > Elastigroup > Elastigroup Azure Stateful >...  
 
 * [Create Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate) or [Update Stateful Node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeUpdate)  (under statefulNode > strategy)
-* [Get Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeGetStatus) or [Update Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeChangeState)
+* [Get Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeGetStatus) or [Update Stateful Node Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeChangeState)  
 
