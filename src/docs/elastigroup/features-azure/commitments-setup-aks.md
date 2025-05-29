@@ -152,5 +152,9 @@ Under Spot API > Elastigroup > Elastigroup Azure Spot VMs >...
 
 * [Create Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsCreate) or [Update Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsUpdate)  (under strategy)
 
+* [Import Group from VMp](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsImportFromVirtualMachine)
+* [Get Elastigroup Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsGetStat)
+
+
 
 
