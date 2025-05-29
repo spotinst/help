@@ -77,7 +77,10 @@ To schedule an auto-upgrade:
 
 4. If you need to upgrade node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
 
-5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
+
+
+
+6. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
 <img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
 
