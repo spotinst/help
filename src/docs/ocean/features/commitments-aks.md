@@ -37,6 +37,8 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 ## Commitments Scenarios
 
+<img src="https://docs.spot.io//ocean/_media/ocean-commitments.png" />
+
 <img width="1000" src="https://github.com/user-attachments/assets/ae781249-3fff-4647-9cc4-35bd8573abf8" />
 
 
