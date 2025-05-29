@@ -51,6 +51,8 @@ Follow the instructions below while referring to the [Azure documentation](https
 
       Upgrade:
 
+
+
       <img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
 
 
@@ -59,11 +61,11 @@ Follow the instructions below while referring to the [Azure documentation](https
       <img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
 
 
-2. Copy the following credentials from your Azure app and paste them into the fields:
+3. Copy the following credentials from your Azure app and paste them into the fields:
    * Application (client) ID.
    * Directory (tenant) ID.
 
-3.  Go to Step 2: Certificates and Secrets
+4.  Go to Step 2: Certificates and Secrets
 
 ###  Step 2: Certificates and Secrets
 
