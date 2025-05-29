@@ -442,6 +442,7 @@
   "/ocean/features/revert-to-lower-cost-node.md",
   "/ocean/features/right-sizing.md",
   "/ocean/features/roll-gen.md",
+  "/ocean/features/roll-gke.md",
   "/ocean/features/roll.md",
   "/ocean/features/running-hours.md",
   "/ocean/features/scaling-ecs.md",
