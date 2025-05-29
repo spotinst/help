@@ -8,7 +8,7 @@ Before you can turn on commitments for your Elastigroup, you need to:
 
 *  Purchase Azure commitments (refer to Azure)
 *  [Get your Azure credentials](link)
-*  [Connect Commitments to Spot Products](link) 
+*  [Connect Commitments to Spot Products](link)
 
 Once you have your Azure credentials, you can turn on commitments via either the Spot console or the Spot API.
 
