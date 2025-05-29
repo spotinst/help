@@ -63,26 +63,25 @@ To schedule an auto-upgrade:
 1. Ensure that the [Azure Kubernetes upgrades feature](https://spotinst.atlassian.net/wiki/pages/resumedraft.action?draftId=3271589937) is not enabled for your cluster. You cannot enable Ocean and Azure Kubernetes auto-upgrades simultaneously.
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
->**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
-> <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
+  >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
+  > <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
 
 3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
 
-<img src="https://github.com/user-attachments/assets/1f69eb8f-c964-4a09-a739-d0f89c4b74a0" />
-
->**Note**: Rolls
-> - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
-> - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
-> - If an option appears grayed, you have already run it and cannot select it again.
+   <img src="https://github.com/user-attachments/assets/1f69eb8f-c964-4a09-a739-d0f89c4b74a0" />
 
 4. If you need to upgrade node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
 
+   <img src="https://github.com/user-attachments/assets/b077d377-b6de-4faa-8cc9-8c1736ded19f" />
 
+5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
+    >**Note**: Rolls
+    > - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
+    > - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
+    > - If an option appears grayed, you have already run it and cannot select it again.
 
-6. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
-
-<img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
+   <img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
 
    * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
