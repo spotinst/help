@@ -17,7 +17,7 @@ To check if your Control Plane version needs upgrading, access the cluster overv
 2. Select a cluster from the list of clusters.
 3. View the installed version number of the control plane at the bottom of the tab.
 
-   <img src="https://docs.spot.io/ocean/_media/_media/check-need-to-uprade.png" />
+   <img src="https://docs.spot.io/ocean/_media/check-need-to-uprade.png" />
 
 ![control-plane -version](https://github.com/user-attachments/assets/6776f5a7-bea6-4a46-9068-daaf0f1c4575)
 
