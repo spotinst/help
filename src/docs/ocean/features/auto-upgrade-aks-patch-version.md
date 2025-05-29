@@ -17,6 +17,8 @@ To check if your Control Plane version needs upgrading, access the cluster overv
 2. Select a cluster from the list of clusters.
 3. View the installed version number of the control plane at the bottom of the tab.
 
+![check-need-to-uprade](https://github.com/user-attachments/assets/9b54a427-2371-4504-81ef-142c07d76780)
+
 ![control-plane -version](https://github.com/user-attachments/assets/6776f5a7-bea6-4a46-9068-daaf0f1c4575)
 
 The version can have one of the following statuses:
@@ -32,6 +34,8 @@ provide support updates for Kubernetes minor version upgrades.
 * Click **Auto Upgrade** at the bottom of the cluster overview screen (next to the control plane version), or click the **Auto Upgrade** tab.
 
   >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Update** button in the center of the screen. Otherwise, lists are displayed as shown below.
+
+![autoupgrades-history](https://github.com/user-attachments/assets/aa66e6e9-7cc7-44aa-8575-82769fad1611)
 
 ![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
@@ -49,6 +53,8 @@ The auto-upgrades history list for completed runs is displayed at the top of the
  
 >**Tip**: Search for auto-update runs by **Status** using the Updates History filter.
 
+![autoupgrade-schedules](https://github.com/user-attachments/assets/b5ba7d03-dee1-4064-a3e2-f450d120e13c)
+
 ![screen-schedule](https://github.com/user-attachments/assets/6384776b-ed1b-4a6b-b86a-7ab5f58db8c5)
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
@@ -64,13 +70,17 @@ To schedule an auto-upgrade:
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
   >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
+  > ![check-need-to-uprade](https://github.com/user-attachments/assets/9b54a427-2371-4504-81ef-142c07d76780)
   > <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
 
 3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
 
+   ![select-what-to-upgrade](https://github.com/user-attachments/assets/30e1c73d-685c-4bcf-bc21-b4b664bd9b0d)
+
+
    <img src="https://github.com/user-attachments/assets/1f69eb8f-c964-4a09-a739-d0f89c4b74a0" />
 
-4. If you need to upgrade node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
+5. If you need to upgrade node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
 
   <img src="https://docs.spot.io/ocean/_media/select-what-to-upgrade.png" />
 
@@ -81,7 +91,10 @@ To schedule an auto-upgrade:
     > - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
     > - If an option appears grayed, you have already run it and cannot select it again.
 
-   <img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
+
+    ![auto-upgrade-roll-configuration](https://github.com/user-attachments/assets/17585476-39ac-46b3-b89e-807d29e00d29)
+
+    <img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
 
    * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
@@ -92,9 +105,13 @@ To schedule an auto-upgrade:
 
 >**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed.
 
+![auto-upgrade-when-to](https://github.com/user-attachments/assets/fcf3aaf6-5dc9-44f6-8c2f-b8f8039d9d6e)
+
 <img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
 6. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
+
+![auto-upgrade-when-to-frequency](https://github.com/user-attachments/assets/ef96ff5a-a151-44c9-b366-be8431f4f127)
 
 <img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
 
