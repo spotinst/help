@@ -7,7 +7,7 @@ With Ocean, you can roll a cluster with just a single click. The roll feature in
 
 Whether you are rolling out changes to your entire Ocean cluster, a particular virtual node group (VNG), or specific nodes, Ocean offers the flexibility to divide the roll into batches based on your chosen batch sizes. For example, if you opt for the default batch size of 20%, Ocean will divide the roll into five batches.
 
-The process is as follows: 
+The process is as follows:  
 
 1.  Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
 2.  Ocean starts with the first batch, successfully replacing each node to accommodate the new nodes' workloads. Ocean's autoscaler considers all relevant constraints in place before the roll.
