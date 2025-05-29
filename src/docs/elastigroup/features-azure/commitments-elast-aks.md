@@ -61,7 +61,7 @@ Elastigroup performs a strategy fix check every **xx (to check)** minutes to det
 
 2. **Elastigroup checks if the commitment is required elsewhere**: Elastigroup constantly checks if a different resource can utilize a commitment in your Azure account, ultimately meeting the risk percentage and required strategy.
 
-3. **Replacement**: Elastigroup will replace if the terms are met.
+3. **Replacement**: Elastigroup will replace if the terms are met. 
 
 4. **Launch spot or regular (RI/SP)**: Elastigroup launches a different spot or an alternative regular RI/SP to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
 
