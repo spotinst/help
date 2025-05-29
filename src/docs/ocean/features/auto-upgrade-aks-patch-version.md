@@ -17,6 +17,8 @@ To check if your Control Plane version needs upgrading, access the cluster overv
 2. Select a cluster from the list of clusters.
 3. View the installed version number of the control plane at the bottom of the tab.
 
+   <img src="https://docs.spot.io/ocean/_media/check-need-to-uprade.png" />
+
 ![control-plane -version](https://github.com/user-attachments/assets/6776f5a7-bea6-4a46-9068-daaf0f1c4575)
 
 The version can have one of the following statuses:
@@ -32,6 +34,8 @@ provide support updates for Kubernetes minor version upgrades.
 * Click **Auto Upgrade** at the bottom of the cluster overview screen (next to the control plane version), or click the **Auto Upgrade** tab.
 
   >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Update** button in the center of the screen. Otherwise, lists are displayed as shown below.
+
+<img src="https://docs.spot.io/ocean/_media/autoupgrades-history.png" />
 
 ![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
@@ -49,6 +53,8 @@ The auto-upgrades history list for completed runs is displayed at the top of the
  
 >**Tip**: Search for auto-update runs by **Status** using the Updates History filter.
 
+<img src="https://docs.spot.io/ocean/_media/autoupgrade-schedules.png" />
+
 ![screen-schedule](https://github.com/user-attachments/assets/6384776b-ed1b-4a6b-b86a-7ab5f58db8c5)
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
@@ -63,21 +69,28 @@ To schedule an auto-upgrade:
 1. Ensure that the [Azure Kubernetes upgrades feature](https://spotinst.atlassian.net/wiki/pages/resumedraft.action?draftId=3271589937) is not enabled for your cluster. You cannot enable Ocean and Azure Kubernetes auto-upgrades simultaneously.
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
->**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
-> <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
+  >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
+  > <img src="https://docs.spot.io/ocean/_media/_media/check-need-to-uprade.png" />
+  > <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
 
 3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
 
-<img width="600" src="https://github.com/user-attachments/assets/0fbf845d-3595-4111-89c8-2b318b303265" />
+   <img src="https://docs.spot.io/ocean/_media/select-what-to-upgrade.png" />
+ 
+   <img src="https://github.com/user-attachments/assets/1f69eb8f-c964-4a09-a739-d0f89c4b74a0" />
 
->**Note**: Rolls
-> - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
-> - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
-> - If an option appears grayed, you have already run it and cannot select it again.
+5. If you need to upgrade node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
 
-4. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
+5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
-<img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
+    >**Note**: Rolls
+    > - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
+    > - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
+    > - If an option appears grayed, you have already run it and cannot select it again.
+
+    <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
+
+    <img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
 
    * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
@@ -88,11 +101,15 @@ To schedule an auto-upgrade:
 
 >**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed.
 
-<img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
+  <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
+
+  <img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
 6. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
-<img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
+     <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to-frequency.png" />
+
+     <img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
 
 7. Click **Schedule**.
 
@@ -106,7 +123,20 @@ Use this option if you want to auto-upgrade immediately (rather than schedule an
 1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
 2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Configure and Update Now**).
 
-<img width="600" src="https://github.com/user-attachments/assets/8df2d910-0653-4f73-8036-8c128490fe20" />
+>Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
+
+3. Click **Update Now**.
+
+>**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
+
+After the update is complete, a new entry is added to the auto-upgrades history list.
+
+##  Upgrade Now - Node Pools Only
+
+Use this option if you want to auto-upgrade node pools immediately (rather than schedule an upgrade).
+
+1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
+2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **System Node Pools Upgrade**).
 
 >Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
 
@@ -115,6 +145,7 @@ Use this option if you want to auto-upgrade immediately (rather than schedule an
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
 
 After the update is complete, a new entry is added to the auto-upgrades history list.
+
 
 ## Delete an Auto-Upgrade Schedule
 
