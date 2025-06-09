@@ -22,6 +22,9 @@ You can use these identity providers with Spot:
     * **Relay state**: this is the Organization ID. It's used as the relay state configuration for the identity provider (used in IDP-initiated SSO).
     * **Provider type**: currently, the only supported standard is security assertion markup language (SAML).
     * **Metadata**: this is the data provided by the identity provider to sync the settings properly.
+      * Limitation: Only one certificate is supported. Before adding a new certificate to the metadata file (when the old one expires), first remove the old certificate to ensure successful authentication.
+  
+ 
     * **User Default Organization Role**: this is the role given to [users](administration/users/) who sign in using the Identity Provider (Viewer/Editor). Roles can be defined only by organization or by account, not both.
     * **User Allowed Accounts**: the [accounts](https://docs.spot.io/administration/organizations/) the user has access to (<i>Default Account</i> or <i>All Accounts</i>).
     
