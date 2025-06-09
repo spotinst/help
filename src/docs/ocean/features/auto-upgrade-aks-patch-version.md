@@ -121,8 +121,7 @@ To schedule an auto-upgrade:
 Use this option if you want to auto-upgrade immediately (rather than schedule an upgrade).
 
 1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
-2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Configure and Update Now**).
-
+2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Create an Upgrade > Configure & Upgrade Now**).
 3. Click **Update Now**.
 
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
@@ -134,7 +133,7 @@ After the update is complete, a new entry is added to the auto-upgrades history 
 Use this option if you want to auto-upgrade node pools immediately (rather than schedule an upgrade).
 
 1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
-2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **System Node Pools Upgrade**).
+2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Create an Upgrade > System Node Pools Upgrade**).
 
 3. Click **Update Now**.
 
