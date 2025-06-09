@@ -89,7 +89,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  Select the custom reader role, and the permissions in accordance with those you purchased from Azure (by default, both RI and SP are selected).
 
-2.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level:
+2.  Use the following Azure PowerShell script to assign the Reservation Reader role / Savings Plan role at the tenant level:
 
 ```
 Import-Module Az.Accounts
