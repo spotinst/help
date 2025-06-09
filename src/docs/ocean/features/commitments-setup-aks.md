@@ -92,7 +92,7 @@ These permissions give you access to all the resources under the same tenant. Yo
 
 1.  Select the permissions in accordance with those you purchased from Azure. By default, both RI and SP are selected.
 
-2.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level with PowerShell:
+2.  Use the following Azure PowerShell script to assign the Reservation Reader role / Savings Plan role at the tenant level with PowerShell:
 
 ```
 Import-Module Az.Accounts
