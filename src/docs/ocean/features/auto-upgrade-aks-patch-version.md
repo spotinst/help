@@ -123,8 +123,6 @@ Use this option if you want to auto-upgrade immediately (rather than schedule an
 1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
 2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Configure and Update Now**).
 
->Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
-
 3. Click **Update Now**.
 
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
@@ -137,8 +135,6 @@ Use this option if you want to auto-upgrade node pools immediately (rather than 
 
 1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
 2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **System Node Pools Upgrade**).
-
->Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
 
 3. Click **Update Now**.
 
