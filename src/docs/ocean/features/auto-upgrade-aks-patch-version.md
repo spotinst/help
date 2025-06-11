@@ -79,7 +79,7 @@ To schedule an auto-upgrade:
  
    <img src="https://github.com/user-attachments/assets/1f69eb8f-c964-4a09-a739-d0f89c4b74a0" />
 
-5. If you need to upgrade system node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
+4. If you need to upgrade system node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
 
 5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
@@ -97,7 +97,7 @@ To schedule an auto-upgrade:
    * Optionally, turn on the Pod Disruption Budget (PDB) option.
    * Optionally, turn on the Restrict Scale-Down option.
 
-5. Select whether to schedule the auto upgrade once a day or at a specific time.
+6. Select whether to schedule the auto upgrade once a day or at a specific time.
 
 >**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed.
 
@@ -105,13 +105,13 @@ To schedule an auto-upgrade:
 
   <img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
-6. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
+7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
      <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to-frequency.png" />
 
      <img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
 
-7. Click **Schedule**.
+8. Click **Schedule**.
 
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
@@ -120,8 +120,7 @@ To schedule an auto-upgrade:
 
 Use this option if you want to auto-upgrade immediately (rather than schedule an upgrade).
 
-1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
-2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Create an Upgrade > Configure & Upgrade Now**).
+1. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 5 (but in Step 2, click **Create an Upgrade > Configure & Upgrade Now**).
 3. Click **Update Now**.
 
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
@@ -132,12 +131,9 @@ After the update is complete, a new entry is added to the auto-upgrades history 
 
 Use this option if you want to auto-upgrade systems node pools immediately (rather than schedule an upgrade).
 
-1. First [check if you need to upgrade](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=check-if-you-need-to-upgrade).
-2. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Create an Upgrade > System Node Pools Upgrade**).
-
-   * Click the Upgrade system node pools box, and then select required system node pools from the list.
-
-4. Click **Update Now**.
+1. Click **Create an Upgrade > System Node Pools Upgrade**.
+2. Click the Upgrade system node pools box, and then select required system node pools from the list.
+3. Click **Update Now**.
 
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
 
