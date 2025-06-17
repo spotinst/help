@@ -4,7 +4,7 @@ In the console, you can enable single sign-on (SSO) for your organization.
 
 ## Identity Providers
 
-You can use these identity providers with Spot:
+You can use these identity providers (IdPs) with Spot:
 
 - [ADFS SAML](administration/identity-providers/adfs-saml-authentication)
 - [Azure AD Integration](administration/identity-providers/azure-active-directory-integration)
@@ -19,13 +19,13 @@ You can use these identity providers with Spot:
 1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png" />  > **Settings**.
 2. Click **Security** > **Identity Providers**.
 4. Enter the:
-    * **Relay state**: this is the Organization ID. It's used as the relay state configuration for the identity provider (used in IDP-initiated SSO).
+    * **Relay state**: this is the Organization ID. It's used as the relay state configuration for the IdP (used in IDP-initiated SSO).
     * **Provider type**: currently, the only supported standard is security assertion markup language (SAML).
-    * **Metadata**: this is the data provided by the identity provider to sync the settings properly.
-      * Limitation: The metadata file supports one certificate only. Before changing a certificate when it expires, first remove the old certificate from your IDP to ensure successful authentication.
+    * **Metadata**: this is the data provided by the IdP to sync the settings properly.
+      * Limitation: Only one certificate is supported. Before adding a new certificate to the metadata file (for example, when the old one expires), first remove the old certificate from your IdP to ensure successful authentication.
   
  
-    * **User Default Organization Role**: this is the role given to [users](administration/users/) who sign in using the Identity Provider (Viewer/Editor). Roles can be defined only by organization or by account, not both.
+    * **User Default Organization Role**: this is the role given to [users](administration/users/) who sign in using the IdP (Viewer/Editor). Roles can be defined only by organization or by account, not both.
     * **User Allowed Accounts**: the [accounts](https://docs.spot.io/administration/organizations/) the user has access to (<i>Default Account</i> or <i>All Accounts</i>).
     
    <details>
