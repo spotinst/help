@@ -23,6 +23,7 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
 *  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
+*  Kubernetes 1.3.3 if you want Ocean to apply automatic recommendations without having to restart pods.
 
 ```sh
 
@@ -42,7 +43,9 @@ Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod u
 
 The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
 
-Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
+Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. **Ocean automatically applies these recommendations to your workloads**. 
+
+>**Tip**: if you have Kubernetes 1.3.3 or above and VPA 1.0.0 or above, Ocean automatically applies the recommendations without having to restart pods.
 
 Recommendations for decreasing and increasing memory or CPU requests are based on the percentile defined for the cluster (the default is the 85th percentile).
 
