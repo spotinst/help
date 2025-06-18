@@ -91,7 +91,8 @@ To create/edit a right-sizing rule:
    * Workloads with more than 1 replica only.
    * No restart.
 
-   >**Note**: if you have Kubernetes 1.33 or above and VPA 1.0.0 or above, Ocean automatically applies the recommendations without having to restart pods.
+   >**Note**: if you have Kubernetes 1.33 or above and VPA 1.0.0 or above, Ocean can (in most cases) automatically apply the recommendations without having to restart pods. For details about limitations for this feature, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/).
+
    
 8. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
 9. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
