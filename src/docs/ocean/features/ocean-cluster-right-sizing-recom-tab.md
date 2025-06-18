@@ -90,14 +90,17 @@ To create/edit a right-sizing rule:
    * All manifests.
    * Manifests with more than 1 replica only.
    * No restart.
-7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
-8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
+
+   >**Note**: if you have Kubernetes 1.3.3 or above and VPA 1.0.0 or above, Ocean automatically applies the recommendations without having to restart pods.
+   
+8. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
+9. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
    * If a recommendation is above the set boundaries, automatic right-sizing will apply the recommendation using the maximum value configured in the rule.
    * If a recommendation is below the set boundaries, automatic right-sizing will apply the recommendation using the minimum value configured in the rule.
-9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-10. Ocean supports automatic right-sizing for HPA-associated workloads. To enable, click **Apply HPA on associated workload**.
+10. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
+11. Ocean supports automatic right-sizing for HPA-associated workloads. To enable, click **Apply HPA on associated workload**.
 
-11. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
+12. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
      *  In the Auto-attach area, select required namespaces / labels.
    
 <img width="500" src="https://github.com/user-attachments/assets/dae038b7-6dda-4a85-8e2f-bea04c12f517" />
