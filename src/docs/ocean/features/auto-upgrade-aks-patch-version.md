@@ -131,6 +131,8 @@ After the update is complete, a new entry is added to the auto-upgrades history 
 
 Use this option if you want to auto-upgrade systems node pools immediately (rather than schedule an upgrade).
 
+Ocean shows only the system node pools that are not updated.
+
 1. Click **Create an Upgrade > System Node Pools Upgrade**.
 2. Click the Upgrade system node pools box, and then select required system node pools from the list.
 3. Click **Update Now**.
