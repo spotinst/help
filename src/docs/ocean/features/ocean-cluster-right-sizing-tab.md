@@ -30,7 +30,8 @@ helm repo add spot https://charts.spot.io
 helm repo update 
 helm install <my-release-name> spot/ocean-vpa
 ```
-*  Kubernetes 1.33 and above if you want Ocean to apply automatic recommendations without having to restart pods.
+*  Kubernetes 1.33 and above if you want Ocean to apply automatic recommendations without (barring Kubernetes limitations) having to restart pods. For a detailed explanation of changing CPU and memory
+requests and limits assigned to a container without recreating pods, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/).
 
 >**Note**: To turn on automatic right-sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
@@ -46,8 +47,7 @@ The output produces a single point-in-time data point for each pod. Ocean then a
 
 Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. **Ocean automatically applies these recommendations to your workloads**. 
 
->**Important**: if you have Kubernetes 1.33 or above and VPA 1.0.0 or above, Ocean automatically applies the recommendations without having to restart pods. For a detailed explanation of changing CPU and memory
-requests and limits assigned to a contaiber without recreating pods, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/).
+>**Important**: if you have Kubernetes 1.33 or above and VPA 1.0.0 or above, Ocean automatically applies the recommendations without having to restart pods. 
 
 Recommendations for decreasing and increasing memory or CPU requests are based on the percentile defined for the cluster (the default is the 85th percentile).
 
