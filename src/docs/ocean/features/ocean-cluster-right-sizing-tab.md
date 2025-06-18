@@ -23,7 +23,6 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
 *  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
-*  Kubernetes 1.33 if you want Ocean to apply automatic recommendations without having to restart pods.
 
 ```sh
 
@@ -31,6 +30,8 @@ helm repo add spot https://charts.spot.io
 helm repo update 
 helm install <my-release-name> spot/ocean-vpa
 ```
+*  Kubernetes 1.33 and above if you want Ocean to apply automatic recommendations without having to restart pods.
+
 >**Note**: To turn on automatic right-sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
 ##  How It Works 
