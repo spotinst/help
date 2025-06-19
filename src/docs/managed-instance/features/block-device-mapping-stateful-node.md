@@ -1,14 +1,16 @@
-# Block Device Mapping
+<meta name="robots" content="noindex">
 
-You have the option to configure Block Device Mapping settings for an Elastigroup to provision and handle volumes for your instances. Block device mapping can be used to configure the root volume of the instance as well as data volumes. Elastigroup configured Block Device mappings will override AMI Block device mappings per device name.
+# Block Device Mapping (BDM)
+
+You can configure BDM settings for a stateful node to provision and handle volumes for your instances. You can configure the root volume of the instance as well as data volumes. Stateful Node configured BDMs will override AMI BDMs per device name.
 
 For additional information, you can check out the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html).
 
-Block Device Mapping settings can be added or managed using the API while creating an Elastigroup or as an update to an Elastigroup, or using the UI at the last step of the Creation Wizard – in the Review Tab.
+You can manage BDM via the Spot API with create/update Stateful Node, or via the Spot console in the last step of the Creation Wizard (in the Review Tab).
 
-## Implement Block Device Mapping
+## Implement Block Device Mapping via the Console
 
-1. Navigate to the relevant Elastigroup and open the creation wizard to enter the Review Tab via Actions –> Edit configuration –> Review Tab –> JSON –> Edit mode.
+1. Open the creation wizard for the required stateful node via **Actions > Edit configuration > Review Tab > JSON > Edit mode**.
 
 <img src="/elastigroup/_media/compute-blockdevice-01.png" />
 
