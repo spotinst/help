@@ -22,7 +22,11 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 * Ocean cluster managing your Kubernetes worker nodes. 
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
-*  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
+
+*  Kubernetes 1.33 and above if you want Ocean to apply automatic recommendations without having to restart pods (subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations)). For a detailed explanation of changing CPU and memory
+requests and limits assigned to a container without recreating pods, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/).
+
+*  Vertical Pod Autoscaler project (VPA) 1.0.0 and above installed on your cluster (Spot recommends to upgrade to version 1.4.1 to apply automatic recommendations without having to restart pods). If the VPA is not already running on your cluster, run the following helm commands:
 
 ```sh
 
@@ -30,8 +34,6 @@ helm repo add spot https://charts.spot.io
 helm repo update 
 helm install <my-release-name> spot/ocean-vpa
 ```
-*  Kubernetes 1.33 and above if you want Ocean to apply automatic recommendations without (barring Kubernetes limitations) having to restart pods. For a detailed explanation of changing CPU and memory
-requests and limits assigned to a container without recreating pods, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/).
 
 >**Note**: To turn on automatic right-sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
