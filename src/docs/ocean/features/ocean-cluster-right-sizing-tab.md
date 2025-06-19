@@ -23,10 +23,9 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
 
-*  Kubernetes 1.33 and above if you want Ocean to apply automatic recommendations without having to restart pods (subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations)). For a detailed explanation of changing CPU and memory
-requests and limits assigned to a container without recreating pods, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/).
+*  Kubernetes 1.33 and above if you want to apply automatic recommendations without having to restart pods (subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations)).
 
-*  Vertical Pod Autoscaler project (VPA) 1.0.0 and above installed on your cluster (Spot recommends to upgrade to version 1.4.1 to apply automatic recommendations without having to restart pods). If the VPA is not already running on your cluster, run the following helm commands:
+*  Vertical Pod Autoscaler project (VPA) 1.0.0 and above installed on your cluster (Spot recommends to [upgrade to version 1.4.1](https://docs.spot.io/ocean/features/) to if you want to apply automatic recommendations without having to restart pods). If the VPA is not already running on your cluster, run the following helm commands:
 
 ```sh
 
@@ -47,9 +46,9 @@ Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod u
 
 The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
 
-Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. **Ocean automatically applies these recommendations to your workloads**. 
+Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. **Ocean can automatically apply these recommendations to your workloads**. 
 
->**Important**: if you have Kubernetes 1.33 or above and VPA 1.0.0 or above, Ocean automatically applies the recommendations without having to restart pods. 
+>**Important**: if you have Kubernetes 1.33 or above and VPA 1.4.1 or above, Ocean can automatically apply the recommendations without having to restart pods. 
 
 Recommendations for decreasing and increasing memory or CPU requests are based on the percentile defined for the cluster (the default is the 85th percentile).
 
