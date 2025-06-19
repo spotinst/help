@@ -25,7 +25,7 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 
 *  Kubernetes 1.33 and above if you want the option to apply automatic recommendations without having to restart pods (subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations)).
 
-*  Vertical Pod Autoscaler project (VPA) 1.0.0 and above installed on your cluster. [Upgrade to version 1.4.1](https://docs.spot.io/ocean/features/) if you want the option to apply automatic recommendations without having to restart pods). If the VPA is not already running on your cluster, run the following helm commands:
+*  Vertical Pod Autoscaler project (VPA) 1.0.0 and above installed on your cluster. [Upgrade to version 1.4.1](https://docs.spot.io/ocean/features/) if you want the option to apply automatic recommendations without having to restart pods. If the VPA is not already running on your cluster, run the following helm commands:
 
 ```sh
 
