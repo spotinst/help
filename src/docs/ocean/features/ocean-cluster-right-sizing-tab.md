@@ -27,12 +27,12 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 
 *  Vertical Pod Autoscaler project (VPA) 1.4.1. If you need to upgrade, see [Upgrade VPA](link TBD). If the VPA is not already running on your cluster, run the following helm commands:
 
-```sh.
-
-helm repo add spot https://charts.spot.io 
-helm repo update 
-helm install <my-release-name> spot/ocean-vpa
-```
+    ```sh.
+    
+    helm repo add spot https://charts.spot.io 
+    helm repo update 
+    helm install <my-release-name> spot/ocean-vpa
+    ```
 
 >**Note**: To turn on automatic right-sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
