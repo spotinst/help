@@ -2,27 +2,26 @@
 
 # Block Device Mapping (BDM)
 
-You can configure BDM settings for a stateful node to provision and handle volumes for your instances. You can configure the root volume of the instance as well as data volumes. Stateful Node configured BDMs will override AMI BDMs per device name.
+Spot's Stateful Node supports [Block Device Mapping for AWS EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html).
 
-For additional information, you can check out the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html).
+You can configure a stateful node's BDM to provision and manage root and data volumes. 
+The configured BDM overrides an AMI BDM per device name.
 
-You can manage BDM via the Spot API with create/update Stateful Node, or via the Spot console in the last step of the Creation Wizard (in the Review Tab).
+## Set BDM for a Stateful Node
 
-## Implement Block Device Mapping via the Console
+To set BDM for a stateful node via the console:
 
-1. Open the creation wizard for the required stateful node via **Actions > Edit configuration > Review Tab > JSON > Edit mode**.
+  1. Open the creation wizard for the required stateful node via **Actions > Edit configuration > Review Tab > JSON > Edit mode**.
+        
+  2. Add the block device mappings JSON block in the `launchSpecification` object `(compute.launchSpecification.blockDeviceMappings)`.
 
-2. Add the block device mappings JSON block in the `launchSpecification` object `( compute.launchSpecification.blockDeviceMappings )`.
+To set BDM for a stateful node via the API (under `managedInstance/compute/launchSpecification/blockDeviceMappings`)
 
-## Implement Block Device Mapping via the Spot API
+* [Create Stateful Node](https://docs.spot.io/api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceCreate)
 
-managedInstance/compute/launchSpecification/blockDeviceMappings
+* [Edit Stateful Node](https://docs.spot.io/api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceUpdate)
 
-[Create Stateful Node](https://docs.spot.io/api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceCreate)
-[Edit Stateful Node](https://docs.spot.io/api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceUpdate)
-
-
-```json
+   ```json
         "blockDeviceMappings": [
           {
             "deviceName": "/dev/xvdcz",
@@ -38,35 +37,17 @@ managedInstance/compute/launchSpecification/blockDeviceMappings
             }
           }
         ],
-```
+  ```
+To remove BDM from a stateful node:
 
-**Use Case 1 – Deploy a group with an existing volume in case of a spot termination/recycle**
+   1. Replace the values under the "blockDeviceMappings" key with null:
 
-Block device mapping (BDM) allows you create a new instance which is based on an existing Snapshot. While using the method above, you can specify an existing snapshotId so that the volume will be created based on the provided Snapshot.
+     `"blockDeviceMappings": null,`
 
-**Use Case 2 – Modify the type/size of a device**
+   2. Apply the changes, and optionally roll the stateful node.
 
-With BDM you can manage the volume type/size dynamically by modifying the size/type according to the current need.
 
-```json
-{
-  "deviceName": "/dev/sda1",
-  "ebs": {
-    "deleteOnTermination": "true",
-    "volumeSize": 24,
-    "volumeType": "gp2"
-  }
-}
-```
+To deploy a stateful node with an existing volume for a spot termination/recycle.
 
-## Remove a Block Device Mapping
-
-1. In case you have a block device mapping setting in your Elastigroup, and you would like to disable it, go to the relevant ElastiGroup ID –> Actions –> Edit configuration –> Review.
-2. Click the `Edit Mode` toggle, and now simply replace the values under the "blockDeviceMappings" key with null:
-
-`"blockDeviceMappings": null,`
-
-3. Click Update to apply the changes, and optionally Roll your group.
-
-The implementation is the same if you are using the Update API.
+   * Specify a `snapshotId` so that a new instance is create a new instance based on the existing Snapshot.
 
