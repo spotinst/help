@@ -12,82 +12,32 @@ You can manage BDM via the Spot API with create/update Stateful Node, or via the
 
 1. Open the creation wizard for the required stateful node via **Actions > Edit configuration > Review Tab > JSON > Edit mode**.
 
-<img src="/elastigroup/_media/compute-blockdevice-01.png" />
-
 2. Add the block device mappings JSON block in the `launchSpecification` object `( compute.launchSpecification.blockDeviceMappings )`.
 
-Example: 'blockDeviceMappings' object overriding the settings for the drives: /dev/sdf , /dev/sdm , /dev/sda1. In this case, the root volume is `sda1`. The root volume can also be `xvda`.
+## Implement Block Device Mapping via the Spot API
+
+managedInstance/compute/launchSpecification/blockDeviceMappings
+
+[Create Stateful Node](https://docs.spot.io/api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceCreate)
+[Edit Stateful Node](https://docs.spot.io/api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceUpdate)
+
 
 ```json
-{
-  "blockDeviceMappings": [
-    {
-      "deviceName": "/dev/sdm",
-      "ebs": {
-        "deleteOnTermination": true,
-        "volumeSize": 80,
-        "volumeType": "gp2"
-      }
-    },
-    {
-      "deviceName": "/dev/sdf",
-      "ebs": {
-        "deleteOnTermination": true,
-        "snapshotId": "snap-09e8dccc6a7512345",
-        "volumeSize": 500,
-        "volumeType": "gp2"
-      }
-    },
-    {
-      "deviceName": "/dev/sda1",
-      "ebs": {
-        "deleteOnTermination": true,
-        "volumeSize": 48,
-        "volumeType": "gp2"
-      }
-    }
-  ]
-}
-```
-
-Alternatively, you can use the Update API with the following Body:
-
-```json
-{
-  "group": {
-    "compute": {
-      "launchSpecification": {
         "blockDeviceMappings": [
           {
-            "deviceName": "/dev/sdm",
+            "deviceName": "/dev/xvdcz",
             "ebs": {
+              "iops": 0,
+              "throughput": 125,
               "deleteOnTermination": true,
-              "volumeSize": 80,
-              "volumeType": "gp2"
-            }
-          },
-          {
-            "deviceName": "/dev/sdf",
-            "ebs": {
-              "deleteOnTermination": true,
-              "snapshotId": "snap-09e8dccc6a7512345",
-              "volumeSize": 500,
-              "volumeType": "gp2"
-            }
-          },
-          {
-            "deviceName": "/dev/sda1",
-            "ebs": {
-              "deleteOnTermination": true,
-              "volumeSize": 24,
-              "volumeType": "gp2"
+              "encrypted": true,
+              "volumeSize": 12,
+              "volumeType": "gp2",
+              "kmsKeyId": "string",
+              "snapshotId": "string"
             }
           }
-        ]
-      }
-    }
-  }
-}
+        ],
 ```
 
 **Use Case 1 – Deploy a group with an existing volume in case of a spot termination/recycle**
