@@ -1,11 +1,12 @@
 <meta name="robots" content="noindex">
 
-# Block Device Mapping (BDM)
+# Block Device Mapping (BDM) for Stateful Node Instances
 
-Spot's Stateful Node supports [Block Device Mapping for AWS EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html).
+Spot's Stateful Node supports [Block Device Mapping (BDM) for AWS EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-block-device-mapping.html).
 
-You can configure a stateful node's BDM to provision and manage root and data volumes. 
-The configured BDM overrides an AMI BDM per device name.
+You can configure a Spot stateful node's BDM to provision and manage instance root and data volumes. 
+
+>Note: An instance BDM overrides an AMI BDM per device name.
 
 ## Set BDM for a Stateful Node
 
@@ -49,5 +50,5 @@ To remove BDM from a stateful node:
 
 To deploy a stateful node with an existing volume for a spot termination/recycle.
 
-   * Specify a `snapshotId` so that a new instance is create a new instance based on the existing Snapshot.
+   * Specify a `snapshotId` so that a new instance is created based on the existing Snapshot.
 
