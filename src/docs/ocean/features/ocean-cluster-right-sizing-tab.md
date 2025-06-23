@@ -16,15 +16,14 @@ To opt-in and turn on the full capabilities of this powerful feature, [Contact S
 
 ##  Prerequisites
 
-Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, you will need: 
+Before you attempt to fine-tune your cluster resources according to Ocean recommendations, you will need: 
 
 *  A Spot account. 
 * Ocean cluster managing your Kubernetes worker nodes. 
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
 
-*  Kubernetes 1.33 and above; for the option to apply automatic recommendations without having to restart pods (subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations)).
-
+*  Kubernetes 1.33 and above for the option to apply automatic recommendations without having to restart pods.
 *  Vertical Pod Autoscaler project (VPA) 1.4.1. If you need to upgrade, see [Upgrade VPA](link TBD). If the VPA is not already running on your cluster, run the following helm commands:
 
     ```sh.
@@ -50,9 +49,9 @@ Using the per-workload container aggregated data points, Ocean makes recommendat
 
 <BR>
 
-**Ocean can automatically apply these recommendations to your workloads**. 
+Ocean can automatically apply these recommendations to your workloads according to your requirements. 
 
->**Note**: if you have Kubernetes 1.33 or above, Ocean can automatically apply the recommendations without having to restart pods.
+If you have Kubernetes 1.33 or above (see Prerequisites), Ocean provides the option to change the CPU / memory allocation of container(s) within a running Pod while potentially avoiding application disruption. As such, Ocean automatically applies its recommendations without restarting the pods. This feature is subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations).
 
 Recommendations for decreasing and increasing memory or CPU requests are based on the percentile defined for the cluster (the default is the 85th percentile).
 
