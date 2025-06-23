@@ -73,39 +73,46 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
+2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or edit an existing rule).
 
-<img width="500" src="https://github.com/user-attachments/assets/44cf0e73-8bd0-4dbe-b383-a28abf6c31cc" />
+     <img width="500" src="https://github.com/user-attachments/assets/44cf0e73-8bd0-4dbe-b383-a28abf6c31cc" />
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
-4.   Select when to apply the recommendation by selecting one of the following options: 
+4.   Select when to apply the recommendation: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **Specific time**: You select when to apply the recommendation after it becomes available.
 
-![rule-when-to-apply-3](https://github.com/user-attachments/assets/5cb76163-9f33-477e-95d6-b99b36f0f200)
+          <br>
+          <img width="500" src="https://github.com/user-attachments/assets/31f94101-ee02-4cc4-b699-a81eb2130400" />
 
 5. Turn on **Exclude preliminary recommendation** if you want to suppress recommendations as long as the workload has preliminary status (4 days).
-6. Select one of the **Restart replicas** options:
-   * All workloads.
-   * Workloads with more than 1 replica only.
-   * No restart.
+6. Select one of the **Pod modification methods**:
+   * Update workloads live.
+   * Restart all attached workloads.
+   * Restart all attached workloads with more than 1 replica only.
+   * Update workloads on recreation without triggering a restart.
 
-   >**Note**: if you have Kubernetes 1.33 or above, Ocean can (in most cases) automatically apply the recommendations without having to restart pods. For feature limitations, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations).
+    >**Note**: if you have Kubernetes 1.33 or above, Ocean can (in most cases) automatically apply the recommendations without having to restart pods. For feature limitations, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations).
    
-8. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
-9. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
+7. Set the recommendation baseline (right-sizing percentile) for the workload to calculate the vCPU and memory recommendations.
+The lower the percentile, the stronger the recommendations. By default, both vCPU and memory use the 85th percentile.
+
+>**Important:** Changing the percentile setting will impact the recommendations that were already applied (this may take a few minutes to update).
+
+8. Click **Set the resources percentage change to apply the recommendation** (CPU and Memory percentage thresholds). This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
+9. Click **Set recommendation ranges for resources**, and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
    * If a recommendation is above the set boundaries, automatic right-sizing will apply the recommendation using the maximum value configured in the rule.
    * If a recommendation is below the set boundaries, automatic right-sizing will apply the recommendation using the minimum value configured in the rule.
-10. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-11. Ocean supports automatic right-sizing for HPA-associated workloads. To enable, click **Apply HPA on associated workload**.
+11. Click **Set overhead for resources**, and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
+12. Ocean supports automatic right-sizing for HPA-associated workloads. Click **Apply HPA on associated workload** to enable.
 
-12. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
+13. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
      *  In the Auto-attach area, select required namespaces / labels.
    
-<img width="500" src="https://github.com/user-attachments/assets/dae038b7-6dda-4a85-8e2f-bea04c12f517" />
+        <img width="500" src="https://github.com/user-attachments/assets/95b7724c-4be7-4da4-86df-45b9b3d5d466" />
 
-12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+12. A saved rule appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
     > - Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
@@ -127,7 +134,7 @@ To manually attach a rule:
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
 
-![attach-rule-to-workload](https://github.com/user-attachments/assets/be315afa-0ef8-4d30-b1f3-422e8caf8633)
+     ![attach-rule-to-workload](https://github.com/user-attachments/assets/be315afa-0ef8-4d30-b1f3-422e8caf8633)
 
 3.   You can either attach an existing or new rule you create from scratch (a new rule will be attached to the workload(s) you selected earlier):
 
@@ -162,9 +169,9 @@ To acknowledge a workload rollback:
 
 1. Click **Acknowledge Rollback** to view all the workloads with the rollback status.
 
-![right-sozomg-rollback-dialog](https://github.com/user-attachments/assets/4bb206f5-73e3-4b26-b7fb-19e5e519505f)
+   ![right-sozomg-rollback-dialog](https://github.com/user-attachments/assets/4bb206f5-73e3-4b26-b7fb-19e5e519505f)
 
-* The rollback drill-down list contains the following information:
+* The rollback list contains the following information:
    * Workload Name.
    * Namespace.
    * CPU Update in vCPUs (before and after rollback).
@@ -176,27 +183,15 @@ To acknowledge a workload rollback:
 
 The workloads are displayed in the [Workloads Optimization List](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list) without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
 
-### Set the vCPU/Memory Percentile
-
-You can select the right-sizing percentile settings to calculate the vCPU and memory recommendations.
-The lower the percentile, the stronger the recommendations.
-
-By default:
-
-*  vCPU: Right-sizing uses the 85th percentile.
-*  Memory: Right-sizing uses the maximum value.
-
->**Important:** Changing the percentile setting will impact the recommendations that were already applied (this may take a few minutes to update).
+### Set the vCPU/Memory Percentile for all Workloads in the Cluster
 
 To change settings:
 
-1. Click **Settings** above the [workloads optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+1. Click **Cluster Settings** above the [workloads optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+ 
+2. Click **vCPU** or **Memory** as required (vCPU shown in the example).
 
- <img width="500" src="https://github.com/user-attachments/assets/5bcddc81-c527-4f87-a897-369e911bedcc" />
-
-2. Click the arrow on the right for **vCPU** or **Memory** as required (vCPU shown in the example).
-
- <img width="500" src="https://github.com/user-attachments/assets/59b2e755-04d8-4967-9b39-9fc0904e5231" />
+   <img width="500" src="https://github.com/user-attachments/assets/59b2e755-04d8-4967-9b39-9fc0904e5231" />
 
 3. Change the current value(s) and save.
 
