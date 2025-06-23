@@ -23,7 +23,7 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
 
-*  Kubernetes 1.33 and above if you want the option to apply automatic recommendations without having to restart pods (subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations)).
+*  Kubernetes 1.33 and above; for the option to apply automatic recommendations without having to restart pods (subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations)).
 
 *  Vertical Pod Autoscaler project (VPA) 1.4.1. If you need to upgrade, see [Upgrade VPA](link TBD). If the VPA is not already running on your cluster, run the following helm commands:
 
