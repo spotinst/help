@@ -183,6 +183,8 @@ This panel contains a set of widgets that display categorized information on you
 <!--! new-->
 ## Autoscaling Activity Panel 
 
+
+
 <img width=800 src="https://github.com/user-attachments/assets/e077fe98-6c2b-4be1-9c6d-1cb97a3404f6" />
 
 The Autoscaling Activity panel contains the following widgets:  
