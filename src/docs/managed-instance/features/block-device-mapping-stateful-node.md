@@ -41,7 +41,7 @@ To set BDM for a stateful node via the API (under `managedInstance/compute/launc
   ```
 To modify the volume type or size of a device:
 
-Change the size/type ( `volumeType`, `volumeSize`) according to your requirements.
+  * Change the size/type ( `volumeType`, `volumeSize`) according to your requirements.
 
 
 To remove BDM from a stateful node:
