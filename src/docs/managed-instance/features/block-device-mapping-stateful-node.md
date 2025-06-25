@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Block Device Mapping (BDM) for Stateful Node Instances
+# Block Device Mapping (BDM) for Stateful Nodes
 
 Spot's Stateful Node supports [Block Device Mapping (BDM) for AWS EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-block-device-mapping.html).
 
@@ -39,6 +39,11 @@ To set BDM for a stateful node via the API (under `managedInstance/compute/launc
           }
         ],
   ```
+To modify the volume type or size of a device:
+
+Change the size/type ( `volumeType`, `volumeSize`) according to your requirements.
+
+
 To remove BDM from a stateful node:
 
    1. Replace the values under the "blockDeviceMappings" key with null:
