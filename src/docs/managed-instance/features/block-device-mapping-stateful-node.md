@@ -1,6 +1,7 @@
-<meta name="robots" content="noindex">
-
 # Block Device Mapping (BDM) for Stateful Nodes
+
+Cloud service provider relevance: <font color="#FC01CC">AWS</font>
+
 
 Spot's Stateful Node supports [Block Device Mapping (BDM) for AWS EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-block-device-mapping.html).
 
