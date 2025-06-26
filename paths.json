@@ -386,6 +386,7 @@
   "/managed-instance/azure/tutorials/set-health-checks-and-autohealing.md",
   "/managed-instance/azure/tutorials/view-details.md",
   "/managed-instance/features/README.md",
+  "/managed-instance/features/block-device-mapping-stateful-node.md",
   "/managed-instance/features/commitments-setup-stateful-aks.md",
   "/managed-instance/features/commitments-stateful-aks.md",
   "/managed-instance/features/data-volume-persistence.md",
