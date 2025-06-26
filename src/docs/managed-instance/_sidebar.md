@@ -8,6 +8,7 @@
       - [Import a Stateful Node](managed-instance/getting-started/join-an-existing-managed-instance)
       - [Upgrade an Elastigroup to Stateful Nodes](managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance)
     - [Features](managed-instance/features/)
+      - [BDM for Stateful Nodes]()
       - [Data Volume Persistence](managed-instance/features/data-volume-persistence)
       - [Network Persistence](managed-instance/features/network-persistence)
       - [Root Volume Persistence](managed-instance/features/root-volume-persistence)
