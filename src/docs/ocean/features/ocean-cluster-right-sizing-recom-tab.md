@@ -183,7 +183,11 @@ To acknowledge a workload rollback:
 
 The workloads are displayed in the [Workloads Optimization List](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list) without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
 
-### Set the vCPU/Memory Percentile for all Workloads in the Cluster
+### Set the vCPU/Memory Percentiles at Cluster Level
+
+These are the global percentile settings at the cluster level and apply to all workloads.
+
+Any percentile change you make for a workload in a right-sizing rule overrides the setting at cluster level.
 
 To change the settings:
 
