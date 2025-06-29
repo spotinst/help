@@ -119,7 +119,7 @@ This panel contains two widgets:
 * vCPU usage in the last 2 weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last 2 weeks.
 * Memory usage in the last 2 weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last 2 weeks.
 
-<img width="1000" src="https://github.com/user-attachments/assets/a94b2d5f-b191-4142-acbc-085809aa21d4" />
+<img width="1000" src="https://github.com/user-attachments/assets/1f733141-b48f-41b5-9c78-bcaf480e96ec" />
 
 Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view usage details:
 >**Note**: The default **85th percentile vCPU usage** and **Maximum memory usage** options are used to calculate the right-sizing recommendations for all usage parameters.
@@ -145,7 +145,8 @@ Hover over a data point in the **Memory usage in the last 2 weeks** widget to vi
 ## Related Topics
 
 * [Right-Sizing Troubleshooting](https://docs.spot.io/ocean/features/troubleshoot-right-sizing)
-* [Right-Sizing Rules and Reommendations](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab)
+* [Right-Sizing Rules and Recommendations](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab)
+* [Right-Sizing Savings Panel](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab)
 
 
 
