@@ -98,7 +98,7 @@ To create or edit a right-sizing rule:
 7. Set the recommendation baseline (right-sizing percentile) for the workload to calculate the vCPU and memory recommendations.
 The lower the percentile, the stronger the recommendations. By default, both vCPU and memory use the 85th percentile.
 
->**Important:** Changing the percentile setting will impact the recommendations that were already applied (this may take a few minutes to update).
+>**Important:** Changing the percentiles will impact any recommendations that were already applied (this may take a few minutes to update) and will also override the values set at cluster level (for this workload).
 
 8. Click **Set the resources percentage change to apply the recommendation** (CPU and memory percentage thresholds). This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
 9. Click **Set recommendation ranges for resources**, and enter the upper and lower boundary values for CPU (millicpu) and memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
@@ -169,7 +169,7 @@ To acknowledge a workload rollback:
 
 1. Click **Acknowledge Rollback** to view all the workloads with the rollback status.
 
-   ![right-sozomg-rollback-dialog](https://github.com/user-attachments/assets/4bb206f5-73e3-4b26-b7fb-19e5e519505f)
+ <img width="700" src="https://github.com/user-attachments/assets/310675c3-29eb-4259-b886-d89a2683292a" />
 
 * The rollback list includes the following information:
    * Workload Name.
@@ -185,9 +185,9 @@ The workloads are displayed in the [Workloads Optimization List](https://docs.sp
 
 ### Set the vCPU/Memory Percentiles at Cluster Level
 
-These are the global percentile settings at the cluster level and apply to all workloads.
+These are the global percentile settings at the cluster level and apply to all workloads in the cluster.
 
-Any percentile change you make for a workload in a right-sizing rule overrides the setting at cluster level.
+Any percentile change you make for a specific workload in a right-sizing rule overrides the setting at cluster level.
 
 To change the settings:
 
