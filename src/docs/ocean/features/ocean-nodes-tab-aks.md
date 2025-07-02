@@ -83,6 +83,7 @@ To start an immediate node roll:
 4. Click **Terminate** to confirm the action.
 
 >**Note**: VM termination may take several minutes to complete.
+>
 
 
 
