@@ -19,8 +19,6 @@ To check if your Control Plane version needs upgrading, access the cluster overv
 
    <img src="https://docs.spot.io/ocean/_media/check-need-to-uprade.png" />
 
-![control-plane -version](https://github.com/user-attachments/assets/6776f5a7-bea6-4a46-9068-daaf0f1c4575)
-
 The version can have one of the following statuses:
 
 * Green: The control plane is upgraded to the latest patch version.
@@ -36,8 +34,6 @@ provide support updates for Kubernetes minor version upgrades.
   >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Update** button in the center of the screen. Otherwise, lists are displayed as shown below.
 
 <img src="https://docs.spot.io/ocean/_media/autoupgrades-history.png" />
-
-![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
 The auto-upgrades history list for completed runs is displayed at the top of the screen with these attributes:
 
@@ -55,8 +51,6 @@ The auto-upgrades history list for completed runs is displayed at the top of the
 
 <img src="https://docs.spot.io/ocean/_media/autoupgrade-schedules.png" />
 
-![screen-schedule](https://github.com/user-attachments/assets/6384776b-ed1b-4a6b-b86a-7ab5f58db8c5)
-
 The configured schedules are displayed at the bottom of the screen with these attributes:
 
 * Schedule: for example, at 11:00 PM only on Sunday.
@@ -71,13 +65,10 @@ To schedule an auto-upgrade:
 
   >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
   > <img src="https://docs.spot.io/ocean/_media/_media/check-need-to-uprade.png" />
-  > <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
 
 3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
 
    <img src="https://docs.spot.io/ocean/_media/select-what-to-upgrade.png" />
- 
-   <img src="https://github.com/user-attachments/assets/1f69eb8f-c964-4a09-a739-d0f89c4b74a0" />
 
 4. If you need to upgrade system node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
 
@@ -90,9 +81,7 @@ To schedule an auto-upgrade:
 
     <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
 
-    <img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
-
-   * Select the Batch size percentage (1 - 100%).
+     * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
    * Optionally, turn on the Pod Disruption Budget (PDB) option.
    * Optionally, turn on the Restrict Scale-Down option.
@@ -100,18 +89,17 @@ To schedule an auto-upgrade:
 6. Select whether to schedule the auto upgrade once a day or at a specific time.
 
 >**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed.
+>
+> <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
 
-  <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
 
-  <img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
+  
 7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
      <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to-frequency.png" />
 
-     <img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
-
-8. Click **Schedule**.
+ 8. Click **Schedule**.
 
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
