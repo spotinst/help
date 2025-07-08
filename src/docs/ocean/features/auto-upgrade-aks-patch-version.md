@@ -64,7 +64,8 @@ To schedule an auto-upgrade:
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
   >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
-  > <img src="https://docs.spot.io/ocean/_media/auto-upgrade-azure-feature.png" />
+  
+  <img src="https://docs.spot.io/ocean/_media/auto-upgrade-azure-feature.png" /> 
 
   https://github.com/spotinst/help/blob/doc-2777/src/docs/ocean/_media/auto-upgrade-azure-feature.png
 
