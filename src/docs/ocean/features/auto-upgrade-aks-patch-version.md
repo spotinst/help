@@ -11,7 +11,7 @@ Spot recommends you schedule once daily and let Ocean manage your upgrades.
 
 ## Check if you need to Upgrade
 
-To check if your Control Plane version needs upgrading, access the cluster overview tab:
+To check if your control plane version needs upgrading, access the cluster overview tab:
 
 1. Click **Ocean > Cloud Clusters** in the left main menu. 
 2. Select a cluster from the list of clusters.
@@ -24,7 +24,7 @@ The version can have one of the following statuses:
 * Green: The control plane is upgraded to the latest patch version.
 * Yellow: The control plane patch version can be upgraded to the latest available version.
 * Red: The control plane patch version needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not 
-provide support updates for Kubernetes minor version upgrades.
+provide support for Kubernetes minor version upgrades.
 * Gray: The Ocean controller is not valid or is not reporting, so there is no indication of the control plane patch version. See [Troubleshoot the Ocean Controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts).
 
 ## View the Auto-Upgrades History and Schedules
@@ -78,7 +78,7 @@ To schedule an auto-upgrade:
     >**Note**: Rolls
     > - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
     > - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
-    > - If an option appears grayed, you have already run it and cannot select it again.
+    > - If an option appears grayed out, you have already run it and cannot select it again.
 
     <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
 
@@ -89,7 +89,7 @@ To schedule an auto-upgrade:
 
 6. Select whether to schedule the auto upgrade once a day or at a specific time.
 
->**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed.
+>**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed out.
 >
 > <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
 
@@ -137,8 +137,6 @@ To delete an auto-upgrade schedule:
 
 1. Click the garbage bin icon to the right of the entry for the schedule.
 2. In the confirmation window, type **Delete** in the field provided and then click **Delete**.
-3. Click **Schedule**. The schedule will appear at the bottom of the screen in the auto-upgrades schedules list. 
-
   
 
 
