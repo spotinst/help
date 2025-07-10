@@ -9,7 +9,7 @@ You can immediately run an auto-upgrade of an AKS patch version or schedule an a
 
 Spot recommends you schedule once daily and let Ocean manage your upgrades.
 
-## Check if you need to Upgrade
+## Check if you Need to Upgrade
 
 To check if your control plane version needs upgrading, access the cluster overview tab:
 
@@ -82,7 +82,7 @@ To schedule an auto-upgrade:
 
     <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
 
-     * Select the Batch size percentage (1 - 100%).
+   * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
    * Optionally, turn on the Pod Disruption Budget (PDB) option.
    * Optionally, turn on the Restrict Scale-Down option.
@@ -93,9 +93,6 @@ To schedule an auto-upgrade:
 >
 > <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
 
-
-
-  
 7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
      <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to-frequency.png" />
