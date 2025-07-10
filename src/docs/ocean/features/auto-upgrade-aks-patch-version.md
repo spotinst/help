@@ -65,8 +65,8 @@ To schedule an auto-upgrade:
 
   >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
   
-  <img src="https://docs.spot.io/ocean/_media/auto-upgrade-azure-feature.png" /> 
-
+   <img src="https://docs.spot.io/ocean/_media/auto-upgrade-azure-feature.png" />
+   
 3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
 
    <img src="https://docs.spot.io/ocean/_media/select-what-to-upgrade.png" />
