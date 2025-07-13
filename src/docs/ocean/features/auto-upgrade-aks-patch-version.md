@@ -7,6 +7,8 @@ You can immediately run an auto-upgrade of an AKS patch version or schedule an a
 * Control plane upgrade: Upgrade the control plane patch version only.
 * Control plane upgrade and Ocean roll: Upgrade the control plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the updated version.
 
+You can also roll your system node pools in either of the above options, or you can update them immediately on their own.
+
 Spot recommends you schedule once daily and let Ocean manage your upgrades.
 
 ## Check if you Need to Upgrade
@@ -72,7 +74,7 @@ To schedule an auto-upgrade:
 
    <img src="https://docs.spot.io/ocean/_media/select-what-to-upgrade.png" />
 
-4. If you need to upgrade system node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
+4. If you need to upgrade system node pools, click **Upgrade system node pools**, and then select required node pools from the list.
 
 5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
