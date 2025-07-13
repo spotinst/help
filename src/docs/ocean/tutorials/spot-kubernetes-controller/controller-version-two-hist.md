@@ -1,9 +1,14 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.63] (v2.0.70) - 2025-07-13
+
+### Added
+* Ocean controller readonly installation mode.
+
 ## Chart Version [0.1.62] (v2.0.70) - 2025-05-28
 
 ### Bug Fixes
-* Fixed unknown flag `--logtostderr` in metrics-server version `v0.7.2`
+* Fixed unknown flag `--logtostderr` in metrics-server version `v0.7.2`.
 
 ## Chart Version [0.1.61] (v2.0.70) - 2025-05-21
 

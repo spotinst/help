@@ -6,7 +6,7 @@ This topic delves into this dashboard's various components and sections, offerin
 Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. 
 It achieves this by intelligently combining spot, reserved, and regular compute instances.
 
-* Ocean Savings panel shows the amount of money, CPU, memory (GiB/TiB), and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
+* Ocean Savings panel shows the amount of money, CPU, memory (GiB/TiB), and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot nodes, bin packing, and reverting to lower-cost nodes. 
 * The Ocean Managed Nodes and Resources panel shows information about your Ocean-managed and unmanaged nodes and your managed CPU, memory, and GPU resources.
 * Resource Allocation panel shows resource allocation information about your managed CPU, memory (GiB/TiB), and GPU resources at the cluster level.
   * Drill down to view resource allocation information at the namespace, Virtual Node Group, node pool, or node level. Each has a dedicated tab to the right of the Overview tab.
@@ -36,7 +36,7 @@ In this panel:
 
 ### Ocean Savings from Running on Spot
 
-Ocean autoscaler intelligently leverages these spot instances when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot instances in your cluster. 
+Ocean autoscaler intelligently leverages these spot nodes when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot nodes in your cluster. 
 Ocean savings from running on spot are calculated as the difference between the price of regular and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs running as spot nodes. 
 
 To view these savings, click the **Running on Spot** tab (unless already displayed). 
@@ -183,7 +183,7 @@ This panel contains a set of widgets that display categorized information on you
 <!--! new-->
 ## Autoscaling Activity Panel 
 
-<img width=800 src="https://github.com/user-attachments/assets/e077fe98-6c2b-4be1-9c6d-1cb97a3404f6" />
+<img width=1100 src="https://github.com/user-attachments/assets/af22e771-a66b-489c-9e37-10d0ba2ff439" />
 
 The Autoscaling Activity panel contains the following widgets:  
 
@@ -217,26 +217,29 @@ The Scale Down widget shows the number of scale-down events and scaled-down node
 
 ### Revert to Spots
 
-Suppose a node was launched as OD due to the unavailability of spot nodes in the market. In that case, Ocean continuously scans the market for an available spot node and reverts promptly upon finding one. 
-
+Nodes may be launched as regular nodes due to unavailable spot nodes. Ocean continuously scans the market for available spot nodes. When it finds them, it reverts the regular nodes to spots.
 The Revert to Spots widget shows the number of events for which a regular node was reverted to a spot node in the selected time range. 
 
-By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster utilizes spot nodes to exploit cost-saving opportunities. 
+Monitor these events on the autoscaling activity panel to see when (and how often) your cluster utilizes spot nodes to exploit cost-saving opportunities. 
 
-<!--!   ->
+### Revert to Commitments
 
-#### Revert to Commitments
+Nodes may be launched as spots or regulars due to unavailable commitments (RI or SP). Ocean continuously scans the market for available commitments. When it finds them, it reverts the spots/regulars to commitments.
 
-Coming soon (not available at the time of writing).
+>Note: Spots are first reverted to regular nodes and then associated with RIs or SPs.
 
-If a node was launched as a spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
+The Revert to Commitments widget shows the number of events for which a spot/regular nodes was reverted to a commitment in the selected time range.  
 
-The Revert to Commitments widget shows the number of events for which a spot node was reverted to a commitment in the selected time range.  
-
-By monitoring these events on the Autoscaling Activity panel, you can understand how your cluster is dynamically adapting to changes in the cloud market to maintain optimal operation and taking advantage of cost-saving opportunities by utilizing commitments. 
+Monitor these events on the autoscaling activity panel to see how your cluster dynamically adapts to changes in the cloud market and exploits the cost-saving opportunities of commitments.
 
 For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-and-best-practices/?id=utilize-reserved-instances-for-aws-users). 
--->
+
+<!--
+### Dynamic Commitments
+
+Ocean reverts from regular reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean continually adjusts to changes in application requirements and usage. 
+
+Ocean tracks commitments and initiates proactive replacements, increasing the account’s commitment coverage, and decreasing excessive regular node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments. -->
 
 ### Revert to Lower Cost
 
@@ -246,11 +249,11 @@ The number of scaled-down nodes does not have to match exactly the number of sca
 
 The Revert to Lower Cost widget shows the number of events for which a node was reverted to a lower-cost node in the selected time range. For more information, see [Revert to Lower Cost Node](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node).  
 
-Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
+Tracking these events on the autoscaling activity panel lets you see when and how often your cluster is optimizing for cost savings.
 
 ##   Autoscaling Activity Graph
 
-The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
+The autoscaling activity graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean autoscaler triggered a specific scale event within the cluster.
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
@@ -263,13 +266,19 @@ These are the curves:
 
 *  Lifecycle Types:
    * Spot.
-   * Regular.  
+   * Regular.
+   * Reserved instances.
+   * Savings plans.  
 *  Workload Requests: includes running pods and pending pods requests. 
 *  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
 
 >**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
 
-### Set the Zoom Level for the Graph
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To set the zoom level for the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 3 days/ 7 days.
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
@@ -277,7 +286,13 @@ These are the curves:
 
 <img width=800 src="https://github.com/user-attachments/assets/96bc9f5c-48e9-445d-b451-267397c723db" />
 
-### Display Autoscaling Activity at a Specific Point on the Graph
+   </div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display autoscaling activity at a specific point on the graph</summary>
+ 
+   <div style="padding-left:16px">
 
 1. Mouse over the upper graph to view the main details.
 2. Click **Cluster State Details** to view more information.
@@ -294,36 +309,31 @@ For vCPU/Memory(GiB)/GPU:
   * Total node allocation. 
   * Split according to lifecycle types.
 *  Workload:
-    *  deamonSets Requested. 
-    *  Pods Requested.
-    *  Headroom requested.
-    *  Total workload allocation percentage (includes only running pods, headroom pods, and DaemonSets pods scheduled on Ocean nodes).
+   * deamonSets Requested. 
+   * Pods Requested.
+   * Headroom requested.
+   * Total workload allocation percentage (includes only running pods, headroom pods, and DaemonSets pods scheduled on Ocean nodes).
 
 Total Allocation Calculation:
 
 * Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
 
-To view more detailed information about autoscaling events:
+   </div>
+</details>
 
-### Display Extended Details for Revert to Spots/Revert to Lower-Cost Events
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">To display detailed information for a specific autoscaler event</summary>
+ 
+   <div style="padding-left:16px">
 
-1. Set the zoom level to 12 hours or less (described above).
-2. Mouse over the revert to spots / revert to lower cost event on the curve.
-
-<img width="270" src="https://github.com/user-attachments/assets/ef53d900-078d-4da9-89e4-7432d9a0f08e" />
-
-3. Click the (shaded) revert event in the main details to show the extended details.
+* Click the blue rectangle for the event, for example, a revert to lower cost event.
 
 <img width="900" src="https://github.com/user-attachments/assets/25d4f754-c88d-4a04-b414-90a3d1b6e3db" />
 
-These are the extended details:
+>Note: The details shown in the box depend on the type of autoscaler event.
 
-* Affected node pools (new/replaced).
-* Nodes count.
-* Virtual node group (click on the link to view virtual node group details).
-* VM Size.
-* Availability Zones.
-* LifeCycle (Spot/regular).
+   </div>
+</details>
 
 ## Resource Allocation Panel
 

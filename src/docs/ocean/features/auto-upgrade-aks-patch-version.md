@@ -25,6 +25,7 @@ The version can have one of the following statuses:
 * Yellow: The control plane patch version can be upgraded to the latest available version.
 * Red: The control plane patch version needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not 
 support Kubernetes minor version upgrades.
+
 * Gray: The Ocean controller is not valid or is not reporting, so there is no indication of the control plane patch version. See [Troubleshoot the Ocean Controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts).
 
 ## View the Auto-Upgrades History and Schedules
@@ -90,8 +91,8 @@ To schedule an auto-upgrade:
 6. You can schedule the auto upgrade once a day or at a specific time.
 
 >**Note**: If you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is not clickable.
->
-> <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
+
+   <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
 
 7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
