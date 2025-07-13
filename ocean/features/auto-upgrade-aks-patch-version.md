@@ -7,6 +7,8 @@ You can immediately run an auto-upgrade of an AKS patch version or schedule an a
 * Control plane upgrade: Upgrade the control plane patch version only.
 * Control plane upgrade and Ocean roll: Upgrade the control plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the updated version.
 
+You can also optionally update your system node pools as part of an auto-upgrade, or you can update them immediately on their own.
+
 Spot recommends you schedule once daily and let Ocean manage your upgrades.
 
 ## Check if you Need to Upgrade
@@ -64,24 +66,24 @@ To schedule an auto-upgrade:
 1. Ensure that the [Azure Kubernetes upgrades feature](https://spotinst.atlassian.net/wiki/pages/resumedraft.action?draftId=3271589937) is not enabled for your cluster. You cannot enable Ocean and Azure Kubernetes auto-upgrades simultaneously.
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
-  >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
+   >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
   
-   <img src="https://docs.spot.io/ocean/_media/auto-upgrade-azure-feature.png" />
+      <img src="https://docs.spot.io/ocean/_media/auto-upgrade-azure-feature.png" />
    
-3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
+3. Select whether to auto-upgrade the control plane or to auto-upgrade the control plane and Roll.
 
    <img src="https://docs.spot.io/ocean/_media/select-what-to-upgrade.png" />
 
-4. If you need to upgrade system node pools, click the **Upgrade system node pools box**, and then select required node pools from the list.
+4. If you need to upgrade system node pools, click **Upgrade system node pools**, and then select required node pools from the list.
 
 5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
     >**Note**: Rolls
-    > - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
+    > - Ocean will roll all virtual node groups applicable to the available control plane patch upgrade version if you select to roll.
     > - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
     > - If an option is not clickable, you have already run it and cannot select it again.
 
-    <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
+      <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
 
    * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
@@ -90,9 +92,9 @@ To schedule an auto-upgrade:
 
 6. You can schedule the auto upgrade once a day or at a specific time.
 
->**Note**: If you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is not clickable.
+   >**Note**: If you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is not clickable.
 
-   <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
+     <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
 
 7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 

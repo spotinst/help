@@ -1,7 +1,16 @@
 # Ocean Release Notes
 
 
-## April 2025: Features and Enhancements
+## July 2025: Features and Enhancements
+
+*  **OCN-0077 July 13, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now upgrade your system node pools to the latest Kubernetes patch version as part of an AKS auto-upgrade. This option is available for both scheduled and immediate upgrades. [Learn more…](https://docs-spot.flexera.com/ocean/features/auto-upgrade-aks-patch-version )
+
+Previous months...
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">April, 2025 - click to view</summary>
+ 
+   <div style="padding-left:16px">
 
 *  **OCN-0076 April 16, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean node recovery process improvements ensure a more accurate scale-up and take scaling constraints into account. [Learn more…](https://docs.spot.io/ocean/features/scaling-kubernetes?id=ocean-instance-recovery-mechanism)
 
@@ -9,7 +18,8 @@
 
 *  **OCN-0074: April 01, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Machine Ephemeral Storage: Use `instanceStorePolicy` to manage instance store volumes for faster node ephemeral storage. [Learn more…](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=machine-ephemeral-storage)
 
-Previous months...
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">March, 2025 - click to view</summary>
