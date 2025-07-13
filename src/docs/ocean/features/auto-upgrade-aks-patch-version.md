@@ -24,7 +24,7 @@ The version can have one of the following statuses:
 * Green: The control plane is upgraded to the latest patch version.
 * Yellow: The control plane patch version can be upgraded to the latest available version.
 * Red: The control plane patch version needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not 
-provide support for Kubernetes minor version upgrades.
+support Kubernetes minor version upgrades.
 * Gray: The Ocean controller is not valid or is not reporting, so there is no indication of the control plane patch version. See [Troubleshoot the Ocean Controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts).
 
 ## View the Auto-Upgrades History and Schedules
@@ -78,18 +78,18 @@ To schedule an auto-upgrade:
     >**Note**: Rolls
     > - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
     > - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
-    > - If an option appears grayed out, you have already run it and cannot select it again.
+    > - If an option is not clickable, you have already run it and cannot select it again.
 
     <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
 
    * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
-   * Optionally, turn on the Pod Disruption Budget (PDB) option.
-   * Optionally, turn on the Restrict Scale-Down option.
+   * Optionally, turn on Pod Disruption Budget (PDB).
+   * Optionally, turn on Restrict Scale-Down.
 
-6. Select whether to schedule the auto upgrade once a day or at a specific time.
+6. You can schedule the auto upgrade once a day or at a specific time.
 
->**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed out.
+>**Note**: If you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is not clickable.
 >
 > <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to.png" />
 
@@ -120,7 +120,7 @@ Use this option if you want to auto-upgrade systems node pools immediately (rath
 Ocean shows only the system node pools that are not updated.
 
 1. Click **Create an Upgrade > System Node Pools Upgrade**.
-2. Click the Upgrade system node pools box, and then select required system node pools from the list.
+2. Click **Upgrade system node pools**, and then select required system node pools from the list.
 3. Click **Update Now**.
 
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
