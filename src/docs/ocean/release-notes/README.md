@@ -5,7 +5,7 @@
 
 Keep checking for updates.....
 
-<!--*  **OCN-0077 July 13, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now upgrade your system node pools to the latest Kubernetes patch version as part of an AKS auto-upgrade. This option is available for both scheduled and immediate upgrades. [Learn more…](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version ) -->
+<!--*  **OCN-0077 July 13, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now run immediate or scheduled auto-updates for AKS system node pools from the Ocean console for Kubernetes patch version updates to avoid potential errors and keep updated with the latest version. [Learn more…](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version ) -->
 
 Previous months...
 
