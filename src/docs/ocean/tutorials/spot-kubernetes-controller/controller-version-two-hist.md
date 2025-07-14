@@ -1,5 +1,10 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.64] (v2.0.71) - 2025-07-14
+
+### Bug Fixes
+  * Improves reporting during node drain operations.
+    
 ## Chart Version [0.1.63] (v2.0.70) - 2025-07-13
 
 ### Added
