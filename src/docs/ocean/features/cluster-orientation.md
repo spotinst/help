@@ -29,7 +29,7 @@ When Ocean launches instances, it searches all the markets defined in the Ocean 
 
 ## Set up in Ocean API
 
-To define the cluster orientation for your Ocean cluster, you can use the Create Cluster or Update Cluster APIs. Look for the following attribute:
+To define the cluster orientation for your Ocean cluster, you can use the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate) APIs. Look for the following attribute:
 
 ```
 cluster.strategy.clusterOrientation.availabilityVsCost
@@ -38,4 +38,11 @@ cluster.strategy.clusterOrientation.availabilityVsCost
 The valid values are: costOriented, balanced, cheapest
 
 > **Tip**: If you have already configured cluster orientation at the Elastigroup level (i.e., using the Elastigroup API), those configurations will not be impacted, and will still apply in Ocean. Going forward, all cluster orientation configurations for Ocean should be made in the Ocean APIs only.
+
+To define the cluster orientation for a virtual node group, you can use [Create VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) APIs, Look for the following attribute:
+
+```
+launchSpec.strategy.orientation.availabilityVsCost
+```
+The valid values are: costOriented, balanced, cheapest
 
