@@ -2,7 +2,7 @@
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>    
 
-While Ocean is designed to optimize for both availability and cost, you may want control over which optimizations are given priority. In a development environment, you can use cheaper nodes for development clusters. In a production environment, where availability is more important, you can apply a balanced orientation for cost and availability.
+While Ocean optimizes for both availability and cost, you may want control over which optimizations are given priority. In a development environment, you can use cheaper nodes for development clusters. In a production environment, where availability is more important, you can apply a balanced orientation for cost and availability.
 
 You can control the approach that Ocean takes by configuring the Cluster Orientation at cluster / virtual node group levels.
 
