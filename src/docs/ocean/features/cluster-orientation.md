@@ -27,9 +27,11 @@ The *Cheapest* orientation takes a highly aggressive approach to cost savings.
 
 When Ocean launches instances, it searches all the markets defined in the Ocean cluster and looks for the lowest price for the spot type defined in the cluster. Ocean then launches instances only in the markets with the minimum price. If the required instance type or type with the cheapest price are not available, Ocean will fall back to on-demand.
 
-## Set up in Ocean API
+## Set up in Ocean API at Cluster-Level
 
-To define the cluster orientation at cluster-level, you can use the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate) APIs. Look for the following attribute:
+To define the cluster orientation at cluster-level, you can use the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate) APIs. 
+
+Look for the following attribute:
 
 ```
 cluster.strategy.clusterOrientation.availabilityVsCost
@@ -39,7 +41,13 @@ The valid values are: costOriented, balanced, cheapest
 
 > **Tip**: If you have already configured cluster orientation at the Elastigroup level (i.e., using the Elastigroup API), those configurations will not be impacted, and will still apply to Ocean. Going forward, all cluster orientation configurations for Ocean should be made in the Ocean APIs only.
 
-To define the cluster orientation for a virtual node group, you can use [Create VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) APIs, Look for the following attribute:
+## Set up in Ocean API for a Virtual Node Group
+
+Virtual node groups are seperate configurable Launch specs on Ocean clusters, on which strategy and cluster orientation can be defined. 
+
+To define the cluster orientation for a virtual node group, you can use the [Create VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) APIs. 
+
+Look for the following attribute:
 
 ```
 launchSpec.strategy.orientation.availabilityVsCost
