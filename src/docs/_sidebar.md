@@ -5,7 +5,7 @@
     - [Connect AWS](connect-your-cloud-provider/first-account/aws)
     - [Connect GCP Manually](connect-your-cloud-provider/first-account/gcp-manually)
     - [Connect Azure Manually](connect-your-cloud-provider/first-account/azure)
-  - [Update Azure Credentials](/connect-your-cloud-provider/update-azure-credentials)
+  - [Update Azure Credentials](connect-your-cloud-provider/update-azure-credentials)
   - [Connect Azure Billing Account](connect-your-cloud-provider/azure-ea-account)
   - [Connect an Additional Account](connect-your-cloud-provider/additional-account)
   - [Release Notes - Connect Your Cloud Account](connect-your-cloud-provider/release-notes-connecting/)
