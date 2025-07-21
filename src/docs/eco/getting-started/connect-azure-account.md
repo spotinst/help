@@ -42,7 +42,7 @@ If you need assistance, read the [FAQs](https://docs.spot.io/faqs/faqs-finops). 
      ```
      Header Inputs: 
      billingAccountName: <enrollment id> 
-     billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e 
+     billingRoleAssignmentName: <A unique GUID you [generate](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-guid)>
      Example of body for API call: 
      { 
      "properties": { 
