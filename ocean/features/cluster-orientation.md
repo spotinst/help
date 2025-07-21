@@ -2,9 +2,9 @@
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>    
 
-While Ocean is designed to optimize for both availability and cost, you may want have control over which optimizations are given priority. For example, in a development environment you might want to use cheaper nodes for dev clusters. In contrast, in a production environment, where availability is more important, you might want Ocean to apply a balanced orientation regarding cost and availability.
+While Ocean optimizes for both availability and cost, you can control which optimization is prioritized. In a development environment, you may choose cheaper nodes for development clusters. In a production environment, where availability is more critical, a balanced orientation between cost and availability is recommended.
 
-You can control the approach that Ocean takes by configuring the Cluster Orientation.
+You can configure Ocean’s optimization approach by setting the cluster orientation at the cluster or virtual node group level.
 
 ## Ocean Orientations
 
@@ -15,21 +15,23 @@ Ocean supports the following orientations:
 
 ### Balanced (Default)
 
-The *Balanced* orientation optimizes towards both continuity of operations and cost-effective infrastructure. The Spot team highly recommends using this orientation, which provides the optimal balance between cost-savings and availability.
+The Balanced orientation optimizes for both operational continuity and cost-effective infrastructure. It provides an optimal balance between cost savings and availability.
 
 ### Cost
 
-The *Cost* orientation optimizes towards the most cost-effective infrastructure. Although Ocean takes both cost and availability into consideration, it prioritizes so that cost is emphasized more in node selection.   
+The Cost orientation prioritizes cost-efficiency. While Ocean still considers availability, it gives greater weight to cost when selecting nodes. 
 
 ### Cheapest
 
-The *Cheapest* orientation takes a highly aggressive approach to cost savings.
+The Cheapest orientation takes an aggressive approach to cost savings.
 
-When Ocean launches instances, it searches all the markets defined in the Ocean cluster and looks for the lowest price for the spot type defined in the cluster. Ocean then brings up instances only in the markets that have the minimum price. If the desired instance type or any type of the cheapest price is not available, Ocean will fall back to on-demand.
+When launching instances, Ocean scans all markets defined in the cluster and selects the one offering the lowest price for the specified spot instance type. If the cheapest instance type is unavailable, Ocean falls back to on-demand instances
 
-## Set up in Ocean API
+## Set Orientation for the Cluster in the Spot API 
 
-To define the cluster orientation for your Ocean cluster, you can use the Create Cluster or Update Cluster APIs. Look for the following attribute:
+To set the orientation for the cluster, use the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate) APIs. 
+
+Look for the following attribute:
 
 ```
 cluster.strategy.clusterOrientation.availabilityVsCost
@@ -37,5 +39,18 @@ cluster.strategy.clusterOrientation.availabilityVsCost
 
 The valid values are: costOriented, balanced, cheapest
 
-> **Tip**: If you have already configured cluster orientation at the Elastigroup level (i.e., using the Elastigroup API), those configurations will not be impacted, and will still apply in Ocean. Going forward, all cluster orientation configurations for Ocean should be made in the Ocean APIs only.
+> **Tip**: If you’ve previously configured cluster orientation at the Elastigroup level (via the Elastigroup API), those settings remain in effect. However, all future configurations for Ocean should be made using the Ocean APIs.
+
+## Set Orientation for a Virtual Node Group in the Spot API 
+
+Virtual node groups are seperate, configurable launch specifications on Ocean clusters, where strategy and cluster orientation can be defined. 
+
+To set the orientation for a virtual node group, use the [Create VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) APIs. 
+
+Look for the following attribute:
+
+```
+launchSpec.strategy.orientation.availabilityVsCost
+```
+The valid values are: costOriented, balanced, cheapest
 
