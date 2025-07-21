@@ -43,7 +43,7 @@ The valid values are: costOriented, balanced, cheapest
 
 ## Set Orientation for a Virtual Node Group in the Spot API 
 
-Virtual node groups are seperate, configurable launch specifications on Ocean clusters, where strategy and cluster orientation can be defined. 
+Virtual node groups are separate, configurable launch specifications on Ocean clusters, where strategy and cluster orientation can be defined. 
 
 To set the orientation for a virtual node group, use the [Create VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) APIs. 
 
