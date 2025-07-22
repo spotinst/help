@@ -1,6 +1,6 @@
 # Update the Vertical Pod Autoscaler Project (VPA) 
 
-To use Ocean's automatic right-sizing feature, you need Vertical Pod Autoscaler project (VPA) 1.4.1 and above installed on your cluster. 
+To use Ocean's automatic right-sizing feature, you need Vertical Pod Autoscaler project (VPA) 1.4.1 or above installed on your cluster. 
 
 if you need to upgrade VPA, follow these instructions:
 
