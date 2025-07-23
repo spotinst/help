@@ -130,22 +130,20 @@ Specify instance attributes that match your compute requirements.
     - Generations to exclude 
 3. Spot Types: Choose the instance types Elastigroup should consider when launching your instances. Spot recommends selecting multiple instance types to provide Elastigroup with as many Spot instance market options as possible. 
     - On-demand Type: Choose the on-demand type to use in the event that no Spot instances are available in your desired markets. 
-    - Preferred Spot Types: Select at least one preferred Spot type to prioritize. This constitutes a higher percentage of the group's instance type mix. 4. Select the Minimum Instance Lifetime. The amount of time you want your workloads to run without any interruption to their underlying instances. The shorter the lifetime you choose, the more accurate the market scoring will be. This is based on predictions of the selected value.  
-
+    - Preferred Spot Types: Select at least one preferred Spot type to prioritize. This constitutes a higher percentage of the group's instance type mix. 
 #### Manual Selection 
 
 Select instance types that match your compute requirements.  
 
 1. Select at least one Spot type.  
 2. Select an On-demand Spot type. 
-3. Select the Minimum Instance Lifetime. 
 
 **Market Statistics**
 
 You can view the market statistics of your selection.  
 
 * Selected Markets: This shows the amount of selected markets. 
-* Average Score: The average score for all selected markets. Market score is a reflection of the selected minimum instance lifetime and the market's stability, based on Elastigroup's prediction algorithm. 
+* Average Score: The average score for all selected markets. Market score is a reflection of the market's stability, based on Elastigroup's prediction algorithm. 
 * Average Savings: The average savings you can achieve by utilizing the selected spot markets.   
 
 Click More Details under Market Statistics in the manual selection to open the heat-map. This shows the availability score per market. 
@@ -302,7 +300,7 @@ Continuous Optimization: If fallback to on-demand instances has occurred, you ca
 
 ### Instance Availability
 
-This option enables you to define availability preferences and gain visibility into EC2 spot instance availability and lifespan. After you define a minimum instance lifetime and your other availability preferences, Spot will do the following:
+This option enables you to define availability preferences and gain visibility into EC2 spot instance availability and lifespan. After you define your other availability preferences, Spot will do the following:
 
 - Display the resulting market scoring chart showing the probabilities of meeting your specifications.
 - Deploy instances that have the highest probability of matching your specifications.
@@ -311,7 +309,6 @@ This option enables you to define availability preferences and gain visibility i
 
 Specify the following:
 
-- Minimum Instance Lifetime: The desired amount of time you wish your workloads to run without any interruption to their underlying instances. The shorter the lifetime you choose, the more accurate the market scoring will be.
 - Preferred Availability Zones: Choose one or more of the availability zones that you defined in the Compute tab.
 - Preferred Spot Types: Choose one or more of the instance types you defined in the Compute tab.
 - Draining Timeout: In addition, you can define the draining period your application requires so the automation will start replacing the instances with enough time before the interruption is predicted to occur, allowing for complete and graceful draining.
