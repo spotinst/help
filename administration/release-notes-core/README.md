@@ -4,8 +4,8 @@
 
 * **ADM-0002 July 7, 2025:** There is a limit to the number of API requests you can make every 60 seconds. The limit is according to the Spot organization, API route (such as /aws/ec2/group), and the request type (such as DEL, GET). [Learn more](/administration/api/#rate-limit).
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">December 2024</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+  <summary markdown="span" style="color:#7632FE; font-weight:600">December 2024</summary>
 
    <div style="padding-left:16px">
 
