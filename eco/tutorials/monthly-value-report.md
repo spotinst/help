@@ -10,7 +10,7 @@ The subject line contains the name of your company as it appears in the Spot con
 
 The header restates the goal and provides the date of the report.
 
-<img width="500" src="https://github.com/user-attachments/assets/08419c4c-7d97-4ff5-b42b-925d089dedee" />
+![report header](https://github.com/user-attachments/assets/6f831b12-9436-4ce8-a93c-afa67300668f)
 
 ### Total Actions Provided by Eco
 
@@ -24,7 +24,7 @@ A month’s total of all unique instances in your environment which Eco could co
 
 A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans.
 
-<img src="/eco/_media/tutorials-monthly-value-report-02.png" />
+![Savings over time](https://github.com/user-attachments/assets/f978302d-4183-4574-a211-944d4e4a5599)
 
 ### Total All Time Savings
 
@@ -34,13 +34,13 @@ The net savings Eco has provided since you became a customer.
 
 Over the last month, the primary regions in which savings were provided and the amounts provided in those regions. It will show up to five of the top regions.
 
-<img src="/eco/_media/tutorials-monthly-value-report-03.png" width="200" />
+![top regions](https://github.com/user-attachments/assets/53680d0a-9f6b-4149-b996-a9e967f2b970)
 
 ### Top Instance Types by Savings
 
 Over the last month, the primary regions in which savings were provided and the amount of savings provided for those instance types. Up to three instance types will be shown. With “other” acting as a catch-all category for any instance types after the top three.
 
-<img src="/eco/_media/tutorials-monthly-value-report-04.png" width="200" />
+![top types](https://github.com/user-attachments/assets/ffae5bde-3036-4f44-a105-62b75e50395f)
 
 ### Top Expiring RIs Eco is Reviewing
 
