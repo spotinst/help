@@ -1,6 +1,6 @@
 #  Ocean Cluster Automatic Right Sizing
 
-Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS, and GKE</font>
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
 
@@ -16,20 +16,23 @@ To opt-in and turn on the full capabilities of this powerful feature, [Contact S
 
 ##  Prerequisites
 
-Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, you will need: 
+Before you attempt to fine-tune your cluster resources according to Ocean recommendations, you will need: 
 
 *  A Spot account. 
-* Ocean cluster managing your Kubernetes worker nodes. 
+*  Ocean cluster managing your Kubernetes worker nodes. 
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
-*  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
 
-```sh
+*  Kubernetes 1.33 and above for the option to apply automatic recommendations without having to restart pods. See [How it works](link TBD).
+*  Vertical Pod Autoscaler project (VPA) 1.4.1. If you need to upgrade, see [Upgrade VPA](link TBD). If the VPA is not already running on your cluster, run the following helm commands:
 
-helm repo add spot https://charts.spot.io 
-helm repo update 
-helm install <my-release-name> spot/ocean-vpa
-```
+    ```sh.
+    
+    helm repo add spot https://charts.spot.io 
+    helm repo update 
+    helm install <my-release-name> spot/ocean-vpa
+    ```
+
 >**Note**: To turn on automatic right-sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
 ##  How It Works 
@@ -43,6 +46,12 @@ Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod u
 The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
 
 Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
+
+<BR>
+
+Ocean can automatically apply these recommendations to your workloads according to your requirements. 
+
+If you have Kubernetes 1.33 or above (see Prerequisites), Ocean provides the option to change the CPU / memory allocation of container(s) within a running Pod while potentially avoiding application disruption. As such, Ocean automatically applies its recommendations without restarting the pods. This feature is subject to [Kubernetes limitations](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/#limitations).
 
 Recommendations for decreasing and increasing memory or CPU requests are based on the percentile defined for the cluster (the default is the 85th percentile).
 
@@ -110,7 +119,7 @@ This panel contains two widgets:
 * vCPU usage in the last 2 weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last 2 weeks.
 * Memory usage in the last 2 weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last 2 weeks.
 
-<img width="1000" src="https://github.com/user-attachments/assets/a94b2d5f-b191-4142-acbc-085809aa21d4" />
+<img width="1000" src="https://github.com/user-attachments/assets/1f733141-b48f-41b5-9c78-bcaf480e96ec" />
 
 Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view usage details:
 >**Note**: The default **85th percentile vCPU usage** and **Maximum memory usage** options are used to calculate the right-sizing recommendations for all usage parameters.
@@ -123,16 +132,21 @@ Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view
   * Average vCPU usage
 * Suggested vCPU usage based on data from the last 2 weeks.
 Hover over a data point in the **Memory usage in the last 2 weeks** widget to view:
+
 * Allocated memory usage in GiB based on data from the last 2 weeks.
 * Actual memory usage in GiB based on data from the last 2 weeks (you can change the default from the **Usage drop-down menu**).
-  * Maximum memory usage in GiB (**default**)
+  * 85th percentile vCPU usage (**default**)
+  * 95th percentile vCPU usage
+  * 90th percentile vCPU usage
+  * Maximum memory usage in GiB
   * Average memory usage in GiB
 * Suggested memory usage in GiB based on data from the last 2 weeks.
 
 ## Related Topics
 
 * [Right-Sizing Troubleshooting](https://docs.spot.io/ocean/features/troubleshoot-right-sizing)
-* [Right-Sizing Rules and Reommendations](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab)
+* [Right-Sizing Rules and Recommendations](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab)
+* [Right-Sizing Savings Panel](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab)
 
 
 
