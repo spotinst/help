@@ -1,7 +1,7 @@
 # Right Sizing
 
 
-Check out Spot's New [Automatic Right-Sizing feature!](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
+Check out the [Automatic Right-Sizing feature!](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
 
 
 Ocean ensures pods and tasks are placed on the best possible VM that fits their resource requirements and other scheduling constraints such as labels, attributes, taints, tolerations, and affinity rules.
