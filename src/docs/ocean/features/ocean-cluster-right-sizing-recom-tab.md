@@ -21,7 +21,8 @@ Your workload optimization activities impact the status of the workloads in the 
 
 ##  Workloads Optimization List 
 
-<img width="1000" src="https://github.com/user-attachments/assets/a6070749-5c8f-4871-b4ff-2c3faccc5755" />
+<img width="1000" alt="right-sizing-example-table-ex" src="https://github.com/user-attachments/assets/92ac8778-4b63-42bf-b9b5-76213fd8ec49" />
+
 
 This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
