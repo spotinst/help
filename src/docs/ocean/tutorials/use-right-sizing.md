@@ -1,6 +1,6 @@
 # Use Right Sizing
 
-Check out Spot's New [Automatic Right-Sizing feature!](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
+Check out our [Automatic Right-Sizing feature!](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
 
 In this tutorial you will learn about Ocean resizing suggestions and how to use them. This feature will help you define better resource requirements, based on actual consumption, in order to avoid over- or under-provisioning a cluster and increase the cluster's efficiency.
 
