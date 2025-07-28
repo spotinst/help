@@ -45,6 +45,10 @@ Follow the instructions below while referring to the [Azure documentation](https
 
    <img src="https://docs.spot.io/managed-instance/_media/create-stateful-node-commitments.png" />
 
+   <img src="https://docs.spot.io/managed-instance/_media/sn-commits-where-to-find-it.png" />
+
+   
+
 ###  Step 1: App Registrations
 
   1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
