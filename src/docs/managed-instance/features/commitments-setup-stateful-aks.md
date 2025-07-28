@@ -45,7 +45,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
    <img src="https://docs.spot.io/managed-instance/_media/create-stateful-node-commitments.png" />
 
-   <img src="https://docs.spot.io/managed-instance/_media/sn-commits-where-to-find-it.png" />
+   <img width="600" src="https://docs.spot.io/managed-instance/_media/sn-commits-where-to-find-it.png" />
 
    
 
