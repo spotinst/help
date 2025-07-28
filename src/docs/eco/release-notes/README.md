@@ -1,6 +1,6 @@
 # Eco Release Notes
 
-* **ECO-0004 July 28, 2025**: Eco value email updated with Flexera logo and standards.
+* **ECO-0004 July 28, 2025**: [Eco value email](eco/tutorials/monthly-value-report) updated with Flexera logo and standards.
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
  <summary markdown="span" style="color:#7632FE; font-weight:600">April 2024</summary>
