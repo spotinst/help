@@ -1,15 +1,24 @@
 # Eco Release Notes
 
-* **ECO-0003 April 15, 2025**: Enhancements and new onboarding for Eco Google Cloud:
-   * The [new onboarding process](eco/getting-started/connect-gc-account) lets you grant Eco read-only permission to your Google Cloud environment for data analysis and ingestion.
-   * You can [view Google Cloud savings data](eco/gcp-tutorials/view-your-savings), such as total committed use discount savings, current monthly commitment, and month-to-date (MTD) savings.
-   * You can also see a [detailed visualization](eco/gcp-tutorials/view-your-savings) of your committed use discount savings in the savings over time graph. It includes filters for resource-based and spend-based committed use discounts. This gives you a comprehensive view of your savings.
+* **ECO-0004 July 28, 2025**: Eco value email updated with Flexera logo and standards.
 
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+ <summary markdown="span" style="color:#7632FE; font-weight:600">April 2024</summary>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">November 2024</summary>
+  <div style="padding-left:16px">
 
-<div style="padding-left:16px">
+  * **ECO-0003 April 15, 2025**: Enhancements and new onboarding for Eco Google Cloud:
+     * The [new onboarding process](eco/getting-started/connect-gc-account) lets you grant Eco read-only permission to your Google Cloud environment for data analysis and ingestion.
+     * You can [view Google Cloud savings data](eco/gcp-tutorials/view-your-savings), such as total committed use discount savings, current monthly commitment, and month-to-date (MTD) savings.
+     * You can also see a [detailed visualization](eco/gcp-tutorials/view-your-savings) of your committed use discount savings in the savings over time graph. It includes filters for resource-based and spend-based committed use discounts. This gives you a comprehensive view of your savings.
+
+</div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+ <summary markdown="span" style="color:#7632FE; font-weight:600">November 2024</summary>
+
+  <div style="padding-left:16px">
 
    * **ECO-0002 November 27, 2024**: You can now view the following Effective Savings Rate (ESR is a FinOps metric that measures the actual ROI of cloud discount instruments) data in the Eco console:
   
