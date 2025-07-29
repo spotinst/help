@@ -19,7 +19,6 @@ To opt-in and turn on the full capabilities of this powerful feature, [Contact S
 Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, you will need: 
 
 *  A Spot account. 
-* Ocean cluster managing your Kubernetes worker nodes. 
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
 *  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
