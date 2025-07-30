@@ -43,7 +43,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 2.  Create or edit the group. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
 3.  In the Availability settings area, next to Utilize RIs/SPs, click **Add permission**.
  
-    ---NEED SCREENCAP---CREATE ELASTIGROUP---
+    <img width="900" src="https://docs.spot.io/managed-instance/_media/elastigroup-commits-find-in-wizard.png" />
 
 ###  Step 1: App Registrations
 
