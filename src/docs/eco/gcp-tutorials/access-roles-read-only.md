@@ -119,3 +119,7 @@ These roles and permissions are needed for Eco Google Cloud cost specialists to 
    * recommender.usageCommitmentRecommendations.get
    * recommender.usageCommitmentRecommendations.list
    * recommender.usageCommitmentRecommendations.update
+
+**Enable Committed Use (CUD) Sharing**
+
+After you grant Eco the roles and full permissions to manage your environment, [enable CUD sharing](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#turning_on_committed_use_discount_sharing).
