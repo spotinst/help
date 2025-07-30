@@ -44,7 +44,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
 3.  In the Ocean autoscaler strategy area of the virtual node group, click **Add permissions**.
 
-   GET NEW PICTURE
+    <img src="https://docs.spot.io/managed-instance/_media/ocean-commis-where-to-find.png" />
     
        
 ###  Step 1: App Registrations
