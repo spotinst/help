@@ -29,12 +29,7 @@ You can see your main security statistics:
 
 ## Filters and Asset Groups
 
-You can use asset groups to filter findings for specific crown jewels, teams, or production accounts. After you’ve set up an asset group, you can use it in [Billing Engine](billing-engine/), [Cost Intelligence](cost-intelligence/), and [Spot Security](spot-security/).
-
-Keep in mind, the assets you see in a group will be different if:
-
-* The accounts have been onboarded to all or just some of the products. For example, you may have onboarded an account to Spot Security and Cost Intelligence but not to Billing Engine.
-* The filters are available for that product. For example, in Spot Security, you can also filter on services and regions. When you view that same asset group in Billing Engine or Cost Intelligence, which do not use the service and region filters, you will see all assets for the providers and accounts selected.
+You can use asset groups to filter findings for specific crown jewels, teams, or production accounts.
 
 To edit an asset group, hover over a group in the list and click **Edit** <img height=14 src="https://github.com/user-attachments/assets/63025d14-99a6-4e5d-9601-6beb1fce7792">.
 
