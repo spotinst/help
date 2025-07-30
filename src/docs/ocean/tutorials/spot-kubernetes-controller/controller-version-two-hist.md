@@ -1,5 +1,15 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.66] (v2.0.73) - 2025-07-30
+
+### Added
+* Improvements to concurrency management in drain operations.
+  
+## Chart Version [0.1.65] (v2.0.72) - 2025-07-16
+
+### Added
+* Improvements to concurrency management in drain operations.
+  
 ## Chart Version [0.1.64] (v2.0.71) - 2025-07-14
 
 ### Added
