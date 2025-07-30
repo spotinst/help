@@ -24,18 +24,18 @@ In this step, you make some choices about what type of account you are creating 
 
 >**Important**: Follow the flow for your cloud service provider: 
 >
-> - Connect [<font color="#FC01CC">AWS</font>](connect-your-cloud-provider/first-account/?id=connect-aws)
+> - Connect [AWS](connect-your-cloud-provider/first-account/?id=connect-aws)
 >
-> - Connect [<font color="#FC01CC">GCP</font>](connect-your-cloud-provider/first-account/?id=connect-gcp)
+> - Connect [GCP](connect-your-cloud-provider/first-account/?id=connect-gcp)
 >
-> - Connect [<font color="#FC01CC">Azure</font>](connect-your-cloud-provider/first-account/?id=connect-azure)
+> - Connect [Azure](connect-your-cloud-provider/first-account/?id=connect-azure)
 
 ### Connect AWS
 #### Linked Account
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. Choose Linked Account to use Elastigroup or Ocean. 
 
-<img width=750 src="https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/d99911eb-68fb-4888-a466-04e16e9c86e7" />
 
 You can connect a linked account in two ways:  
 * Automatically
@@ -49,23 +49,15 @@ Connecting automatically is the quicker option. Using a CloudFormation stack, th
 
 ##### Connect Manually 
 
-When you connect manually, you use your provider’s console (AWS) to choose the policy and role to associate the two. 
+When you [connect manually](connect-your-cloud-provider/first-account/aws-manually), you use your provider’s console (AWS) to choose the policy and role to associate the two. 
 
 <img width="472" alt="connect-1st-cloud-account-6" src="https://github.com/spotinst/help/assets/106514736/de0c0f55-c6d0-41a3-ae35-1f25955fbe01">
 
-Please see the detailed [procedures](connect-your-cloud-provider/first-account/aws-manually) for connecting manually. 
-
 #### Management Account 
 
-Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you to save even more on your cloud expenses. Learn how to connect to [Eco](https://docs.spot.io/eco/getting-started/connect-your-aws-account). 
+[Connection to a management account](https://docs.spot.io/eco/getting-started/connect-your-aws-account) is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you to save even more on your cloud expenses. 
 
-<img width=750 src="https://github.com/spotinst/help/assets/106514736/d34a05ab-6316-4744-80e2-d93148d2efa5">
-
-#### FinOps Products 
-
-Connect an account to the Billing Engine or Cost Intelligence solutions. This enables advanced analysis, rating and reporting on your cloud accounts. 
-
-<img width=750 src="https://github.com/spotinst/help/assets/106514736/c32be20a-120b-4355-a307-fdc1808b2473">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/c0207cb7-6e9c-4964-9716-ccc6a8573fb8" />
 
 ### Connect GCP 
 #### Linked Account 
@@ -80,11 +72,9 @@ You can connect a linked account in two ways:
 
 ##### Connect Manually 
 
-When you connect manually, you use your provider’s console (GCP) to choose the policy and role to associate the two. For GCP, this is a quick option and Spot recommends choosing Manually. 
+When you [connect manually](https://docs.spot.io/connect-your-cloud-provider/first-account/gcp-manually), you use your provider’s console (GCP) to choose the policy and role to associate the two. For GCP, this is a quick option and Spot recommends choosing Manually. 
 
 <img width="472" alt="connect-1st-cloud-account-7" src="https://github.com/spotinst/help/assets/106514736/fe87ede2-8985-47bd-b0f7-a98c6ef72a8e">
-
-Please see the [detailed procedures for connecting manually](https://docs.spot.io/connect-your-cloud-provider/first-account/gcp-manually). 
 
 ##### Connect Automatically  
 
@@ -93,23 +83,15 @@ This option automatically chooses a policy and a role and associates the two for
 ### Connect Azure 
 #### Subscription 
 
-Connection to your Azure subscription is required to use Spot Elastigroup or Spot Ocean. Continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in [Connect Azure Subscription](https://docs.spot.io/connect-your-cloud-provider/first-account/azure). 
+[Connection to your Azure Subscription](https://docs.spot.io/connect-your-cloud-provider/first-account/azure) is required to use Spot Elastigroup or Spot Ocean. Continue with the wizard in Spot after you choose Azure as the cloud provider.
 
-<img width=750 src="https://github.com/spotinst/help/assets/106514736/aeddf12d-f678-4e53-837b-4fe989963d10">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/8b3bc52f-20f7-4780-ab1d-9d3f2452d80a" />
 
 #### Billing Account 
 
-Connection to your Azure Billing Account is required to use Spot Eco. A connected billing account enables Spot Eco to analyze your cost, usage, and commitment data and help you save even more on your cloud expenses.  
+[Connection to your Azure Billing Account](https://docs.spot.io/connect-your-cloud-provider/azure-ea-account) is required to use Spot Eco. A connected billing account enables Spot Eco to analyze your cost, usage, and commitment data and help you save even more on your cloud expenses.  
  
-To connect your Azure Billing Account to Spot Eco, use the procedure described in [Connect Azure billing account to Spot](https://docs.spot.io/connect-your-cloud-provider/azure-ea-account). 
-
-<img width=750 src="https://github.com/spotinst/help/assets/106514736/be43db83-c19d-4585-b0bf-92a79b3e5b38">
-
-#### FinOps Products 
-
-Connect an account to the Billing Engine or Cost Intelligence solutions. This enables advanced analysis, rating and reporting on your cloud accounts. 
-
-<img width=750 src="https://github.com/spotinst/help/assets/106514736/58d85cba-1b80-403b-bab6-2138c87daca2">
+<img width="500" src="https://github.com/user-attachments/assets/a7d0cef8-cff4-4603-a042-3e79f5fd63f6" />
 
 ## Step 4: Complete Your Connection 
 
