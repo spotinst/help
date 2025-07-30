@@ -43,6 +43,8 @@ Follow the instructions below while referring to the [Azure documentation](https
 2.  Create or edit a stateful node. See [Manage Stateful Nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).
 3.  In the Strategy area, next to Utilize RIs/SPs, click **Add permission**.
 
+<img width="700" alt="this is where you will find the add permissions link" src="https://docs.spot.io/managed-instance/_media/stateful-node-commits-add-perms-in wizard.png" />
+
 ###  Step 1: App Registrations
 
   1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
