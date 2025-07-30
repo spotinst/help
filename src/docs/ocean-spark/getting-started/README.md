@@ -16,5 +16,4 @@ If the Ocean Spark menu does not appear in the Spot console navigation bar, plea
 
 Connect the cloud account in which you intend to deploy Ocean Spark: ([AWS](connect-your-cloud-provider/aws-account))
 
-> **Tip**: Other Spot products such as [Eco](https://docs.spot.io/eco/) and [Cost Intelligence](https://docs.spot.io/cost-intelligence/) can give you visibility into your entire cloud spend and help you optimize it. Therefore, these products may require connecting multiple accounts (or your master billing account). For Ocean Spark, connecting only the account in which you intend to deploy an Ocean Spark cluster is enough.
-
+> **Tip**: Other Spot products such as [Eco](https://docs.spot.io/eco/) can give you visibility into your entire cloud spend and help you optimize it. Therefore, these products may require connecting multiple accounts (or your master billing account). For Ocean Spark, connecting only the account in which you intend to deploy an Ocean Spark cluster is enough.
