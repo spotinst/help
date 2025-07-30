@@ -14,7 +14,7 @@ You can connect your account to AWS in two ways:
 
 1. After you have selected AWS as the [cloud provider](connect-your-cloud-provider/first-account/), select **Linked Account**.  
 
-   <img width=700 src="https://github.com/spotinst/help/assets/106514736/4d5e4bbd-56b3-4ed0-9c6c-e377c4fcdb13">
+   <img width="500" alt="image" src="https://github.com/user-attachments/assets/6d72829e-a3a1-4adb-945e-f84f721ef2d9" />
 
 2. Select **Manually**. 
 
