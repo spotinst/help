@@ -278,5 +278,5 @@
    </ol>
 
 4. Click **Upload Saved JSON File**, browse to find your service key: `spot-programmatic-access-sa-key.json` and click **Next**.
-5. Enter your [BigQuery dataset and table IDs](https://cloud.google.com/bigquery/docs/listing-datasets) and click **Next**.
+5. Enter your [BigQuery dataset and table IDs](https://cloud.google.com/bigquery/docs/listing-datasets) for your detailed billing export without the path (for example, just include gcp_billing_export_resource_v1_xyz), then select **Next**.
 6. Click **Connect to Eco**. It can take a few hours for your data to show up in the dashboard.
