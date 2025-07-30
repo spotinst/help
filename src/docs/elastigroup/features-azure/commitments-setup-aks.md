@@ -43,7 +43,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 2.  Create or edit the group. See [Create an Elastigroup](https://docs.spot.io/elastigroup/getting-started/create-an-elastigroup-for-azure).
 3.  In the Availability settings area, next to Utilize RIs/SPs, click **Add permission**.
  
-    ---NEED SCREENCAP---CREATE ELASTIGROUP---
+    <img width="900" src="https://docs.spot.io/elastigroup/_media/elastigroup-commits-find-in-wizard.png" />
 
 ###  Step 1: App Registrations
 
@@ -51,23 +51,22 @@ Follow the instructions below while referring to the [Azure documentation](https
 
       Upgrade:
 
-      <img width="500" src="https://github.com/user-attachments/assets/52ed6761-4d7a-4a8f-b05c-d0356392b217" />
-
+      <img src="https://docs.spot.io/managed-instance/_media/commitments_register-upgrade-app.png" />
 
       New:
 
-      <img width="500" src="https://github.com/user-attachments/assets/86e527cd-f95d-4be6-a44f-7e01da0c21c4" />
+      <img src="https://docs.spot.io/managed-instance/_media/commitments-register-new-app.png" />    
 
 
-2. Copy the following credentials from your Azure app and paste them into the fields:
+3. Copy the following credentials from your Azure app and paste them into the fields:
    * Application (client) ID.
    * Directory (tenant) ID.
 
-3.  Go to Step 2: Certificates and Secrets
+4.  Go to Step 2: Certificates and Secrets
 
 ###  Step 2: Certificates and Secrets
 
-<img width="500" src="https://github.com/user-attachments/assets/e61b0e9d-103d-47f2-b46e-74cac43daa82" />
+<img src="https://docs.spot.io/managed-instance/_media/commitments-certs-and-secrets.png" />
 
 1. Copy the following credentials from your Azure app and paste them into the fields:
    * Application secret expiration date.
@@ -78,7 +77,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 ###  Step 3: Permissions Assignment
 
-<img width="500" src="https://github.com/user-attachments/assets/71cae309-ad03-4c61-9859-c455bef17ec2" />
+<img src="https://docs.spot.io/managed-instance/_media/commitments-permss-with-reader.png" />
 
 >IMPORTANT:
 >
@@ -90,7 +89,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 1.  Select the custom reader role, and the permissions in accordance with those you purchased from Azure (by default, both RI and SP are selected).
 
-2.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level:
+2.  Use the following Azure PowerShell script to assign the Reservation Reader role / Savings Plan role at the tenant level:
 
 ```
 Import-Module Az.Accounts
@@ -152,6 +151,10 @@ When set to `True` (default), and there are free reserved instances / savings pl
 Under Spot API > Elastigroup > Elastigroup Azure Spot VMs >...  
 
 * [Create Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsCreate) or [Update Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsUpdate)  (under strategy)
+
+* [Import Group from VMp](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsImportFromVirtualMachine)
+* [Get Elastigroup Status](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs/operation/elastigroupAzureSpotVmsGetStat)
+
 
 
 
