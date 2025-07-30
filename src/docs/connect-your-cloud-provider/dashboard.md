@@ -84,7 +84,3 @@ Your actual Azure RIs and/or SPs and/or RCs charges deducted from the cost of Mi
 #### GCP Committed Usage Discounts (CUD)  
 
 Your actual GCP CUD charges deducted from the published cost of GCP On-Demand VMs. The On-Demand VMs charges can be found on GCP’s website at https://cloud.google.com/compute/pricing.
-
-#### Billing Engine and Cost Intelligence Fee Calculation 
-
-The monthly fee is calculated each month as a percentage of the total cloud spend. Unless otherwise specified, “Spend” is your charges as detailed in your cloud provider’s bills at the end of each month. This includes taxes, credits, and program discounts, but excludes your cloud provider’s support services. 
