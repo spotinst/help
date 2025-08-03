@@ -1,6 +1,6 @@
 #  Automatic Right-Sizing Recommendations and Rules
 
-Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS, and GCP</font>
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS, and GKE</font>
 
 This topic shows you how to view right-sizing recommendations for workloads and containers and work with right-sizing rules.
 
