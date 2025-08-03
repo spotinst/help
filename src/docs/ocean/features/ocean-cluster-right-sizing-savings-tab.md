@@ -1,6 +1,6 @@
 #  Automatic Right-Sizing Actual Savings
 
-Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS</font>, and  <font color="#FC01CC">GKE</font>.
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS</font>, and <font color="#FC01CC">GKE</font>
 
 This topic shows you how to view your (actual) right-sizing savings from applying down-sizing recommendations to your workloads.
 
