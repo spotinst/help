@@ -1,6 +1,6 @@
 #  Ocean Cluster Automatic Right Sizing
 
-Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS</font>, and  <font color="#FC01CC">GKE</font>.
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS</font>, and <font color="#FC01CC">GKE</font>
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
 
