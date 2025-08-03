@@ -454,7 +454,18 @@ There are a number of <a href="/administration/sso-access-control/">attributes t
 * Email
 * FirstName
 * LastName
-  
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSOaddlattributes">SSO: Can I disable multiple-factor authentication (MFA) for a single user in my organization?</summary>
+
+  <div style="padding-left:16px">
+
+  Contact [Support](https://support.spot.io/hc/en-us) to disable MFA for a single user.
+
  </div>
 
  </details>
