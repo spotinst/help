@@ -1,6 +1,6 @@
 # Automatic Right-Sizing-Troubleshooting
 
-Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS</font>
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>, <font color="#FC01CC">AKS</font>, and  <font color="#FC01CC">GKE</font>
 
 ## VPA not reporting message appears at the top of the right-sizing page
 
