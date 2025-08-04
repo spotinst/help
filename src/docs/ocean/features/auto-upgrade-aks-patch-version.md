@@ -17,14 +17,13 @@ To check if your control plane version needs an upgrade, access the cluster over
 2. Select a cluster from the list of clusters.
 3. View the installed version number of the control plane at the bottom of the tab.
 
-   <img src="https://docs.spot.io/ocean/_media/check-need-to-uprade.png" />
+   <img src="https://docs.spot.io/ocean/_media/check-need-to-upgrade.png" />
 
 The version can have one of the following statuses:
 
 * Green: The control plane is upgraded to the latest patch version.
 * Yellow: The control plane patch version can be upgraded to the latest available version.
-* Red: The control plane patch version needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not 
-support Kubernetes minor version upgrades.
+* Red: The control plane patch version needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not support Kubernetes minor version upgrades.
 
 * Gray: The Ocean controller is not valid or is not reporting, so there is no indication of the control plane patch version. See [Troubleshoot the Ocean Controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts).
 
@@ -65,7 +64,7 @@ To schedule an auto-upgrade:
    >**Note**: If this message appears, click to turn off the Azure Kubernetes upgrades feature.
   
       <img src="https://docs.spot.io/ocean/_media/auto-upgrade-azure-feature.png" />
-   
+
 3. Select whether to auto-upgrade the control plane or to auto-upgrade the control plane and roll.
 
    <img src="https://docs.spot.io/ocean/_media/select-what-to-upgrade.png" />
@@ -75,9 +74,9 @@ To schedule an auto-upgrade:
 5. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
 
     >**Note**: Rolls
-    > - Ocean will roll all virtual node groups applicable to the available control plane patch upgrade version.
-    > - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not in the auto-upgrades history.
-    > - If an option is not clickable, you have already run it and cannot select it again.
+    > * Ocean will roll all virtual node groups applicable to the available control plane patch upgrade version.
+    > * You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not in the auto-upgrades history.
+    > * If an option is not clickable, you have already run it and cannot select it again.
 
       <img src="https://docs.spot.io/ocean/_media/auto-upgrade-roll-configuration.png" />
 
@@ -96,12 +95,12 @@ To schedule an auto-upgrade:
 
      <img src="https://docs.spot.io/ocean/_media/auto-upgrade-when-to-frequency.png" />
 
- 8. Click **Schedule**.
+8. Click **Schedule**.
 
-   * The new schedule is turned on by default. To turn off the schedule, move the slider to the turned-off position.
-   * After the scheduled update is run, an entry will appear in the auto-upgrades history list.
+* The new schedule is turned on by default. To turn off the schedule, move the slider to the turned-off position.
+* After the scheduled update is run, an entry will appear in the auto-upgrades history list.
 
-##  Auto-Upgrade Now
+## Auto-Upgrade Now
 
 Use this option if you want to auto-upgrade immediately (rather than schedule an upgrade).
 
@@ -112,9 +111,9 @@ Use this option if you want to auto-upgrade immediately (rather than schedule an
 
 After the update, a new entry is added to the auto-upgrades history list.
 
-##  Upgrade Now - System Node Pools Only
+## Upgrade Now - System Node Pools Only
 
-Use this option if you want to auto-upgrade systems node pools immediately (rather than schedule an upgrade).
+Use this option if you want to auto-upgrade system node pools immediately (rather than schedule an upgrade).
 
 Ocean shows only the system node pools that are not updated.
 
@@ -124,8 +123,7 @@ Ocean shows only the system node pools that are not updated.
 
 >**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
 
-After the updatee, a new entry is added to the auto-upgrades history list.
-
+After the update, a new entry is added to the auto-upgrades history list.
 
 ## Delete an Auto-Upgrade Schedule
 
@@ -133,6 +131,3 @@ To delete an auto-upgrade schedule:
 
 1. Click the garbage bin icon to the right of the entry for the schedule.
 2. In the confirmation window, type **Delete** in the field provided and then click **Delete**.
-  
-
-
