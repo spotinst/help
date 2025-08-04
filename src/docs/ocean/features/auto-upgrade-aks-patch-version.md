@@ -17,7 +17,7 @@ To check if your control plane version needs an upgrade, access the cluster over
 2. Select a cluster from the list of clusters.
 3. View the installed version number of the control plane at the bottom of the tab.
 
-   <img src="https://docs.spot.io/ocean/_media/check-need-to-upgrade.png" />
+   <img src="https://docs.spot.io/ocean/_media/check-need-to-uprade.png" />
 
 The version can have one of the following statuses:
 
