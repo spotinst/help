@@ -31,7 +31,7 @@ The version can have one of the following statuses:
 
 * Click **Auto Upgrade** at the bottom of the cluster overview screen (next to the control plane version), or click the **Auto Upgrade** tab. If you have run or scheduled at least one auto-upgrade in this cluster, upgrade history and schedule lists appear.
 
-<img src="https://docs.spot.io/ocean/_media/autoupgrades-history.png" />
+<img width=1000 src="https://docs.spot.io/ocean/_media/autoupgrades-history.png" />
 
 The auto-upgrades history for completed runs appears at the top of the screen with these attributes:
 
@@ -50,7 +50,7 @@ System node pools upgrade history appears in a separate table.
 
 >**Tip**: Search for auto-update runs by **Status** using the updates history filter.
 
-<img src="https://docs.spot.io/ocean/_media/autoupgrade-schedules.png" />
+<img width=1000 src="https://docs.spot.io/ocean/_media/autoupgrade-schedules.png" />
 
 The schedules list appears at the bottom of the screen with these attributes:
 
