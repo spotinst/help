@@ -1,11 +1,9 @@
 # Ocean Release Notes
 
 
-## July 2025: Features and Enhancements
+## August 2025: Features and Enhancements
 
-Keep checking for updates.....
-
-<!--*  **OCN-0077 July 13, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now run immediate or scheduled auto-updates for AKS system node pools from the Ocean console for Kubernetes patch version updates to avoid potential errors and keep updated with the latest version. [Learn more…](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version ) -->
+* **OCN-0077 August 05, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now run immediate or scheduled auto-updates for AKS system node pools directly from the Ocean console, specifically for Kubernetes patch version updates. This helps prevent potential errors and enhance cluster resilience. [Learn more…](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version )
 
 Previous months...
 
