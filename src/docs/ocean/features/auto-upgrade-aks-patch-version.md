@@ -35,16 +35,19 @@ The version can have one of the following statuses:
 
 The auto-upgrades history for completed runs appears at the top of the screen with these attributes:
 
+* Upgrade ID
 * Execution Time: Format MM/DD/YYYY, hh: mm: ss.
-* Old Version number (before the run).
-* New Version number (after the run).
+* Old Version (number) before the run.
+* New Version (number) after the run.
 * Roll ID: Listed if the cluster was rolled after auto-update. Click the **Roll ID** link on the list entry to view roll attributes.
-* Run Statuses:
+* Status:
   * Completed (green): The control plane patch version was successfully updated.
   * Partly completed (orange): The control plane was successfully updated but could not create a roll, start a replacement for the roll, or only partly complete the roll.
   * Failed (red): The control plane patch version could not be updated. Review the logs tab for more details.
   * Stopped (black): The roll was stopped.
- 
+
+System node pools upgrade history appears in a separate table.
+
 >**Tip**: Search for auto-update runs by **Status** using the updates history filter.
 
 <img src="https://docs.spot.io/ocean/_media/autoupgrade-schedules.png" />
