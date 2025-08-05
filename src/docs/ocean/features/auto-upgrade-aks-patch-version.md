@@ -50,7 +50,7 @@ System node pools upgrade history appears in a separate table.
 
 >**Tip**: Search for auto-update runs by **Status** using the updates history filter.
 
-<img width=1000 src="https://docs.spot.io/ocean/_media/autoupgrade-schedules.png" />
+<img width=1000 src="https://docs.spot.io/ocean/_media/autoupgrade-schedules-1.png" />
 
 The schedules list appears at the bottom of the screen with these attributes:
 
