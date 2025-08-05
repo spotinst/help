@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create an Ocean CD Policy
 
 You can create notifications for Ocean CD.
