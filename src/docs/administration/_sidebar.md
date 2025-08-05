@@ -15,7 +15,6 @@
     - [Event Policies](administration/notification-center/event-policies/)
       - [Create a Compute Policy](administration/notification-center/event-policies/create)
       - [Create a Security Policy](administration/notification-center/event-policies/create-security-policy)
-      - [Create an Ocean CD Policy](administration/notification-center/event-policies/create-ocean-cd-policy)
   - [SSO Access Control](administration/sso-access-control/)
     - [Organization Level SSO](administration/sso-access-control/organization-level-sso)
     - [Account Level SSO](administration/sso-access-control/account-level-sso)
