@@ -1,6 +1,16 @@
 # Eco Release Notes
 
-* **ECO-0004 July 28, 2025**: [Eco value email](eco/tutorials/monthly-value-report) updated with Flexera logo and standards.
+* **ECO-0005 August 8, 2025**: Documentation improvements for [connecting your GC account](eco/getting-started/connect-gc-account) and [access roles and permissions](eco/gcp-tutorials/access-roles-read-only) to enhance clarity and reduce troubleshooting during onboarding.
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+ <summary markdown="span" style="color:#7632FE; font-weight:600">July 2024</summary>
+
+  <div style="padding-left:16px">
+
+  * **ECO-0004 July 28, 2025**: [Eco value email](eco/tutorials/monthly-value-report) updated with Flexera logo and standards.
+
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
  <summary markdown="span" style="color:#7632FE; font-weight:600">April 2024</summary>
