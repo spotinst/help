@@ -33,7 +33,7 @@ To be able to add these "extra CAs" to the Ocean Controller, we provide a way th
 To add “extra pems,” add the certificate(s) to userEnvCertificates.pem. The certificates must be in PEM format. 
 
 ```bash
-helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller  
+helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
   --set spotinst.account=$SPOTINST_ACCOUNT \ 
   --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \ 
   --set spotinst.token=$SPOTINST_TOKEN \ 
