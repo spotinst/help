@@ -37,6 +37,8 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 ## Commitments Scenarios
 
+  <img src="https://docs.spot.io/elastigroup/_media/elastigroup-commitments.png" />
+
 <img width="1140" src="https://github.com/user-attachments/assets/6ae7f058-9f2f-40a7-bb09-3e8244a15929" />
 
 ###  Launching a VM
