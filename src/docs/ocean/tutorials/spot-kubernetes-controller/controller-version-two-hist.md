@@ -159,6 +159,7 @@
 * Initial support for Azure - Added AKS Interruption handler.
 * Upgraded Kubernetes SDK to version 1.29.
 * Supported Kubernetes resource deletion for custom resources.
+* Support Automatic Right-Sizing Beta Feature
 
 ### Bug Fixes
 * Leader Election process now waits for V1 controller pods to terminate before starting.
