@@ -59,11 +59,13 @@ If you need assistance, read the [FAQs](https://docs.spot.io/faqs/faqs-finops). 
 
 5. Assign the Cost Management Reader role to the registered application on the [management groups](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/assign-access-acm-data#assign-management-group-scope-access) or [subscriptions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/assign-access-acm-data#assign-subscription-scope-access) you want to manage (the management groups/subscriptions you want Eco Azure to purchase reservations).
 
-6. For PAYG only, assign the Reservation Reader role to the registered application.
+   **Note**: For PAYG only, assign the Cost Management permissions on the management group ([tenant root group](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview#management-group-access)).
+
+7. Assign the Reservation Reader role to the registered application.
     <ol style="list-style-type: lower-alpha;">
     <li>Go to the Reservations page > <b>Role assignments</b> > <b>Add role assignment</b>. </li>
     <li>Search for and select <b>Reservation Reader</b>, then click <b>Next</b> > <b>Select Members</b>.</li>
     <li>Search for and select the Eco Azure Registered application, then click <b>Review + Assign</b>.</li>
       </ol>
 
-7. In the Spot console, in the App Registration page, enter the Application ID, Tenant ID, Application Secret Value and Expiration date and click **Connect**. 
+8. In the Spot console, in the App Registration page, enter the Application ID, Tenant ID, Application Secret Value and Expiration date and click **Connect**. 
