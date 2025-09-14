@@ -1,5 +1,19 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.67] (v2.0.73) - 2025-09-10
+
+### Added
+* Added the following permissions to enable service interaction with `Argo Rollouts` resources:
+
+    ```
+    - apiGroups: [ "argoproj.io" ]
+      resources: [ "rollouts" ]
+      verbs: [ "get", "list", "watch" ]
+    - apiGroups: [ "argoproj.io" ]
+      resources: [ "rollouts" ]
+      verbs: [ "get", "list", "patch", "update", "create", "delete" ]
+    ```
+
 ## Chart Version [0.1.66] (v2.0.73) - 2025-07-30
 
 ### Added
