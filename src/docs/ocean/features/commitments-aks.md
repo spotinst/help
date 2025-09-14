@@ -37,7 +37,9 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 ## Commitments Scenarios
 
-<img width="1000" src="https://github.com/user-attachments/assets/ae781249-3fff-4647-9cc4-35bd8573abf8" />
+<img src="https://docs.spot.io//ocean/_media/ocean-commitments.png" />
+
+![ocean-commitments](https://github.com/user-attachments/assets/0bffd078-f98c-4a03-ba73-9dcafd7e9891)
 
 
 ###  Launching a VM
