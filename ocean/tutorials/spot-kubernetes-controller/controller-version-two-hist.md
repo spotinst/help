@@ -1,5 +1,26 @@
 # Ocean Controller Version 2 History
 
+## Chart Version [0.1.68] (v2.0.74) - 2025-11-11
+
+### Added
+* GCP - Added support for multi-org CSR approval (required for GKE-v1.33).
+* Upgraded `log-shipper` image to `ghcr.io/fluent/fluent-bit:4.1.1`.
+* Upgraded `metrics-server` chart to `3.13.0`.
+* Added the following permissions to the auto-updater to support metrics-server `3.13.0`:
+
+    ```
+    - apiGroups: [ "rbac.authorization.k8s.io" ]
+      resources: [ "clusterroles" ]
+      verbs: [ "get", "patch", "escalate", "bind" ]
+      resourceNames:
+      - system:auth-delegator
+    - apiGroups: [ "rbac.authorization.k8s.io" ]
+      resources: [ "roles" ]
+      verbs: [ "get", "patch", "escalate", "bind" ]
+      resourceNames:
+      - extension-apiserver-authentication-reader
+    ```
+
 ## Chart Version [0.1.67] (v2.0.73) - 2025-09-10
 
 ### Added
