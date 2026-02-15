@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Define OrgAndRole with Okta
 
 You can create multiple organization and role (OrgAndRole) definitions in Spot using Okta. Then you can use your Okta SSO to sign in to multiple organizations in Spot.

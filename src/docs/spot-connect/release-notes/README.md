@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Connect Release Notes
 
 * **CON-0002 September 16, 2024** Spot Connect has a new look and feel. The basic functionality hasn't changed. The benefits include reduced loading time and increased security.

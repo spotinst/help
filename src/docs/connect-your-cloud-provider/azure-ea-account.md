@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Your Azure Billing Account to Spot
 
 This procedure describes how to set up Spot account access to Azure EA read only data, which gives Spot the necessary permissions to pull Azure data and process it for the [Eco Azure Dashboard](eco/azure-tutorials/view-your-savings).

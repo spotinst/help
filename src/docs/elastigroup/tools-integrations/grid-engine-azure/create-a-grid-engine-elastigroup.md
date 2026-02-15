@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Grid Engine Elastigroup
 
 ## Step 1: Open the Creation Wizard

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Run Your First App
 
 Now that you have created your first [Ocean Spark cluster](ocean-spark/getting-started/create-cluster), you are ready to run your first app.

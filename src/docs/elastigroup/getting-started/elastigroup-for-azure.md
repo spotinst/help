@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup for Azure
 
 Elastigroup for Azure is an IaaS Optimization platform that allows you to provision, manage and scale compute infrastructure to support any Elastic Application or Load Balanced workload.

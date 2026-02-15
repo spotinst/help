@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cross-Account KMS Key to Encrypt EBS Volumes
 
 ## Introduction

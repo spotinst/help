@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Inventory
 
 Spot Security provides a list of all supported assets within your cloud network. Analytics are provided to help increase your visibility. 

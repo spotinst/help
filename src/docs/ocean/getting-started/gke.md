@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect an Existing GKE Cluster
 
 This topic describes connecting an existing GKE cluster to Ocean using the [Spot Console](http://console.spotinst.com/).

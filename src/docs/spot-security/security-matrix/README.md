@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Security Support Matrix
 
 ## Supported AWS Asset Types

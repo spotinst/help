@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import an AKS Cluster to Ocean via the Console
 
 These are the options for importing an AKS cluster to Ocean:

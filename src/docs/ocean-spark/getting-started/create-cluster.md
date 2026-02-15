@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create an Ocean Spark Cluster
 
 There are several ways to deploy an Ocean Spark cluster:

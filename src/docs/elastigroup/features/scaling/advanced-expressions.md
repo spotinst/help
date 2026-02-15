@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Advanced Expressions
 
 The scaling action to be performed can also be defined as a mathematical expression.

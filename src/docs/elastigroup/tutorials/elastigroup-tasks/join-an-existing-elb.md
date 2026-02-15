@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import an Existing Elastic Load Balancer
 
 You can import the configuration of an existing AWS Elastic load balancer (ELB) to Spot so that the ELB can be managed as an Elastigroup in Spot.

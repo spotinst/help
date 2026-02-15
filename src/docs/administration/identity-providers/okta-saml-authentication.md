@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Okta SAML Authentication
 
 SSO support makes it easy to manage your accounts and works with the most popular identity providers.

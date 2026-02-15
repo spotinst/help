@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Distribute Nodes by vCPU
 
 Cloud sevice provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  

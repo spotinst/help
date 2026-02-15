@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CloudFormation Overview
 
 AWS CloudFormation is an infrastructure automation tool that provisions cloud computing resources. By creating a stack template, you can be confident your AWS cloud resources are built in a consistent manner.

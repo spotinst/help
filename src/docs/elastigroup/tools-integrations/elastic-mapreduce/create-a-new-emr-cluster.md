@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a New EMR Cluster
 
 In this tutorial, you will learn how to create an Elastic MapReduce (EMR) cluster in an Elastigroup.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Splunk
 
 This integration assists you in retrieving data and enables Splunk in your automation workflows. 

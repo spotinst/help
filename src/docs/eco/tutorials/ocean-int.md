@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ocean Integration
 
 Eco and Ocean are designed to optimize the cost of EC2 instances. While Eco focuses on managing commitments, Ocean specializes in managing container infrastructure. Ocean's management feature enables cost savings by launching instances as spot instances whenever the market allows. 

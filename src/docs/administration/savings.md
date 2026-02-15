@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Savings
 
 You can view how much you saved using spot instances instead of on-demand instances.

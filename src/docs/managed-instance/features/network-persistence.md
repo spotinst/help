@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Network Persistence
 
 Stateful Node Network Persistence works by maintaining the EC2 node's Elastic Network Interface (ENI), allowing the persistence of both public and private IPs associated with the node.

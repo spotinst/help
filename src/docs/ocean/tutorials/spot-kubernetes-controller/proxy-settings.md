@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ocean Controller Proxy Settings
 
 This page describes how to configure the Ocean Controller Proxy.

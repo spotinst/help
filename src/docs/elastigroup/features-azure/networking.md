@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup Networking 
 
 Elastigroup enables you to define a configuration of rationally similar workloads and enables the scaling of virtual machines (VMs) in the Azure cloud vendor. Defining the network configuration enables Elastigroup to provision the VMs in the appropriate Azure virtual network and configure the individual network interfaces that are initialized to meet the requirements of your workloads.  

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # AWS Load Balancers & Autohealing
 
 If you are running an application or service behind AWS Elastic Load Balancer (ELB) such as Application Load Balancer (ALB), Elastigroup provides the freedom to run a blended cluster of multiple instance types (e.g., M3, M4, C3) and sizes (e.g., large, xlarge).

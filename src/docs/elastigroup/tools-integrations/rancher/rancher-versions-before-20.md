@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Rancher Version before 2.0
 
 This proceduree covers integrating Elastigroup with Rancher. Once completed Elastigroup will communicate with the Rancher primary to scale and manage the underlying cluster nodes.

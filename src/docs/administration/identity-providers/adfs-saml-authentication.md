@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # AD FS SAML Authentication
 
 Active Directory Federation Services (AD FS or ADFS) is one of the leading identity provider (IDP) solutions in the market. You can configure your Spot account to be authenticated using the SAML protocol using AD FS.

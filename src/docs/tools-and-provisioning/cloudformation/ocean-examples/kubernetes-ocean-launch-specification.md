@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Kubernetes Ocean Launch Spec
 
 Create an Ocean Launch Spec with the following CloudFormation template. The full body attributes list is available on our main [creation](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) page.

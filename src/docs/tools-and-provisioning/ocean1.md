@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # This is the title
 
 This is a test file.

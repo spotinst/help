@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Install kOps 1.14
 
 Download the proper binary file for your operating system:

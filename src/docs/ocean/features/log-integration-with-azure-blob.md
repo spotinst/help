@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  Log Integration with Azure Blob
 
 Cloud service provider relevance: <font color="#FC01CC">Azure</font>

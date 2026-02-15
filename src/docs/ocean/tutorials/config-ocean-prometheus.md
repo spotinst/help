@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configurations for the Ocean Prometheus Exporter
 
 Helm link:

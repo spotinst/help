@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CFN Helper Scripts
 
 [CFN helper scripts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-helper-scripts-reference.html) are used to retrieve and interpret resource metadata, install packages, create files, and start services. It is commonly used in user-data scripts.

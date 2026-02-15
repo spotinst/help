@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Identity Providers
 
 You can choose from several major identity providers to manage user authentication with Spot. Identity providers create connections between cloud computing resources and users. This minimizes signing in for users when they use mobile and roaming applications.

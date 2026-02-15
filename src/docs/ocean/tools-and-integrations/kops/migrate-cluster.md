@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Migrate a Cluster
 
 ## Prerequisites

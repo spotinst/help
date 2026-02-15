@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Notification Center
 
 In the notification center, you can:

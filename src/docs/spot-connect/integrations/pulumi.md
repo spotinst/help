@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Pulumi
 
 Use the Pulumi integration to execute Pulumi templates and connect the execution with other integrations that Spot Connect offers. 

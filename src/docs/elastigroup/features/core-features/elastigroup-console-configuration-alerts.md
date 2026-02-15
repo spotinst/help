@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configuration Alerts
 
 Configuration alerts allow more visibility and control of group configuration and integration healthiness.

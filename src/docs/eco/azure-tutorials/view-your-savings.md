@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # View your Savings
 
 Once Eco Azure has been enabled for your organization and you have chosen your reservation and savings plan strategy, your Eco Azure dashboard will display a more complete view of savings.

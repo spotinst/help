@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Target Scaling Policies and Predictive Autoscaling
 
 Target scaling policies are autoscaling policies that track a specified metric relative to your desired target value and automatically adjust your Elastigroup scale to meet this target.

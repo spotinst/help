@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Jupyter Notebooks
 
 Ocean Spark’s integration with Jupyter Notebooks enables you to run Jupyter kernels with Spark support on an Ocean Spark cluster. You can connect your notebooks from a Jupyter or Jupyterlab server running locally or from a hosted JupyterHub.

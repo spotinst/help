@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Notification Policy
 
 This page describes the procedures to create a new notification policy in Spot console’s Notification Center.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Auto-Upgrade the AKS Control Plane Patch Version in the Console
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>

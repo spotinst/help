@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # gen19 release notes
 
 ## Changelog

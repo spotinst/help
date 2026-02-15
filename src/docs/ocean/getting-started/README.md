@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Getting Started
 
 It's easy to get started with Ocean. It integrates with multiple container and Kubernetes environments, including ECS, EKS, AKS, and GKE, as well as with your existing DevOps tools, such as Terraform, CloudFormation, and Ansible, to support your cloud-native applications.

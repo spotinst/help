@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CodeDeploy: Blue-Green Deployment
 
 ## Introduction

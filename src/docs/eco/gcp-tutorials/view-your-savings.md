@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # View Your Savings
 
 Once Eco GC is set up for your organization and you select your committed use discount strategy, your Eco GC dashboard will display a more complete view of savings.

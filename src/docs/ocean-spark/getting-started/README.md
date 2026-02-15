@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Get Started with Ocean for Apache Spark
 
 Ocean for Apache Spark (also referred to as Ocean Spark) is a managed Spark platform deployed on a Kubernetes cluster in your cloud account.

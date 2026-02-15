@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ocean Overview Dashboards
 
 This topic includes these dashboards:

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Legacy images release notes
 
 Before generation 18, images were available in the `gcr.io/datamechanics/spark` repository.

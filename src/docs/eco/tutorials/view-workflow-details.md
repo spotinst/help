@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # View Workflow Details
 
 For each [Workflow](eco/tutorials/manage-workflows) you create, you can view a summary of the rules included, generate a workflow report, and access information about reports created in the past.

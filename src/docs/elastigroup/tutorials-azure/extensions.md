@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Extensions for Elastigroup 
 
 Spot Elastigroups support Azure extensions. The extensions are installed right after the VM initialization. 

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Update Spot Policy
 
 When setting up your Spot account, we use a cloud formation stack to register our IAM role policy in your AWS account. This policy holds permissions that are needed for Spot's account to handle your AWS resources.

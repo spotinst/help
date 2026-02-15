@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Docker Images Release Notes
 
 Please choose a specific release in the sidebar on the left.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup Auto-Recover for EMR
 
 ## Introduction

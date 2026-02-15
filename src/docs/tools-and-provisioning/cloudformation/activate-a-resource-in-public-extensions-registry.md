@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Activate a Resource in Public Extensions Registry
 
 This page describes how to activate a Spot resource in the AWS CloudFormation public extensions registry.

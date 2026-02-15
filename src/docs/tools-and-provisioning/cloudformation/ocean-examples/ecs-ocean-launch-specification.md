@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # ECS Ocean Launch Spec
 
 Create an ECS Ocean Launch Spec with the following CloudFormation template.

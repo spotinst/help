@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # String Transformers
 
 This action node manipulates a string output from the previous node. 

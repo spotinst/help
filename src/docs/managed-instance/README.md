@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup Stateful Node
 
 Elastigroup Stateful Node enables you to run stateful applications on stateful nodes. Stateful Node utilizes spot nodes while providing persistence for the root volume, data volumes and network interface, in addition to other launch specifications during node replacements.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Availability Zone Scores 
 
 Availability zone scores and recommendations assist you in making informed decisions when choosing the best availability zones to launch instances at. The data on the recommendation page is based on availability zone scores calculated by Elastigroup, taking both Cost and Spot markets availability into account. To ensure tailor-made data is displayed, the data comprising the availability zone scores is directly related to the allowed instance types configured in your group.  

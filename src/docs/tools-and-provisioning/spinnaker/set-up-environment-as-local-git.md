@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set up Environment as Local Git
 
 This page describes the prerequisites and procedures for setting up the local Git environment for using Spinnaker.

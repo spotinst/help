@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # JSONPath 
 
 Use this node to perform JSONpath expression on your JSON objects. 

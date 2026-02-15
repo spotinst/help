@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Install kOps 1.12
 
 ## Installing kOps Binaries

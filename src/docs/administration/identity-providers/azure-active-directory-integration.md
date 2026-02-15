@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Azure Active Directory Integration
 
 Manage Access with Azure Active Directory. For Spot users managing accounts in Azure Active Directory, Spot has an approved application in the Active Directory Gallery.

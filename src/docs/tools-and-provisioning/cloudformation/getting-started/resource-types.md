@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Resource Types
 
 You can manage the Spot resources listed below via CloudFormation custom resources.

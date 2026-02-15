@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Stateful Node with Application Persistency
 
 This topic describes how to create a stateful node with application persistence using a date and time Python script in the Spot API.

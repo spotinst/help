@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Node Details
 
 The Stateful Nodes Overview gives you access to key information and summary data about a node. It offers insights into cost efficiency, as well as details about persisted network and storage resources. 

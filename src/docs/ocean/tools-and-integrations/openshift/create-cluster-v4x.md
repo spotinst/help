@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Ocean Cluster from OpenShift (v4.x)
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of all pods, containers, and applications.

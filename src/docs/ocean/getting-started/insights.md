@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Ocean Insights
 
 Ocean Insights provides a convenient way for you to see how Ocean can reduce your cluster costs and optimize your cluster resources. Insights reads and analyzes data from your Kubernetes cluster and then presents a detailed report of potential savings that you could achieve. This Insights analysis is free of charge and does not require any migration or changes to your cluster configuration.

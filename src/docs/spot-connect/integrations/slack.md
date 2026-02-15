@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Slack
 
 Slack is a very popular communication tool and you can use the Slack integration to send messages and notifications to your Slack team. One of the most common workflow integrations is the connection to the user's communication suite.  

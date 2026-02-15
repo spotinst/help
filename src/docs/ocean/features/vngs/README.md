@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Virtual Node Groups
 
 >**Note on terminology:** A Virtual node group is equivalent to a launch specification. The term virtual node group is used throughout our documentation, though you may see launch specifications appear in the [Spot API](https://docs.spot.io/api/). 

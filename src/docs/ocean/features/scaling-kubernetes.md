@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Scaling (Kubernetes)
 
 Ocean's pod-driven scaling for Kubernetes clusters serves three main goals:

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # FAQs - Ocean and Ocean for Apache Spark
 
 <!----------------------------------ocean---------------------------------->

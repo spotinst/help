@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # AWS SNS Webhook 
 
 Webhooks are automated messages sent from applications when something happens. They have a message, or payload, and are sent to a unique URL. 

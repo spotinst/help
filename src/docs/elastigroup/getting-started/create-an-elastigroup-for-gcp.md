@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create an Elastigroup for GCP
 
 This tutorial covers the creation of a Load Balanced Elastigroup from scratch. To learn more, read about how Elastigroup works with [GCP Load Balancers and Backend Services](elastigroup/features/gcp/gcp-load-balancers-backend-services).

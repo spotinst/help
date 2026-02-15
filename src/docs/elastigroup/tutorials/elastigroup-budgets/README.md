@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup Budgets
 
 Elastigroup Budgets gives you budget management capabilities for all of your clusters. Get deeper visibility and control over your cloud expenses by setting budgets to clusters, defining alert thresholds, together with an email/SNS notification in case of budget deviation.

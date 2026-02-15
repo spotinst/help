@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Analyze Your Costs
 
 In a containerized world, where multiple applications and services share the same infrastructure, it is often hard to distinguish the costs of different applications, services, and environments.

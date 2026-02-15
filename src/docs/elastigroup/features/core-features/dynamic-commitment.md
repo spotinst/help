@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Dynamic Commitment Management
 
 Elastigroup and Ocean automatically revert existing instances using reserved capacity (RI) and savings plans (SP) to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs. 

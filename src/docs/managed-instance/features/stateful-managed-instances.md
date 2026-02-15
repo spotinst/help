@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Node for AWS
 
 Run stateful applications on stateful nodes. Stateful Nodes utilize spot nodes while providing persistence for the root volume, data volumes and network interface, in addition to other launch specifications during node replacements.

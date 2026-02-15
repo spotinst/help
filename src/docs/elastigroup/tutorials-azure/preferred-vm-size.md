@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Preferred Spot VM Size 
   
 Preferred Spot VM sizes enable you to set priority tiers on the Elastigroup’s configured VM sizes. VM sizes that are selected as preferred will be prioritized over other types and will be used whenever possible.  

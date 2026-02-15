@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Administration
 
 You can easily manage users, permissions, and accounts in Spot:

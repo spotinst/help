@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Secrets and Environment Variables
 
 This page describes the configuration of secrets and environment variables.

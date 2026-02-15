@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create HCS on Existing Elastigroup
 
 Once the Spot Health Check Service is Installed on an instance, set the Spot Health Check configuration in Elastigroup using Cloud Formation templates.

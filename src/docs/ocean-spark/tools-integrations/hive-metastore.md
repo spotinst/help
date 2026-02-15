@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Hive Metastore
 
 Configuring a Hive Metastore makes your table metadata persistent across your Apache Spark applications and enables the sharing of Spark tables across multiple Spark infrastructures.

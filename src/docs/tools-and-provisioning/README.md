@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Tools and Provisioning
 
 Spot easily plugs into the tools you already use including infrastructure as code providers such as Terraform, CloudFormation, Ansible, and Puppet. Keep your existing templates in place, and let Spot determine and enforce the best possible mix of server sizes, types, and lifecycles for your workloads.

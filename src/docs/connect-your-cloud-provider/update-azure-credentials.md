@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Update Azure Credentials
 
 You can update your Azure client secret and its expiration date:

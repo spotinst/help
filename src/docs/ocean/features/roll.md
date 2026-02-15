@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Rolls (AKS)
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>

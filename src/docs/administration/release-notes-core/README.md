@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  Administration Release Notes
 
 * **ADM-0003 July 23, 2025**: The Spot console has updated [vCPU](administration/vcpu) and [Savings](administration/savings) pages, offering improved visibility and usability for resource and cost optimization.

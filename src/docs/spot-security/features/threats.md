@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Threats
 
 AWS Threat Detection and Response is an advanced security feature offered by Spot Security to safeguard your cloud infrastructure from potential threats and unauthorized activities. By combining event analysis from CloudTrail with Spot's proprietary anomaly detection methods, this feature provides comprehensive protection and maps detected anomalies to the ATT&CK MITRE framework for enhanced threat intelligence. 

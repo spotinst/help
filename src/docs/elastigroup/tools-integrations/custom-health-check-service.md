@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Custom Health Check Service
 
 ## Architecture

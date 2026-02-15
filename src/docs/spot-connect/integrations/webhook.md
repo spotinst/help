@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Generic Webhook
 
 Webhooks are automated messages sent from applications when an issue occurs. They have a message, or payload, and are sent to a unique URL. They are a simple mechanism and nearly every service can integrate with Spot Connect by using webhooks.

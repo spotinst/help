@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Product Tour
 
 This section takes you through a tour of the main pages of Ocean for Apache Spark (also referred to as Ocean Spark): Clusters, Applications, and Jobs. Let’s first define these major concepts.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Budgets
 
 Elastigroup Budgets is a cost control tool embedded in the Elastigroup platform.

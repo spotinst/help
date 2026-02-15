@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create New Environment
 
 To create an Elastigroup in the same template that creates a Beanstalk environment, create the following in your template:

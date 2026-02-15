@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # IaC scanning
 
 Infrastructure as Code (IaC) scanning examines your source code repository to identify misconfigurations. It checks your pull requests (PRs) and provides comments on detected misconfigurations, allowing you to address them before merging the pull request. 

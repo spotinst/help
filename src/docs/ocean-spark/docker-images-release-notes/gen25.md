@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # gen25 release notes (2024-11-26)
 
 ## Changelog

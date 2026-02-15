@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Eco Azure Tutorials
 
 Eco actively manages the full lifecycle of your commitments, including planning, purchasing, exchanging and canceling. It ensures that your reserved instance and savings plan portfolio is optimized from the start, starting with your existing commitment purchases and creating a well-balanced mix of reserved instances and savings plans that continues to adapt to changing needs and usage.

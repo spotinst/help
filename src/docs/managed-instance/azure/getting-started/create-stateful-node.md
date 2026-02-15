@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Stateful Node
 
 This procedure describes how to create a stateful node from scratch in Elastigroup Azure.

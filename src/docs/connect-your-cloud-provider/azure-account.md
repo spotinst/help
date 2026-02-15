@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect your Azure Subscription to Spot
 
 This procedure covers authenticating your Spot account with Azure, which gives Spot the necessary permissions to launch and manage Azure resources on your behalf.

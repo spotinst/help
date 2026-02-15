@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  AWS ECS Features
 
 Ocean is a managed infrastructure scaling service that adjusts infrastructure capacity and size to meet the needs of containerized applications running on the cluster. Ocean monitors for pending ECS tasks and automatically adjusts the cluster size based on the workload placement constraints. 

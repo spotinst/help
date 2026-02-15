@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # gen20 release notes
 
 ## Changelog

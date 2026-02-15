@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # On Demand & Spot Virtual Machines
 
 There are two options for configuring the desired number of Spot virtual machines within an Elastigroup:

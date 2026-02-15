@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Eco Monthly Value Report
 
 Once Eco for AWS has been enabled for your organization and you have chosen your commitment [Strategy](eco/tutorials/choose-a-strategy), all users associated with the organization will begin to receive automated, monthly emails to help you understand the value Eco provides. Our goal is to save you both time and money. The email explains how and is described below.

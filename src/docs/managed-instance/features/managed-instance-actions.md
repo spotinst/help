@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Node Actions
 
 The Stateful Node actions that apply changes maintain the stateful node’s configuration while applying changes to the underlying VM.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CloudFormation Templates
 
 CloudFormation actions allow you to perform operations to manage your AWS resources. 

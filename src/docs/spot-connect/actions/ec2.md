@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # EC2 
 
 EC2 actions allow you to perform targeted operations against EC2 resources. 

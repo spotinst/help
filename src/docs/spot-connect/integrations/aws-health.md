@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # AWS Health Trigger
 
 Webhooks are automated messages sent from applications when some alerts and notifications happen. They have a message, or payload, and are sent to a unique URL.

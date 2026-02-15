@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Kubernetes Ocean Cluster
 
 Create an Ocean Cluster with the following CloudFormation template.

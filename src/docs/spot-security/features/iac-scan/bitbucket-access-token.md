@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Bitbucket Cloud Access Token Generation Steps
 
 Spot Security requires a valid Bitbucket Cloud Personal Access token to scan the repositories. The steps to generate the token can be found at [Access Tokens | Bitbucket Cloud | Atlassian Support](https://support.atlassian.com/bitbucket-cloud/docs/access-tokens/). 

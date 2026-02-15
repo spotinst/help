@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Deploy an Elastigroup
 
 Whenever you wish to upgrade your application version or any configuration attribute in the Elastigroup, you can run Elastigroup’s blue-green deployment to update the VMs in the group.

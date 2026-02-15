@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Rancher Versions 2.0 and Later
 
 ## Step 1: Prepare Rancher

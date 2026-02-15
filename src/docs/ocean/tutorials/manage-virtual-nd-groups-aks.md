@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Manage Virtual Node Groups (AKS)
 
 Virtual Node Groups (VNGs) provide a single layer of abstraction that enables you to manage different types of workloads on the same cluster. 

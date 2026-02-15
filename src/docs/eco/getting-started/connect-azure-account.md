@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Your Azure Account for Eco Analysis
 
 You can connect your account to Eco to get estimated cost savings analysis.

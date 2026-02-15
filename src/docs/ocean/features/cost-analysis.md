@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cost Analysis
 
 In a containerized world, in which multiple applications and services share the same infrastructure, it is often hard to distinguish between the costs of different applications, services, and environments.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Permit List IP Addresses
 
 Spot permit list IP addresses are required for integrations to work as expected. The IP must be permit-listed on the Primary nodes of Rancher, HCS, Kubernetes, Nomad, and Docker Swarm.

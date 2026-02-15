@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Independent Elastigroup Integration
 
 When Beanstalk deployment policy is set as: `Immutable` or `Rolling with additional batch`, Elastigroup uses `Independent` integration to manage the cluster instances.

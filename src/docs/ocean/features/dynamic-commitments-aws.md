@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Dynamic Commitments 
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font>
