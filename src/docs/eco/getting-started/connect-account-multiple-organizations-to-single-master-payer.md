@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Account: Multiple Organizations to Single Management Account
 
 Use this procedure if you need to connect multiple Spot organizations to a single Management Account. This procedure enables Eco to access your billing file and provide you with visibility into your cloud expenditures.

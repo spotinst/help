@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # View Scaling Constraints
 
 Every application has its unique compute infrastructure requirements, and for that reason container orchestrators such as Kubernetes allow the use of taints and affinities to control precisely where pods run.

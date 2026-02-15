@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Using Signals in Elastigroups
 
 The instance signal API is used for notifying the system about the instance state, so that the system can act accordingly. Supported signals are:

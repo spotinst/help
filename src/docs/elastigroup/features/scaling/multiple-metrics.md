@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Multiple Metrics
 
 In its simplest form, autoscaling is based on tracking of a metric you choose, for example, Average CPU or Latency. When the metric exceeds a defined threshold, then a scaling action is triggered.

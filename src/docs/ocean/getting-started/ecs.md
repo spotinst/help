@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect an Existing ECS Cluster
 
 Ocean is a managed infrastructure service for ECS that automatically adjusts infrastructure capacity and size to meet the needs of all tasks, containers, and applications.

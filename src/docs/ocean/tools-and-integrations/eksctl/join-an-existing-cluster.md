@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect an Existing Cluster using eksctl
 
 If you have an existing EKS cluster managed by eksctl and would like to connect it to Ocean, complete the procedure below.

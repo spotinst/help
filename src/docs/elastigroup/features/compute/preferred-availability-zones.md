@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Preferred Availability Zones
 
 When you set up an Elastigroup, you choose a region, and according to the Availability Zones (AZs) existing in that region, you choose the AZs that you want to be allowed for instances Spot creates.

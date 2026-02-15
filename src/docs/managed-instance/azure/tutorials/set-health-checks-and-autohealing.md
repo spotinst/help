@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set Health Checks and Auto Healing
 
 Elastigroup stateful node has configurable health checks make sure your VMs are ready and healthy for running your workloads. You can define health checks when you are creating a stateful node or add them to an existing stateful node in the Networking configuration.

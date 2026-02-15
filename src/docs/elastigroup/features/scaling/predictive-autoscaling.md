@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Predictive Autoscaling
 
 Predictive autoscaling allows you to enjoy seamless prediction of when your Elastigroup would experience load and scale the number of instances in advance to meet business needs.

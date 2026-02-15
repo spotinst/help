@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Groups
 
 The Groups page shows you all the details about your Elastigroup. In addition, you can edit and manage the group from this page. The information you can see depends on your features and integrations.

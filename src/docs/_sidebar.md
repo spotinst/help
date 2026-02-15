@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 <!-- Table of Contents -->
 
 - [**Get Started with Spot**](connect-your-cloud-provider/)

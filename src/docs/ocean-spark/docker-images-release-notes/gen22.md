@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # gen22 release notes
 
 ## Changelog

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create an API Token
 
 You can create permanent and temporary tokens:

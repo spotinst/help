@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Data Volume Persistence
 
 Data volume persistence maintains the data volumes during spot node replacement. The data on the volumes that were attached at the time of the previous node termination will be present on the new node, using the same BlockDeviceMapping configuration upon node replacement.

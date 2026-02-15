@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  Availability Zones Recommendations (AWS Kubernetes)
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  

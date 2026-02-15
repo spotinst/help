@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Humio
 
 The integration between Humio and Spot Connect provides users with the ability to automate and streamline cloud log management. 

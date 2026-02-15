@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # View Spot Markets
 
 The Spot Markets page provides insights about the status of your chosen instance types within the greater AWS spot market. For example, you can see how your cluster instances are distributed throughout the market, what the current trends in interruption rates are, and what the typical spot instance lifetimes are of instances like yours. The information presented on this page can help you to understand the behavior of the currently configured markets and make changes as required.

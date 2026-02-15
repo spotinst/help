@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Third-Party Integrations
 
 Spot stateful nodes can be configured to receive traffic from Amazon Route 53 or one of these load balancers:

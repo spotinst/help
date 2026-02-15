@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ocean AKS Cloud Cluster Overview Dashboard
 
 The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean autoscaler actions with high granularity and gain deeper insights into its behavior. 

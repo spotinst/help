@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 ## Eco in Flexera One
 
 Eco is a service that helps you manage reserved capacity for your cloud resources. It makes it easy to plan, buy, and sell reserved instances.

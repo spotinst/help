@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Predictive Rebalancing
 
 Predictive Rebalancing is based on a machine learning model used for identifying and predicting spot capacity usage and interruptions in the public cloud. Its purpose is to predict which markets will experience interruptions and replace the instances within these markets before the interruption. This prevents under-capacity and ensures availability of resources.

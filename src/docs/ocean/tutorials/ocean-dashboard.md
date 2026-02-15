@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ocean Dashboard
 
 The Ocean dashboard gives you quick access to insights and summary data over all the Kubernetes Ocean clusters in your Spot account. You can obtain an overview of your current cost efficiency status, insights for potential savings, and detailed breakdowns of your workload cost efficiency across Ocean clusters or aggregated according to Kubernetes labels and annotations.

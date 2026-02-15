@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ocean Overview (Kubernetes)
 
 Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers are using infrastructure, automatically scaling compute resources to maximize utilization and availability and utilizing the optimal blend of spot, reserved, and on-demand compute instances. Ocean eliminates the need to manage and operate cloud infrastructure.

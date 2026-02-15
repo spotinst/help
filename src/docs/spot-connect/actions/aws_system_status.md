@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # AWS System Status  
 
 Use this action node to obtain the latest operational status of AWS services.  

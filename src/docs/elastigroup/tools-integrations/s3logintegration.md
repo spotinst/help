@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Log Integration with S3
 
 There are several ways to view logs. For example, you can view them directly in the Spot console or use the [Spot OpenAPI](https://docs.spot.io/api/) to fetch them.

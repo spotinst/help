@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create your first workflow - AWS Integration
 
 You can shut down an EC2 instance with a specific name. The following procedure is an example of creating a workflow that shuts down an EC2 instance.  

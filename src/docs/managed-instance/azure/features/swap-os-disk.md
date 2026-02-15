@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Swap OS Disk for Stateful Nodes 
 
 You can swap the OS disk (operating system disk) of Stateful Nodes with OS persistence.  

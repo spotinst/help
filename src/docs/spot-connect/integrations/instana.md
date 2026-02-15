@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Instana
 
 The Instana integration ingests issues or incidents raised by built-in or custom events and responds to them automatically. 

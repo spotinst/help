@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Troposphere
 
 [Troposphere](https://github.com/cloudtools/troposphere) is a library for creating AWS CloudFormation templates.

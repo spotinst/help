@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Wrap Cluster
 
 The Spot Elastigroup integration with EMR clusters can help you quickly Wrap your existing cluster with Spot instances as Task nodes.

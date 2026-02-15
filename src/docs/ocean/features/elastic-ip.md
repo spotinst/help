@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastic IP
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  

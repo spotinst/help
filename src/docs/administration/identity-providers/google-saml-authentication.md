@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Google SAML Authentication
 
 Manage Access with Google Workspace Directory. For Spot users managing accounts in Google Workspace Directory, Spot has an approved application in the App gallery.

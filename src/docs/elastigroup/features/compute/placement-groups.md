@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Placement Groups
 
 A placement group is a logical set of interdependent instances that are distributed on the underlying hardware in a way that meets the needs of your workload while minimizing the chance of correlated failures. Depending on the type of workload, you can create a placement group using placement strategies such as Cluster, Partition, and Spread. These placement strategies are described in detail in the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html).

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Node Features
 
 Stateful Node is tailored to the single node use case and is the ideal way to optimize cost by leveraging cloud excess capacity while mitigating the risks of running on spot nodes. 

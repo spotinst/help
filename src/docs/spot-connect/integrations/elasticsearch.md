@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elasticsearch
 
 Elasticsearch is a tool that is used for full-text search and analytics. It is widely used as an open-source logging database and offers real-time, distributed, and analytics capabilities. It is a highly scalable document storage engine, that stores data in document format, and allows users to perform advanced queries for detailed analysis. The integration of Elasticsearch with Spot Connect provides you with the ability to interact with data in Elasticsearch within their automation workflows, utilizing the search API. 

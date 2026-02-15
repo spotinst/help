@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Eco Savings Blox
 
 Eco Savings Blox is a method of providing qualified customers with deep, targeted savings. To obtain the savings, a customer commits to a per-region, on-demand equivalent for which Eco guarantees reasonable coverage.

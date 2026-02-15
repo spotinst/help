@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Event Policies
 
 The Spot console provides a robust and flexible tool for configuring and managing notifications. Spot uses a system of user-definable policies, providing granular management of event notifications and customization to fit different business cases. You can customize notification policies by:

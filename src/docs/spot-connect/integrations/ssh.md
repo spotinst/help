@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # SSH Target 
 
 Use this integration to run commands over SSH and log results and errors. 

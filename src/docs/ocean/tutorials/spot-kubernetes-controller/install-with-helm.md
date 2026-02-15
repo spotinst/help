@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Install with Helm
 
 ## For Helm Versions 2.\* and Earlier

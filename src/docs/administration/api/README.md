@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot API Administration
 
 The Spot API reference is available as an OpenAPI Specification.

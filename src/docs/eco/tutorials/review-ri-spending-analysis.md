@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Review AWS Commitment Spending Analysis
 
 The Dashboard’s Analysis page (AWS) appears to new customers who have connected an AWS Management account to Spot, but have not yet committed to an Eco RI and Savings Plan management strategy.

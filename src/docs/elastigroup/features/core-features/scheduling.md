@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Scheduling
 
 Elastigroup provides a cron-based scheduling tool to schedule scaling actions, capacity changes, and deployments. This gives you the flexibility to schedule events when they are most convenient for you and your customers. For example, you can schedule a deployment to minimize the potential impact on your users, schedule scale up processes in advance of anticipated holiday traffic, and keep your costs down by terminating development environments over weekends.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Termination Policies for EMR
 
 Elastigroup provides termination policies for EMR cluster. Termination policies are based on CloudWatch Metrics that can be specified by the customer on the termination policy definition. This can be used for different use cases, for example, the shutdown of a cluster when it is idle.

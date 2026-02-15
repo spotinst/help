@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # GCP Pricing Models
 
 This article provides a brief overview of the most common pricing models on GCP. All the major cloud providers use the same pricing models, just with different terms. Elastigroup utilizes these pricing models to ensure that your computing cluster is always cost-optimized.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Preferred Set Up
 
 ## Preferred Instance Types

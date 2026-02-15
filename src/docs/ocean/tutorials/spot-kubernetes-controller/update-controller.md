@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Update the Controller
 
 In this tutorial, you will learn how to update the Ocean Controller in your Kubernetes cluster.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Intelligent Migration Flow Migration Process
 
 Intelligent Traffic Flow (ITF) migration is a process whereby your load balancer target groups assigned to the listener rules are replaced with target groups created by Elastigroup so that Elastigroup can optimize the distribution while applying the rules. The migration takes place in a graceful process so that you do not experience any downtime.

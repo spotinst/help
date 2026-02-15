@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import a Stateful Virtual Machine
 
 This procedure describes how to import the configuration of an existing Azure stateful virtual machine (VM) to Spot so that it can be managed as an Elastigroup stateful node in Spot.

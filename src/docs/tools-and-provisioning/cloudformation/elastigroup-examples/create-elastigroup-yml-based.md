@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Elastigroup – YAML Based
 
 Create a new Elastigroup.

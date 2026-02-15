@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Policy in Azure (AKS)
 
 This is the latest Spot policy in Azure:

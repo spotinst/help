@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Migrate Workload using the API
 
 This page describes how to migrate existing Kubernetes workloads into an Ocean cluster by using the API.

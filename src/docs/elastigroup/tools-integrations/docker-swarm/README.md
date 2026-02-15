@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Docker Swarm Integration
 
 ## What is Docker Swarm?

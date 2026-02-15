@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Notification
 
 Add a new notification to an existing Elastigroup by creating a new stack and referring to existing groupId, or create a new Elastigroup together with a notification.

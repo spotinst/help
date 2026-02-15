@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Use Virtual Node Groups with Ocean Spark
 
 Ocean for Apache Spark (also referred to as Ocean Spark) is built on top of [Ocean](ocean/), the engine automating cloud infrastructure management for containers. As a result, when Ocean Spark customers run Spark applications, they benefit from all the features of Ocean at no additional cost. For example, your Ocean Spark cluster is also visible from the Ocean user interface, giving you visibility over its nodes, pods, and cloud provider costs in real time.

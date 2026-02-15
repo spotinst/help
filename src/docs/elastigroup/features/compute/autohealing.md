@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Autohealing
 
 Autohealing enables you to select which health check service will be used to determine if an Instance needs to be replaced due to unhealthiness. If an instance fails the health check selected, it is automatically replaced with a new instance.

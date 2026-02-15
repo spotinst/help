@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Connect Overview
 
 Spot Connect is a comprehensive cloud orchestration, automation and response platform that unifies case management, automation, real-time collaboration and incident remediation to serve cloud engineering teams across the incident lifecycle.

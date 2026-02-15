@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Eco
 
 Eco is a service that helps you manage your cloud commitments for the major cloud providers. This can include reserved instances, savings plans, and committed use discounts (CUDs).

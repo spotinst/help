@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import Azure Resources
 
 You can join an existing Azure resource to Elastigroup by importing its configuration. This enables you to manage your resources completely in Elastigroup and enjoy all the optimization and cost benefits that Elastigroup provides.

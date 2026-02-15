@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Block Device Mapping (BDM) for Stateful Nodes
 
 Cloud service provider relevance: <font color="#FC01CC">AWS</font>

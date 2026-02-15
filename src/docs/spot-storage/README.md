@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Storage for AWS
 
 Spot Storage is a managed service that optimizes cloud storage using capacity and performance auto-scaling engines and waste management technology for object, block, and file storage.

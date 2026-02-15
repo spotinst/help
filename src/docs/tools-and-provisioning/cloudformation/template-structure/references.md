@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # References
 
 AWS CloudFormation provides a built-in function that helps to reuse parameters and different resources managed by the stack:

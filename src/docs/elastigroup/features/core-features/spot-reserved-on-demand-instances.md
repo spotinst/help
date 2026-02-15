@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # On-Demand, Spot & Reserved Instances
 
 This article briefly describes the most common pricing models on AWS, but all cloud providers offer the same three pricing models with varying conditions. Elastigroup utilizes these pricing models to ensure that your computing cluster is always cost-optimized. To learn more about your cloud provider's pricing, visit their website.

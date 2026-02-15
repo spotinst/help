@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Register Instances to Domain
 
 In order to register an instance to your domain, a user data script needs to be applied to your Elastigroup settings, under the Compute tab.

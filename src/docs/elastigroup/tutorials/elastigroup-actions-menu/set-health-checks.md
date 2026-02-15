@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set Health Checks
 
 Spot offers an option for you to use our own custom Health Check Service (HCS) in your Elastigroup. For a feature description, see [Custom Health Check Service](elastigroup/tools-integrations/custom-health-check-service).

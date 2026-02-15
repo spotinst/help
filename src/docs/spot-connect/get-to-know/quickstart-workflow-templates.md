@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # QuickStart- Workflow Templates
 
 Workflow templates in Spot Connect help you navigate to a specific workflow easily.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Labels and Taints
 
 To make scheduling more efficient and compatible with Kubernetes, Ocean supports the following [Kubernetes constraint mechanisms](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) for scheduling pods:

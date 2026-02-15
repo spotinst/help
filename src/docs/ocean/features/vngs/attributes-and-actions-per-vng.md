@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Attributes and Actions per VNG
 
 Many attributes you can apply to your cluster are also available for virtual node groups. This lets you organize and manage customized workload types within the same cluster. 

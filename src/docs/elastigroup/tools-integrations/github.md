@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set up GitHub Actions
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that automates, builds, and tests the deployment of pipelines. You can create workflows that build and test every pull request to your repository or deploy merged pull requests to production.

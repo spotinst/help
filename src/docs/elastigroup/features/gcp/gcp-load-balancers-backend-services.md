@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # GCP Load Balancers: Backend Services
 
 The GCP Load Balancer is a software defined globally distributed load balancing service.

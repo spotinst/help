@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create an Elastigroup for Azure
 
 This procedure describes how to create an Elastigroup from scratch in Azure.

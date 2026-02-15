@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # gen21 release notes
 
 ## Changelog

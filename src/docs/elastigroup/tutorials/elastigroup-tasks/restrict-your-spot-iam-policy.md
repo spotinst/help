@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Restrict your Spot IAM Policy
 
 ## Introduction

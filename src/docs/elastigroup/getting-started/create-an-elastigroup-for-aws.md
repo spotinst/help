@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create an Elastigroup for AWS
 
 If you have already connected your AWS account, you can start creating Elastigroups.

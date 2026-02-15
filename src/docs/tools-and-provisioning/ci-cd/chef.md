@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Chef
 
 ## Integrate Chef with Elastigroup

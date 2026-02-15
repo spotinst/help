@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Controller Permissions
 
 The Ocean Controller is a pod that resides within your k8s cluster, enabling the integration with the Spot platform. It is responsible for collecting metrics and events that are pushed via a secured link to the Spot SaaS platform for the purpose of capacity scaling activities as well as additional features of the Spot Kubernetes integration.

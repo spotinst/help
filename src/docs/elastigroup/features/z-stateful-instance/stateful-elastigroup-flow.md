@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Elastigroup Flow
 
 The flow diagram below describes on a high level how Spot manages the persistence of stateful nodes.

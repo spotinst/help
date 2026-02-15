@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Onboard Azure Account
 
 If you are using Spot Security for the first time, in the left main menu of the Spot console click **Spot Security** > **Start With 30 Days Free Trial**.  

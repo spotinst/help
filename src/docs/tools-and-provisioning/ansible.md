@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ansible Module Documentation
 
 Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.

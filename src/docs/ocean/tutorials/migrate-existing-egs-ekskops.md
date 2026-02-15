@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Migrate Existing Elastigroups to Ocean (EKS,  kOps)
 
 The following tutorial covers migration of existing Elastigroups running a Kubernetes cluster to Ocean.

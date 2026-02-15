@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  AMI Auto Update for EKS via the Console
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font>

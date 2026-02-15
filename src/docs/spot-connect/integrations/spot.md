@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Integration 
 
 The Spot integration automates Elastigroup and Ocean operations and optimizes your cloud infrastructure. 

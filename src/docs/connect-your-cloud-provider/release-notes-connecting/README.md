@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  Connecting Your Accounts Release Notes
 
 * **CFA-0002 July 21, 2025:** You can [update your Azure client secret](connect-your-cloud-provider/update-azure-credentials) and its expiration date in the Spot console. Make sure your automated scripts and processes related to this action are updated. Any scripts or processes that don’t include this expiration date will not work as of April 7, 2025.

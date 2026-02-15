@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # AWS Batch
 
 [AWS Batch](https://aws.amazon.com/batch/) has quickly become one of the most sought after ways to run batch computing in the cloud. Powered by AWS ECS, AWS Batch provides scheduling and queuing capabilities that enable developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs. The service offers managed compute environments, provisioning and scheduling work for you.

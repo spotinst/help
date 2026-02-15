@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # OpsWorks Integration Setup
 
 AWS OpsWorks is a configuration management service that uses Chef, an automation platform that treats server configurations as a code. OpsWorks uses Chef to automate how servers are configured, deployed and managed across your instances.

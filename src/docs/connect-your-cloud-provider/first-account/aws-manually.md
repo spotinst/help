@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect AWS Account
 
 This page describes the procedures for automatically and manually connecting your AWS account to Spot. You can also customize your account by selecting permissions for specific Spot products and integrations with AWS.  

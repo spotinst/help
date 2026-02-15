@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set up Halyard
 
 This page describes the second part of the Spinnaker integration which includes installing Halyard and setting up Spot as a cloud provider in Spinnaker. Halyard is the configuration service which manages the lifecycle of Spinnaker services.

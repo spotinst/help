@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Upgrade to Terraform v0.12
 
 ## Introduction

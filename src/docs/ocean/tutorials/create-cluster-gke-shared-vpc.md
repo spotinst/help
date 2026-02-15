@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Cluster for GKE Using Shared VPC
 
 Shared Virtual Private Cloud (VPC) allows an organization to connect resources from multiple projects to a common [VPC network](https://cloud.google.com/vpc/docs/vpc), so that they can communicate with each other securely and efficiently using internal IPs from that network. When you use Shared VPC, you designate a project as a host project and attach one or more other service projects to it. The VPC networks in the host project are called Shared VPC networks.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup for AWS
 
 Elastigroup for AWS helps you optimize your cloud infrastructure. You can easily set up, manage, and scale the resources you need for elastic applications and load-balanced workloads.

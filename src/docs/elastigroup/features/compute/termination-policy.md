@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Termination Policy
 
 The instance termination policy API is used for controlling how Elastigroup will terminate the instances during scale-down operation.

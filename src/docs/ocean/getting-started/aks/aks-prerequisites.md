@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Prerequisites for Importing an AKS Cluster to Ocean 
 
 The following prerequisites are required before importing a cluster to Ocean.

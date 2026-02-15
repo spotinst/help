@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup for AWS
 
 With Elastigroup, you can:

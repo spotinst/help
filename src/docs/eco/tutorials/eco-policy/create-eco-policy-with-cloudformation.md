@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Eco Policy with CloudFormation
 
 Use the policy below to if you are creating an Eco policy with Cloudformation.

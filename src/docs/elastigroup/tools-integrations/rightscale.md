@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # RightScale
 
 The RightScale Universal Cloud Management Platform allows customers to orchestrate, automate, and govern applications across public cloud or private infrastructure. Today we are announcing a new integration with RightScale that will allow you to easily manage your RightScale clusters and provide you with amazing cost savings by utilizing Spot Elastigroups.

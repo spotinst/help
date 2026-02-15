@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # eksctl
 
 [eksctl AWS CLI](https://aws.amazon.com/blogs/opensource/eksctl-eks-cli/) is an open-source CLI that lets you easily create Elastic Kubernetes Service (EKS) clusters. One of the benefits of EKS is that the Kubernetes control plane is handled entirely by AWS, freeing you from managing high availability for your control plane(s) and handling ongoing maintenance, such as Kubernetes upgrades.

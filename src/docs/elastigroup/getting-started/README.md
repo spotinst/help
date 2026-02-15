@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Get Started with Elastigroup
 
 It is really easy to get started with Elastigroup. It integrates with the major cloud providers such as AWS, Azure, and Google Cloud.

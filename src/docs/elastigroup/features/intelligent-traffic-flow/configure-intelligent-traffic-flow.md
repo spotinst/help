@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Intelligent Traffic Flow
 
 This page describes the procedures to configure Intelligent Traffic Flow (ITF).

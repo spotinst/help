@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # External Shuffle Storage
 
 When External Shuffle Storage is turned on, Spark writes shuffle data to a shared remote filesystem, such as S3.

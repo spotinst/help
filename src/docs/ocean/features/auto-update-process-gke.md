@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Auto-Update Process (Ocean GKE)
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>

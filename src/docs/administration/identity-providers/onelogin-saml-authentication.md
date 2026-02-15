@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # OneLogin SAML Authentication
 
 This feature makes it easy to manage your accounts and works with the most popular identity providers.

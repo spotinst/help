@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # DNS Integration 
 
 Elastigroup has the capability to register your IPs with one or multiple Azure DNS services. When your Elastigroup is launched, it handles the IP registration process. When you detach the Virtual Machine from the Elastigroup, the IPs will be deregistered from the Azure DNS. 

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Policy in AWS
 
 You can find and modify your Spot Policy in the [AWS IAM Console](https://console.aws.amazon.com/iam/home#/policies).

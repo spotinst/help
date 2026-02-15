@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup Release Notes
 
 * **ELS-0004 November 26, 2024**: Elastigroup and Ocean automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your <font color="#FC01CC">AWS</font> account. [Learn more](elastigroup/features/core-features/dynamic-commitment).

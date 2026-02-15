@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Send Email 
 
 An action that sends an email to multiple recipients. 

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Get Started with Eco (AWS)
 
 Eco is an automation and optimization solution for cloud commitment purchasing and deployment. Taking into account flexibility, market volume, historical, and predicted usage, Eco identifies the ideal blend of reserved instances and savings plans to maximize savings while providing the most flexibility for future needs.

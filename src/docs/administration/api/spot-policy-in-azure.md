@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 <html>
 <script>
         fetch('https://spotinst-public.s3.amazonaws.com/assets/azure/custom_role_file.json')

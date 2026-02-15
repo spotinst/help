@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Output
 
 Optional: Describes the values that are returned when viewing the stack properties.

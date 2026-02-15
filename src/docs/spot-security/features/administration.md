@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Administration
 
 The Administration page enables you to see an overview of all of the cloud accounts that you have created, view their status at a glance, and add and remove accounts.

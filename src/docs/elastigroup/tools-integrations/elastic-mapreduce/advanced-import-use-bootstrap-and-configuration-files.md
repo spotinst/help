@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Advanced Import: Use Bootstrap and Configuration Files
 
 While cloning an EMR cluster you can also specify Bootstrap actions and Configuration files in the cluster configuration. These will pull the information from an S3 bucket and apply these while the cluster is created.

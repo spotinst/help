@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # GCP
 
 Elastigroup for Google Cloud Platform (GCP) enables you to take control of your GCP cloud spend,

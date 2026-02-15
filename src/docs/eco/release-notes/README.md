@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Eco Release Notes
 
 * **ECO-0005 August 8, 2025**: Documentation improvements for [connecting your GC account](eco/getting-started/connect-gc-account) and [access roles and permissions](eco/gcp-tutorials/access-roles-read-only) to enhance clarity and reduce troubleshooting during onboarding.

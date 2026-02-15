@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Shared Image Galleries
 
 This page describes how you can use images from Azure’s shared galleries in Spot configurations, and includes a procedure that allows sharing from cross-subscription galleries. For context, the page also includes a brief introduction to Azure shared galleries and, in particular, cross-subscription shared galleries.

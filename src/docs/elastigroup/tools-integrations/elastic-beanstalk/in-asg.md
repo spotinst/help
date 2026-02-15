@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # In-ASG
 
 Once Beanstalk integration is configured, Elastigroup takes control of instance provisioning, scaling and deploying. The Amazon ASG becomes passive, Beanstalk's `min` `capacity` is set to 0 and max capacity is set to double the original `max capacity`.

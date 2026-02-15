@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # View Recommendations Log
 Spot Storage keeps a log of the actions you have taken based on the Recommendations presented.
 

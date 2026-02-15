@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # OpsWorks Autohealing
 
 Various Elastigroup integrations offer autohealing of instances using health-check capabilities.

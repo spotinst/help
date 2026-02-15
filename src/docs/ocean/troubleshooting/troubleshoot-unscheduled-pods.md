@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Troubleshoot Unscheduled Pods 
 
 We have provided this topic to help you troubleshoot issues with unscheduled pods in Kubernetes. 

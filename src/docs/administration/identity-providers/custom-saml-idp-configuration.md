@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Custom SAML IDP Configuration
 
 Configuring an IDP to authenticate using SAML requires the:

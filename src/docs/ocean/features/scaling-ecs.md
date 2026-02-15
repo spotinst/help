@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Scaling (ECS)
 
 Cloud service provider relevance: <font color="#FC01CC">ECS</font>

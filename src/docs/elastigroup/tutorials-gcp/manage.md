@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Manage
 
 The Groups page provides an overview of all your Elastigroups. You can also add and remove Elastigroups, check their status, and delve deeper into specific Elastigroup details. 

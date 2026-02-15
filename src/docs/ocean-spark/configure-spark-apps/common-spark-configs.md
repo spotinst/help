@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Common Spark Configurations
 
 This page describes some common Spark configurations relevant to Ocean Spark.

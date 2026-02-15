@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Custom Labels
 
 In this tutorial you will learn how to use custom labels with Ocean Launch Specifications.

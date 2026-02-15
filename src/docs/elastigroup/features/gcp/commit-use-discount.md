@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Committed Use Discounts 
 
 Elastigroup assists in optimizing the usage of [committed use discounts (CUDs)](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview) to ensure minimal waste. Elastigroup strategically allocates reservations for maximum benefit, improving estimation accuracy for commitment usage. This provides visibility into savings plans and RI utilization, enabling enhanced methods for effectively utilizing vacant plans and maximizing cost savings. 

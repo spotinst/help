@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Security Webhook 
 
 Webhook integration in a Spot Connect workflow lets you trigger execution of a workflow after validating the webhook input. When creating a workflow, Spot Connect provides a Spot Security webhook trigger node that can be invoked by any Spot Security application once a new alert is generated to automatically execute the workflow. 

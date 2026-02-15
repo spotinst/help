@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Jenkins
 
 ## Run Jenkins with the Spot Plugin

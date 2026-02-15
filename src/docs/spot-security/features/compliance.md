@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Compliance
 
 Spot Security provides information on how compliant your organization is with global security standards.  

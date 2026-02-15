@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  Import AKS Cluster with Availability Zone Zero
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set Shutdown Hours
 
 >**Important:** Before you set shutdown hours, you must configure the minimum capacity in the Ocean cluster to 0.

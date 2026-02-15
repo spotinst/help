@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Tips & Best Practices
 
 This page presents a collection of tips, suggestions, and recommendations to help you become an expert Ocean user and get the most out of your Ocean experience. To learn more, click on a topic below.
