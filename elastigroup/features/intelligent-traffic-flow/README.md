@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Intelligent Traffic Flow
 
 Intelligent Traffic Flow (ITF) is a feature that optimizes the incoming traffic distribution to instances that are launched by Elastigroup. ITF manages in real time the traffic distribution to target groups based on the number of vCPUs (or other user-defined parameters) each target group has.

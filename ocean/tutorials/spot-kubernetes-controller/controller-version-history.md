@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Controller Version History
 
 ## [1.0.101] - 2024-08-14

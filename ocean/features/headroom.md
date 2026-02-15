@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Headroom
 
 One of Ocean’s key features for optimizing scaling is **headroom**, a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale-up.

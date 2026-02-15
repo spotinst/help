@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #   AKS Permissions
 
 This topic describes:

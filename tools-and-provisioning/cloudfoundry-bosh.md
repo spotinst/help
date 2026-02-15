@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CloudFoundry BOSH
 
 BOSH is an open source tool for release engineering, deployment, lifecycle management, and monitoring of distributed systems. We will install the BOSH server (Director) using BOSH CLI. Once a VM with Director is running, we are going to use BOSH CLI to send commands to the Director.

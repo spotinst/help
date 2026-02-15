@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect your GCP Project to Spot
 
 In order to allow Spot to manage GCP resources, it is necessary to authenticate Spot with a relevant GCP Project.

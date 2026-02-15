@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # EKS AMI Auto-Update
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font>  

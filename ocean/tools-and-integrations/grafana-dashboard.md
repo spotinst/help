@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Grafana Dashboard
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AKS</font>, <font color="#FC01CC">GKE</font>

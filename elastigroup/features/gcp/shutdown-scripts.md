@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Shutdown Scripts
 
 When you launch an instance in Google Cloud, you have the option of passing user data to the instance that can be used to perform common automated configuration tasks and even run scripts after the instance starts.

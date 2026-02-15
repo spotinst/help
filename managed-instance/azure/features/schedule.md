@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Schedule Stateful Node Actions
 
 In [Stateful Nodes](managed-instance/azure/), you can schedule when certain actions take place. For example, for a node that is not used on weekends, you can pause the node Friday evening after everyone has stopped working and then resume the node early Monday morning just before people start work again.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Get Started with Lambda
 
 ## Step 1. Generate Token

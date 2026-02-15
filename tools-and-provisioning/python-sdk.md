@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # SDK for Python
 
 You can use a Python client library for accessing the Spot API. For detailed information, go to the [Spot SDK for Python](https://github.com/spotinst/spotinst-sdk-python) on the Spot Github site.

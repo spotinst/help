@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Account: Customer Working with AWS MSP
 
 If more than one of your AWS accounts is managed by an MSP and you do not have access to the billing file, the MSP must complete the procedures in this article in order to retrieve the billing information. This procedure enables Eco to access your billing file and provide you with visibility into your cloud expenditures.

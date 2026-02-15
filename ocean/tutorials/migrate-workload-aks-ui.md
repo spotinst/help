@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 #  Migrate AKS Workload using the Console
 
 This topic describes migrating your existing Kubernetes workloads into an Ocean cluster via the Ocean console.

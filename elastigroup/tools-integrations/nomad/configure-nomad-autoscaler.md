@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Nomad Autoscaler
 
 This procedure provides the steps necessary to set up your Nomad Autoscaler.

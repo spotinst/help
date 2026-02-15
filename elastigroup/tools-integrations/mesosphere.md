@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Mesosphere
 
 Mesosphere DC/OS is based on the production-proven Apache Mesos distributed systems kernel and provides APIs for resource management and scheduling across the entire data center and cloud environments.

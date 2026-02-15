@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Persist Network
 
 Network persistence maintains the public IP and private IP for the virtual machine.

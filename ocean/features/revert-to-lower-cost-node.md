@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Revert to Lower-Cost Node
 
 In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale down](ocean/features/scaling-kubernetes?id=scale-down), and various optimization processes (e.g., Revert to Reserved Capacity, Savings Plans, and Revert to Spot), Ocean employs the Revert to Lower-cost Node process. This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes.

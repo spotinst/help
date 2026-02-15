@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import ASG
 
 Allows you to create an Elastigroup based on the setup of an ASG. For full API documentation, check out [Import ASG](https://docs.spot.io/api/#operation/elastigroupAwsImportAsg).

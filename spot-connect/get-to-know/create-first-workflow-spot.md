@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create your First Workflow - Spot Integration
 
 With Spot Connect, you can automatically execute a workflow with actionable results, including Slack notifications, approval policies, and Elastigroup-specific actions like scale up, scale-down, delete a group, and more.

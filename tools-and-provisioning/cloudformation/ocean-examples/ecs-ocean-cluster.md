@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # ECS Ocean Cluster
 
 Create an ECS Ocean Cluster with the following CloudFormation template.

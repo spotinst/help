@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Block Device Mapping
 
 You have the option to configure Block Device Mapping settings for an Elastigroup to provision and handle volumes for your instances. Block device mapping can be used to configure the root volume of the instance as well as data volumes. Elastigroup configured Block Device mappings will override AMI Block device mappings per device name.

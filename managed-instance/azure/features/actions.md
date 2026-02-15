@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Node Actions
 
 With stateful node actions you can change the node’s state while persisting its resources.

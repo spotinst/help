@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Let Ocean Manage Machine Types
 
 Ocean operation is based on containers, and as such, Ocean is free to utilize all types of cloud infrastructure, distribute optimally, and focus on cutting costs. Therefore, when it comes to machine types, it is usually best practice to let Ocean make the intelligent decisions about which machine family to launch.

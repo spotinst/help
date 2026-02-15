@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Upgrade an Elastigroup to Stateful Nodes
 
 If you have an existing Elastigroup that manages a single stateful node, you can upgrade it to a Stateful Node.

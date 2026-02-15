@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Troubleshoot Cluster Deployment
 
 This page describes a list of common issues specific to the cluster deployment phase that you could encounter and solutions to fix them.

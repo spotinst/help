@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 ##  AKS Migration Troubleshooting
 
 For a Failed migration status, a reason for the failure is written in the Ocean logs. 

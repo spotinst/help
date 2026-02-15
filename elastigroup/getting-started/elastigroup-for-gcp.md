@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup for GCP
 
 Elastigroup for GCP is an IaaS Optimization platform in which the user can provision, manage and scale compute infrastructure to support any Elastic Application or Load Balanced workload.

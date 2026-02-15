@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Onboard AWS Account
 
 This procedure describes how to connect your AWS account to Spot Security.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Extensions for Stateful Nodes- Azure 
 
 Elastigroup’s stateful nodes support Azure extensions and they are installed right after the VM initialization. 

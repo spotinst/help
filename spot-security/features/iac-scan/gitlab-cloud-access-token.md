@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Generate a Gitlab Cloud Access Token
 
 Spot Security requires a valid Gitlab Personal Access token to scan the repositories. The steps to generate the token can be found at [Personal access tokens | GitLab](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html).  

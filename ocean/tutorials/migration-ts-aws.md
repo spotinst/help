@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # AWS Kubernetes Migration Troubleshooting
 
 When a migration status is Failed, a reason for the failure is written in the Ocean logs. The table below lists the possible failure messages and provides additional information to help you resolve the issue.

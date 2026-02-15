@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Optimize Your Cloud
 
 The Optimization page shows key areas in your accounts where you can get significant savings, either costs or vCPU hours. There are actionable recommendations that you can start implementing with the click of a button.

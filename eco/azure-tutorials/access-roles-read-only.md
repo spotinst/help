@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Access Roles and Permissions
 
 As mentioned on the [Azure Tutorial](eco/azure-tutorials/), if you want to receive an analysis as to how much savings Eco Azure can provide you, you must connect your Azure account to Spot using a registered application. The details below explain the permissions the registered application needs to process cost and usage data that allows Eco Azure to provide the analysis results and also explains the additional roles needed when you decide to onboard. 

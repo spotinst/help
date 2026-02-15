@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup
 
 Elastigroup simplifies and automates cloud infrastructure for scale-out applications running in AWS, Azure, or GCP, freeing operations teams from the burdens of infrastructure management. Elastigroup continuously analyzes your resource usage and provides autoscaling groups that optimize compute resources to ensure availability and meet resource demands using the lowest-cost compute options.

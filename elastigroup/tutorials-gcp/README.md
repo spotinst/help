@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # GCP 
 
 Spot offers you the opportunity to leverage the benefits of Google Spot VMs. These Spot VMs enhance the existing spare capacity offering of preemptible VMs and provide you with even greater cost savings and fewer restrictions. 

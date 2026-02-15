@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Sumo Logic
 
 Sumo Logic is a cloud data analytics platform focused on security, operations, and business intelligence use cases.   

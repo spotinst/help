@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Deploy an Elastigroup
 
 A deployment is a process in which all of the instances running in an Elastigroup are detached and new instances are launched to replace them. A deployment is required when you update a software version and whenever you make changes to certain parameters in the Elastigroup configuration.

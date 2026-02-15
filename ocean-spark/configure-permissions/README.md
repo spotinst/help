@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Permissions
 
 This topic describes setting up permissions for **Ocean for Apache Spark** product users.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CloudWatch 
 
 CloudWatch is used to monitor AWS resources and use alarms, logs, and events to take automated action to reduce mean time to resolution.  

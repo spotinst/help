@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Azure
 
 Elastigroup for Microsoft Azure enables you to take control of your Azure cloud spend,

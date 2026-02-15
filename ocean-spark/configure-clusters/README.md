@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Cluster
 
 This section shows you how to configure your Ocean for Apache Spark (OfAS) cluster. You can configure the cluster ingress, log collection, Spark application namespaces, and more. You can also refer to the [API documentation](https://docs.spot.io/api/#tag/Ocean-Spark) and the [Terraform](https://registry.terraform.io/modules/spotinst/ocean-spark/spotinst/latest) module to see the different cluster configuration options.

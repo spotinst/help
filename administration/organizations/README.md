@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Organizations and Accounts
 
 When you set up your Spot account, you create an organization and one or more account entities. You can set up multiple organizations if required. Within an organization, you can define multiple accounts for different teams or projects in the organization. Each account can be set up to use any supported cloud service provider and cloud service provider account.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Security Release Notes
 
 ## Features and Enhancements

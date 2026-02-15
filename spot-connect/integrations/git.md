@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # GitHub/Bitbucket Cloud
 
 The GitHub/Bitbucket cloud integration manages Git repositories while enabling you to clone Git repositories and create pull requests.  

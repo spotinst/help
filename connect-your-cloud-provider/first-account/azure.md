@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Azure Subscription
 
 The procedures on this page describe how to connect your Microsoft Azure subscription to Spot. The procedure assumes that you are following the instructions in the [onboarding wizard](connect-your-cloud-provider/first-account/?id=connect-azure), have already created your Spot organization or new account, and selected Azure as your cloud provider. 

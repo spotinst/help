@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Getting Started with EKS
 
 It is easy to start with Ocean for EKS, as it provides a simple flow to connect an existing EKS cluster and multiple ways to create new EKS clusters already connected to Ocean.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Users
 
 In Spot, a user is a person who accesses the Spot console to perform any action such as viewing information, producing reports, or creating and configuring spot clusters.

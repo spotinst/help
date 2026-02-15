@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Manage Group Capacity
 
 ## Update the Elastigroup Capacity Configuration

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Publish Metrics to CloudWatch
 
 Elastigroup can optionally publish custom metrics to CloudWatch. These metrics can be used to report data to any third party tool, such as DataDog or Grafana.

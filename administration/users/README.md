@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Users and Roles
 
 When you create a user, you must define a role in order to set the limitations of the specific user inside the account and organization.

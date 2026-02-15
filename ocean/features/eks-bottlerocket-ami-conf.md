@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Bottlerocket AMI for Ocean
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font>

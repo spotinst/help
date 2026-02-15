@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Generate a Github Access Token
 
 You can create:

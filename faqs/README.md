@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Frequently Asked Questions
 
 Find answers to common questions about Spot products:

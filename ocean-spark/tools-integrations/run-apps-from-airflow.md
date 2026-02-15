@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Run Apps from Airflow
 
 This page describes how to configure Airflow to trigger Spark applications on Ocean for Apache Spark (also referred to as Ocean Spark). Our Airflow plugin is compatible with Airflow 1 and Airflow 2.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Persist OS and Data Disks
 
 Elastigroup’s [stateful nodes](managed-instance/azure/) are able to persist data when VMs need to be replaced. Stateful Nodes breaks this down into two parts which are described below.

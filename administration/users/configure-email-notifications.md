@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Email Notifications
 
 By default, Spot will notify all the users in your account for every error or warning event (Unless they unsubscribe from the service). You can customize Elastigroup Notifications to send notifications for the events that matter to you.

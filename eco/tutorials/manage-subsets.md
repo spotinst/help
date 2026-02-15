@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Manage Subsets
 
 A _subset_ is a group of accounts within an organization that are assigned to the same logical unit. Within your organization, you can create subsets of accounts for the purpose of analyzing data of several related accounts together and creating reports relevant to your organization.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Kafka
 
 In Big Data, a large volume of data is used. Regarding data, we have two main challenges:

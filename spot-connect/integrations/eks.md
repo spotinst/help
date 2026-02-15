@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # EKS Permissions 
 
 EKS actions require additional IAM configuration to create a cluster and access it. 

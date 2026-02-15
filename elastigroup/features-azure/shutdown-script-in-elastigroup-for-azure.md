@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Shutdown Script in Elastigroup for Azure
 
 With Elastigroup, you can run workloads in a reliable and efficient manner, maintaining high availability while reducing the VM costs significantly.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Security Dashboard
 
 The Security Dashboard gives you a high-level summary of your cloud security posture. It also provides quick access to more detailed information and remediation actions.

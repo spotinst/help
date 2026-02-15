@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Datadog
 
 Use the Datadog integration to ingest alerts raised by the monitoring system and respond to them automatically. 

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Eco Reports Enrollment
 
 There are several use cases for Eco Reports enrollment. This use case is for AWS enterprises with administrative access to their Management Account.

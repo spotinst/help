@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set up Extended Resource Support
 
 The Kubernetes [extended resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/) feature allows cluster administrators to advertise node-level resources that would otherwise be unknown to Kubernetes. As the infrastructure manager, Ocean integrates with Kubernetes to take advantage of this feature for [scaling](ocean/features/scaling-kubernetes) activities.

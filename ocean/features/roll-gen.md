@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Rolls
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AWS ECS</font>, <font color="#FC01CC">GKE</font>

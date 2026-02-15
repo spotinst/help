@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # OpenShift
 
 >**Note**: OpenShift integration is currently only supported for AWS Kubernetes.

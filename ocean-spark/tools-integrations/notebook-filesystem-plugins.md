@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Jupyter Notebook Filesystem Plugins
 
 With the current setup of launching a local notebook connecting to Ofas through the Jupyter Enterprise Gateway, you can launch notebooks stored on their machines. These notebooks can be shared via cloud storage services like Google Drive, Microsoft OneDrive and Dropbox installed on the desktop machine. You can also leverage Git for sharing notebooks, providing the added advantage of not storing any notebook data or results on OfAS' side. This relieves you from the responsibility of ensuring the data's protection.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup Dashboard
 
 The Elastigroup dashboard gives you quick access to insights and summary data over all the Elastigroups in your Spot account. Information on the dashboard is presented for the entire account. You can obtain an overview of your current cost efficiency status, insights for potential savings, and detailed breakdowns of your resource utilization.

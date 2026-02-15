@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Nomad Autoscaling
 
 Scaling Nomad nodes has always been difficult, our solution is our own proprietary Nomad Autoscaler which will allow our customers to scale Nomad workloads economically based on Spot prices and trends based on aggregated node utilization.

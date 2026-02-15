@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Jenkins
 
 Use the Jenkins integration to run Jenkins jobs as part of your automation workflows.  

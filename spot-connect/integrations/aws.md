@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Amazon Web Services
 
 Execute AWS API calls from within Spot Connect Workflows.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Use Right Sizing
 
 Check out the [Automatic Right-Sizing feature!](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a New Stateful Node
 
 This procedure describes how to create a new stateful node from scratch.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect an Additional Account
 
 Once you have completed your Spot registration and connected your first account (either a linked or a managed account), you can connect additional accounts to your Organization in Spot. Your additional accounts can be from the same cloud provider or from different ones (AWS, GCP, or Azure).

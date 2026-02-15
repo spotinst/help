@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Jira
 
 Use the Jira integration to create new issues inside your Jira sprints. 

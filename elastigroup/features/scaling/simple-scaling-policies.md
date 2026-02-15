@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Simple Scaling Policies
 
 Simple scaling policies provide the ability to scale up when you need to accommodate increased workloads or to scale down to maximize cost efficiency during quiet hours. Set as many policies as needed to maximize the Elastigroup efficiency.

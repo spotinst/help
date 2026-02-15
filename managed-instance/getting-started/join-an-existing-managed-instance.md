@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import an AWS Stateful Node
 
 This procedure describes how to import a stateful node from AWS to your account in Spot. This will enable you to have full control of your stateful node directly in Spot and take advantage of all of the optimization features available in Spot.

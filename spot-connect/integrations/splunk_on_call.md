@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Splunk On-Call (VictorOps)
 
 Splunk On-Call (VictorOps) is a collaboration and incident management platform for on-call teams. This integration can be used to trigger workflows when it receives any incoming signal for alerts. With the help of the integration, incidents can be rerouted or resolved in the workflows.  

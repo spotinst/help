@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Scrape Ocean Metrics using Prometheus
 
 This topic is valid for EKS, AKS, and GKE.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Prometheus for Kubernetes Data-Plane Monitoring
 
 Ocean manages the scaling of the Kubernetes data plane, and the data generated in the process could be valuable for monitoring your containerized environment. Using well-defined Prometheus metrics for monitoring Ocean can help you understand the cluster scaling and debug any issues that may arise. In addition, you can build alerts based on the metrics to address issues in real-time and track important trends on a dashboard of different Ocean metrics.  

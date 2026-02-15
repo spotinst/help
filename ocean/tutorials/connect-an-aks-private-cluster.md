@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect an AKS Private cluster
 
 Ocean supports the management and optimization of AKS private clusters. This tutorial describes how to connect your AKS private cluster to Ocean.

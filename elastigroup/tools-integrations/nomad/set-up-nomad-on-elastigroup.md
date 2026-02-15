@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set up Nomad on Elastigroup
 
 This procedure covers integrating Elastigroup with Nomad clusters. Managing a Nomad cluster while keeping costs down can be quite a challenge, especially when it comes to heterogeneous environments (made up from different instance types, and sizes). Elastigroup's Nomad integration increases the cluster's efficiency by choosing the right instance size and type for a specific workload, as well as utilizing Spot Instances to minimize costs.

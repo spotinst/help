@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Manage Stateful Nodes
 
 Elastigroup enables you to see an overview of all your stateful nodes, get status at a glance, perform tasks such as importing and creating new stateful nodes, and drill down to more detailed information when you need to.

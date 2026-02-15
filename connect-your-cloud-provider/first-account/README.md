@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect Your First Cloud Account to Spot 
 
 In order to take advantage of Spot’s optimization and cost savings features, you need to connect your cloud account to Spot. The procedure on this page walks you through the steps to connect your account. 

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Elastigroup – Generic
 
 Create a new Elastigroup – generic with basic scaling.

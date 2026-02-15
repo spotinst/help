@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Overview Dashboard
 
 The Dashboard provides a compute overview of your entire organization. On the Dashboard, you can see insights and recommendations, potential savings, and an overview of savings for the Spot products you are using, including Elastigroup, Ocean, and Eco.

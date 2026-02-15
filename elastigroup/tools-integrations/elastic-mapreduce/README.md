@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastic MapReduce
 
 Amazon's Elastic MapReduce (EMR) provides a managed big data framework that enables you to easily add and remove cluster capacity to meet your requirements. EMR supports Hadoop, Apache Spark, and other popular distributed frameworks. Running your EMR clusters on Elastigroup provides you with the significant discounts that Spot instances offer while maintaining 100% availability.

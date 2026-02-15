@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Scaling Policies for GCP Elastigroup
 
 Simple scaling policies provide the ability to accommodate increased workloads or alternatively scale down to maximize cost efficiency during quiet hours.

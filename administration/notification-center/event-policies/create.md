@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Compute Policy
 
 You can create notifications for compute products, such as Elastigroup and Ocean resources.

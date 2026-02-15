@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Get Started with a Stateful Node
 
 Running single node workloads on Stateful Node will provide you with a simple and intuitive environment as well as additional visibility tailored to the stateful single-node use case.

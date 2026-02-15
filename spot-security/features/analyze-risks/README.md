@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Analyze Risks
 
 Risk analysis gives you visibility into your misconfigurations on several levels:

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 ##  Reusable Snippet
 
 I am a markdown reusable snippet (on media)

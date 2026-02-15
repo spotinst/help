@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Upgrade Kubernetes Version in Ocean AKS Cluster
 
 This page describes the procedures for upgrading the Kubernetes version in Ocean AKS Cluster.

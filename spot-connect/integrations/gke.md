@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Google Kubernetes Engine (GKE)
 
 Use the GKE integration in Spot Connect to manage the clusters deployed in Google infrastructure. 

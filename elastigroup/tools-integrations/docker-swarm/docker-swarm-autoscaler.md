@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Docker Swarm Autoscaler
 
 You can scale up and down the instances in your cluster according to CPU and memory reservations needed for your nodes to work properly on top of EC2 instances.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Install with kubectl
 
 To install the Ocean Controller, follow the steps below.

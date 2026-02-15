@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # CI/CD
 
 Spot easily plugs into your delivery pipeline, including major CI/CD platforms such as [Jenkins](tools-and-provisioning/ci-cd/jenkins.md), and [GitLab](tools-and-provisioning/ci-cd/gitlab.md), and extends your Continuous Integration/Continuous Deployment (CI/CD) pipeline of choice with Continuous Optimization (CO) to complete the application delivery pipeline.

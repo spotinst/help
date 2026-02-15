@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set Subset and Workflow Permissions
 
 If you would like to be an administrator of [Subsets](eco/tutorials/manage-subsets) and [Workflows](eco/tutorials/manage-workflows), you can do so under the following types of permissions.

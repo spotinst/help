@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a Security Policy
 
 You can create notifications for security resources.

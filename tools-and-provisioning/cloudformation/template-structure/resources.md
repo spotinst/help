@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Resources
 
 Describes the resources created and managed by the template. The resource properties depend on the resource type.

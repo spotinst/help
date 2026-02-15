@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Preferred Availability Zones 
 
 The Preferred Availability Zones feature in Elastigroup enables you to specify a preferred availability zone (AZ) for launching Spot virtual machines (VMs). If no VMs are available in the preferred AZ, Elastigroup will launch a VM from another configured AZ. 

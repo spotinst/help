@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # SSO Access Control
 
 In the console, you can enable single sign-on (SSO) for your organization.

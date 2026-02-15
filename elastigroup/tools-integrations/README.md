@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Tools and Integrations
 
 We make it really easy for you to use Elastigroup with tools and processes you already have in place. Elastigroup works with leading cloud platforms, services, and tools so that you can simplify and automate your cloud infrastructure wherever your workloads and applications run and however you run them.

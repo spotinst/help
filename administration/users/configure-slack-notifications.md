@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Slack Notification
 
 Elastigroup notifications can be sent automatically to a pre-defined Slack channel.

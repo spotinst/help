@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Equal Area Zone Instance Distribution Orientation
 
 Elastigroups support a high-availability deployment structure, allowing you to evenly distribute instances across multiple area zones in a single region. This Elastigroup orientation guarantees equal capacity across all selected area zones (AZ).

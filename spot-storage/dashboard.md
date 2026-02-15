@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Use the Spot Storage Dashboard
 
 The Spot Storage Dashboard provides an overview of your storage resources in the cloud (AWS) and presents recommendations for you to achieve cost savings for your storage use.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Preferred Spot VM Size for Stateful Nodes 
   
 Preferred Spot VM sizes enable you to set priority tiers on the Stateful Node configured VM sizes. VM sizes that are selected as preferred will be prioritized over other types and will be used whenever possible. In cases that any of the preferred VM sizes are not available, the stateful node will use other types that are selected in the group. 

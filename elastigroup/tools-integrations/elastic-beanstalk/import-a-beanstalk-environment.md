@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Tutorial: Import a Beanstalk Environment
 
 ## Introduction

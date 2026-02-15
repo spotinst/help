@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Notifications
 
 ## Set up Elastigroup's Notifications

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set Health Checks and Auto Healing
 
 Elastigroup provides configurable health checks to ensure that your VMs are ready and healthy for running your workloads. You can define health checks when you are creating a new Elastigroup or add them to an existing Elastigroup in the Compute configuration.

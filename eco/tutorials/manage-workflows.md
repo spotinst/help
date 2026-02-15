@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Manage Workflows
 
 Cloud administrators face the challenge of presenting cloud spend data clearly to their users and customers. Complex billing conditions and logic -- such as amortization, discount sharing, and customer uplifts and discounts -- can make reporting a major challenge. Using Eco Workflows, your cloud spending will be clear and accounted for.

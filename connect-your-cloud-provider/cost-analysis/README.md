@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Analyze your Costs
 
 The Cost Analysis page provides insights on past, current, and future cloud costs.

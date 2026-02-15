@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Recycle Process
 
 If the underlying EC2 node has to be replaced for any reason, Stateful Node will initiate a recycle process, which includes two parts, a pause action followed directly by a resume action.

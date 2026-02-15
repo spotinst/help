@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cluster (and Virtual Node Group) Orientation
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>.

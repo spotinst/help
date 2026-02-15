@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Opsgenie
 
 Opsgenie is mainly used for on-call, alerting, and incident management. 

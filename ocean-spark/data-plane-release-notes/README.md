@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cluster Release Notes
 
 ## [0.5.6-86] - 2025-01-09

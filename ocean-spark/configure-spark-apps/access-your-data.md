@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Access Your Data
 
 This page shows how to run your own code and access data hosted in your cloud account. It assumes that you know how to [run a Spark application](ocean-spark/getting-started/?id=run-your-first-app) on Ocean for Apache Spark.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Suspend Processes
 
 Suspend processes gives you the option to easily put any scaling or auto-healing actions on hold. You can access the dialogue under the Elastigroup view Actions button.

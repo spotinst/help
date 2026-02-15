@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Shutdown Hours
 
 Use shutdown hours to achieve cost savings with Ocean. 

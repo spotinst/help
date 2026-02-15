@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Elastigroup for ECS – YAML Based
 
 Create a new Elastigroup for ECS cluster.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Filter API Responses
 
 ## Introduction

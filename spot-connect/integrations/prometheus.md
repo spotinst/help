@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Prometheus
 
 Use this integration to monitor machine-centric as well as highly dynamic service-oriented architectures. 

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Pod Sizes
 
 This page describes how to configure your Spark pod sizes and select the instances they run on.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Clone Elastigroup
 
 You can create a new Elastigroup in Spot by cloning an existing Elastigroup. The new group will have the same configuration as the existing group. The clone feature provides a convenient way to replicate the configuration of an existing group or, alternatively, to use the configuration as a template for creating a new group and modifying it to suit your needs.

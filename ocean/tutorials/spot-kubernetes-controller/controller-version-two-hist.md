@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Ocean Controller Version 2 History
 
 ## Chart Version [0.1.68] (v2.0.74) - 2025-11-11
