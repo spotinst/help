@@ -285,7 +285,7 @@ metadata:
   namespace: spot-system
 spec:
   selector:
-    istio: ingress
+    istio: ingressgateway
   servers:
     - port:
         number: 443
