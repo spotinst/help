@@ -20,7 +20,6 @@
 - [**Elastigroup**](elastigroup/)
 - [**Elastigroup Stateful Node**](managed-instance/)
 - [Ocean](ocean/)
-- [**Ocean for Apache Spark**](ocean-spark/)
 - [**Eco**](eco/)
 - [**Security**](spot-security/)
 - [**Spot Connect**](spot-connect/)
