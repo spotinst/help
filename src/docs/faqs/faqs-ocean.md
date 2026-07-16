@@ -34,16 +34,16 @@ us-east1, us-east1, us-east1, us-east4, us-east4, us-east4, us-central1, us-cent
 
 When shutdown hours end and Ocean needs to launch a node, it searches for a virtual node group with these characteristics:
 
-* It is not in shutdown hours.
-* Has no taints (Ocean will not launch a virtual node group that has a taint).
-* `maxInstanceCount > 0` (or not set).
+- It is not in shutdown hours.
+- Has no taints (Ocean will not launch a virtual node group that has a taint).
+- `maxInstanceCount > 0` (or not set).
 
 Ocean sorts the groups as follows:
 
-* Highest max instance count.
-* Highest spot percentage.
-* Highest number of AZs.
-* Highest number of possible instance types defined.
+- Highest max instance count.
+- Highest spot percentage.
+- Highest number of AZs.
+- Highest number of possible instance types defined.
 
 **Virtual Node Group shutdown hours:**
 
@@ -58,8 +58,6 @@ See also [Set Shutdown Hours](https://docs.spot.io/ocean/tutorials/set-running-h
  </div>
  
  </details>
-
- 
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">AWS, Azure, GCP: What's the difference between allocation and utilization for Ocean right sizing?</summary>
@@ -108,31 +106,35 @@ This can happen if your virtual node group was deleted in Terraform. When you de
 
   <div style="padding-left:16px">
 
-   If you get a `snapshotId cannot be modified on the root device` error:
+If you get a `snapshotId cannot be modified on the root device` error:
 
-   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-   2. On the Virtual Nodes Groups tab, select the virtual node group.
-   3. Click **JSON**.
-   4. In the blockDeviceMappings, update the snapshotID or remove it:
+1.  In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2.  On the Virtual Nodes Groups tab, select the virtual node group.
+3.  Click **JSON**.
+4.  In the blockDeviceMappings, update the snapshotID or remove it:
 
-      ````json
-	  "blockDeviceMappings": [
-      {
-        "deviceName": "/dev/xvda",
-        "ebs": {
-          "deleteOnTerminaspoton": true,
-          "encrypted": false,
-          "iops": 3000,
-          "throughput": 125,
-          "snapshotId": "snap-1234",
-          "volumeSize": 100,
-          "volumeType": "GP3"
-        }
+    ```json
+    "blockDeviceMappings": [
+    {
+      "deviceName": "/dev/xvda",
+      "ebs": {
+        "deleteOnTerminaspoton": true,
+        "encrypted": false,
+        "iops": 3000,
+        "throughput": 125,
+        "snapshotId": "snap-1234",
+        "volumeSize": 100,
+        "volumeType": "GP3"
       }
+    }
     ],
-    ````
+    ```
 
-   5. Click **Save**.
+    ```
+
+    ```
+
+5.  Click **Save**.
 
  </div>
 
@@ -145,11 +147,11 @@ This can happen if your virtual node group was deleted in Terraform. When you de
 
 No, you will get this error:
 
-````
+```
 Virtual Node Group configuration failed to update. Reason: Error while trying to create LaunchSpec. spotPercentage cannot be set on both ocean cluster and launch spec
-````
+```
 
-The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of its virtual node groups at the same time. This is intentional. Either remove it from the  cluster or from the virtual node group.
+The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of its virtual node groups at the same time. This is intentional. Either remove it from the cluster or from the virtual node group.
 
  </div>
 
@@ -162,14 +164,14 @@ The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of
 
 You can get this message when the group or cluster is scaling up instances:
 
-````
+```
 Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error
-````
+```
 
 This happens if you have duplicate tags configured:
 
-* The cluster has more than one of the same custom tags.
-* You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
+- The cluster has more than one of the same custom tags.
+- You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
 
  </div>
 
@@ -199,9 +201,9 @@ Draining timeout is the time in seconds to allow the instance or node to be drai
 
 The default draining for:
 
-* Elastigroup is 120 seconds
-* Ocean is 300 seconds
-* ECS (Elastigroup/Ocean) is 900 seconds
+- Elastigroup is 120 seconds
+- Ocean is 300 seconds
+- ECS (Elastigroup/Ocean) is 900 seconds
 
  </div>
 
@@ -222,20 +224,24 @@ You can see the list of permissions required for Spot in [Sample AWS policies](h
 
   <div style="padding-left:16px">
 
-   You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
-   
-   * [Ocean](/ocean/features/log-integration-with-s3)
-   * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
+You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
 
-     ````json
-	 "logging": {
-       "export": {
-         "s3": {
-           "id": "di-123"
-         }
-       }
-     }
-    ````
+- [Ocean](/ocean/features/log-integration-with-s3)
+- [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
+
+  ```json
+  "logging": {
+    "export": {
+      "s3": {
+        "id": "di-123"
+      }
+    }
+  }
+  ```
+
+  ```
+
+  ```
 
  </div>
 
@@ -248,54 +254,54 @@ You can see the list of permissions required for Spot in [Sample AWS policies](h
 
 You can change your volume type to gp3 by:
 
-* Adding a block device mapping for a single virtual node group in the Spot console:
+- Adding a block device mapping for a single virtual node group in the Spot console:
 
-   1. In the Spot console, go to **Ocean** > **Cloud Cluster**s and select the cluster.
-   2. On the Virtual Nodes Groups tab, select the virtual node group.
-   3. Go to **Advanced** > **Block Device Mapping**.
-   4. Add the block device mapping and click **Save**.
-   5. [Roll the virtual node group](ocean/features/roll-gen?id=roll-per-node-or-vng) if you want the changes to apply immediately on new nodes.
+  1.  In the Spot console, go to **Ocean** > **Cloud Cluster**s and select the cluster.
+  2.  On the Virtual Nodes Groups tab, select the virtual node group.
+  3.  Go to **Advanced** > **Block Device Mapping**.
+  4.  Add the block device mapping and click **Save**.
+  5.  [Roll the virtual node group](ocean/features/roll-gen?id=roll-per-node-or-vng) if you want the changes to apply immediately on new nodes.
 
-* Changing the AMI to an AMI with gp3 volume type:
+- Changing the AMI to an AMI with gp3 volume type:
 
-   1. In the Spot console, go to **Ocean** > **Cloud Cluster**s and select the cluster.
-   2. On the Virtual Nodes Groups tab, select the virtual node group.
-   3. Go to **Advanced** > **Image**.
-   4. Select an AMI with gp3.
+  1.  In the Spot console, go to **Ocean** > **Cloud Cluster**s and select the cluster.
+  2.  On the Virtual Nodes Groups tab, select the virtual node group.
+  3.  Go to **Advanced** > **Image**.
+  4.  Select an AMI with gp3.
 
-* Making the [default virtual node group](ocean/features/launch-specifications?id=default-virtual-node-group) gp3 by adding a block device mapping at the cluster level.
+- Making the [default virtual node group](ocean/features/launch-specifications?id=default-virtual-node-group) gp3 by adding a block device mapping at the cluster level.
 
-   1. Add the block device mapping:
+  1.  Add the block device mapping:
 
-      * In the JSON: select the cluster > **Actions** > **Edit Cluster** > **Review** > **JSON** > **Edit Mode**.
-      * Using the [Ocean AWS cluster update API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate).
+      - In the JSON: select the cluster > **Actions** > **Edit Cluster** > **Review** > **JSON** > **Edit Mode**.
+      - Using the [Ocean AWS cluster update API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate).
 
       Keep in mind, you cannot use both [block device mapping](ocean/tutorials/manage-virtual-node-groups?id=advanced-parameters) and [root volume size](ocean/tutorials/manage-virtual-node-groups?id=configuration-parameters) at the same time.
 
       Sample block device mapping:
 
-     ````json
-	{
-	  "group": {
-    	   "compute": {
-      	    "launchSpecification": {
-             "blockDeviceMappings": [
-              {
-               "deviceName": "/dev/sda1",
-               "ebs": {
-                 "deleteOnTermination": true,
-                 "volumeSize": 24,
-                 "volumeType": "gp2"
-               }
+  ```json
+  {
+    "group": {
+      "compute": {
+        "launchSpecification": {
+          "blockDeviceMappings": [
+            {
+              "deviceName": "/dev/sda1",
+              "ebs": {
+                "deleteOnTermination": true,
+                "volumeSize": 24,
+                "volumeType": "gp2"
               }
-             ]
             }
-           }
-          }
-         }
-    ````
+          ]
+        }
+      }
+    }
+  }
+  ```
 
-   2. Make sure to [roll the cluster](ocean/features/roll-gen) to replace the current instance gracefully with the changes.
+  2.  Make sure to [roll the cluster](ocean/features/roll-gen) to replace the current instance gracefully with the changes.
 
  </div>
 
@@ -309,8 +315,9 @@ You can change your volume type to gp3 by:
 You can have on-demand instances running in your group/cluster using reserved instance/savings plan even if you have set utilizeCommitments: false.
 
 This happens because of:
-* **AWS commitments coverage**: When an on-demand instance launches in AWS, if there are any existing reservation or savings plan AWS may use them. AWS has its own way of deciding if an instance can be covered by a commitment plan. If the instance meets certain criteria, it will be covered if there's available space. This is how AWS handles reservations and savings plans. This happens even if you select utilizeCommitments: false.
-* **Elastigroup/Ocean’s explicit commitment utilization**: If you’ve selected utilizeCommitments: true, Spot imitates AWS’s method to help you utilize all the commitment plans for your AWS account. If there is free space in the commitment plan and markets, your on-demand instances run reserved instances/savings plans.
+
+- **AWS commitments coverage**: When an on-demand instance launches in AWS, if there are any existing reservation or savings plan AWS may use them. AWS has its own way of deciding if an instance can be covered by a commitment plan. If the instance meets certain criteria, it will be covered if there's available space. This is how AWS handles reservations and savings plans. This happens even if you select utilizeCommitments: false.
+- **Elastigroup/Ocean’s explicit commitment utilization**: If you’ve selected utilizeCommitments: true, Spot imitates AWS’s method to help you utilize all the commitment plans for your AWS account. If there is free space in the commitment plan and markets, your on-demand instances run reserved instances/savings plans.
 
 An on-demand instance marked as a reserved instance/savings plan doesn't always mean it will launch as a commitment plan. There can be other reasons for launching on-demand instances, such as when there is no spot capacity available or when certain requirements in Ocean need an on-demand instance. Then, if the on-demand instance is eligible, it will automatically use a commitment plan if there's space.
 
@@ -325,9 +332,9 @@ Spot cannot control how AWS automatically handles commitment plan utilization. I
 
   <div style="padding-left:16px">
 
-   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
-   
-   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+
+When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
 
 AWS decides according to:
 
@@ -338,7 +345,7 @@ AWS decides according to:
 5. Otherwise, the instance will run as a full-price on-demand instance.
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
-   
+
  </div>
 
  </details>
@@ -348,7 +355,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 
   <div style="padding-left:16px">
 
-   Yes, a cluster roll will override the <i>spotinst.io/restrict-scale-down</i> label. Nodes containing pods with the <i>spotinst.io/restrict-scale-down</i> label will be replaced during a cluster roll.
+Yes, a cluster roll will override the <i>spotinst.io/restrict-scale-down</i> label. Nodes containing pods with the <i>spotinst.io/restrict-scale-down</i> label will be replaced during a cluster roll.
 
 Nodes can be replaced during a cluster roll even if the [instance is locked](elastigroup/features/core-features/instance-actions?id=lock-an-instance). Instance lock only protects the instance from autoscaling actions. Cluster roll is a manually triggered action that requires replacing all the cluster’s instances.
 
@@ -361,7 +368,7 @@ Nodes can be replaced during a cluster roll even if the [instance is locked](ela
 
   <div style="padding-left:16px">
 
-When you’re in a cluster or group, you only see roles associated with the instance profile.  
+When you’re in a cluster or group, you only see roles associated with the instance profile.
 
    </div>
 
@@ -380,7 +387,8 @@ Instance metadata service version 2 (IMDSv2) addresses security concerns and vul
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   ````json
+
+   ```json
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -390,11 +398,11 @@ You can define metadata for autoscaling groups in AWS that gets imported when yo
           }
       }
     }
-   ````
+   ```
 
 2. Apply these changes to the currently running instances so the clusters are restarted and have the new definitions:
-    * [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
-    * [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
+   - [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+   - [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
 
 **Scenario 2: Stateful Node**
 
@@ -403,21 +411,23 @@ When a stateful managed node is imported from AWS, Spot creates an image from th
 You can use your own AMI and configure IMDSv2 on it. All instances launched after recycling will have IMDSv2 by default.
 
 1. Configure IMDSv2 on your AMI:
-    * If you're creating a new AMI, you can add IMDSv2 support using AWS CLI:
-     ````
-      aws ec2 register-image Let me know if there is anything else I can help you with.
-      --name my-image \
-      --root-device-name /dev/xvda \
-      --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
-      --imds-support v2.0
-      ````
 
-    * If you use an existing AMI, you can add IMDSv2 using AWS CLI:
-      ````
-      aws ec2 modify-image-attribute \
-      --image-id ami-0123456789example \
-      --imds-support v2.0
-      ````
+   - If you're creating a new AMI, you can add IMDSv2 support using AWS CLI:
+
+   ```
+    aws ec2 register-image Let me know if there is anything else I can help you with.
+    --name my-image \
+    --root-device-name /dev/xvda \
+    --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
+    --imds-support v2.0
+   ```
+
+   - If you use an existing AMI, you can add IMDSv2 using AWS CLI:
+     ```
+     aws ec2 modify-image-attribute \
+     --image-id ami-0123456789example \
+     --imds-support v2.0
+     ```
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
 
@@ -432,19 +442,18 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
 When you use autoTag in CloudFormation, Spot adds these tracking tags to instances provisioned as part of the custom resource:
 
-* `spotinst:aws:cloudformation:logical-id`
-* `spotinst:aws:cloudformation:stack-name`
-* `spotinst:aws:cloudformation:stack-id`
+- `spotinst:aws:cloudformation:logical-id`
+- `spotinst:aws:cloudformation:stack-name`
+- `spotinst:aws:cloudformation:stack-id`
 
 You can see examples of autotagging in:
 
-* [Ocean](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-a-kubernetes-ocean-cluster)
-* [Elastigroup](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-elastigroup)
+- [Ocean](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-a-kubernetes-ocean-cluster)
+- [Elastigroup](tools-and-provisioning/cloudformation/template-structure/parameters?id=request-json-example-adding-auto-tags-to-elastigroup)
 
    </div>
 
  </details>
-
 
  </details>
 
@@ -453,14 +462,13 @@ You can see examples of autotagging in:
 
   <div style="padding-left:16px">
 
-  See the following topic:
+See the following topic:
 
-  * [Startup Taints](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
+- [Startup Taints](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
 
    </div>
 
  </details>
- 
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oc2min">AWS: Why doesn’t Spot gracefully terminate instances if AWS gives a 2-minute termination notice?</summary>
@@ -473,8 +481,8 @@ When AWS terminates an instance, the machine status is updated regardless of the
 
 You can get higher availability by including:
 
-* More instance types and availability zones for the group/cluster
-* Fallback to on-demand
+- More instance types and availability zones for the group/cluster
+- Fallback to on-demand
 
    </div>
 
@@ -488,8 +496,8 @@ If you change the Spot % to 0, your already running spot instances do not automa
 
 You need to:
 
-* [Deploy an Elastigroup](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
-* [Roll an Ocean cluster](ocean/features/roll-gen)
+- [Deploy an Elastigroup](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+- [Roll an Ocean cluster](ocean/features/roll-gen)
 
 The automatic process only happens when changing the Spot % from on-demand instances to spot (fix strategy in [Elastigroup](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy), [Ocean](ocean/features/dynamic-commitments-aws)).
 
@@ -523,16 +531,16 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 
 If you’re getting this message:
 
-````
+```
 Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.
-````
+```
 
 It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
 
 1. In the Spot console, go to:
 
-   * **Elastigroup** > **Groups** > click on the Elastigroup > **Log**.
-   * **Ocean** > **Cloud Clusters** > click on the cluster > **Log**.
+   - **Elastigroup** > **Groups** > click on the Elastigroup > **Log**.
+   - **Ocean** > **Cloud Clusters** > click on the cluster > **Log**.
 
 2. Identify the problematic tag keys/values.
 
@@ -540,8 +548,8 @@ It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS�
 
 4. In the Spot console, update the tag keys/values:
 
-   * **Elastigroup** > **Groups** > click on the Elastigroup > **Actions** > **Edit Configuration** > **Compute** > **Advanced Settings**.
-   * **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
+   - **Elastigroup** > **Groups** > click on the Elastigroup > **Actions** > **Edit Configuration** > **Compute** > **Advanced Settings**.
+   - **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
 
 The instance will be launched when the tags in Spot clusters/groups comply with the tag policy defined in AWS.
 
@@ -556,18 +564,18 @@ The instance will be launched when the tags in Spot clusters/groups comply with 
 
 You can get these messages when the group or cluster is scaling up instances:
 
-* `Can’t Spin Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
-* `Can’t Spin On-Demand Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+- `Can’t Spin Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+- `Can’t Spin On-Demand Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
 
 These messages could be related to [service control policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) (SCP). Keep in mind, Spot doesn’t get SCP information from AWS, so doesn’t know which instance types AWS blocks because of the SCP restrictions. As a result, Spot cannot launch a new instance of a different type.
 
 1. You need to [identify the reason for the error](https://docs.aws.amazon.com/STS/latest/APIReference/API_DecodeAuthorizationMessage.html) in AWS.
 2. In the Spot console, update the instance types:
 
-   * [Ocean](ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types)
-   * [Elastigroup](elastigroup/features/compute/preferred-instance-types)
-   * [Ocean ECS cluster update API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
-   * [Elastigroup AWS update API](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate)
+   - [Ocean](ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types)
+   - [Elastigroup](elastigroup/features/compute/preferred-instance-types)
+   - [Ocean ECS cluster update API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
+   - [Elastigroup AWS update API](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate)
 
    </div>
 
@@ -580,23 +588,23 @@ These messages could be related to [service control policies](https://docs.aws.a
 
 You can get this message when the group or cluster is scaling up instances:
 
-````
+```
 Can't spin spot instance: Code: UnsupportedOperation, Message: The instance configuration for this AWS Marketplace product is not supported. Please see the AWS Marketplace site for more information about supported instance types, regions, and operating systems.
-````
+```
 
 This typically happens if the group/cluster AMI product doesn’t support specific instance types in the group/cluster instance list.
 
 1. Identify the AMI:
 
-   * [Search AWS Marketplace for the AMI ID](https://aws.amazon.com/marketplace/search/results?ref_=nav_search_box&searchTerms=ami).
-   * **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Group Information** and click **Details** > **productCodeId**.
-   * **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance specifications** > **View AMI details** > **productCodeId**.
+   - [Search AWS Marketplace for the AMI ID](https://aws.amazon.com/marketplace/search/results?ref_=nav_search_box&searchTerms=ami).
+   - **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Group Information** and click **Details** > **productCodeId**.
+   - **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance specifications** > **View AMI details** > **productCodeId**.
 
 2. [Troubleshoot AWS Marketplace AMIs](https://repost.aws/knowledge-center/ami-marketplace-troubleshoot). For example, check the instance types, regions, and availability zones. You can compare the instance types in AWS with the Spot console:
 
-   * **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Compute** > **Instance types**.
-   * **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance types**.
-   
+   - **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Compute** > **Instance types**.
+   - **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance types**.
+
  </div>
 
  </details>
@@ -608,9 +616,9 @@ This typically happens if the group/cluster AMI product doesn’t support specif
 
 You may get this message when creating or importing an Elastigroup or cluster if you reach your AWS service quota limit for security groups per network interface:
 
-````
+```
 POST https://api.spotinst.io/aws/ec2/group?accountId=act-xxxxx: 400 (request: "xxxxx") SecurityGroupLimitExceeded: You have exceeded the number of VPC security groups allowed per instance.
-````
+```
 
 You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html).
 
@@ -625,14 +633,14 @@ You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/late
 
 You can get this log message if:
 
-* The instance is scaled down because of AWS’s capacity.
-* An instance replacement was initiated because of AWS’s capacity. A new instance is launched to replace an instance that was taken back because of AWS’s capacity.
-* An instance is manually terminated in AWS.
+- The instance is scaled down because of AWS’s capacity.
+- An instance replacement was initiated because of AWS’s capacity. A new instance is launched to replace an instance that was taken back because of AWS’s capacity.
+- An instance is manually terminated in AWS.
 
 This means that there are no [spot markets](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy) available to launch spot instances. You can add more spot markets to improve availability:
 
-* For Elastigroup, [instance types](elastigroup/features/compute/preferred-instance-types?id=preferred-instance-types) and [availability zones](elastigroup/features/compute/preferred-availability-zones).
-* For Ocean, [instance types](ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-instance-types-per-virtual-node-group-aws) and [availability zones](ocean/features/avail-zones-scores?id=configure-your-availability-zones-recommendations).
+- For Elastigroup, [instance types](elastigroup/features/compute/preferred-instance-types?id=preferred-instance-types) and [availability zones](elastigroup/features/compute/preferred-availability-zones).
+- For Ocean, [instance types](ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-instance-types-per-virtual-node-group-aws) and [availability zones](ocean/features/avail-zones-scores?id=configure-your-availability-zones-recommendations).
 
    </div>
 
@@ -645,9 +653,9 @@ This means that there are no [spot markets](elastigroup/features/core-features/m
 
 You can get this message if the key pair is missing or not valid:
 
-````
+```
 Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound, Message: The key pair 'xxxxx' does not exist
-````
+```
 
 Update the key pair:
 
@@ -690,8 +698,8 @@ One of the reasons this can happen is if you’re using enhanced networking and 
 
 Yes, you can connect using SSH to a VM running:
 
-* [Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux)
-* [Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/connect-ssh?tabs=azurecli)
+- [Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux)
+- [Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/connect-ssh?tabs=azurecli)
 
    </div>
 
@@ -704,9 +712,9 @@ Yes, you can connect using SSH to a VM running:
 
 You got this error in the logs, and it’s not possible for the cluster to perform any scaling actions:
 
-````
+```
 Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app
-````
+```
 
 In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client secret ID</i> and <i>client secret value</i>.
 
@@ -729,12 +737,12 @@ Cooldown is set at the cluster level and is applied across all virtual node grou
 
 You can set the cooldown period:
 
-* In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Review** > **JSON** > **Edit Mode**.
-* Using the APIs:
+- In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Review** > **JSON** > **Edit Mode**.
+- Using the APIs:
 
-   * [Ocean AWS cluster update](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
-   * [Ocean ECS cluster update](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
-   * [Ocean GKE cluster update](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
+  - [Ocean AWS cluster update](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
+  - [Ocean ECS cluster update](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
+  - [Ocean GKE cluster update](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
 
  </div>
 
@@ -750,7 +758,6 @@ Cluster roll randomly chooses the nodes and divides the instances between batche
    </div>
 
  </details>
-
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
@@ -782,16 +789,17 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
 
 This message is shown in the console logs if Ocean attempts to scale up a certain spot instance type in a particular availability zone. This happens because of a lack of capacity on the AWS side.
 
-````
+```
 Can't Spin Spot Instances: Code: InsufficientInstanceCapacity, Message: We currently do not have sufficient m5.2xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get m5.2xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.
-````
+```
 
 Ocean is aware of a pending pod and is spinning up an instance. Based on your current instance market, Ocean chooses the instance type in a particular availability zone and attempts to scale up. If it fails due to a lack of capacity, the error message is shown in the console logs.
 
 You can solve this by:
-* Having many instance types so Ocean can choose the best available markets.
-* Having multiple availability zones to provide more availability.
-* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) `spotinst.io/node-lifecycle`.
+
+- Having many instance types so Ocean can choose the best available markets.
+- Having multiple availability zones to provide more availability.
+- For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) `spotinst.io/node-lifecycle`.
 
  </div>
 
@@ -804,26 +812,23 @@ You can solve this by:
 
 You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
-````
+```
 ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.
-````
+```
 
 If you have a block device that is mapped to a snapshot ID of an Elastigroup or Ocean cluster and the snapshot isn't available, you will get this error. This can happen if the snapshot is deleted.
 
  <img width="460" alt="cant-spin-instances-invalidsnapshot1" src="https://github.com/user-attachments/assets/6b828a90-314f-44e7-8508-077e5e392cb8">
 
-
 If you have another snapshot, then you can use that snapshot ID for the block device mapping. If not, you can remove the snapshot ID, and then the instance is launched using the AMI information.
 
-* **Elastigroup**: on the Elastigroup you want to change, [open the creation wizard](https://docs.spot.io/elastigroup/features/compute/block-device-mapping) and update the snapshot ID.
+- **Elastigroup**: on the Elastigroup you want to change, [open the creation wizard](https://docs.spot.io/elastigroup/features/compute/block-device-mapping) and update the snapshot ID.
 
   <img width="467" alt="cant-spin-instances-invalidsnapshot2" src="https://github.com/user-attachments/assets/0d90513e-a6f3-478c-9b7f-a8bc2d07a798">
 
-
-* **Ocean**: on the virtual node group you want to change, update the snapshot ID.
+- **Ocean**: on the virtual node group you want to change, update the snapshot ID.
 
   <img width="588" alt="cant-spin-instances-invalidsnapshot3" src="https://github.com/user-attachments/assets/2cca9a9d-6123-4ddb-99b6-afe565304964">
-
 
  </div>
 
@@ -834,17 +839,16 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
   <div style="padding-left:16px">
 
-   You can get this message if AWS's spot service limit is reached:
-   
-   ````
-   Can't Spin Spot Instances:Code: MaxSpotInstanceCountExceeded, Message: Max spot instance count exceeded
-````
+You can get this message if AWS's spot service limit is reached:
+
+```
+Can't Spin Spot Instances:Code: MaxSpotInstanceCountExceeded, Message: Max spot instance count exceeded
+```
 
 You may also get an email from Spot: <i>Spot Proactive Monitoring | Max Spot Instance Count Exceeded</i>. This email includes instructions for opening a support request with AWS, such as the instance type and region that triggered the error.
 
 You can read the AWS documentation on [spot instance quotas](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html).
 
-   
  </div>
 
  </details>
@@ -856,12 +860,12 @@ You can read the AWS documentation on [spot instance quotas](https://docs.aws.am
 
 You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
-````
+```
 Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping
-````
+```
 
-* AMI - "deviceName": "xvda"
-* Group's configuration - "deviceName": "/dev/xvda"
+- AMI - "deviceName": "xvda"
+- Group's configuration - "deviceName": "/dev/xvda"
 
 Change the device name from `xvda` to `/dev/xvda` on the group's side. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Change the device name from `xvda` to `/dev/xvda` and click **Update**.
 
@@ -874,17 +878,17 @@ Change the device name from `xvda` to `/dev/xvda` on the group's side. In the st
 
 <div style="padding-left:16px">
 
-When you import Fargate services with more than 5 security groups, you get an error: 
+When you import Fargate services with more than 5 security groups, you get an error:
 
-````
+```
 Failed to import Fargate services into Ocean. Please verify Spot IAM policy has the right permissions and try again.
-````
+```
 
 In Spot, you see this warning:
 
-````
+```
 Fargate import failed for xxx-xxxxxx, due to Failed to import services, too many security groups. Import less services to this group (Group ID: xxxx-xxxxxx).
-````
+```
 
 You can have up to 5 security groups in each service according to this [article](https://spot.io/blog/import-ecs-fargate-into-spot-ocean/#:~:text=more%20than%20five-,security,-groups%20as%20only). This means that if more than 5 security groups are defined in one of the services, the import doesn’t succeed.
 
@@ -915,7 +919,6 @@ Yes, you can launch an instance with a specific launch specification or virtual 
 
 When a new instance is launched, it will be from the dedicated virtual node group.
 
-   
  </div>
 
  </details>
@@ -925,10 +928,10 @@ When a new instance is launched, it will be from the dedicated virtual node grou
 
   <div style="padding-left:16px">
 
-   An ECS cluster launches an instance just for a single task, even when there is capacity on the nodes currently running in the cluster. This can happen if a task has placement constraints called <i>distinctInstance</i>, which causes each task in the group to run on its own instance.
-   
-   You can [define which container instances Amazon ECS uses for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html). The <i>placementConstraints</i> may be defined in one of these actions [CreateService](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html), [UpdateService](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateService.html), and/or [RunTask](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html).
-   
+An ECS cluster launches an instance just for a single task, even when there is capacity on the nodes currently running in the cluster. This can happen if a task has placement constraints called <i>distinctInstance</i>, which causes each task in the group to run on its own instance.
+
+You can [define which container instances Amazon ECS uses for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html). The <i>placementConstraints</i> may be defined in one of these actions [CreateService](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html), [UpdateService](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateService.html), and/or [RunTask](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html).
+
  </div>
 
  </details>
@@ -938,20 +941,20 @@ When a new instance is launched, it will be from the dedicated virtual node grou
 
   <div style="padding-left:16px">
 
-   If your virtual node group has more on-demand instances than defined, your extra instances are reverted to spot instances when they become available. This is called the fix strategy.
+If your virtual node group has more on-demand instances than defined, your extra instances are reverted to spot instances when they become available. This is called the fix strategy.
 
 If you see this message in the log:
 
-````
+```
 DEBUG, Replacement of type Out of strategy for instance i-xxx has been canceled. Reason for cancelation: Instance contains stand-alone tasks, and the group's configuration doesn't allow termination of stand-alone tasks.
-````
+```
 
 It means that your strategy cannot be fixed and your spot instances cannot be reverted to spot instances. This is because you have standalone tasks in the instances, and the group's configuration can't stop standalone tasks. The autoscaler cannot scale down these instances.
 
 Update the cluster [in the API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) or in the cluster's JSON file to include `"shouldScaleDownNonServiceTasks": true`.
 
 The standalone task and instance are terminated and are not redeployed because they weren't created as part of a service.
-   
+
  </div>
 
  </details>
@@ -963,11 +966,11 @@ The standalone task and instance are terminated and are not redeployed because t
 
 Your container instances may be unregistered if the newly launched Ocean ECS container instance:
 
-* Has unregistered contain instance events
-* Doesn’t have a Container Instance ID
-* Is eventually scaled down
-* CPU and memory resource allocations are 0%
-* Status: Can’t determine
+- Has unregistered contain instance events
+- Doesn’t have a Container Instance ID
+- Is eventually scaled down
+- CPU and memory resource allocations are 0%
+- Status: Can’t determine
 
 <img src="https://github.com/user-attachments/assets/a21d2179-18d4-4968-b85d-cf71c0ed959f" />
 
@@ -980,42 +983,41 @@ Your container instance must be registered with an ECS cluster. If the container
 
 If your container is unregistered, you should make sure:
 
-* **User Data**
-  
+- **User Data**
+
   1. Go to the cluster in the Spot console and click **Actions** > **Edit Configuration** > **Compute**.
   2. Add this script to **User Data**, using your cluster name.
 
-       ````
-       #!/bin/bash
-       echo ECS_CLUSTER="xxxxx" >> /etc/ecs/ecs.config
-       ````
-  
-* **AMI**
+     ```
+     #!/bin/bash
+     echo ECS_CLUSTER="xxxxx" >> /etc/ecs/ecs.config
+     ```
+
+- **AMI**
 
   ECS is optimized and Agent (similar to the controller in Kubernetes) is configured in the AMI.
-  
-* **Security group and specific ports**
-  * **Port 22 (SSH)** is required if you want to connect to your container instances using Secure Shell (SSH) for troubleshooting or maintenance.
-    It is not directly related to ECS cluster registration, but it's commonly included for administrative access to the instances.
-  * **Port 2375 (TCP)** is used for the ECS container agent to communicate with the ECS control plane. It allows the agent to register the container instance with the cluster, send heartbeats, and receive instructions for task placement and management.
-  * **Port 2376 (TCP)** is used for secure communication between the ECS container agent and the ECS control plane. It enables encrypted communication and is recommended for improved security when managing your ECS cluster.
 
-* **IAM role**
+- **Security group and specific ports**
+
+  - **Port 22 (SSH)** is required if you want to connect to your container instances using Secure Shell (SSH) for troubleshooting or maintenance.
+    It is not directly related to ECS cluster registration, but it's commonly included for administrative access to the instances.
+  - **Port 2375 (TCP)** is used for the ECS container agent to communicate with the ECS control plane. It allows the agent to register the container instance with the cluster, send heartbeats, and receive instructions for task placement and management.
+  - **Port 2376 (TCP)** is used for secure communication between the ECS container agent and the ECS control plane. It enables encrypted communication and is recommended for improved security when managing your ECS cluster.
+
+- **IAM role**
 
   Configure an instance profile with relevant permissions.
 
   <img alt="unregistered-container-instance3" src="https://github.com/spotinst/help/assets/167069628/b51d91f7-c067-431f-94b5-64926a6e469c">
 
-* **IP**
+- **IP**
 
   Make sure you configured Public IP according to subnet, and have NAT gateway.
   If you change the configuration in the virtual node group, such as tags/user data, it immediately overrides the cluster's configuration.
 
   <img alt="unregistered-container-instance4" src="https://github.com/spotinst/help/assets/167069628/98a19d66-d218-41da-bb88-5a99220dcac3">
 
-
-* [AWS troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)
-
+- [AWS troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)
 
  </div>
  
@@ -1026,8 +1028,8 @@ If your container is unregistered, you should make sure:
 
   <div style="padding-left:16px">
 
-   A non-service task is a standalone task that isn't part of a service. It's typically used for batch processing or one-time jobs rather than continuous, long-running services. When an independent task runs in a cluster, and there aren't enough resources available, the task may fail to launch due to CPU or memory errors. This means that no service is continuously attempting to launch tasks to meet the required number of tasks. Instead, the task will be launched later when resources become available.
-   
+A non-service task is a standalone task that isn't part of a service. It's typically used for batch processing or one-time jobs rather than continuous, long-running services. When an independent task runs in a cluster, and there aren't enough resources available, the task may fail to launch due to CPU or memory errors. This means that no service is continuously attempting to launch tasks to meet the required number of tasks. Instead, the task will be launched later when resources become available.
+
  </div>
 
  </details>
@@ -1065,18 +1067,18 @@ As a result, the new instances have auto-assign public IP disabled.
 
 Headroom can only be scheduled if there are enough instance types. If you’re using [manual headroom](ocean/features/headroom?id=manual-headroom) and there aren’t enough instance types, you may get this message:
 
-````
+```
 WARN, AutoScaler - Attempt Scale Up, Task service:spotinst-headroom-task-ols-e72002a2-4 is pending but could not find any applicable instance type to scale up in order to schedule the pending Task.
-````
+```
 
 You can:
 
-* Add more [instance types](ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-spot-instance-types) (bigger instance types) to the virtual node group, which gives Ocean more options to choose from. This can reduce your costs.
-* Decrease the **Reserve**, **CPU**, **Memory**:
+- Add more [instance types](ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-spot-instance-types) (bigger instance types) to the virtual node group, which gives Ocean more options to choose from. This can reduce your costs.
+- Decrease the **Reserve**, **CPU**, **Memory**:
 
-   1. In the Spot console, go to **Ocean** > **Cloud Clusters** and select the cluster.
-   2. On the Virtual Node Groups tab, click on the virtual node group.
-   3. Go to **Advanced** > **Headroom** and update the **Reserve**, **CPU**, and/or **Memory**.
+  1.  In the Spot console, go to **Ocean** > **Cloud Clusters** and select the cluster.
+  2.  On the Virtual Node Groups tab, click on the virtual node group.
+  3.  Go to **Advanced** > **Headroom** and update the **Reserve**, **CPU**, and/or **Memory**.
 
  </div>
 
@@ -1089,9 +1091,9 @@ You can:
 
 You may get this message if you create a custom virtual node group and then change the AMI:
 
-````
+```
 error: The Virtual Node Group’s architecture doesn’t match the Virtual Node Group Template filter.
-````
+```
 
 This can happen if the new AMI architecture does not support the instance types set in the default virtual node group.
 
@@ -1121,34 +1123,35 @@ If a node only has one task running, then it causes the node to be underutilized
 
 Example service:
 
-````json
+```json
 "placementConstraints": [],
    "placementStrategy": [],
-````
+```
 
 The task definition doesn't have constraints to spread tasks across nodes.
 
-````json
+```json
 "placementConstraints": [
   {
   "type": "memberOf",
   "expression": "attribute:nd.type == default"
   }
   ],
-````
+```
 
 Check the **portMappings: hostPort** value in the task/service defintion.
 
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
 Example:
-````json
+
+```json
       "portMappings": [
             {
                "protocol": "tcp",
                "hostPort": 0,
                "containerPort": 443
-````
+```
 
 However, if the hostPort value equals the containerPort value, then each task needs its own container. Any pending tasks trigger a scale-up, and the number of launched instances is equal to the number of pending tasks. This leads to underutilized instances and higher costs.
 
@@ -1195,7 +1198,7 @@ You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com
 
   <div style="padding-left:16px">
 
-   You can safely disconnect Ocean from an existing EKS Cluster:
+You can safely disconnect Ocean from an existing EKS Cluster:
 
 1. Increase the number of instances in the ASG attached to the EKS cluster. This way, the pods that run on the nodes managed by Spot will be able to reschedule on the new instances and avoid downtime.
 2. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
@@ -1206,9 +1209,10 @@ You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com
    <img width="144" alt="oceandisconnectcluster" src="https://github.com/user-attachments/assets/ec722def-980f-4754-ab0d-b2751bf67a81">
 
    The instances managed by Ocean will be detached and the pods will be rescheduled on the new instances launched by AWS ASG.
+
 6. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
 7. Click **Actions** > **Delete**.
- 
+
  </div>
 
  </details>
@@ -1225,7 +1229,6 @@ Add a [node group to your EKS cluster](https://docs.aws.amazon.com/eks/latest/us
  </div>
 
  </details>
-
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanamiid">EKS: How can I get the AMI ID for EKS-optimized Amazon Linux?</summary>
@@ -1251,15 +1254,14 @@ Update your tolerances in the DaemonSet YAML so you can schedule DaemonSet pods 
 
 For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) to include:
 
-````json
+```json
    spec:
       tolerations:
       - key: dedicated
         operator: Equal
         value: statefulset
         effect: NoSchedule
-````
-
+```
 
    </div>
 
@@ -1274,7 +1276,7 @@ Yes, you can use `autoScaler: resourceLimits: maxInstanceCount: 10` to set capac
 
 For example:
 
-````json
+```json
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
@@ -1287,7 +1289,7 @@ name: ng1
       resourceLimits:
         maxInstanceCount: 10
     # ...
-````
+```
 
    </div>
    
@@ -1301,18 +1303,19 @@ name: ng1
 Kubernetes nodes in the cluster have <i>Unhealthy</i> status—the node has a <i>Node Name</i> but the Kubernetes status is <i>Unhealthy</i>.
 
 You can debug unhealthy Kubernetes nodes:
-* Check the nodes' status by running this command in CLI: `kubectl get nodes`
-   Look for nodes in a <i>NotReady</i> or <i>Unknown</i> state. This indicates that the nodes are unhealthy or experiencing issues.
-* Get detailed information about the problematic nodes by running the `kubectl describe` command: `kubectl describe node <node-name>`.
-   Look for any error messages or warnings that can help identify the problem. Pay attention to resource allocation issues, network connectivity problems, or other relevant information.
-* Verify the health of cluster components such as the kubelet, kube-proxy, and container runtime (for example, Docker, containerd). Check your local logs and the status of these components to identify any errors or issues.
-* Examine the resource utilization of your nodes, including CPU, memory, and disk usage. High resource utilization can lead to node instability or unresponsiveness. Use tools like Prometheus or Grafana to monitor resource metrics.
-* Ensure that network connectivity is properly configured and functioning between the Kubernetes control plane and the nodes. Verify that nodes can reach each other and communicate with external services.
-* Use the `kubectl get events` command to check for cluster-level events that might provide insights into the node health issues. Events often contain helpful information about the state of your cluster and its components.
-* Examine the logs of individual pods running on the problematic nodes. Logs can provide clues about any application-specific issues or errors that might be impacting node health. Use the `kubectl logs` command to retrieve pod logs.
-* Verify that the node configurations (for example, kubelet configuration, network settings) are correct and aligned with the cluster requirements.
-* Ensure that the container runtime (such as Docker, containerd) is properly installed and functioning on the nodes. Check the runtime logs for any errors or warnings.
-* If you think that a specific component is causing the node health issues, consider updating or reinstalling that component to resolve any known bugs or conflicts.
+
+- Check the nodes' status by running this command in CLI: `kubectl get nodes`
+  Look for nodes in a <i>NotReady</i> or <i>Unknown</i> state. This indicates that the nodes are unhealthy or experiencing issues.
+- Get detailed information about the problematic nodes by running the `kubectl describe` command: `kubectl describe node <node-name>`.
+  Look for any error messages or warnings that can help identify the problem. Pay attention to resource allocation issues, network connectivity problems, or other relevant information.
+- Verify the health of cluster components such as the kubelet, kube-proxy, and container runtime (for example, Docker, containerd). Check your local logs and the status of these components to identify any errors or issues.
+- Examine the resource utilization of your nodes, including CPU, memory, and disk usage. High resource utilization can lead to node instability or unresponsiveness. Use tools like Prometheus or Grafana to monitor resource metrics.
+- Ensure that network connectivity is properly configured and functioning between the Kubernetes control plane and the nodes. Verify that nodes can reach each other and communicate with external services.
+- Use the `kubectl get events` command to check for cluster-level events that might provide insights into the node health issues. Events often contain helpful information about the state of your cluster and its components.
+- Examine the logs of individual pods running on the problematic nodes. Logs can provide clues about any application-specific issues or errors that might be impacting node health. Use the `kubectl logs` command to retrieve pod logs.
+- Verify that the node configurations (for example, kubelet configuration, network settings) are correct and aligned with the cluster requirements.
+- Ensure that the container runtime (such as Docker, containerd) is properly installed and functioning on the nodes. Check the runtime logs for any errors or warnings.
+- If you think that a specific component is causing the node health issues, consider updating or reinstalling that component to resolve any known bugs or conflicts.
 
   </div>
 
@@ -1335,12 +1338,12 @@ If there is no active migration, after the configured unhealthy duration ends (t
 
   <div style="padding-left:16px">
 
-   Ocean doesn't actually have a horizontal pod autoscaling (HPA) policy. The HPA is essentially operating on the Kubernetes side so Ocean itself doesn't have an HPA.
+Ocean doesn't actually have a horizontal pod autoscaling (HPA) policy. The HPA is essentially operating on the Kubernetes side so Ocean itself doesn't have an HPA.
 
 The cluster autoscaler only takes care of provisioning the required number of nodes.
 
 Essentially, if the load increases on your cluster, then Kubernetes will create more replicas, and Ocean will launch nodes for the new pods. Kubernetes HPA will create pods and Ocean will launch new nodes for pods to be scheduled.
-   
+
  </div>
 
  </details>
@@ -1353,15 +1356,17 @@ Essentially, if the load increases on your cluster, then Kubernetes will create 
 <a href="https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html">AWS node termination handler</a> is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
 
 AWS node termination handler makes sure that the Kubernetes control plane responds as it should to events that can cause EC2 instances to become unavailable. Some reasons EC2 instances may become unavailable include:
-* EC2 maintenance events
-* EC2 spot interruptions
-* ASG scale-in
-* ASG AZ rebalance
-* EC2 instance termination using the API or Console
+
+- EC2 maintenance events
+- EC2 spot interruptions
+- ASG scale-in
+- ASG AZ rebalance
+- EC2 instance termination using the API or Console
 
 If not handled, the application code may not stop gracefully, take longer to recover full availability, or accidentally schedule work to nodes going down.
 
 The workflow of the node termination handler DaemonSet is:
+
 1. Identify that a spot instance is being reclaimed.
 2. Use the 2-minute notification window to prepare the node for graceful termination.
 3. Taint the node and cordon it off to prevent new pods from being placed.
@@ -1370,7 +1375,7 @@ The workflow of the node termination handler DaemonSet is:
 
 Ocean does not conflict with aws-node-termination-handler. It is possible to install it, but using aws-node-termination-handler is not required. Ocean continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability.
 Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to optimize maximal cost.
- 
+
  </div>
 
  </details>
@@ -1381,7 +1386,7 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 <div style="padding-left:16px">
 
 The JSON for a virtual node group has all the parameters from the Ocean template/default virtual node group. Any items you haven’t defined yet have a value of <i>null</i>. This way, you can edit the existing parameters.
-    
+
  </div>
 
  </details>
@@ -1400,7 +1405,6 @@ You can update this line in the SDK to debug:
 
  </details>
 
-
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneksclusters">EKS: Why can’t I see EKS clusters in Ocean in the Spot console when I’m importing to Ocean?</summary>
 
@@ -1408,11 +1412,11 @@ You can update this line in the SDK to debug:
 
 When [importing EKS clusters to Ocean](ocean/getting-started/eks/join-an-existing-cluster) in the Spot console, some of your clusters may not show in the list you can import from. Make sure:
 
-* The EKS cluster is in the region you’re trying to import from.
-* You have the [correct permissions](ocean/getting-started/eks/join-an-existing-cluster?id=add-required-permissions) and the most [current Spot policy](administration/api/spot-policy-in-aws).
-* The Kubernetes cluster has an EKS version that is [supported by Amazon](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html). Spot supports an EKS version two months after the Amazon [EKS release date](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar). A version is considered deprecated for Spot when Amazon [ends standard support](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar). A version is considered retired for Spot when Amazon [ends extended support](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar).
-* You have at least one node group in your EKS cluster. There don’t need to be any nodes running in the node group, just configured in the AWS console.
-* If you’re using [ASG](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) in your EKS cluster, you need to import the EKS cluster using the legacy design:
+- The EKS cluster is in the region you’re trying to import from.
+- You have the [correct permissions](ocean/getting-started/eks/join-an-existing-cluster?id=add-required-permissions) and the most [current Spot policy](administration/api/spot-policy-in-aws).
+- The Kubernetes cluster has an EKS version that is [supported by Amazon](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html). Spot supports an EKS version two months after the Amazon [EKS release date](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar). A version is considered deprecated for Spot when Amazon [ends standard support](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar). A version is considered retired for Spot when Amazon [ends extended support](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar).
+- You have at least one node group in your EKS cluster. There don’t need to be any nodes running in the node group, just configured in the AWS console.
+- If you’re using [ASG](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) in your EKS cluster, you need to import the EKS cluster using the legacy design:
 
    <ol style="list-style-type: lower-alpha;">
    <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b> > <b>Create Cluster</b>.</li>
@@ -1475,13 +1479,13 @@ Ocean Insights is intended for <i>unmanaged</i> clusters.
 
 If you get a `Maximum Pods configuration reached` message for a node in the console:
 
-* It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt). For example, the EKS maximum pod limit for <b>r4.large</b> is <i>29</i>.
+- It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt). For example, the EKS maximum pod limit for <b>r4.large</b> is <i>29</i>.
 
-   You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS. You can see more information about the number of pods per EKS instance on [Stack Overflow](https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster).
+  You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS. You can see more information about the number of pods per EKS instance on [Stack Overflow](https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster).
 
-* If the node has fewer pods than the EKS maximum pod limit, then check if the <b>max-pods</b> limit is set at the user data level in the Ocean configuration.
+- If the node has fewer pods than the EKS maximum pod limit, then check if the <b>max-pods</b> limit is set at the user data level in the Ocean configuration.
 
-   Increase this limit for the user data in Ocean:
+  Increase this limit for the user data in Ocean:
 
    <ol style="list-style-type: lower-alpha;">
    <li>Go to the cluster in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Compute</b>.</li>
@@ -1493,7 +1497,7 @@ If you get a `Maximum Pods configuration reached` message for a node in the cons
    <li><a href="ocean/features/roll-gen">Roll the cluster</a>.</li>
    </ol>
 
-   If you continue to get this error, [roll the cluster](ocean/features/roll-gen) again and disable [Respect Pod Disruption Budget (PDB)](ocean/features/roll-gen?id=respect-pod-disruption-budget). You can also manually terminate the node.
+  If you continue to get this error, [roll the cluster](ocean/features/roll-gen) again and disable [Respect Pod Disruption Budget (PDB)](ocean/features/roll-gen?id=respect-pod-disruption-budget). You can also manually terminate the node.
 
  </div>
 
@@ -1509,7 +1513,7 @@ You may get an <i>Invalid IAMInstanceProfile</i> error when you're [creating an 
 If you want to use <i>IAMInstanceProfileName</i> in Terraform, set <b>use_as_template_only</b> to <i>true</i>.
 
 Once the cluster is configured to use the default virtual node group as a template, <i>IAMInstanceProfileName</i> can be used instead of <i>Invalid IAMInstanceProfile</i>.
-      
+
  </div>
 
  </details>
@@ -1521,15 +1525,16 @@ Once the cluster is configured to use the default virtual node group as a templa
 
 If you have unregistered nodes and are getting log messages such as:
 
-````
+```
 /var/lib/cloud/instance/scripts/part-001: line 5: unexpected EOF while looking for matching `"'
-   
+
 /var/lib/cloud/instance/scripts/part-001: line 9: syntax error: unexpected end of file
 
 Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user (<module ‘cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_scripts_user.pyc'>) failed
-````
+```
 
 Make sure:
+
 1. The parameters are configured correctly (such as labels, AMI, IP, user data).
 2. The user data script is executable and working properly.
 
@@ -1544,21 +1549,21 @@ Make sure:
 
 You may get this message in Kubernetes:
 
-````
-Failed to create pod sandbox: rpc error: code = Unknown desc = 
+```
+Failed to create pod sandbox: rpc error: code = Unknown desc =
 failed to set up sandbox container "xxxxx"
-network for pod "coreservice-xxxxx": 
-networkPlugin cni failed to set up pod "coreservice-xxxxx" 
+network for pod "coreservice-xxxxx":
+networkPlugin cni failed to set up pod "coreservice-xxxxx"
 network: add cmd: failed to assign an IP address to container
-````
+```
 
-Each node on Kubernetes has a [different number of elastic network interfaces (ENI) available](https://github.com/aws/amazon-vpc-cni-k8s/blob/master/misc/eni-max-pods.txt). For example, M5.Large can only have 29+2*31 ENIs.
+Each node on Kubernetes has a [different number of elastic network interfaces (ENI) available](https://github.com/aws/amazon-vpc-cni-k8s/blob/master/misc/eni-max-pods.txt). For example, M5.Large can only have 29+2\*31 ENIs.
 
 You can create a script to dynamically calculate the `--max-pods` value based on the instance type and CNI version. For example:
 
-````
+```
 CNI_VERSION=<such as 1.11.4-eksbuild.1> MAX_PODS=$(/etc/eks/max-pods-calculator.sh --instance-type-from-imds --cni-version $CNI_VERSION)
-````
+```
 
 `--instance-type-from-imds` gets the instance type from the instance metadata service (IMDS).
 
@@ -1579,13 +1584,12 @@ Defining a static value for `--max-pods` in the user data startup script for a v
 
 You can:
 
-* [Download the Spot provider plugin](tools-and-provisioning/terraform/getting-started/install-terraform) and update it.
-* [Update the plugin from Terraform](tools-and-provisioning/terraform/getting-started/install-terraform#update-terraform-provider).
+- [Download the Spot provider plugin](tools-and-provisioning/terraform/getting-started/install-terraform) and update it.
+- [Update the plugin from Terraform](tools-and-provisioning/terraform/getting-started/install-terraform#update-terraform-provider).
 
  </div>
 
  </details>
-
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
@@ -1598,8 +1602,8 @@ In Spot, when you import a regional cluster, the cluster is <b>not</b> integrate
 
 Keep in mind:
 
-* The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
-* Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
+- The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
+- Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
 
  </div>
 
@@ -1614,8 +1618,8 @@ You can set up committed use discounts (CUDs) for clusters in Ocean and groups i
 
 Set up committed use discounts for:
 
-* [Ocean](ocean/features/committed-use-discount)
-* [Elastigroup](elastigroup/features/gcp/commit-use-discount)
+- [Ocean](ocean/features/committed-use-discount)
+- [Elastigroup](elastigroup/features/gcp/commit-use-discount)
 
    </div>
 
@@ -1638,16 +1642,18 @@ Set up committed use discounts for:
   <div style="padding-left:16px">
 
 Some of the common reasons your GKE nodes can be unregistered are if:
-* You have shielded nodes. [Shutdown hours](ocean/features/running-hours?id=scaling-behavior-ocean-for-kubernetes) are not supported for GKE clusters with shielded nodes. If you use shutdown hours with shielded nodes, make sure that the Ocean controller is available at the end of the off time by checking that it runs on a node that Ocean does not manage. This is because the controller is part of the node registration process and requires an available node to run on.
-* The cluster is in a private network. You need to configure NAT gateway on the cluster in GKE so it’ll have access to the internet.
+
+- You have shielded nodes. [Shutdown hours](ocean/features/running-hours?id=scaling-behavior-ocean-for-kubernetes) are not supported for GKE clusters with shielded nodes. If you use shutdown hours with shielded nodes, make sure that the Ocean controller is available at the end of the off time by checking that it runs on a node that Ocean does not manage. This is because the controller is part of the node registration process and requires an available node to run on.
+- The cluster is in a private network. You need to configure NAT gateway on the cluster in GKE so it’ll have access to the internet.
 
   Make sure the cluster has <i>external-nat</i> and <i>ONE_TO_ONE_NAT</i> set:
 
-   * In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Action** > **Edit Cluster** > **Review** > **JSON**
-   * In the [API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterGet)
+  - In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Action** > **Edit Cluster** > **Review** > **JSON**
+  - In the [API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterGet)
 
-   For example:
-````json
+  For example:
+
+```json
     "compute": {
        "networkInterfaces": [
          {
@@ -1667,7 +1673,7 @@ Some of the common reasons your GKE nodes can be unregistered are if:
           "projectId": "projectId"
          }
         ],
-````
+```
 
    </div>
 
@@ -1697,9 +1703,9 @@ Ocean then detects the pending pods and launches virtual node groups for the nod
 
 If Ocean isn’t launching a VM, you might get this log message:
 
-````
+```
 Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'
-````
+```
 
 This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
 
@@ -1714,10 +1720,10 @@ This can happen because Ocean doesn’t validate VM architecture for GCP. You ca
 
 You may get this log message when a VM is trying to scale up or launch VMs:
 
-````
+```
 Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
 Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.
-````
+```
 
 This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
 
@@ -1732,15 +1738,16 @@ This can happen if the specific VM family and size aren’t available for a cert
 
 If you update the Kubernetes version and pods launch with the old version, you may get these errors:
 
-* `ERROR, Failed to update the launchSpec ols-f775236b with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
+- `ERROR, Failed to update the launchSpec ols-f775236b with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
 
-* `ERROR, Failed to update the group with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
+- `ERROR, Failed to update the group with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
 
 This can happen if the original node pool is deleted, which prevents Ocean from fetching/updating the new GKE configuration. In the future, [preserve the original node pool](ocean/getting-started/gke?id=preserve-original-node-pool) instead of deleting it.
 
 To resolve the errors, you can either:
-* [Create a new node pool](https://cloud.google.com/kubernetes-engine/docs/how-to/node-pools) with the original pool name. It doesn’t need to run any nodes.
-* Delete the cluster in the Spot console (Actions > Delete Cluster) or using [the Spot API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterDelete), then import the cluster in the [Spot console](ocean/getting-started/gke) or using the [Spot API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke).
+
+- [Create a new node pool](https://cloud.google.com/kubernetes-engine/docs/how-to/node-pools) with the original pool name. It doesn’t need to run any nodes.
+- Delete the cluster in the Spot console (Actions > Delete Cluster) or using [the Spot API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterDelete), then import the cluster in the [Spot console](ocean/getting-started/gke) or using the [Spot API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke).
 
 Every 30 minutes, [an automatic process](ocean/features/auto-update-process-gke) runs to update the GKE configuration in the control plane manager. You can [trigger the process manually](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke).
 
@@ -1755,9 +1762,9 @@ Every 30 minutes, [an automatic process](ocean/features/auto-update-process-gke)
 
 You can get this message if the instance type is not compatible with the boot disk type:
 
-````
+```
 ERROR, Can't Spin Instance: Name: sin-xxxx. Code: Error, Message: [pd-standard] features and [instance_type: VIRTUAL_MACHINE family: COMPUTE_OPTIMIZED generation: GEN_3 cpu_vendor: INTEL architecture: X86_64 ] InstanceTaxonomies are not compatible for creating instance.
-````
+```
 
 [Compare the machine family](https://cloud.google.com/compute/docs/machine-resource#machine_type_comparison) and PD-standard disk type to decide which is appropriate for your workload.
 
@@ -1774,9 +1781,9 @@ Contact support to decide on the selected instance type for launching and to rem
 
 You may get this message when scaling up instances:
 
-````
+```
 ERROR, Can't Spin Instance: Name: sin-xxxxx. Code: QUOTA_EXCEEDED, Message: Quota 'M1_CPUS' exceeded. Limit: 0.0 in region us-east4
-````
+```
 
 GCP has [allocation quotas](https://cloud.google.com/compute/resource-usage), which limit the number of resources that your project has access to. The limit is per region.
 
@@ -1793,8 +1800,8 @@ The prefix in some of the [machine names changed from n1 to m1](https://cloud.go
 
   <div style="padding-left:16px">
 
-  1. [Change the cgroup_mode in the GKE node pool](https://cloud.google.com/kubernetes-engine/docs/how-to/node-system-config#cgroup-mode-options).
-  2. [Reimport the cluster configuration to Ocean](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke) (or [roll the cluster/virtual node group](ocean/features/roll-gen?id=roll-per-node-or-vng) for all nodes so they have the latest changes).
+1. [Change the cgroup_mode in the GKE node pool](https://cloud.google.com/kubernetes-engine/docs/how-to/node-system-config#cgroup-mode-options).
+2. [Reimport the cluster configuration to Ocean](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke) (or [roll the cluster/virtual node group](ocean/features/roll-gen?id=roll-per-node-or-vng) for all nodes so they have the latest changes).
 
  </div>
 
@@ -1824,11 +1831,12 @@ For example, if you have a 600 second terminationGracePeriodSeconds, make sure y
 
   <div style="padding-left:16px">
 
-   When the `useAsTemplateOnly` parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
-   
+When the `useAsTemplateOnly` parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
+
 Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
 
 If you want to edit the target capacity:
+
 1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
 2. Click **Actions** > **Edit**.
 3. On the Review tab, click **JSON** > **Edit Mode**.
@@ -1892,10 +1900,10 @@ You can set a static endpoint to use with Ocean Controller Version 2:
 
 If you get this message when you’re [upgrading the Ocean Controller Version 2](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm) using Helm:
 
-````
+```
 Release "ocean-controller" does not exist. Installing it now.
 Error: parse error at (ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed action
-````
+```
 
 You need to:
 
@@ -1916,7 +1924,7 @@ If these don’t work, add the `--set metrics-server.deloyChart=false` flag to t
 
 After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
 
-With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
+With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the controller starts up and on a regular basis when it's running.
 
  </div>
 
@@ -1946,8 +1954,8 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
 1. Make sure you’re using the [latest version of the controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update). It takes around 4 days for the metrics to show after upgrading.
 2. If you’re using an EKS cluster, make sure you have 2 [security groups](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html):
 
-    * Worker node group with an inbound rule that allows communication with the control plane’s security group through port 443.
-    * Cluster’s control plane.
+   - Worker node group with an inbound rule that allows communication with the control plane’s security group through port 443.
+   - Cluster’s control plane.
 
 3. Check the [common issues with the metrics server](https://repost.aws/knowledge-center/eks-metrics-server).
 
@@ -1962,9 +1970,9 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
 
 If a node replacement is canceled, you may see this log message in the cluster in the Spot console:
 
-````
+```
 DEBUG, Replacement of type Out of strategy for instance has been canceled. Reason for cancellation: A pod with the restrict-scale-down label is currently running on the node.
-````
+```
 
 You can also get this message if you’re using the `cluster-autoscaler.kubernetes.io/safe-to-evict` label. It works the same as the `restrict-scale-down` label. When you have one of those labels, the node is not scaled down or replaced.
 
@@ -1979,9 +1987,9 @@ Make sure that labels and annotations don’t prevent scaling down [on the virtu
 
   <div style="padding-left:16px">
 
-   You can use a programmatic token for creating Ocean cluster controllers. The benefit of programmatic tokens is they aren't linked to a specific user. If the user is deleted, it doesn't affect the Ocean controller. This helps prevent interruptions and heartbeat issues.
+You can use a programmatic token for creating Ocean cluster controllers. The benefit of programmatic tokens is they aren't linked to a specific user. If the user is deleted, it doesn't affect the Ocean controller. This helps prevent interruptions and heartbeat issues.
 
-   At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
+At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
 
 For a network client, only the **account viewer** permission is required for the client to operate.
 
@@ -2028,10 +2036,10 @@ You may get this event in your Kubernetes cluster:
 
 This can happen because:
 
-* Kubernetes needs [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/) to create the [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) (PVCs) dynamically. Make sure you have storage classes configured unless you’re using static persistent volume claims.
-* The [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) and [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes-1) access modes don’t match.
-* The persistent volume [capacity](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity) is less than the persistent volume claim.
-* The total number of persistent volume claims is higher than the persistent volume.
+- Kubernetes needs [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/) to create the [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) (PVCs) dynamically. Make sure you have storage classes configured unless you’re using static persistent volume claims.
+- The [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) and [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes-1) access modes don’t match.
+- The persistent volume [capacity](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity) is less than the persistent volume claim.
+- The total number of persistent volume claims is higher than the persistent volume.
 
  </div>
 
@@ -2044,21 +2052,21 @@ This can happen because:
 
 If the Ocean autoscaler scales up an instance for your pod at least 5 times, but the Kubernetes scheduler can’t schedule the pod, you may get this message:
 
-````
+```
 WARN, Pod Metrics-Server-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Metrics-Server-xxxxx
 WARN, Pod Redis-0 Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Redis-0
 WARN, Pod Kube-Dns-Autoscaler-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Kube-Dns-Autoscaler-xxxxx
 WARN, Pod Worker-Deployment-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Worker-Deployment-xxxxx
 WARN, Pod Kube-Dns-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Kube-Dns-xxxxx
-   ````
+```
 
 Ocean stops trying to scale up this pod to prevent infinite scaling.
 
 This can happen if:
 
-* Ocean launches instances for the pending pod but they don’t fully register to the Kubernetes cluster because the pod has no node to schedule.
-* You’re using AWS ebs-csi-driver PV/PVC. It’s possible that the [ebs-csi-node](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) DaemonSet pods are not running on the nodes. This can happen if the DaemonSet object is having issues, the DaemonSet pods are not running, or if taints on a custom virtual node group are stopping the DaemonSet pods from being scheduled on the node. If you’re using DaemonSet, then the DaemonSet pods must run on every node if a pending pod has a PVC.
-* You’re using GPU nodes. The [Nvidia GPU DaemonSet](https://github.com/NVIDIA/k8s-device-plugin) is required to run on every GPU node for the nodes to expose their GPU resources. If a pending node is requesting GPU, then Ocean launches a GPU instance. You need to make sure the nodes are exposing the GPU resources. Typically, you do this with the Nvidia GPU DaemonSet. If the DaemonSet has issues, then the pod may not be scheduled on the node because the node won’t be exposing the GPU.
+- Ocean launches instances for the pending pod but they don’t fully register to the Kubernetes cluster because the pod has no node to schedule.
+- You’re using AWS ebs-csi-driver PV/PVC. It’s possible that the [ebs-csi-node](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) DaemonSet pods are not running on the nodes. This can happen if the DaemonSet object is having issues, the DaemonSet pods are not running, or if taints on a custom virtual node group are stopping the DaemonSet pods from being scheduled on the node. If you’re using DaemonSet, then the DaemonSet pods must run on every node if a pending pod has a PVC.
+- You’re using GPU nodes. The [Nvidia GPU DaemonSet](https://github.com/NVIDIA/k8s-device-plugin) is required to run on every GPU node for the nodes to expose their GPU resources. If a pending node is requesting GPU, then Ocean launches a GPU instance. You need to make sure the nodes are exposing the GPU resources. Typically, you do this with the Nvidia GPU DaemonSet. If the DaemonSet has issues, then the pod may not be scheduled on the node because the node won’t be exposing the GPU.
 
  </div>
 
@@ -2071,10 +2079,10 @@ This can happen if:
 
 You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
 
-````
+```
 ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
 java.lang.OutOfMemoryError: Java heap space
-````
+```
 
 This means the application ran out of Java heap space, and the pod will crash temporarily. You may also see that the target on the [Prometheus](ocean/tools-and-integrations/prometheus/scrape) dashboard is down.
 
@@ -2083,7 +2091,6 @@ Use the JAVA_OPTS variables to increase the minimum and maximum heap space the a
 Set the amounts according to the needs of your pods.
 
 <img width=450 src="https://github.com/user-attachments/assets/2e2aaf44-b76d-445c-a86d-058e53c634e6">
-
 
  </div>
 
@@ -2096,14 +2103,14 @@ Set the amounts according to the needs of your pods.
 
 You get this error in the log:
 
-````
-Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
-Can't scale up an Instance since PersistentVolumeClaim: 
-'{PVC-name}' 
-VolumeId: '{vol-name}' is already attached to an existing Instance: 
-'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
+```
+Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}'
+Can't scale up an Instance since PersistentVolumeClaim:
+'{PVC-name}'
+VolumeId: '{vol-name}' is already attached to an existing Instance:
+'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a
 support ticket.
-````
+```
 
 This can happen when the pod has a claim for a specific volume attached to a different instance, and that instance does not have free space for the pod.
 
@@ -2139,7 +2146,6 @@ A [limit range](https://kubernetes.io/docs/concepts/policy/limit-range/) is a po
 
  </details>
 
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroomnode">AKS, EKS, GKE: Can I configure headroom for a node?</summary>
 
@@ -2147,8 +2153,8 @@ A [limit range](https://kubernetes.io/docs/concepts/policy/limit-range/) is a po
 
 You cannot add headroom at a node level. Headroom is intended for:
 
-* Fast scaling: the infrastructure is ready, no need to wait for scaling.
-* Interruption: there is available capacity for the pod. If the headroom is all on one node and the node is interrupted, then there is no headroom that is readily available.
+- Fast scaling: the infrastructure is ready, no need to wait for scaling.
+- Interruption: there is available capacity for the pod. If the headroom is all on one node and the node is interrupted, then there is no headroom that is readily available.
 
   </div>
 
@@ -2161,15 +2167,15 @@ You cannot add headroom at a node level. Headroom is intended for:
 
 You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node group level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
 
-````
+```
 spotinst.io/autoscaler-auto-config: "true"
 spotinst.io/autoscaler-auto-headroom-percentage : {Value}
 spotinst.io/ocean-default-launchspec: "true"
-````
+```
 
 Here's an example of a config file:
 
-````json
+```json
 apiVersion: kops.k8s.io/v1alpha2
 kind: InstanceGroup
 metadata:
@@ -2190,7 +2196,7 @@ spec:
 role: Node
 maxSize: 1
 minSize: 1
-````
+```
 
  </div>
 
@@ -2202,15 +2208,17 @@ minSize: 1
   <div style="padding-left:16px">
 
 You can restrict specific pods from scaling down by configuring Ocean and Kubernetes. The instance will be replaced only if:
-* It goes into an unhealthy state.
-* Forced by a cloud provider interruption.
+
+- It goes into an unhealthy state.
+- Forced by a cloud provider interruption.
 
 There are two options for restricting pods from scaling down:
-* Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
+
+- Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
 
   Use the `spotinst.io/restrict-scale-down` label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
 
-* Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
+- Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
 
   You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the virtual node group level so the nodes and pods within the virtual node group are not replaced or scaled down due to the auto scaler resource optimization. Create a virtual node group, go to the Advanced tab, then select **Restrict Scale Down**.
 
@@ -2228,11 +2236,11 @@ You can stop the autoscaler and recoveries:
 1. Disable [autoscaling](ocean/features/scaling-kubernetes?id=customize-scaling-configuration).
 2. Stop recoveries:
 
-    <ol style="list-style-type: lower-alpha;">
-    <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b> and select a group.</li>
-    <li>On the Nodes tab, select the node and click <b>Actions</b> > <b>Detach</b>.</li>
-    <li>In the AWS console, <a target="_blank" href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-detach-attach-instances.html" >detach any new nodes</a>.</li>
-    </ol>
+<ol style="list-style-type: lower-alpha;">
+<li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b> and select a group.</li>
+<li>On the Nodes tab, select the node and click <b>Actions</b> > <b>Detach</b>.</li>
+<li>In the AWS console, <a target="_blank" href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-detach-attach-instances.html" >detach any new nodes</a>.</li>
+</ol>
 
 If you need to restart autoscaling and recoveries, enable [autoscaling](ocean/features/scaling-kubernetes?id=customize-scaling-configuration).
 
@@ -2249,9 +2257,9 @@ You cannot update the instance types in the default virtual node group. For exam
 
 If you do, you’ll get this error:
 
-````
+```
 Launch spec ols-xxxxxxxx instance types are not a subset of ocean cluster
-````
+```
 
 Remove the instance types at the cluster level, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> instance types, and then update the cluster.
 
@@ -2267,9 +2275,10 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
 <div style="padding-left:16px">
 
 You can include or exclude certain instance types in your Ocean cluster. Typically, you do it from the cluster configuration.
-* **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
-* **Whitelist**: instance types allowed in the Ocean cluster. It cannot be used with a deny list.
-* **Filtering**: list of filters. The instance types that match with all filters make up the Ocean's whitelist parameter. Filtering cannot be used with allow or block lists.
+
+- **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
+- **Whitelist**: instance types allowed in the Ocean cluster. It cannot be used with a deny list.
+- **Filtering**: list of filters. The instance types that match with all filters make up the Ocean's whitelist parameter. Filtering cannot be used with allow or block lists.
 
 You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types), or [filter](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=select-instance-types-with-advanced-filters) instance types in the cluster configuration in <i>compute: instanceTypes</i> in the cluster’s JSON or using an API.
 
@@ -2307,14 +2316,14 @@ Initially, the costs are compared with the on demand value of the instance types
 
 If you have shutdown hours set up and autoscaler is disabled, you may see one of these messages in the Spot console:
 
-* `Info Instances: [i-xxxxx] have been launched. Reason: Shutdown hours period finished`
-* `Info Instances: [i-xxxxx] have been detached. Reason: Scale-down as part of instance recovery`
-* `Info Instances: [i-xxxxx] have been launched. Reason: Scale-up as part of instance recovery`
+- `Info Instances: [i-xxxxx] have been launched. Reason: Shutdown hours period finished`
+- `Info Instances: [i-xxxxx] have been detached. Reason: Scale-down as part of instance recovery`
+- `Info Instances: [i-xxxxx] have been launched. Reason: Scale-up as part of instance recovery`
 
 If shutdown hours are set up and autoscaler is disabled, new nodes are not scaled up based on pending pods. [An existing node is <i>still</i> launched](ocean/features/running-hours?id=scaling-behavior-kubernetes):
 
-* At the end of the shutdown hours.
-* If the spot node launched at the end of shutdown hours has an interruption or recovery.
+- At the end of the shutdown hours.
+- If the spot node launched at the end of shutdown hours has an interruption or recovery.
 
 You can disable shutdown hours in the Spot console: go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Customize Scaling** > **Cluster Shutdown Hours**.
 
@@ -2329,14 +2338,14 @@ You can disable shutdown hours in the Spot console: go to **Ocean** > **Cloud Cl
 
 If your Ocean cluster won’t scale up, you may see a message like this in the Spot console logs:
 
-````
+```
 Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "BadRequest", "details": null, "message": "Client Error: error parsing version(1.26). If you would like to use alias minor version, please use api version starting from 2022-03-02-preview", "subcode": "" }
-````
+```
 
 This happens when the Ocean cluster tries to create a node pool using a specific Kubernetes version. In this message, it’s version 1.26.
 
-* If you want to use a specific version, you also need to give the exact patch version (the alias minor version).
-* You also need to make sure your [AKS API version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#alias-minor-version) is at least the version mentioned in the message.
+- If you want to use a specific version, you also need to give the exact patch version (the alias minor version).
+- You also need to make sure your [AKS API version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#alias-minor-version) is at least the version mentioned in the message.
 
  </div>
 
@@ -2349,14 +2358,15 @@ This happens when the Ocean cluster tries to create a node pool using a specific
 
 If your pods are scheduled on [B-series nodes](https://learn.microsoft.com/en-us/azure/virtual-machines/b-series-cpu-credit-model/b-series-cpu-credit-model), the nodes and VMs are burstable. This means that they outperform their actual limits for a short period. After the burst credits are used, the pods will fail, and you may see this message:
 
-````
+```
 The node was low on resource: memory. Threshold quantity: 750Mi, available: 757424Ki. Container terrakube-registry was using 339556Ki, request is 0, has larger consumption of memory.
-````
+```
 
 You can:
-* Make sure your resource allocation is set up correctly. You can use the [resource quotas and limit ranges](https://kubernetes.io/docs/concepts/policy/resource-quotas/) as a reference.
-* [Exclude b-series (Bs) nodes](ocean/tutorials/manage-virtual-nd-groups-aks?id=vm-selection) from your virtual node groups.
-* Set up [rightsizing recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab).
+
+- Make sure your resource allocation is set up correctly. You can use the [resource quotas and limit ranges](https://kubernetes.io/docs/concepts/policy/resource-quotas/) as a reference.
+- [Exclude b-series (Bs) nodes](ocean/tutorials/manage-virtual-nd-groups-aks?id=vm-selection) from your virtual node groups.
+- Set up [rightsizing recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab).
 
  </div>
 
@@ -2369,22 +2379,22 @@ You can:
 
 If your pods are not registering in your AKS cluster, you may get this message:
 
-````
+```
 Could not scale up for pending pod xxxxx due to technical failure to launch required instances. Scale down has been disabled in the cluster until pod is scheduled.
 ERROR Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "UDRWithNodePublicIPNotAllowed", "details": null, "message": "OutboundType UserDefinedRouting can not be combined with Node Public IP.", "subcode": "" }
 ERROR Failed to scale up 1 new nodes as part of scaling the virtual node groups vng-xxxxx (xxxxx).
-````
+```
 
 You cannot use **enableNodePublicIP** set to <i>True</i> with **userDefinedRouting** set to <i>outboundType</i>.
 
 If you’re using [outbound types of userDefinedRouting](https://learn.microsoft.com/en-us/azure/aks/egress-outboundtype#outbound-type-of-userdefinedrouting), change `"enableNodePublicIP": true`, to <i>false</i>. For example:
 
-````json
+```json
     "nodePoolProperties": {
         "maxPodsPerNode": 250,
         "enableNodePublicIP": false,
     }
-````
+```
 
  </div>
 
@@ -2397,12 +2407,12 @@ If you’re using [outbound types of userDefinedRouting](https://learn.microsoft
 
 The Start Migration button can be grayed out for an AKS Ocean cluster if:
 
-* The cluster has system node pools, which must run as regular nodes and don’t require scaling.
-* The Kubernetes cluster isn’t running on AKS infrastructure.
-* Kubernetes cluster isn’t connected to an Ocean cluster. You can [import an AKS cluster to Ocean](ocean/getting-started/aks/?id=import-an-aks-cluster-to-ocean).
-* The Ocean Controller wasn’t installed, updated, and running in the cluster.
-* Cluster or virtual node group doesn’t have a [supported Kubernetes version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar).
-* You don’t have dedicated [virtual node groups](ocean/features/vngs/?id=virtual-node-groups) for your workload to let Ocean autoscaler scale up nodes.
+- The cluster has system node pools, which must run as regular nodes and don’t require scaling.
+- The Kubernetes cluster isn’t running on AKS infrastructure.
+- Kubernetes cluster isn’t connected to an Ocean cluster. You can [import an AKS cluster to Ocean](ocean/getting-started/aks/?id=import-an-aks-cluster-to-ocean).
+- The Ocean Controller wasn’t installed, updated, and running in the cluster.
+- Cluster or virtual node group doesn’t have a [supported Kubernetes version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar).
+- You don’t have dedicated [virtual node groups](ocean/features/vngs/?id=virtual-node-groups) for your workload to let Ocean autoscaler scale up nodes.
 
  </div>
 
@@ -2419,8 +2429,6 @@ If you’re seeing an unable to migrate status in workload migration, check if t
 
  </details>
 
- 
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
 
@@ -2435,24 +2443,23 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
 1. Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
 2. Add vmSizes to the virtual node group JSON file.
 
-    ````json
-	   "vmSizes": {
-        "filters": {
-            "architectures": [
-                 "x86_64"
-            ],
-            "series": []
-                }
-        }
-    ````
-   
-   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
+   ```json
+     "vmSizes": {
+       "filters": {
+           "architectures": [
+                "x86_64"
+           ],
+           "series": []
+               }
+       }
+   ```
 
-   * Add <b>series</b> with the VM series for the particular architecture.
+   - <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
+
+   - Add <b>series</b> with the VM series for the particular architecture.
      For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
- 
-     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
 
+     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
 
  </div>
  
@@ -2471,16 +2478,16 @@ Do not set this up on production clusters because if the admission controller po
 
 1. Edit the webhook configuration: `kubectl edit MutatingWebhookConfiguration spot-admission-controller.kube-system.svc`.
 
-3. Make sure this object is in the configuration file:
+2. Make sure this object is in the configuration file:
 
-   ````yaml
+   ```yaml
    objectSelector:
      matchExpressions:
-     - key: app.kubernetes.io/name
-       operator: NotIn
-       values:
-       - spot-admission-controller
-   ````
+       - key: app.kubernetes.io/name
+         operator: NotIn
+         values:
+           - spot-admission-controller
+   ```
 
 3. If the object is not there, [reinstall the Spot admission controller](ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional).
 4. Change `failurePolicy` to <i>Fail</i> (`failurePolicy: Fail`).
@@ -2499,129 +2506,6 @@ If you have virtual node groups with Spot % set to 100 or Fallback to Regular se
 This can happen if you have nodes in a [kube-system namespace](https://learn.microsoft.com/en-us/azure/aks/core-aks-concepts#namespaces). Kube-system pods are created by the Kubernetes system and are required to make the cluster work.
 
 AKS only launches spot nodes if the admission controller is enabled and Spot tolerations are injected into the pods.
-
- </div>
- 
- </details>
-
-<!----------------------------------Ocean for Apache Spark---------------------------------->
-
-## Ocean for Apache Spark
-
-<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkretries">Can I set the number of retries for a stage in Ocean Spark?</summary>
-
- <div style="padding-left:16px">
-
-If there is a stage failure when a job runs in Ocean Spark, there’s a [retry mechanism](https://spark.apache.org/docs/3.5.2/configuration.html#:~:text=2.0.3-,spark.stage.maxConsecutiveAttempts,-4). You can change the number of retries for a stage:
-
-1. In the Spot console, go to **Ocean for Spark** > **Configuration Templates**.
-2. Select the configuration template of the application you need to change.
-3. Add `spark.stage.maxConsecutiveAttempts` with the number of retries.
-
-
- </div>
- 
- </details>
-
-<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkdriver">Can I run Spark jobs on the driver, not on executors?</summary>
-
- <div style="padding-left:16px">
-
-Yes, you can define your configuration template to run your Spark application on the driver and not on the executors.
-
-Define a [Jupyter kernel](ocean-spark/tools-integrations/connect-jupyter-notebooks?id=define-jupyter-kernels-with-configuration-templates) with a low idle timeout so it’s scaled down quickly if it’s not in use:
-
-````
-"spark.dynamicAllocation.enabled": "true",
-"spark.dynamicAllocation.maxExecutors": "1",
-"spark.dynamicAllocation.minExecutors": "0",
-"spark.dynamicAllocation.initialExecutors": "0",
-"spark.dynamicAllocation.executorIdleTimeout": "10s"
-````
-
- </div>
- 
- </details>
-
-
-<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkwrongvng">Why are my pods going to the wrong virtual node group?</summary>
-
- <div style="padding-left:16px">
-
-If your Ocean Spark pods are going to the wrong virtual node group, it’s typically because the virtual node group was updated or deleted.
-
-You can either recreate the Ocean Spark cluster or update the labels and taints. These are the definitions for virtual node group labels and taints:
-
-**ocean-spark-system**
-
-````json
-    "labels": [
-      {
-        "key": "nodegroup-name",
-        "value": "ofas-system"
-      }
-    ],
-    "taints": [],
-````
-
-**ocean-spark-on-demand**
-
-````json
-    "labels": [
-      {
-        "key": "bigdata.spot.io/vng",
-        "value": "ocean-spark"
-      },
-      {
-        "key": "nodegroup-name",
-        "value": "ocean-spark-on-demand"
-      }
-    ],
-    "taints": [
-      {
-        "key": "bigdata.spot.io/unschedulable",
-        "value": "ocean-spark",
-        "effect": "NoSchedule"
-      }
-    ],
-````
-
-**ocean-spark-spot**
-
-````json
-    "labels": [
-      {
-        "key": "bigdata.spot.io/vng",
-        "value": "ocean-spark"
-      },
-      {
-        "key": "nodegroup-name",
-        "value": "ocean-spark-spot"
-      }
-    ],
-    "taints": [
-      {
-        "key": "bigdata.spot.io/unschedulable",
-        "value": "ocean-spark",
-        "effect": "NoSchedule"
-      }
-    ],
-````
-
-
- </div>
- 
- </details>
-
-<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkperm">What are the minimum permissions for creating a workspace?</summary>
-
- <div style="padding-left:16px">
-
-You can give some of your users [access to a workspace](ocean-spark/configure-permissions/?id=set-permissions-for-workspace-users) but not allow them to make changes to a cluster.
 
  </div>
  

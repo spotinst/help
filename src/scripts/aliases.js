@@ -1788,24 +1788,6 @@ export const aliases = (() => {
 
     "/tools-and-provisioning/cloudfoundry-bosh":
       "/connect-your-cloud-provider/first-account/",
-
-    "/wave/": "/ocean-spark/",
-
-    "/wave/features/": "/ocean-spark/product-tour/",
-
-    "/wave/features/cluster-management":
-      "/ocean-spark/product-tour/manage-clusters",
-
-    "/wave/features/cost-analysis": "/ocean-spark/product-tour/analyze-costs",
-
-    "/wave/features/wave-cluster-overview":
-      "/ocean-spark/product-tour/view-cluster-details",
-
-    "/wave/getting-started/": "/ocean-spark/getting-started/",
-
-    "/wave/overview": "/ocean-spark/",
-
-    "/wave/wave-overview": "/ocean-spark/",
   };
 
   for (let [key, value] of Object.entries(map)) {
