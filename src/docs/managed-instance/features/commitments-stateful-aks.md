@@ -8,7 +8,7 @@ Cloud service provider relevance: <font color="#FC01CC">Azure Kubernetes</font>
 
 ##  Azure Commitments
 
-Azure Commitments are agreements you make to use a certain amount of Azure resources over a specified period, including RIs and Saving Plans.
+Azure Commitments are agreements you make to use a certain amount of Azure resources over a specified period, including RIs and SPs.
 
 Commitment types are as follows:
 
@@ -20,7 +20,7 @@ You can prioritize available RIs and SPs: Prioritize to prevent their underutili
 
 ###  Azure Reserved Instances
 
-Azure RIs let you reserve VMs in Azure for a one- or three-year term, providing significant cost savings compared to pay-as-you-go pricing, and provide the following benefits:
+Azure RIs let you reserve VMs in Azure for a one, three, or five year term, providing significant cost savings compared to pay-as-you-go pricing, and provide the following benefits:
 
 *  Cost Savings: Typically offers discounts of up to 72% compared to on-demand prices.
 *  Predictable Billing: Helps budget and forecast costs as you pre-purchase capacity.
@@ -28,7 +28,7 @@ Azure RIs let you reserve VMs in Azure for a one- or three-year term, providing 
 
 ###  Azure Savings Plans
 
-Azure SPs offer a flexible pricing model that lets you save up to 65% on your Azure compute costs in exchange for a commitment to spend a specific amount over a one- or three-year period and provide the following benefits:
+Azure SPs offer a flexible pricing model that lets you save significantly on your Azure compute costs in exchange for a commitment to spend a specific amount over a one, three, or five year term and provide the following benefits:
 
 *  Flexibility: Unlike RIs, SPs apply to a broader range of services and can adjust based on your usage patterns.
 *  Automatic Savings: Automatically applies savings to eligible resources, making managing costs across multiple services easier.
@@ -37,13 +37,11 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 ## Commitments Scenarios
 
-
-<img width="1140px" src="https://github.com/user-attachments/assets/f991b76b-efd4-41a6-9576-3e7895ecb2f5" />
-
+<img src="https://docs.spot.io/managed-instance/_media/stateful-node-commitment-options.png" />
 
 ###  Launching a VM
 
-As part of the scale-up process, Stateful Node checks if an RI or SP applies to the market selection. If so,  utilizes that RI/SP.
+As part of the scale-up process, Stateful Node checks if an RI or SP applies to the market selection. If so, prioritizes that RI/SP.
 
 ###  Running Spot VMs
 
@@ -70,5 +68,5 @@ Stateful Node performs a strategy fix check every **xx (to check)** minutes to d
 The reversion will not occur if:
 
 * There is no alternative commitment or spot VM to revert back to. 
-* It violates the group's regular VM count request. 
+* It violates the group's regular VM count request.   
 
